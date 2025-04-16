@@ -7,7 +7,6 @@ on:
   pull_request:
     branches:
       - main
-    
 
 jobs:
   build:
@@ -15,20 +14,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Go
-        uses: actions/setup-go@v5
+      - name: Use Go 1.13
+        uses: actions/setup-go@v5.0.1
         with:
           go-version: 1.13.x
 
-      - name: build game
-        run: |
-          go get github.com/tmedwards/tweego
-          export PATH=$PATH:$(go env GOPATH)/bin
-          tweego source -o dist/index.html
+      - uses: jaxxstorm/action-install-gh-release@v1.12.0 
+        with:
+          repo: tmedwards/tweego
+          chmod: 0775
+      - run : tweego source -o index.html
 
       - name: Deploy to Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./dist
+          publish_dir: ./
