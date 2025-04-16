@@ -17,6 +17,8 @@ jobs:
 
       - name: Use Go
         uses: actions/setup-go@v5
+        with:
+          go-version: latest
 
       - name: build game
         run: |
