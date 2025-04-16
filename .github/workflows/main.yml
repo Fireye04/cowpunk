@@ -20,7 +20,7 @@ jobs:
 
       - name: build game
         run: |
-          go install github.com/tmedwards/tweego@latest
+          go install github.com/tmedwards/tweego@v2.0.0
           export PATH=$PATH:$(go env GOPATH)/bin
           tweego source -o dist/index.html
 
