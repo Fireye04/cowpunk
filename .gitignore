@@ -1,0 +1,6 @@
+.vscode/
+compiler/
+output/
+
+compile_for_macOS.app/
+compile_for_Windows.bat
