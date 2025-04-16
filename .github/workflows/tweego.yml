@@ -1,0 +1,36 @@
+name: 'Tweego'
+on: [push, pull_request]
+jobs:
+  build_project:
+    runs-on: ubuntu-latest
+    needs:
+      storyformats:  # id of input
+        description: 'Location of the storyformats'
+        required: true
+        default: '$GITHUB_WORKSPACE/storyformats'
+      source:
+        description: 'Location of the source twee files.'
+        required: true
+        default: '$GITHUB_WORKSPACE/src'
+      savedir: 
+        description: 'Location where to write the html file.'
+        required: true
+        default: '$GITHUB_WORKSPACE/bin'
+      filename:
+        description: 'Name of the file to be generated.'
+        required: true
+        default: 'index.html'
+    outputs: 
+      value: ${{ steps.finish.outputs.html-file }}
+    env:
+      using: "tweedevs/tweego-docker"
+    steps: 
+      - run: $TWEEGOPATH=$STORYFORMATS
+        shell: sh
+      - run: $OUTPATH=$SAVEDIR/$FILENAME
+        shell: sh 
+      - run: ./main $SOURCE -o $OUTPATH
+        shell: sh
+      - id: finish
+        run: echo "::set-output name=html-file::$(echo $OUTPATH)"
+        shell: sh
