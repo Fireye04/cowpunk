@@ -9,6 +9,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # https://stackoverflow.com/questions/58033366/how-to-get-the-current-branch-within-github-actions
+      - name: Extract branch name
+        shell: bash
+        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        id: extract_branch
+
       - name: Use Go 1.13
         uses: actions/setup-go@v5.0.1
         with:
@@ -18,16 +24,12 @@ jobs:
         with:
           repo: tmedwards/tweego
           chmod: 0775
+      - run : tweego source -o index.html
 
-      - name: Build and deploy apps to gh-pages
-        uses: Sauloxd/review-apps@v2.0.0
+      - name: Deploy to Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          branch: "gh-pages" # The branch you chose to be your github-pages source
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Optional, if you want the apps URL commented in your PR
-          apps: |
-            {
-              "branches": {
-                "build": "tweego source -o index.html",
-                "dist": "output/"
-              }
-            }
+          github_token: ${{ secrets.GITHUB_TOKEN  }}
+          publish_branch: gh-pages
+          publish_dir: ./
+          destination_dir: ${{ steps.extract_branch.outputs.branch }}
