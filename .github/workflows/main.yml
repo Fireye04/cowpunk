@@ -12,7 +12,7 @@ jobs:
       # https://stackoverflow.com/questions/58033366/how-to-get-the-current-branch-within-github-actions
       - name: Extract branch name
         shell: bash
-        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        run: if [ "${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" = "main" ]; then echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT else echo "" >> $GITHUB_OUTPUT fi 
         id: extract_branch
 
       - name: Use Go 1.13
