@@ -2,8 +2,6 @@ name: Build
 
 on:
   push:
-    branches:
-      - main
 
 jobs:
   build:
@@ -20,11 +18,16 @@ jobs:
         with:
           repo: tmedwards/tweego
           chmod: 0775
-      - run : tweego source -o index.html
 
-      - name: Deploy to Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Build and deploy apps to gh-pages
+        uses: Sauloxd/review-apps@v2.0.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN  }}
-          publish_branch: gh-pages
-          publish_dir: ./
+          branch: "gh-pages" # The branch you chose to be your github-pages source
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Optional, if you want the apps URL commented in your PR
+          apps: |
+            {
+              "branches": {
+                "build": "tweego source -o index.html",
+                "dist": "output/"
+              }
+            }
