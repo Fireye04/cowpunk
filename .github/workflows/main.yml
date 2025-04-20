@@ -29,5 +29,5 @@ jobs:
               "branches": {
                 "build": "tweego source -o index.html",
                 "dist": "output/"
-              },
+              }
             }
