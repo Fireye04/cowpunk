@@ -20,7 +20,7 @@ jobs:
           chmod: 0775
 
       - name: Build and deploy apps to gh-pages
-        uses: sauloxd/review-apps@2.0.0
+        uses: Sauloxd/review-apps@v2.0.0
         with:
           branch: "gh-pages" # The branch you chose to be your github-pages source
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Optional, if you want the apps URL commented in your PR
