@@ -1,10 +1,12 @@
 :: Start
-You open up your old dirtied map to decide where you should go next. There are [[a few options.| locations]]
-:: locations
-    [[Cattle's Run| Cow_Town]]
-    [[Home|Your_house]]
-:: Cow_Town
-Cattle's Run. A large old timey rural town. Compared to the lights and glamour of the city it almost feels out of place- like it is meant to be from another time.
-:: Your_house
-Home. An old rickety shed right outside Cattle's Run. You've lived here for ages after some hermit sold the place. It's not nice, but it's a safe place to lie low for a while.
+You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]
 
+:: locations
+    [[Cattle's Run | Cow Town]]
+    [[Home | Your house]]
+
+:: Cow Town
+Cattle's Run. A large old timey rural town. Compared to the lights and glamour of the city it almost feels out of place- like it is meant to be from another time.
+
+:: Your house
+Home. An old rickety shed right outside Cattle's Run. You've lived here for ages after some hermit sold the place. It's not nice, but it's a safe place to lie low for a while.
