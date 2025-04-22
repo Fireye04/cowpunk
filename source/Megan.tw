@@ -9,4 +9,4 @@ You can see your [[coin pouch|coin pouch]] out on the table and in the corner of
 When did I get $money dollars? Wow!
 
 :: upgrades
-<<if $augments='None'>>It's still me.<<else>>Look at what I have become. <</if>>
+<<if $augments='None'>>It's just me. The old boots my dad gave me before I left home and my cowboy hat.<<else>>Somewhat odd looking. <</if>>
