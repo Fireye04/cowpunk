@@ -1,0 +1,43 @@
+:: Map
+You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]
+
+:: locations
+    [[Cattle's Run | Cow Town]]
+    
+    [[Home | Your house]]
+    
+    [[Ember City | City]]
+
+    [[Heaven's Gate | Church town]]
+
+    [[Devil's Pass | Desert]]
+
+:: Cow Town
+A large old timey rural town. Compared to the lights and glamour of the city it almost feels out of place- like it is meant to be from another time.
+
+[[Visit | Visit Town]] or [[go back to the map | locations]]
+
+:: Your house
+An old rickety shed right outside Cattle's Run. You've lived here for ages after some hermit sold the place. It's not nice, but it's a safe place to lie low for a while.
+
+[[Visit | Visit House]] or [[go back to the map | locations]]
+
+:: City
+A sprawling urban city with large skyscrapers and a constant blanket of light and smog. The people here reak of wealth. Underneath the city's image lies another name [[The Ashes | Ashes]]
+
+[[Visit | Visit City]] or [[go back to the map | locations]]
+
+:: Ashes
+In the deepest parts of Ember City there lies a maze of alleyways filled with those who earn their income in less trustworthy ways. If you are willing to take the chance there are "doctors" here you can visit for cybernetics and merchants selling under the table goods. The black market here thrives...just don't expect good quality.
+
+[[Visit | Visit Ashes]] or [[go back to the map | locations]]
+
+:: Church town
+An old church town, not too crowded but still well-kept. Religious folk tend to gather here (and people looking to escape the law)
+
+[[Visit | Visit Church]] or [[go back to the map | locations]]
+
+:: Desert
+A sprawling desert that goes on for miles between the various cities and towns. Not much happens here, but some trains pass through on their way to the city. Every few miles you may be able to spot some dust-beaten buildings long-abandoned by their owners.
+
+[[Visit | Visit Desert]] or [[go back to the map | locations]]
