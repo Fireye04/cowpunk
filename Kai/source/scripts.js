@@ -25,6 +25,6 @@ class weapon {
 Object.assign(weapon.prototype, Sellable);
 
 const gun = new weapon(3, function () {
-	return Math.random() * 8;
+	return Math.floor(Math.random() * 8 + 0.5);
 });
 gun.damage();
