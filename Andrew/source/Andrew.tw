@@ -21,8 +21,6 @@ The third bounty is actually an official [[wanted poster.|Bounty 3]]
 
 The fourth bounty is [[another wanted poster|Bounty 4]] covered in bullet holes.
 
-The fifth bounty is [[an old wanted poster| Bounty 5]]
-
 [[Leave|Bounties]]
 
 
@@ -47,6 +45,8 @@ We cowpunks have enough trouble just trying to get by, we don't need to be killi
 [[Accept?|Bounty 4 Accepted]] or [[Look at the other bounties|Bounty Options]]
 
 
+
+
 /* Bounties Accepted */
-:: Bounty 1 Acceptad
+:: Bounty 1 Accepted
 [[Yay|Bounties][$bounty1 to "true"]]
