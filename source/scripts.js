@@ -13,18 +13,18 @@ const Sellable = {
 };
 
 class weapon {
-	constructor(cost) {
+	constructor(cost, damageFunc) {
 		this.cost = cost;
+		this.damageFunc = damageFunc;
 	}
-	damage(damage) {
-		console.log(damage);
+	damage() {
+		console.log(this.damageFunc());
 	}
 }
 
 Object.assign(weapon.prototype, Sellable);
 
-console.log("gothere");
-
-const gun = new weapon(3);
+const gun = new weapon(3, function () {
+	return Math.random() * 8;
+});
 gun.buy();
-
