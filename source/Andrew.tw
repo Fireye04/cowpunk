@@ -2,16 +2,11 @@
 
 :: Bounties
 
-$bounty1
-
 You approach the giant wooden board littered with wanted posters, body augmentation adverts, and bullet holes. 
 
 There's [[several options|Bounty Options]] to choose from. 
 
-<<if $bounty1 is "true">>[["Option1"|Option 1]]<</if>>
 
-:: Option1
-Hello
 
 :: Bounty Options
 The first bounty is an advert for [[rat extermination?|Bounty 1]]
@@ -29,25 +24,93 @@ The fourth bounty is [[another wanted poster|Bounty 4]] covered in bullet holes.
 /* Bounties Section */
 :: Bounty 1
 A local Cattle Run farmer has been having some radioactive rat trouble. Seems like an easy way to make some money. 
-[[Accept?|Bounty 1 Accepted]] or [[Look at the other bounties|Bounty Options]]
+[[Accept?|Bounty 1 Mission]] or [[Look at the other bounties|Bounty Options]]
+
 
 :: Bounty 2
 "This local scoundrel has been pestering my bar folk for the past week and its bad for business. 
 I have a lump some of cash for anyone that can make him disappear. He always hangs out behind the bar. Look for a green hat."
-[[Accept?|Bounty 2 Accepted]] or [[Look at the other bounties|Bounty Options]]
+[[Accept?|Bounty 2 Mission]] or [[Look at the other bounties|Bounty Options]]
+
 
 :: Bounty 3
 "WANTED: ALIVE - $10 Reward. Tumbleweed Terry is wanted for stealing horses. Bring him back to the Jail in Cattle Run."
-[[Accept?|Bounty 3 Accepted]] or [[Look at the other bounties|Bounty Options]]
+[[Accept?|Bounty 3 Mission]] or [[Look at the other bounties|Bounty Options]]
+
 
 :: Bounty 4
 "WANTED: DEAD or ALIVE - $40 Reward. The notorious gunslinger Chrome Carl has been sited just outside Cattle Run.
 We cowpunks have enough trouble just trying to get by, we don't need to be killing each other anymore. Keep our Cattle Run safe and take him out"
-[[Accept?|Bounty 4 Accepted]] or [[Look at the other bounties|Bounty Options]]
+[[Accept?|Bounty 4 Mission]] or [[Look at the other bounties|Bounty Options]]
 
 
 
 
-/* Bounties Accepted */
-:: Bounty 1 Accepted
-[[Yay|Bounties][$bounty1 to true]]
+/*--------------- Bounties Missions -----------------*/
+
+/* Bounty 1 */
+:: Bounty1 Mission
+You approach [[the farmer|Farmer]] standing outside his barn. He's wearing stained overalls and a tacky orange hat. 
+His eyes widen and a bright smile appears on his face. He's missing a few teeth but a smile is a smile at the end of the day.
+
+
+:: Farmer
+"Hey cowpunk! I reckon with that look in your eye you've seen my little advertisement? 
+There's these huge rats chewing up all of my equipment! How's a farmer supposed to get any work done without my cyber tractor? 
+Anywho, I'll pay ya nicely if you can [[take care of those pesky little critters."|Help Farmer]]
+
+[[Leave|Cattle Run]]
+
+
+:: Help Farmer
+I lured 'em into the basement with some bait a couple of nights ago. 
+A little too big for me to deal with myself, but I knew this job might fit someone like yourself. 
+Here, I'll open the [[barn door.|Barn]]
+
+
+:: Barn
+The farmer very quickly thanks you for your bravery and sheepishly shuts the door behind you. 
+You can hear the latch shut on the outside, securing you and the rats in. 
+Is he really that scared of a few rats? 
+
+[[Look around|Look Around Barn]]
+
+
+:: Look Around Barn
+You see the basement door in the far right corner of the room. 
+To the left you see some [[hay bales and buckets of animal feed.|Barn Leftwall]]
+Along the back wall you see a [[table|Barn Backwall]] with a few items on it.
+
+
+:: Barn Leftwall
+Just some hay and feed. 
+Living out in Cattle Run has familiarized you with with raising livestock and keeping western traditions alive. 
+It's hard to find people who want this lifestyle anymore, especially being able to see the neon lights of the city anywhere you walk in Cattle Run. 
+
+[[Keep looking around|Look Around Barn]]
+
+
+:: Barn Backwall
+You see a table covered in sawdust, metal shavings, and various wires all connecting to who knows what. 
+Must be the farmers workbench. Under the table you see a [[metal box|Farmer's Lockbox]] with a lock on it.
+
+[[Keep looking around|Look Around Barn]]
+
+
+:: Farmer's Lock Box
+Looks important. The farmer probably wouldn't want you messing around with his stuff. But there might be something good in there.
+[[Shoot the lock off?|Opened Lockbox]]
+
+[[Keep looking around|Look Around Barn]]
+
+
+:: Opened Lock Box
+The bullet hits the center of the lock and shatters it like it was made of glass. 
+A small puff of smoke dissipates from the wound. You take the lock off and look inside. 
+There's 5 dollars and an old photograph of a woman wearing a tacky orange hat. You take the money 
+
+[[Keep looking around|Look Around Barn]]
+
+
+:: Barn Basement Door
+Rats Rats Rats
