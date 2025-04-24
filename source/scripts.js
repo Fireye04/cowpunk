@@ -7,25 +7,24 @@ config.history.controls = false;
 */
 
 const Sellable = {
-	constructor(cost) {
-		this.cost = cost;
-	},
 	buy() {
-		console.log(cost);
+		console.log(this.cost);
 	},
 };
 
 class weapon {
+	constructor(cost) {
+		this.cost = cost;
+	}
 	damage(damage) {
 		console.log(damage);
 	}
 }
 
-Object.assign(weapon, Sellable);
+Object.assign(weapon.prototype, Sellable);
 
 console.log("gothere");
 
 const gun = new weapon(3);
-gun.damage(9);
 gun.buy();
 
