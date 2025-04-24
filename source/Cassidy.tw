@@ -1,10 +1,10 @@
 :: Cassidy Start
 <<set $CorpoBounties = ["Corpo bounty 1","Corpo bounty 2","Corpo bounty 3","Corpo bounty 4"]>>
 <<set $CivilianBounties = ["Bounty 2"]>>
+<<set $current_bounty = "None">>
 Go to the [[bounty board | Bounty Board]]
 
 :: Bounty Board
-<<set $current_bounty = "None">>
 Before you lies an array of various bounties.
 [[Check out the first bounty | $CorpoBounties[0]]]
 [[Check out the second bounty | $CorpoBounties[1]]]
