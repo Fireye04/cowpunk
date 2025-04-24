@@ -1,5 +1,5 @@
 :: Cassidy Start
-<<set $CorpoBounties = ["Corpo bounty 1","Corpo bounty 2","Corpo bounty 3"]>>
+<<set $CorpoBounties = ["Corpo bounty 1","Corpo bounty 2","Corpo bounty 3","Corpo bounty 4"]>>
 <<set $CivilianBounties = ["Bounty 2"]>>
 Go to the [[bounty board | Bounty Board]]
 
@@ -8,8 +8,9 @@ Go to the [[bounty board | Bounty Board]]
 Before you lies an array of various bounties.
 [[Check out the first bounty | $CorpoBounties[0]]]
 [[Check out the second bounty | $CorpoBounties[1]]]
-[[Check out the second bounty | $CorpoBounties[2]]]
-Current bounty: $current_bounty
+[[Check out the third bounty | $CorpoBounties[2]]]
+[[Check out the fourth bounty | $CorpoBounties[3]]]
+Current bounty: <<print $current_bounty>>
 
 :: Corpo bounty 1
 In the corner of the bounty there is a corporate logo and two small stars.
@@ -50,5 +51,13 @@ Reward: $500
 <<link "Accept bounty" "Bounty Board">><<set $current_bounty = "Corpo bounty 3">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
 :: Corpo bounty 4
+In the corner of the bounty there is a corporate logo with just one small star.
+The top of the bounty reads "Defend" followed by a picture of the train station.
+The bounty's description reads:
+Duration: 1 day
+Act as guard at the train station to prevent unruly citizens from vaulting the pay gates to evade the train fare.
+Use any means to prevent citizens from avoiding the fare.
+Location: Train station
+Reward: $100
 
-
+<<link "Accept bounty" "Bounty Board">><<set $current_bounty = "Corpo bounty 4">><</link>> or [[Return to Bounty Board | Bounty Board]]
