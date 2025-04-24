@@ -147,26 +147,25 @@ config.history.controls = false;
 */
 
 const Sellable = {
-	constructor(cost) {
-		this.cost = cost;
-	},
 	buy() {
-		console.log(cost);
+		console.log(this.cost);
 	},
 };
 
 class weapon {
+	constructor(cost) {
+		this.cost = cost;
+	}
 	damage(damage) {
 		console.log(damage);
 	}
 }
 
-Object.assign(weapon, Sellable);
+Object.assign(weapon.prototype, Sellable);
 
 console.log("gothere");
 
 const gun = new weapon(3);
-gun.damage(9);
 gun.buy();
 
 </script><tw-passagedata pid="1" name="Andrew Start" tags="" position="100,100" size="100,100">Andrew file</tw-passagedata><tw-passagedata pid="2" name="Map" tags="" position="225,100" size="100,100">You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]</tw-passagedata><tw-passagedata pid="3" name="locations" tags="" position="350,100" size="100,100">[[Cattle&#39;s Run | Cow Town]]
