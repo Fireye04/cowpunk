@@ -8,6 +8,7 @@ Go to the [[bounty board | Bounty Board]]
 Before you lies an array of various bounties.
 [[Check out the first bounty | $CorpoBounties[0]]]
 [[Check out the second bounty | $CorpoBounties[1]]]
+[[Check out the second bounty | $CorpoBounties[2]]]
 Current bounty: $current_bounty
 
 :: Corpo bounty 1
@@ -16,13 +17,38 @@ The top of the bounty reads "Retrieve", underneath is a photo of (description of
 The bounty's description reads:
 Wanted for repeated failure to fulfill property tax payments over a period of two months.
 Retrieve the owed sum of $650 by any means necessary.
-Reward: $50
+Last known location: (name of shopkeepers shop)
+Reward: $100
 
-<<link "Accept bounty">> <<set $current_bounty = "Corpo bounty 1">> <</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "Bounty Board">><<set $current_bounty = "Corpo bounty 1">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
 
 :: Corpo bounty 2
+You notice a corporate logo and three small stars in the top corner of the bounty.
+In bold red text, the top of the bounty reads "Wanted dead or alive"
+Underneath is a photo of a young man with greasy blonde hair and a circular scar on his left temple.
+The bounty's description reads:
+Joshua Dean
+Wanted for theft of confidential company information, and threat to expose important company secrets.
+Eliminate or apprehend by any means necessary.
+Last known location: The Ashes
+Reward: $500
 
+<<link "Accept bounty" "Bounty Board">><<set $current_bounty = "Corpo bounty 2">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
 :: Corpo bounty 3
+The thin sheet of paper's upper corner appears to be branded with a corporate logo and three small stars.
+In bold red text, the top of the bounty reads "Wanted dead or alive"
+Underneath is a dark photo of a man in a bright red velvet suit.
+The bounty's description reads:
+Name unknown
+Wanted for card counting and repeated return to (name of casino) following expulsion.
+Eliminate or apprehend by any means necessary.
+Last known location: (name of casino)
+Reward: $500
+
+<<link "Accept bounty" "Bounty Board">><<set $current_bounty = "Corpo bounty 3">><</link>> or [[Return to Bounty Board | Bounty Board]]
+
+:: Corpo bounty 4
+
 
