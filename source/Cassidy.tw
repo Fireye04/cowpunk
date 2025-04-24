@@ -1,3 +1,17 @@
 :: Cassidy Start
-Cassidy file
+<<set $Bounties = ["Bounty 1"]>>
+Go to the [[bounty board | Bounty Board]]
+
+:: Bounty Board
+Before you lies an array of various bounties.
+[[ Check out the first bounty | $Bounties[0]]]
+
+:: Bounty 1
+Text
+
+:: Bounty 2
+
+
+:: Bounty 3
+
 
