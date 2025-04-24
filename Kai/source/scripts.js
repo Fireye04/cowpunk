@@ -27,4 +27,4 @@ Object.assign(weapon.prototype, Sellable);
 const gun = new weapon(3, function () {
 	return Math.random() * 8;
 });
-gun.buy();
+gun.damage();
