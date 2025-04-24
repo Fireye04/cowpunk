@@ -1,17 +1,26 @@
 :: Cassidy Start
-<<set $Bounties = ["Bounty 1"]>>
+<<set $CorpoBounties = ["Corpo bounty 1","Corpo bounty 2","Corpo bounty 3"]>>
+<<set $CivilianBounties = ["Bounty 2"]>>
 Go to the [[bounty board | Bounty Board]]
 
 :: Bounty Board
 Before you lies an array of various bounties.
-[[ Check out the first bounty | $Bounties[0]]]
+[[Check out the first bounty | $CorpoBounties[0]]]
+[[Check out the second bounty | $CorpoBounties[1]]]
 
-:: Bounty 1
-Text
+:: Corpo bounty 1
+In the corner of the bounty there is a corporate logo and two small stars.
+The top of the bounty reads "Retrieve", underneath is a photo of (description of shopkeeper) followed by (name of shopkeeper) 
+The bounty's description reads:
+Wanted for repeated failure to fulfill property tax payments over a period of two months.
+Retrieve the owed sum of $650 by any means necessary.
+Reward: $50
 
-:: Bounty 2
+<<link "Accept bounty" "Bounty Board">> <<$current_bounty = Corpo bounty 1>> <</link>> or [[Return to Bounty Board | Bounty Board]]
 
 
-:: Bounty 3
+:: Corpo bounty 2
 
+
+:: Corpo bounty 3
 
