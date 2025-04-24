@@ -1,7 +1,16 @@
-:: Bounties
-You approach the giant wooden board littered with wanted posters, body augmentation adverts, and bullet holes.
-There's [[several options|Bounty Options]] to choose from.
 
+
+:: Bounties
+
+
+You approach the giant wooden board littered with wanted posters, body augmentation adverts, and bullet holes. 
+
+There's [[several options|Bounty Options]] to choose from. 
+
+<<if $bounty1 is true>>[["Option1"|Option 1]]<</if>>
+
+:: Option1
+Hello
 
 :: Bounty Options
 The first bounty is an advert for [[rat extermination?|Bounty 1]]
@@ -12,23 +21,32 @@ The third bounty is actually an official [[wanted poster.|Bounty 3]]
 
 The fourth bounty is [[another wanted poster|Bounty 4]] covered in bullet holes.
 
+The fifth bounty is [[an old wanted poster| Bounty 5]]
+
+[[Leave|Bounties]]
+
 
 
 /* Bounties Section */
 :: Bounty 1
 A local Cattle Run farmer has been having some radioactive rat trouble. Seems like an easy way to make some money. 
+[[Accept?|Bounty 1 Accepted]] or [[Look at the other bounties|Bounty Options]]
 
 :: Bounty 2
 "This local scoundrel has been pestering my bar folk for the past week and its bad for business. 
 I have a lump some of cash for anyone that can make him disappear. He always hangs out behind the bar. Look for a green hat."
+[[Accept?|Bounty 2 Accepted]] or [[Look at the other bounties|Bounty Options]]
 
 :: Bounty 3
 "WANTED: ALIVE - $10 Reward. Tumbleweed Terry is wanted for stealing horses. Bring him back to the Jail in Cattle Run."
+[[Accept?|Bounty 3 Accepted]] or [[Look at the other bounties|Bounty Options]]
 
 :: Bounty 4
-"WANTED: DEAD or ALIVE - $40 Reward. The notorious gunslinger Chrome Carl has been site just outside Cattle Run."
+"WANTED: DEAD or ALIVE - $40 Reward. The notorious gunslinger Chrome Carl has been sited just outside Cattle Run.
+We cowpunks have enough trouble just trying to get by, we don't need to be killing each other anymore. Keep our Cattle Run safe and take him out"
+[[Accept?|Bounty 4 Accepted]] or [[Look at the other bounties|Bounty Options]]
 
-:: Bounty 5
 
-
-
+/* Bounties Accepted */
+:: Bounty 1 Acceptad
+[[Yay|Bounties][$bounty1 to "true"]]
