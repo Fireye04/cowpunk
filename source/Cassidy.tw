@@ -8,7 +8,6 @@ Go to the [[bounty board | Bounty Board]]
 Before you lies an array of various bounties.
 [[Check out the first bounty | $CorpoBounties[0]]]
 [[Check out the second bounty | $CorpoBounties[1]]]
-
 Current bounty: $current_bounty
 
 :: Corpo bounty 1
@@ -19,7 +18,7 @@ Wanted for repeated failure to fulfill property tax payments over a period of tw
 Retrieve the owed sum of $650 by any means necessary.
 Reward: $50
 
-<<link "Accept bounty" "Bounty Board">> <<$current_bounty = Corpo bounty 1>> <</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "Bounty Board">> <<set $current_bounty = "Corpo bounty 1">> <</link>> or [[Return to Bounty Board | Bounty Board]]
 
 
 :: Corpo bounty 2
