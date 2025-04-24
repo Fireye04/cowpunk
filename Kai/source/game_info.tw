@@ -10,4 +10,4 @@
 My Twine Game
 
 :: StoryInit
-<<set $myVariable to 1>>
+<<set $map to new Map([["key", "value"], ["key2", "value2"]])>>
