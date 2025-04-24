@@ -1,5 +1,6 @@
 :: Kai Start
 Downtime! we vibin
+<<set $map to new Map([["key", "value"], ["key2", "value2"]])>>
 <<run $map.set("key3", "another value")>>
 <<if $map.has("key")>>KEY<</if>>
 <<if $map.has("key2")>>KEY2<</if>>
