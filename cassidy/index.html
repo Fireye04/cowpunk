@@ -164,9 +164,18 @@ config.history.controls = false;
 
 [[Visit | Visit Church]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="9" name="Desert" tags="" position="1100,100" size="100,100">A sprawling desert that goes on for miles between the various cities and towns. Not much happens here, but some trains pass through on their way to the city. Every few miles you may be able to spot some dust-beaten buildings long-abandoned by their owners.
 
-[[Visit | Visit Desert]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="10" name="Cassidy Start" tags="" position="1225,100" size="100,100">&lt;&lt;set $Bounties = [&quot;Bounty 1&quot;]&gt;&gt;
+[[Visit | Visit Desert]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="10" name="Cassidy Start" tags="" position="1225,100" size="100,100">&lt;&lt;set $CorpoBounties = [&quot;Corpo bounty 1&quot;,&quot;Corpo bounty 2&quot;,&quot;Corpo bounty 3&quot;]&gt;&gt;
+&lt;&lt;set $CivilianBounties = [&quot;Bounty 2&quot;]&gt;&gt;
 Go to the [[bounty board | Bounty Board]]</tw-passagedata><tw-passagedata pid="11" name="Bounty Board" tags="" position="100,225" size="100,100">Before you lies an array of various bounties.
-[[ Check out the first bounty | $Bounties[0]]]</tw-passagedata><tw-passagedata pid="12" name="Bounty 1" tags="" position="225,225" size="100,100">Text</tw-passagedata><tw-passagedata pid="13" name="Bounty 2" tags="" position="350,225" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="Bounty 3" tags="" position="475,225" size="100,100"></tw-passagedata><tw-passagedata pid="15" name="Kai Start" tags="" position="600,225" size="100,100">Kai file</tw-passagedata><tw-passagedata pid="16" name="Start" tags="" position="725,225" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Andrew Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+[[Check out the first bounty | $CorpoBounties[0]]]
+[[Check out the second bounty | $CorpoBounties[1]]]</tw-passagedata><tw-passagedata pid="12" name="Corpo bounty 1" tags="" position="225,225" size="100,100">In the corner of the bounty there is a corporate logo and two small stars.
+The top of the bounty reads &quot;Retrieve&quot;, underneath is a photo of (description of shopkeeper) followed by (name of shopkeeper) 
+The bounty&#39;s description reads:
+Wanted for repeated failure to fulfill property tax payments over a period of two months.
+Retrieve the owed sum of $650 by any means necessary.
+Reward: $50
+
+&lt;&lt;link &quot;Accept bounty&quot; &quot;Bounty Board&quot;&gt;&gt; &lt;&lt;$current_bounty = Corpo bounty 1&gt;&gt; &lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="13" name="Corpo bounty 2" tags="" position="350,225" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="Corpo bounty 3" tags="" position="475,225" size="100,100"></tw-passagedata><tw-passagedata pid="15" name="Kai Start" tags="" position="600,225" size="100,100">Kai file</tw-passagedata><tw-passagedata pid="16" name="Start" tags="" position="725,225" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Andrew Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Caitlin&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Cassidy&quot; &quot;Cassidy Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Kai&quot; &quot;Kai Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
