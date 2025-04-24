@@ -2,6 +2,7 @@
 
 :: Bounties
 
+$bounty1
 
 You approach the giant wooden board littered with wanted posters, body augmentation adverts, and bullet holes. 
 
@@ -49,4 +50,4 @@ We cowpunks have enough trouble just trying to get by, we don't need to be killi
 
 /* Bounties Accepted */
 :: Bounty 1 Accepted
-[[Yay|Bounties][$bounty1 to "true"]]
+[[Yay|Bounties][set $bounty1 to true]]
