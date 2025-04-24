@@ -8,7 +8,7 @@ You approach the giant wooden board littered with wanted posters, body augmentat
 
 There's [[several options|Bounty Options]] to choose from. 
 
-<<if $bounty1 is true>>[["Option1"|Option 1]]<</if>>
+<<if $bounty1 is "true">>[["Option1"|Option 1]]<</if>>
 
 :: Option1
 Hello
@@ -50,4 +50,4 @@ We cowpunks have enough trouble just trying to get by, we don't need to be killi
 
 /* Bounties Accepted */
 :: Bounty 1 Accepted
-[[Yay|Bounties][set $bounty1 to true]]
+[[Yay|Bounties][$bounty1 to true]]
