@@ -4,9 +4,12 @@
 Go to the [[bounty board | Bounty Board]]
 
 :: Bounty Board
+<<set $current_bounty = "None">>
 Before you lies an array of various bounties.
 [[Check out the first bounty | $CorpoBounties[0]]]
 [[Check out the second bounty | $CorpoBounties[1]]]
+
+Current bounty: $current_bounty
 
 :: Corpo bounty 1
 In the corner of the bounty there is a corporate logo and two small stars.
