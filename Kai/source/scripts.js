@@ -32,9 +32,9 @@ const Damageable = (state) => {
 	};
 };
 
-Object.assign(weapon.prototype, Sellable);
+// Object.assign(weapon.prototype, Sellable);
 
-const gun = new weapon(3, function () {
-	return Math.floor(Math.random() * 8 + 0.5);
-});
-gun.damage();
+// const gun = new weapon(3, function () {
+// 	return Math.floor(Math.random() * 8 + 0.5);
+// });
+// gun.damage();
