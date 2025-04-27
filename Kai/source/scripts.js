@@ -5,10 +5,11 @@ config.ui.stowBarInitially = true;
 /* Hide the back / forward buttons
 config.history.controls = false;
 */
-
-window.Globals = {
+const Globals = {
 	money: 0,
 };
+
+window.Globals = Globals;
 
 const Sellable = (state) => {
 	buy: () => {
