@@ -10,4 +10,4 @@
 My Twine Game
 
 :: StoryInit
-<<Globals.init(101)>>
+<<script>>Globals.init(101)<</script>>
