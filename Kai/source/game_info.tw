@@ -10,4 +10,4 @@
 My Twine Game
 
 :: StoryInit
-<<set $map to new Map([["key", "value"], ["key2", "value2"]])>>
+<<Globals.init(100)>>
