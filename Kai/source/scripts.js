@@ -6,7 +6,7 @@ config.ui.stowBarInitially = true;
 config.history.controls = false;
 */
 
-const Globals = {
+window.Globals = {
 	money: 0,
 };
 
