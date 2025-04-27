@@ -149,7 +149,7 @@ config.history.controls = false;
 const Sellable = (state) => ({
 	buy: () => {
 		console.log(state.cost);
-		if (state.upgrades) {
+		if (typeof state.upgrades !== "undefined") {
 			console.log(state.upgrades);
 		}
 	},
@@ -176,7 +176,7 @@ const Augment = (cost, upgrades) => {
 };
 
 let gun = Weapon(3, 5);
-let arm = Augment(3, upgrades(5, 2));
+let arm = Augment(5, upgrades(5, 2));
 gun.damage();
 gun.buy();
 arm.buy();
