@@ -256,7 +256,7 @@ You take your money and [[leave without saying a word.|Bounties]]
 
 
 /* ------------------------ Bounty 3 ------------------------  */
-:: Bounty Mission 3
+:: Bounty 3 Mission
 You head out to Ember City. The bounty said that he was selling horses to the rich.
 These are work horses. In the city they're just going to be turned into show animals.
 These city folk won't know how to take care of them and sure as hell won't be willing to do it themselves.
@@ -348,7 +348,7 @@ You take your newly earned horse [[back home.|Bounties]]
 
 
 /* ------------------------ Bounty 4 ------------------------  */
-:: Bounty Mission 4
+:: Bounty 4 Mission 
 You head to the church out in the desert. You see folk just getting out of service and see their warm smiles and peaceful demeanors. 
 You look around the building and towards some of the benches set around for people to congregate. 
 
@@ -405,5 +405,3 @@ The sherriff looks at you holding Chrome Carl's hat and his eyes widen.
 "Kid...you really did it? I can't believe it. He was a legend. It's so sad to see the path he went down.
 Thank you for your help...us cowpunks need to work together instead of taking each other out. 
 Welp, here's [[your reward. (+$30)|Bounties]]"
-
-
