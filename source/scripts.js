@@ -6,31 +6,38 @@ config.ui.stowBarInitially = true;
 config.history.controls = false;
 */
 
-const Globals = {
-	money: 0,
-};
-
-const Sellable = (state) => {
+const Sellable = (state) => ({
 	buy: () => {
 		console.log(state.cost);
-	};
-};
-
-const Upgradeable = (state) => {
-	applyUpgrades: () => {
-		console.log(state.upgrades);
-	};
-};
-
-const Damageable = (state) => {
-	damage: () => {
-		console.log(this.damageFunc());
-	};
-};
-
-Object.assign(weapon.prototype, Sellable);
-
-const gun = new weapon(3, function () {
-	return Math.floor(Math.random() * 8 + 0.5);
+		if (typeof state.power !== "undefined") {
+			console.log(state.power);
+		}
+		if (typeof state.health !== "undefined") {
+			console.log(state.health);
+		}
+	},
 });
+
+const Damageable = (state) => ({
+	damage: () => {
+		console.log(state.damage);
+	},
+});
+
+const Weapon = (cost, damage) => {
+	let state = { cost, damage };
+
+	return Object.assign(state, Sellable(state), Damageable(state));
+};
+
+const Augment = (cost, power, health) => {
+	let state = { cost, power, health };
+
+	return Object.assign(state, Sellable(state));
+};
+
+let gun = Weapon(3, 4);
+let arm = Augment(5, 8, 2);
 gun.damage();
+gun.buy();
+arm.buy();
