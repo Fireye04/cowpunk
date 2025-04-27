@@ -171,7 +171,7 @@ const Weapon = (cost, damage) => {
 };
 
 const Augment = (cost, power, health) => {
-	let state = { cost, upgrades };
+	let state = { cost, power, health };
 
 	return Object.assign(state, Sellable(state));
 };
