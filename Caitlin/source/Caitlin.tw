@@ -15,6 +15,8 @@ You open up your old dirtied map to decide where you should go next. There are [
 
     [[Devil's Pass | Desert]]
 
+/* Cattle's Run*/
+
 :: Cow Town
 A large old timey rural town. Compared to the lights and glamour of the city it almost feels out of place- like it is meant to be from another time.
 As you walk in some people look your way; an older gentleman tips his hat to you OR a woman who had been sitting on her porch takes one glance at you before going indoors. You can faintly hear the sound of the deadbolt being slid in.
@@ -71,6 +73,8 @@ item 2
 
 item 3
 
+/* House */
+
 :: Your house
 An old rickety shed right outside Cattle's Run. You've lived here for ages after some hermit sold the place. It's not nice, but it's a safe place to lie low for a while.
 
@@ -117,6 +121,7 @@ You throw the can into the small can thats functioned as your trash for years be
 :: Leave House
 You make sure to lock the door behind you as you face the sprawling desert outside. You [[open your map | Locations]] to figure out where to go next.
 
+/* Ember City*/
 
 :: City
 A sprawling urban city with large skyscrapers and a constant blanket of light and smog. The people here reak of wealth. Underneath the city's image lies another name [[The Ashes | Ashes]]
@@ -163,6 +168,8 @@ augment 1 (expensive)
 augment 2 (expensive)
 augment 3 (expensive)
 
+/* The Ashes */
+
 :: Ashes
 In the deepest parts of Ember City there lies a maze of alleyways and ruins stacked on top of eachother. It's filled with those who earn their income in less trustworthy ways. If you are willing to take the chance there are "doctors" here you can visit for cybernetics and merchants selling under the table goods. The black market here thrives...just don't expect good quality.
 
@@ -191,6 +198,8 @@ augment 1
 augment 2 
 augment 3
 
+/* Church Town */
+
 :: Church town
 An old church town, not too crowded but still well-kept. Religious folk tend to gather here (and people looking to escape the law).
 
@@ -200,9 +209,33 @@ An old church town, not too crowded but still well-kept. Religious folk tend to 
 The church is busy today with people using the old building as a community center more than anything. A [[pastor | Pastor]] watches the people from a stand at the far end of the church. At one of the tables a group of older women sit around a [[board game | Game]] you don't recognize.
 
 :: Pastor
+The pastor is familiar to you, when your parents were still alive they would take you to his sermons. His hair has thinned over the years but his kind patient face remains the same. For a momnt his eye catches your own. You [[look away | Visit Church]]/[[walk up to him | Pastor Talk]]
 
+:: Pastor Talk
+The pastor nods to you as you approach, his lips tugging upwards into a smile. "I haven't seen you at mass in a long time," he laughs, "Have you been doing well?"
+
+[["I've been alright." | Alright]]
+[["Things have been better." | Better]]
+
+:: Alright
+The pastor nods, "That is good to hear. The church is always a safe place for you, if you need it."
+
+[["Thank you, but I'm not much of a holy person." | Pastor End]]
+
+:: Better
+The pastor's smile drops for only a moment before he waves you closer. "Unfortunately, that's what I've been hearing a lot of these days. I'm quite sorry about your parents." You know not far from the church your parents lie six feet under unmarked graves. The pastor at least has the mind to give a small apologetic smile.
+
+[["It's been hard." | Pastor End]]
+
+:: Pastor End
+"Even as times become harder I hope you can find a safe place here. I'm sure you're not here to entertain me though, I hope whatever you're here for finds you well."
+
+With that the pastor offers his hand. You take it for a moment, and the human contact feels comforting after so long alone. You give the man one last polite nod before [[turning back | Visit Church]] to the people flooding the church grounds.
 
 :: Game
+You walk up to the group of women all entranced by the game on the table. It involves cards being laid out on the table, each one depicting various machines. Even when you are right behind them none of them look your way. There's [[nothing more | Visit Church]] to see here.
+
+/* The Desert */
 
 :: Desert
 A sprawling desert that goes on for miles between the various cities and towns. Not much happens here, but some trains pass through on their way to the city. Every few miles you may be able to spot some dust-beaten buildings long-abandoned by their owners.
@@ -215,3 +248,60 @@ Just outside of town the desert winds start to buffet your face. The sun beats d
 [[Walk towards the train tracks | Train]] 
 or
 [[Go back to town | Cow Town]]
+
+:: Train
+The walk through the desert is uncomfortable but peaceful. The only thing that interrupts your thoughts is the howling wind and dust that whips across your face. When the train comes into view you spot a light- a fire next to the tracks. [[Investigate | Investigate Fire]]/ [[Leave | Visit Desert]]
+
+:: Investigate Fire
+Only a few meters away the dust gives way to the small camfire set up near the rusted metal train tracks. A figure sits near it; smoke billows from their lips as they bring a cigar to their lips. [[Talk to them | Stranger]]/[[Leave | Visit Desert]]
+
+:: Stranger
+You approach the stranger with hands raised. The figure tenses for a moment before turning to face you. You are met by the face of an older man. His dark eyes seem to see right through you.
+"Not often I find company here," he drawls, "Come. Sit."
+
+The man pats a spot on the dirt next to him and looks at you expectantly, drawing his cigar back between his lips. 
+
+[[Sit | Stranger Talk]]/ [[Turn Away | Stranger Leave]]
+
+:: Stranger Talk
+You feels your knees protest as you take a seat on the warm dirt. Without even looking at you the man offers the cigar. You take it and take a long draw, letting the smoke calm your nerves. He seems pleased when you hand it back.
+"Folks only come here when they're trying to escape something. What's got ya runnin'?"
+
+[[I feel like I'm stuck | Anticorp]]
+[[I don't know if I'm doing the right thing | Antiwork]]
+[[Am I human still? | Human]]
+
+
+:: Anticorp
+You shrug, staring at the lights of the city in the distance. "Too much noise. Feel like no matter what I do I'm not going nowhere," you frown.
+
+The stranger nods, his eyes following your own. "They'll bleed you dry out there kid. No fault of your own its just how it works."
+
+"What's the point?"
+
+"To live," the stranger replies, "Simple as that."
+
+:: Work
+You frown; the stress, both physical and mental, wears on your back. You can feel the sins you've committed just to live crawling under your skin. "I don't know if I'm doing the right thing."
+
+"Well you're alive aint ya? That's gotta count for somethin' right?"
+
+You shrug, reaching over to grab the cigar from the man again. He lets you take it from his fingers with no resistance. "Does it matter if I'm killing myself in the process?"
+
+"It's all perspective ain't it?" the stranger hums. "We all gotta die someday."
+
+:: Human
+You frown, the metal in your body feels like its heavier than normal. "I'm doing everything right but... I don't know what I am anymore."
+
+The stranger nods, looking you up and down. "You're a man tryin' his best."
+
+Your gaze falls to the metal augments adorning your body. You nearly can't remember how it felt before the metal started to encroach on your skin like a plague you can't escape. 
+
+[["Is it worth it if by the end I can't recognize myself?" | Myself]]
+[["I don't think I'm a man anymore | No Human"]]
+
+:: Myself
+"Thats up to you. You can stop whenever ya want; the world'll keep spinnin'."
+
+:: No Human
+"You've still gotta head on your shoulders don't ya? Seems man enough to me."
