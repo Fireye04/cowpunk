@@ -59,7 +59,7 @@ As you enter, the woman at the front counter's smile wavers. Her eyes scan you u
 
 OR 
 
-You walk up to the grocery store, but as you try to push the door open you are met with resistance. The people still around on the street watch you with disdain.
+You walk up to the grocery store, but as you try to push the door open you are met with resistance. The people still around on the street watch you with bairly hidden disdain.
 
 [[I'd like to look at your wares | cr.itemlist]] 
 [[Nothing | Visit Town ]]
@@ -75,6 +75,48 @@ item 3
 An old rickety shed right outside Cattle's Run. You've lived here for ages after some hermit sold the place. It's not nice, but it's a safe place to lie low for a while.
 
 [[Visit | Visit House]] or [[go back to the map | locations]]
+
+:: Visit House
+The old rickety door swings open with a whine of its rusted hinges. Light streams in from the thin curtains that cover the small window above your bed. An old dusty [[picture frame | Look]] glints under the light. Even so, [[the room | Bedroom]] feels homey and safe.
+
+:: Look
+You wipe the dust off with your gloved fingers. Under the thick coat of dirt two familiar faces stare back at you. Your parents were gone [[long before their time | Parents]]. Sometimes you still miss them.
+
+:: Parents
+Your parents died in the city doing the same work you do now. It makes you wonder if you shouldn't just setlle down in Cattle's Run OR You can't find it in yourself to care.
+
+[[Look away from the photo | Bedroom]]
+
+:: Bedroom 
+Your boots click against the wooden floor. [[Your bed | Sleep]] calls to you after so many sleepless days. [[The pantry | Pantry]] is never fully stocked, but you're sure you could find something there. Behind you [[the door | Leave House]] stands as a barrier between you and the stressors of the outside world.
+
+:: Sleep
+Sleep comes easy to you after so much time fighting for your life. You dream of a better home, a safer place. In your dream there is no more fighting, your gun is safely tucked away, only to be touched inc ase of emergency. People greet you as you walk past without a hint of trepidation. You awaken feeling rejuvenated.
+
+OR 
+
+Sleep doesn't come easily today. No matter what you do you can't seem to find comfort under your sheets. The harsh metal planes of your body seem to pinch the skin around them. When sleep finally claims you your dreams are filled wih unease. Darkness surrounds you and all around you, standing tall, are large shadowy towers. Metal scrapes against metal and gears whir in the distance. No matter how far you walk you cant seem to escape their metalic gaze. You awaken feeling unsteady. 
+
+OR
+
+No matter how hard you try you can't seem to fall asleep. Your mind is awake, powered by metal and wires rather than blood and muscle. You stay there for a few more minutes before giving up.
+
+You [[stand up | Leave House]] from bed, ready to go about the rest of your day.
+
+:: Pantry
+You open the pantry door and are met with a few dented cans of food. It's not much, but you can [[have a snack | Snack]] if you would like.
+
+:: Snack
+You crack open a can of black beans with a small pocket knife and sit down at the small one-seat table in the middle of your bedroom. You eat it slowly, savoring the meal that could always be your last OR It takes you a moment for you to realize you don't feel hungry... You don't feel anything anymore. This is pointless.
+
+[[Throw out the can | Trash]]
+
+:: Trash
+You throw the can into the small can thats functioned as your trash for years before heading for [[the door | Leave House]].
+
+:: Leave House
+You make sure to lock the door behind you as you face the sprawling desert outside. You [[open your map | Locations]] to figure out where to go next.
+
 
 :: City
 A sprawling urban city with large skyscrapers and a constant blanket of light and smog. The people here reak of wealth. Underneath the city's image lies another name [[The Ashes | Ashes]]
