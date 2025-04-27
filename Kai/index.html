@@ -175,8 +175,8 @@ const Augment = (cost, upgrades) => {
 	return Object.assign(state, Sellable(state));
 };
 
-gun = Weapon(3, 5);
-arm = Augment(3, upgrades(5, 2));
+let gun = Weapon(3, 5);
+let arm = Augment(3, upgrades(5, 2));
 gun.damage();
 gun.buy();
 arm.buy();
