@@ -15,7 +15,7 @@ You open up your old dirtied map to decide where you should go next. There are [
 
     [[Devil's Pass | Desert]]
 
-/* Cattle's Run*/
+/* Cattle's Run */
 
 :: Cow Town
 A large old timey rural town. Compared to the lights and glamour of the city it almost feels out of place- like it is meant to be from another time.
@@ -119,9 +119,9 @@ You crack open a can of black beans with a small pocket knife and sit down at th
 You throw the can into the small can thats functioned as your trash for years before heading for [[the door | Leave House]].
 
 :: Leave House
-You make sure to lock the door behind you as you face the sprawling desert outside. You [[open your map | Locations]] to figure out where to go next.
+You make sure to lock the door behind you as you face the sprawling desert outside. You [[open your map | locations]] to figure out where to go next.
 
-/* Ember City*/
+/* Ember City */
 
 :: City
 A sprawling urban city with large skyscrapers and a constant blanket of light and smog. The people here reak of wealth. Underneath the city's image lies another name [[The Ashes | Ashes]]
@@ -129,9 +129,18 @@ A sprawling urban city with large skyscrapers and a constant blanket of light an
 [[Visit | Visit City]] or [[go back to the map | locations]]
 
 :: Visit City
-The neon lights and constant blanket of noise welcomes you into the city. Skyscrapers tower above you like mountain tops you could never hope to climb. People pass by without offering you a second glance as they go about their days. There are numerous stores here, but you know the best ones... at least for your needs. There's a small [[mom and pop shop | ec.augments1]] that sells food and offers cybernetic enhancements whenever they have them in stock. The husband worked as an engineer for years, so his work isn't too bad, although he'd never really worked with augmentations before opening the store. There's also [[a fancy shop | ec.augments2]] uptown where the more well-off folks go to get new augmentations. The work is good if you can afford to pay the price.
+The neon lights and constant blanket of noise welcome you into the city. Skyscrapers tower above you like mountain tops you could never hope to climb. People pass by without offering you a second glance as they go about their days. There are numerous stores here, but you know the best ones... at least for your needs. There's a small [[mom and pop shop | ec.augments1]] that sells food and offers cybernetic enhancements whenever they have them in stock. The husband worked as an engineer for years, so his work isn't too bad, although he'd never really worked with augmentations before opening the store. There's also [[a fancy shop | ec.augments2]] uptown where the more well-off folks go to get new augmentations. The work is good if you can afford to pay the price. Towering above the rest of the city, like its own personal sun, the glowing lights of the [[Blue Flame Casino | Casino]] cast a dim light upon the other steal and glass buildings around it.
 
-[[Leave | Locations]]
+[[Leave | locations]]
+
+:: Casino
+The giant sign above the casino with its colored lights that twinkle like stars seems to call you in. The smell of smoke strengthens as you get closer, but if anything it nearly feels comforting- like a blanket pulled tight on a cold afternoon. The security robots? people? you're not sure, don't even look your way as you walk in. In the lobby there are several tables set up with dealers ready to play. The dealers themselves are some of the most augmented people you've ever seen- their entire faces transformed into an amalgamation of wires and lights. You [[sit down at a table | Gamble]]/[[go further in | investigate casino]]/[[leave | Visit City]].
+
+:: Gamble
+
+
+:: investigate casino
+
 
 :: ec.augments1
 The husband greets you as you walk in, his one metal arm that he'd gotten done not too long ago still shines brightly- not a single scratch or dent in sight. "Hey partner, what you in for today?"
