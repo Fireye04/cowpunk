@@ -21,7 +21,6 @@ The fourth bounty is [[another wanted poster|Bounty 4]] covered in bullet holes.
 [[Leave|Bounties]]
 
 
-
 /* Bounties Section */
 :: Bounty 1
 A local Cattle Run farmer has been having some radioactive rat trouble. Seems like an easy way to make some money. 
@@ -33,22 +32,27 @@ money or at least make sure we never see him again. The Platinum Palace in the A
 [[Accept?|Bounty 2 Mission]] or [[Look at the other bounties|Bounty Options]]
 
 :: Bounty 3
-"WANTED: ALIVE - $10 Reward. Tumbleweed Terry is wanted for stealing horses. Bring him back to the Jail in Cattle Run."
+"WANTED: ALIVE - $10 Reward. Tumbleweed Terry is wanted for stealing horses.
+His whereabouts are unknown but there are rumours that he is in Ember City. Bring him and the horse back.
 [[Accept?|Bounty 3 Mission]] or [[Look at the other bounties|Bounty Options]]
 
 :: Bounty 4
-"WANTED: DEAD or ALIVE - $40 Reward. The notorious gunslinger Chrome Carl has been sited just outside Cattle Run.
+"WANTED: DEAD or ALIVE - $20 Reward. The notorious gunslinger Chrome Carl has been sited just outside the church.
 We cowpunks have enough trouble just trying to get by, we don't need to be killing each other anymore. Keep our Cattle Run safe and take him out"
 [[Accept?|Bounty 4 Mission]] or [[Look at the other bounties|Bounty Options]]
 
-
+:: Bounty 5
+"WANTED: DEAD - $30 Reward. There have been several occurences of people disappearing out in the desert. 
+Only accept if you are a very capable individual. Who knows if these disappearences are due to humans or beasts.
+Find out what is making people disappear and you will be rewarded handsomely.
+[[Accept?|Bounty 5 Mission]] or [[Look at the other bounties|Bounty Options]]
 
 
 /*--------------------------------------- Bounties Missions -----------------------------------------*/
 
 /* ------------------------ Bounty 1 ------------------------ */
 :: Bounty 1 Mission
-You approach [[the farmer|Farmer]] standing outside his barn. He's wearing stained overalls and a tacky orange hat. 
+You approach [[the farmer|Farmer]] standing outside his barn. He's wearing stained overalls and a tacky orange bandana. 
 His eyes widen and a bright smile appears on his face. He's missing a few teeth but a smile is a smile at the end of the day.
 
 :: Farmer
@@ -89,16 +93,18 @@ Looks important. The farmer probably wouldn't want you messing around with his s
 [[Shoot the lock off?|Opened Lockbox]]
 [[Keep looking around|Look Around Barn]]
 
+/* TODO: Add 5 dollars */
 :: Opened Lockbox
 The bullet hits the center of the lock and shatters it like it was made of glass. 
 A small puff of smoke dissipates from the wound. You take the lock off and look inside. 
-There's 5 dollars and an old photograph of a woman wearing a tacky orange hat. You take the money 
+There's 5 dollars and an old photograph of a woman wearing a tacky orange bandana. You take the money 
 [[Keep looking around|Look Around Barn]]
 
 :: Barn Basement Door
 Rat encounter
 [[Complete Encounter|Bounty1 Complete]]
 
+/* TODO: Add 10 dollars */
 :: Bounty1 Complete
 "Did you get 'em all? Oh thank goodness! I don't know what I would've done if those rats stirred up anymore trouble.
 Here's that reward that I promised. It ain't much, but it's honest work. Stay safe out there!"
@@ -148,7 +154,6 @@ He heads outside.
 :: Follow Slippery Samuel
 You head outside and notice Samuel walking out towards one of the alleyways. 
 No one else is around and whoever is near is still in the bar. 
-
 [[You follow closely behind.|Follow Slippery Samuel 2]]
 
 :: Follow Slippery Samuel 2
@@ -175,7 +180,7 @@ or
 :: Confront Slippery Samuel 3
 "I really can't pal I'm sorry. I know you're probably here for a job or something, but I can't help you. 
 I need this next paycheck so I can catch the train and get far away from here. Too many bad memories in this place. One more week, I promise?"
-[[Offer to pay for his train ticket|Pay for train ticket]]
+[[Offer to pay for his train ticket (-$5)|Pay for train ticket]]
 or 
 [[Raise your gun|Confront Slippery Samuel with violence]]
 
@@ -192,6 +197,7 @@ That's how you deal with violence down here... you mind your business. You look 
 
 [[Take his wallet|Take Slippery Samuel's Wallet]]
 
+/* TODO: Add 2 dollars */
 :: Take Slippery Samuel's Wallet
 You rip the wallet out of his pocket and open it up. [[2...dollars.|Take Slippery Samuel's Wallet 2]]
 
@@ -200,6 +206,7 @@ Well, at least you still have the bounty reward to look forward to.
 
 [[Head back to the bar|Collect Bounty2 Reward]]
 
+/* TODO: Remove 5 dollars */
 :: Pay for train ticket
 "Wait... are you serious? Partner, I cannot thank you enough! I swear, I swear, I'll head back home and pack my stuff right away. 
 I'll be on the afternoon train tomorrow, don't you worry! You can tell whoever sent you that I'm dead, because I'll never be back here again.
@@ -209,6 +216,7 @@ He reaches into his coat and pulls out a revolver. It's a very dark metal and lo
 
 "I don't got nothing left to protect, cowpunk. [[She's yours|Samuel's Revolver]]"
 
+/* TODO: Add revolver */
 :: Samuel's Revolver
 He hands you the revolver and it's much heavier than yours. It takes a little extra strength to lift up, 
 but it fits perfectly in your hand. You look up and he's already walking away.
@@ -237,12 +245,165 @@ Now that's what I call fast response time! I know you probably don't mind, but I
 informal nature of this business. Couldn't risk getting involved with the law and I'll be damned if I sign a contract with those Corpos. 
 I guess sometimes all you need is a hungry cowpunk. Here, [[your reward|Bounty2 reward]]"
 
+/* TODO: Add 15 dollars */
 :: Bounty2 reward
 He throws $15 on the table and turns back around to continue counting a large pile of money.
 
 "Hey, and anytime you're up at the bar, tell em I got you for a free drink. Cheers"
 
-You're stunned with the irony of that statement for a few seconds. 
+You're stunned with the irony of that statement for a few seconds.
 You take your money and [[leave without saying a word.|Bounties]]
+
+
+/* ------------------------ Bounty 3 ------------------------  */
+:: Bounty Mission 3
+You head out to Ember City. The bounty said that he was selling horses to the rich.
+These are work horses. In the city they're just going to be turned into show animals.
+These city folk won't know how to take care of them and sure as hell won't be willing to do it themselves.
+
+With anger in your heart you walk through the city square. Nothing looks out of the ordinary.
+Skyscrapers line the corners of your vision. You do stand out among the Ember City folk, but no one fears you just because you're a cowpunk.
+
+As you scan your surroundings, you notice a trail of dirt that leads around one of the buildings.
+You follow it and with each step the density of the town folk grows. You sidle by each person coming and going from this loud event and 
+you eventually reach a point where you can see what they are all looking at.
+
+In the center of the town, you see a haphazardly thrown together desert environment made out of cardboard.
+There is a cardboard cactus with too many limbs painted with a neon green paint. There is an actual tumbleweed that somebody must've carried in from desert.
+It's pretty much reduced to a pile of sticks due to everyone kicking it around. Then you notice the sharply dressed man in the middle with a cowboy hat on.
+
+[[Tumbleweed Terry...|Tumbleweed Terry]]
+
+
+:: Tumbleweed Terry
+"Come one, come all! You city-folk finally have a chance to live out your western fantasies!
+These horses were once legendary creatures that helped cowpunks chase down outlaws. What was once out of reach for 
+you fancy city folk, is now for available thanks to yours truly...[[Tumbelweed Terry!|Tumbelweed Terry 2]]"
+
+
+:: Tumbelweed Terry 2
+As you get closer to the front of the audience, Terry notices you and your cowpunk get up.
+
+"Woah there part-ner! Looks like we have a big fan! Now this is the type of commitment that you city-folk need,
+lookie here!"
+
+The crowd all turns to look at you. You can hear "oohs" and "ahhs" as they notice your outfit.
+
+"Are you here to purchase a horse, or just show support young man?"
+
+The smile leaves his face as he notices your blank expression.
+
+[[Tell him that you know these horses aren't his to sell.|Tumbelweed Terry 3]]
+
+:: Tumbelweed Terry 3
+"Uhhhh... what are you talking about partner?! He he-"
+
+He shuffles around uncomfortably and notices the judgemental murmers in the crowd.
+He leans in closer to whisper to you.
+
+"Come on pal, you're making me look bad. What, do you want a cut of the money or something?
+I'm making a killing here. I know you're a cowpunk, but hey these folk don't know any better. 
+What do ya say?"
+
+[[Accept his offer (+$10)|Accept Tumbleweed Terry Bribe]]
+or
+[[Tell him that if he doesn't come with you then he'll never be able to set foot in Cattle Run again.|Confront Tumbleweed Terry]]
+
+:: Accept Tumbleweed Terry Bribe
+He hands you the money and gives you handshake. 
+
+"See, was that so hard? Now [[beat it|Bounties]] I got a horse to sell."
+
+:: Confront Tumbleweed Terry
+Oh yeah? You really think I'm going back there after making all of this money? Once I get these horse gone I'm going to be living the high life!
+Now unless you want to pay me for these horse you can beat it.
+
+[[Pay him for the horses(-$10)|Pay for the horses]]
+
+:: Pay for the horses
+"Really? Well I guess you are a bonafide cowpunk then. Fine. Take it, I get paid either way."
+
+He leans back up and addresses the crowd.
+
+"Alright folks! I'm sad to announce that we finally had an offer big enough! Our cowpunk fan will be taking this horse off my hands!
+Thank you all for showing up!"
+
+You saddle up on the horse and give it a nice gentle brush with your hand. You slowly make your way through the crowd and people part the way for you.
+Time to head back to [[Cattle Run|Bounty3 Reward]] empty handed.
+
+:: Bounty3 Reward
+You head back to Cattle Run and approach the local jail. The sherrif notices you on one of the horses that was stolen and smiles.
+
+"Hey cowpunk! I see that you've got one of the horses back. Where's [[Tumbleweed Terry?| Bounty3 Reward 2]]"
+
+:: Bounty3 Reward 2
+He's in the middle of Ember City just selling horses? By golly I guess the rumors are true. Well then, we'll dispatch some lawmen out their and bring him in.
+At least you got one of the horse back. Here, we'll give you [[half of the bounty (+$5)|Bounty3 Reward 3]] for traveling all the way out there for the horse.
+
+:: Bounty3 Reward 3
+"And you know what...I think that horse suits you. You wouldn't mind taking good care of her now would ya?
+It'll do you good as a cowpunk to have your own horse. Thanks again son, see you around."
+
+You take your newly earned horse [[back home.|Bounties]]
+
+
+/* ------------------------ Bounty 4 ------------------------  */
+:: Bounty Mission 4
+You head to the church out in the desert. You see folk just getting out of service and see their warm smiles and peaceful demeanors. 
+You look around the building and towards some of the benches set around for people to congregate. 
+
+No sign of Chrome Carl. You've heard the legends of him. He used to be a legendary figure in cowpunk culture but in recent years it seems that his gunfights have been
+less honorable and more of a disorganized pattern of killing. I wonder if he's gone cyber-psycho? 
+
+[[Enter the church|Enter the Church]]
+or
+[[Talk to the church-folk|Talk to church-folk]]
+
+:: Talk to church-folk
+
+
+:: Enter the Church
+You enter the church and look up at the beautifully shaped walls and ceilings. Ornate designs made out of marble with steel accents
+highlight the original interior plus modern rennovations thanks to donations from Ember City.
+
+At the very front row of the church, you see a lone person dressed in all black. You walk closer and start to notice how bright the surrounding area is.
+From what you can tell, most of his body is covered in cybernetic enhancements. His chrome skin was reflecting the light from the stained-glass windows.
+His presence was haunting, yet beautiful. Your eyes watched as the colors danced upon the church walls. The uncomfortable silence was broken by a single word.
+
+"[[Leave.|Chrome Carl]]"
+
+
+:: Chrome Carl
+"I know why you're here partner. It'd probably be best if you turned around. No reward is worth losing your life over."
+
+[[Tell him it's wrong to be killing your fellow cowpunks|Chrome Carl 2]]
+
+
+:: Chrome Carl 2
+"Cowpunks? You think these sorry excuses are considered cowpunks? You lot are stuck in the past. The only way that our folk can survive 
+is if we chrome up damnit. You think you meat sacks are gonna survive if all of a sudden those corpos decide to invade us? We need to be stronger unless we want
+our home to be a thing of the past. I'm just jumpstarting our evolution, son."
+
+[[Raise your gun|Chrome Carl Encounter]]
+
+
+:: Chrome Carl Encounter
+Alright son, but they won't remember you if you die.
+
+[[Fight Chrome Carl|Kill Chrome Carl]]
+
+:: Kill Chrome Carl
+"Good job kid... maybe there's hope for cowpunks yet." 
+
+You take his hat as proof of his death.
+
+[[Head back to the Cattle Run jail.|Bounty4 Reward]]
+
+:: Bounty4 Reward
+The sherriff looks at you holding Chrome Carl's hat and his eyes widen. 
+
+"Kid...you really did it? I can't believe it. He was a legend. It's so sad to see the path he went down.
+Thank you for your help...us cowpunks need to work together instead of taking each other out. 
+Welp, here's [[your reward. (+$30)|Bounties]]"
 
 
