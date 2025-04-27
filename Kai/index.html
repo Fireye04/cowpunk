@@ -145,20 +145,20 @@ config.ui.stowBarInitially = true;
 /* Hide the back / forward buttons
 config.history.controls = false;
 */
-const Globals = {
-	money: 0,
-	init: (startingMoney) => {
+const Globals = () => {
+	let money = 0;
+	function init(startingMoney) {
 		money = startingMoney;
-	},
+	}
 };
 
 window.Globals = Globals;
 
-const Sellable = (state) => {
+const Sellable = (state) => ({
 	buy: () => {
 		console.log(state.cost);
-	};
-};
+	},
+});
 
 const Upgradeable = (state) => {
 	applyUpgrades: () => {
