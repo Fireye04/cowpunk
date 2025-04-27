@@ -146,21 +146,27 @@ config.ui.stowBarInitially = true;
 config.history.controls = false;
 */
 
-const Sellable = {
-	buy() {
-		console.log(this.cost);
-	},
+const Globals = {
+	money: 0,
 };
 
-class weapon {
-	constructor(cost, damageFunc) {
-		this.cost = cost;
-		this.damageFunc = damageFunc;
-	}
-	damage() {
+const Sellable = (state) => {
+	buy: () => {
+		console.log(state.cost);
+	};
+};
+
+const Upgradeable = (state) => {
+	applyUpgrades: () => {
+		console.log(state.upgrades);
+	};
+};
+
+const Damageable = (state) => {
+	damage: () => {
 		console.log(this.damageFunc());
-	}
-}
+	};
+};
 
 Object.assign(weapon.prototype, Sellable);
 
@@ -189,11 +195,7 @@ gun.damage();
 [[Visit | Visit Church]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="9" name="Desert" tags="" position="1100,100" size="100,100">A sprawling desert that goes on for miles between the various cities and towns. Not much happens here, but some trains pass through on their way to the city. Every few miles you may be able to spot some dust-beaten buildings long-abandoned by their owners.
 
 [[Visit | Visit Desert]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="10" name="Cassidy Start" tags="" position="1225,100" size="100,100">Cassidy file</tw-passagedata><tw-passagedata pid="11" name="Kai Start" tags="" position="100,225" size="100,100">Downtime! we vibin
-&lt;&lt;set $map to new Map([[&quot;key&quot;, &quot;value&quot;], [&quot;key2&quot;, &quot;value2&quot;]])&gt;&gt;
-&lt;&lt;run $map.set(&quot;key3&quot;, &quot;another value&quot;)&gt;&gt;
-&lt;&lt;if $map.has(&quot;key&quot;)&gt;&gt;KEY&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $map.has(&quot;key2&quot;)&gt;&gt;KEY2&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $map.has(&quot;key3&quot;)&gt;&gt;&lt;&lt;print $map.get(&quot;key3&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Start" tags="" position="225,225" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Andrew Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;print $Globals.money&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Start" tags="" position="225,225" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Andrew Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Caitlin&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Cassidy&quot; &quot;Cassidy Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Kai&quot; &quot;Kai Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;

@@ -6,21 +6,27 @@ config.ui.stowBarInitially = true;
 config.history.controls = false;
 */
 
-const Sellable = {
-	buy() {
-		console.log(this.cost);
-	},
+const Globals = {
+	money: 0,
 };
 
-class weapon {
-	constructor(cost, damageFunc) {
-		this.cost = cost;
-		this.damageFunc = damageFunc;
-	}
-	damage() {
+const Sellable = (state) => {
+	buy: () => {
+		console.log(state.cost);
+	};
+};
+
+const Upgradeable = (state) => {
+	applyUpgrades: () => {
+		console.log(state.upgrades);
+	};
+};
+
+const Damageable = (state) => {
+	damage: () => {
 		console.log(this.damageFunc());
-	}
-}
+	};
+};
 
 Object.assign(weapon.prototype, Sellable);
 
