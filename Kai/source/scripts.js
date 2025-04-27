@@ -6,7 +6,7 @@ config.ui.stowBarInitially = true;
 config.history.controls = false;
 */
 const Globals = () => {
-	money = 0;
+	this.money = 0;
 	init = (startingMoney) => {
 		money = startingMoney;
 	};
