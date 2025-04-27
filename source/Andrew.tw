@@ -27,17 +27,14 @@ The fourth bounty is [[another wanted poster|Bounty 4]] covered in bullet holes.
 A local Cattle Run farmer has been having some radioactive rat trouble. Seems like an easy way to make some money. 
 [[Accept?|Bounty 1 Mission]] or [[Look at the other bounties|Bounty Options]]
 
-
 :: Bounty 2
-"This local scoundrel has been pestering my bar folk for the past week and its bad for business. 
-I have a lump some of cash for anyone that can make him disappear. He always hangs out behind the bar. Look for a green hat."
+"This scoundrel hasn't been paying his tab. Let's just say I have a lump some of cash for anyone that can collect that 
+money or at least make sure we never see him again. The Platinum Palace in the Ashes. He always hangs out in the back. Look for a green hat."
 [[Accept?|Bounty 2 Mission]] or [[Look at the other bounties|Bounty Options]]
-
 
 :: Bounty 3
 "WANTED: ALIVE - $10 Reward. Tumbleweed Terry is wanted for stealing horses. Bring him back to the Jail in Cattle Run."
 [[Accept?|Bounty 3 Mission]] or [[Look at the other bounties|Bounty Options]]
-
 
 :: Bounty 4
 "WANTED: DEAD or ALIVE - $40 Reward. The notorious gunslinger Chrome Carl has been sited just outside Cattle Run.
@@ -47,71 +44,205 @@ We cowpunks have enough trouble just trying to get by, we don't need to be killi
 
 
 
-/*--------------- Bounties Missions -----------------*/
+/*--------------------------------------- Bounties Missions -----------------------------------------*/
 
-/* Bounty 1 */
+/* ------------------------ Bounty 1 ------------------------ */
 :: Bounty 1 Mission
 You approach [[the farmer|Farmer]] standing outside his barn. He's wearing stained overalls and a tacky orange hat. 
 His eyes widen and a bright smile appears on his face. He's missing a few teeth but a smile is a smile at the end of the day.
 
-
 :: Farmer
 \"Hey cowpunk! I reckon with that look in your eye you've seen my little advertisement? 
 There's these huge rats chewing up all of my equipment! How's a farmer supposed to get any work done without my cyber tractor? 
-Anywho, I'll pay ya nicely if you can [[take care of those pesky little critters.|Help Farmer]]\"
-
+Anywho, I'll pay ya nicely if you can [[take care of those pesky little critters.|Help Farmer]]"
 [[Leave|Cattle Run]]
-
 
 :: Help Farmer
 "I lured 'em into the basement with some bait a couple of nights ago. 
 A little too big for me to deal with myself, but I knew this job might fit someone like yourself. 
 Here, I'll open the [[barn door.|Barn]]"
 
-
 :: Barn
 The farmer very quickly thanks you for your bravery and sheepishly shuts the door behind you. 
 You can hear the latch shut on the outside, securing you and the rats in. 
 Is he really that scared of a few rats? 
-
 [[Look around|Look Around Barn]]
 
-
 :: Look Around Barn
-You see the basement door in the far right corner of the room. 
+You see the [[basement door|Barn Basement Door]] in the far right corner of the room. 
 To the left you see some [[hay bales and buckets of animal feed.|Barn Leftwall]]
 Along the back wall you see a [[table|Barn Backwall]] with a few items on it.
-
 
 :: Barn Leftwall
 Just some hay and feed. 
 Living out in Cattle Run has familiarized you with with raising livestock and keeping western traditions alive. 
 It's hard to find people who want this lifestyle anymore, especially being able to see the neon lights of the city anywhere you walk in Cattle Run. 
-
 [[Keep looking around|Look Around Barn]]
-
 
 :: Barn Backwall
 You see a table covered in sawdust, metal shavings, and various wires all connecting to who knows what. 
 Must be the farmers workbench. Under the table you see a [[metal box|Farmer's Lockbox]] with a lock on it.
-
 [[Keep looking around|Look Around Barn]]
-
 
 :: Farmer's Lockbox
 Looks important. The farmer probably wouldn't want you messing around with his stuff. But there might be something good in there.
 [[Shoot the lock off?|Opened Lockbox]]
-
 [[Keep looking around|Look Around Barn]]
-
 
 :: Opened Lockbox
 The bullet hits the center of the lock and shatters it like it was made of glass. 
 A small puff of smoke dissipates from the wound. You take the lock off and look inside. 
 There's 5 dollars and an old photograph of a woman wearing a tacky orange hat. You take the money 
-
 [[Keep looking around|Look Around Barn]]
 
-
 :: Barn Basement Door
-Rats Rats Rats
+Rat encounter
+[[Complete Encounter|Bounty1 Complete]]
+
+:: Bounty1 Complete
+"Did you get 'em all? Oh thank goodness! I don't know what I would've done if those rats stirred up anymore trouble.
+Here's that reward that I promised. It ain't much, but it's honest work. Stay safe out there!"
+[[$10 reward|Bounties]]
+
+
+/* ------------------------ Bounty 2 ------------------------  */
+:: Bounty 2 Mission
+You enter the bar and are welcomed with a polite smile by one of the bartenders. His robotic hand whizzes as is he peels an orange with perfect precision.
+As he places the orange peel in the nearest patrons glass he asks, "How's it going partner? Don't think I've seen you 'round these parts."
+
+He's right, you don't drink and certainly are only here [[for business.|Talk to Bartender]]
+
+:: Talk to Bartender
+You ask the bartender a question.
+
+[[Have you seen anyone with a green hat?|Green Hat]]
+
+:: Green Hat
+Oh, yeah... Slippery Samuel. What a poor fellow.
+[[Where is he?|Where is Slippery Samuel]]
+or
+[[What's wrong with him?|Slippery Samuel]]
+
+:: Where is Slippery Samuel
+"Umm... I wouldn't...know""
+
+You notice their eyes keep darting towards a certain corner of the room. You turn to see what he's looking at and you see a table
+in the corner of the room. There's a half empty glasss on it...and a green hat. [[You look back towards the bartender|Where is Slippery Samuel 2]]
+
+:: Slippery Samuel
+"You haven't heard? His wife and child died in a freak accident last month. He's been a mess ever since. Us barfolk have been keeping him company.
+We all have our stories to share with eachother. Our manager doesn't seem to like our gratitude, but it's hard not to feel for the guy.
+He only ever orders that one bottle that no one likes anyways. Anyways, [[why do you ask?|Where is Slippery Samuel]]"
+
+:: Where is Slippery Samuel 2
+"Hey...if you're going to do anything, just please don't hurt him?"
+
+[[You wait|Where is Slippery Samuel 3]] at the bar for Slippery Samuel to come back.
+
+:: Where is Slippery Samuel 3
+After 15 minutes, you see someone walk in from the back entrance and head over to the table with the green hat. 
+They gulp down the rest of the drink and pick up their hat. He neatly adjusts it over his head and gives a wave to the bartender without even looking at him.
+He heads outside.
+[[Follow him|Follow Slippery Samuel]]
+
+:: Follow Slippery Samuel
+You head outside and notice Samuel walking out towards one of the alleyways. 
+No one else is around and whoever is near is still in the bar. 
+
+[[You follow closely behind.|Follow Slippery Samuel 2]]
+
+:: Follow Slippery Samuel 2
+Now both of you are within the depths of the Ashes. The mehcanical wurring of the undercity is a lot more muffled now. 
+As you follow behind him, you notice bottles and syringes lining the walls of the alleyways. Puddles of neon green liquid emit a sour smell as you walk by.
+Who knows why anyone would subject themselves to this environment, even if you have your reasons.
+
+As you leave your thoughts and lift your head up back to Samuel, you notice him staring at you.
+[[He looks up at you.|Confront Slippery Samuel]]
+
+:: Confront Slippery Samuel
+Howdy partner... can I help you?
+
+[[Tell him that you are here to collect the money for his tab.|Confront Slippery Samuel 2]]
+
+:: Confront Slippery Samuel 2
+Oh... well I suppose that I have been drinking a lot this month. I've been having to pay a lot of fees I'd never thought I'd have to pay. 
+Would you be so kind as to wait 'till next week? I swear I'll get it to you!
+
+[[Ask again|Confront Slippery Samuel 3]]
+or
+[[Raise your gun|Confront Slippery Samuel with violence]]
+
+:: Confront Slippery Samuel 3
+"I really can't pal I'm sorry. I know you're probably here for a job or something, but I can't help you. 
+I need this next paycheck so I can catch the train and get far away from here. Too many bad memories in this place. One more week, I promise?"
+[[Offer to pay for his train ticket|Pay for train ticket]]
+or 
+[[Raise your gun|Confront Slippery Samuel with violence]]
+
+:: Confront Slippery Samuel with violence
+Partner...please... I've been down on my luck and a drink is the only way I can keep my mind clear of everything. 
+I didn't think that old man would send a cowpunk after my ass. Now you let me go on my way...or you shoot me dead here son. Ain't much to live for anyways.
+[[Shoot him|Shoot Slippery Samuel]]
+or
+[[Offer to pay for his train ticket (-$5)|Pay for train ticket]]
+
+:: Shoot Slippery Samuel
+You shoot Slippery Samuel and he falls backward against the wall of the alleyway. You look around and notice several windows of the upper level buildings closing swiftly.
+That's how you deal with violence down here... you mind your business. You look back towards his body and notice his wallet peaking out of his pocket. 
+
+[[Take his wallet|Take Slippery Samuel's Wallet]]
+
+:: Take Slippery Samuel's Wallet
+You rip the wallet out of his pocket and open it up. [[2...dollars.|Take Slippery Samuel's Wallet 2]]
+
+:: Take Slippery Samuel's Wallet 2
+Well, at least you still have the bounty reward to look forward to.
+
+[[Head back to the bar|Collect Bounty2 Reward]]
+
+:: Pay for train ticket
+"Wait... are you serious? Partner, I cannot thank you enough! I swear, I swear, I'll head back home and pack my stuff right away. 
+I'll be on the afternoon train tomorrow, don't you worry! You can tell whoever sent you that I'm dead, because I'll never be back here again.
+Before I go, I have something that might be of use to you and your profession. I have no use for it where I'm going."
+
+He reaches into his coat and pulls out a revolver. It's a very dark metal and looks expensive.
+
+"I don't got nothing left to protect, cowpunk. [[She's yours|Samuel's Revolver]]"
+
+:: Samuel's Revolver
+He hands you the revolver and it's much heavier than yours. It takes a little extra strength to lift up, 
+but it fits perfectly in your hand. You look up and he's already walking away.
+
+[[Farewell partner.|Bounties]]
+
+:: Collect Bounty2 Reward
+You head back to the bar. As you walk in you notice that it's pretty much empty. The bartender is still there, drying off some glasses.
+He notices you, but then quickly shifts his focus back to his job. 
+
+You notice a door in the back that has the lights on still. [[Knock?|Manager's office]]
+
+:: Manager's office
+You knock on the door and hear large footsteps approach from the other side.
+The door swings open and you see a massive man decked out in cybernetic enhancements from head to toe.
+
+"Hey! We're clos-, hmmmm. You a cowpunk? 
+
+Ahhh must be. 
+
+I'm guessing the [[jobs done|Manager's office 2]] then eh?"
+
+:: Manager's office 2
+"Great! I appreciate your hard work buddy. Bounty was up for only 2 days and it got handled. 
+Now that's what I call fast response time! I know you probably don't mind, but I apologize for the 
+informal nature of this business. Couldn't risk getting involved with the law and I'll be damned if I sign a contract with those Corpos. 
+I guess sometimes all you need is a hungry cowpunk. Here, [[your reward|Bounty2 reward]]"
+
+:: Bounty2 reward
+He throws $15 on the table and turns back around to continue counting a large pile of money.
+
+"Hey, and anytime you're up at the bar, tell em I got you for a free drink. Cheers"
+
+You're stunned with the irony of that statement for a few seconds. 
+You take your money and [[leave without saying a word.|Bounties]]
+
+
