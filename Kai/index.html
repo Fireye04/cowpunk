@@ -149,8 +149,11 @@ config.history.controls = false;
 const Sellable = (state) => ({
 	buy: () => {
 		console.log(state.cost);
-		if (typeof state.upgrades !== "undefined") {
-			console.log(state.upgrades);
+		if (typeof state.power !== "undefined") {
+			console.log(state.power);
+		}
+		if (typeof state.health !== "undefined") {
+			console.log(state.health);
 		}
 	},
 });
@@ -161,22 +164,20 @@ const Damageable = (state) => ({
 	},
 });
 
-const upgrades = (health, power) => {};
-
 const Weapon = (cost, damage) => {
 	let state = { cost, damage };
 
 	return Object.assign(state, Sellable(state), Damageable(state));
 };
 
-const Augment = (cost, upgrades) => {
+const Augment = (cost, power, health) => {
 	let state = { cost, upgrades };
 
 	return Object.assign(state, Sellable(state));
 };
 
-let gun = Weapon(3, 5);
-let arm = Augment(5, upgrades(5, 2));
+let gun = Weapon(3, 4);
+let arm = Augment(5, 8, 2);
 gun.damage();
 gun.buy();
 arm.buy();
