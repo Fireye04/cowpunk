@@ -35,8 +35,8 @@ const Augment = (cost, upgrades) => {
 	return Object.assign(state, Sellable(state));
 };
 
-const gun = new Weapon(3, 5);
-const arm = new Augment(3, upgrades(5, 2));
+const gun = Weapon(3, 5);
+const arm = Augment(3, upgrades(5, 2));
 gun.damage();
 gun.buy();
 arm.buy();
