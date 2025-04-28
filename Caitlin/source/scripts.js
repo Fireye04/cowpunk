@@ -6,7 +6,6 @@ config.ui.stowBarInitially = true;
 config.history.controls = false;
 */
 
-
 // function You(Power, Damage, Health) {
 // 	this.Power = $You_Power;
 // 	this.Damage = $You_Damage;
@@ -72,8 +71,7 @@ function StartCombat(Difficulty, En_Health, En_Damage) {
 }
 
 window.test = function () {
-
 	console.log("mwahahah");
-}
-window.StartCombat(Difficulty,En_Health,En_Damage) = StartCombat(Difficulty, En_Health, En_Damage);
+};
+window.StartCombat = StartCombat(Difficulty, En_Health, En_Damage);
 
