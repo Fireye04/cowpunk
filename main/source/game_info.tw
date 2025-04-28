@@ -16,5 +16,6 @@ My Twine Game
 <<set $money to 0>>
 <<set $diceroll to 0>>
 
-<<set $weaponsCatalog to new Map([["bob", new Weapon("bob", "fuck off", 1,2)]])>>
-<<set $augmentsCatalog to new Map([["elbow", new Augment("bob's elbow", "fuck off", 1,2, 3)]])>>
+<<set $inv to new Inventory(null, null)>>
+
+<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])])>>
