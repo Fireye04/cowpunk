@@ -12,6 +12,6 @@ Cowpunk
 :: StoryInit
 <<set $map to new Map([["key", "value"], ["key2", "value2"]])>>
 <<set $money to 0>>
-<<set $power to 0>>
-<<set $health to 0>>
+<<set $power to 3>>
+<<set $health to 10>>
 <<set $humanity to 0>>
