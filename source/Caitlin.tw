@@ -155,13 +155,14 @@ The neon lights and constant blanket of noise welcome you into the city. Skyscra
 The giant sign above the casino with its colored lights that twinkle like stars seems to call you in. The smell of smoke strengthens as you get closer, but if anything it nearly feels comforting- like a blanket pulled tight on a cold afternoon. The security... robots? people? you're not sure, don't even look your way as you walk in. In the lobby there are several tables set up with dealers ready to play. The dealers themselves are some of the most augmented people you've ever seen- their entire faces transformed into an amalgamation of wires and lights. You [[sit down at a table | Gamble]]/[[go further in | investigate casino]]/[[leave | Visit City]].
 
 :: Gamble
-You sit down at a spider's eyes table and nod your head to the dealer. Its a simple game, one you played often in your youth. Both you and the dealer roll a die and whoever rolls the highest wins. The dealer is wearing one of the cleanest suits you've ever seen, its crisp black fabric is embroidered with gold thread along the lapels. He seems mostly human although you can't quite tell if the visor that wraps around his head is removable or not. Even still his voice sounds human enough. "Your wager?"
+You sit down at a spider's eyes table and nod your head to the dealer. Its a simple game, one you played often in your youth. Both you and the dealer roll a die and whoever rolls the highest wins. The dealer is wearing one of the cleanest suits you've ever seen, its crisp black fabric is embroidered with gold thread along the lapels. He seems mostly human although you can't quite tell if the visor that wraps around his head is removable or not. Even still his voice sounds human enough. "[[Your wager? | Wager]]"
 
-<<if $money = 0>>[[The gambler shakes his head when your wallets turn up empty. You can't gamble if you have nothing to start with. | Casino]]<</if>>
-<<if $money > 5>>[[5 | 5]]<</if>>
-<<if $money > 10>>[[10 | 10]]<</if>>
-<<if $money > 50>>[[50 | 50]]<</if>>
-<<if $money > 0>>[[ All in | All in]]<</if>>
+:: Wager
+    <<if $money = 0>>[[The gambler shakes his head when your wallets turn up empty. You can't gamble if you have nothing to start with. | Casino]]<</if>>
+    <<if $money > 5>>[[5 | 5]]<</if>>
+    <<if $money > 10>>[[10 | 10]]<</if>>
+    <<if $money > 50>>[[50 | 50]]<</if>>
+    <<if $money > 0>>[[ All in | All in]]<</if>>
 
 
 :: 5
