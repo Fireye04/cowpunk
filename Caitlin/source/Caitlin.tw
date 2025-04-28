@@ -20,14 +20,17 @@ You open up your old dirtied map to decide where you should go next. There are [
 
 :: Cow Town
 A large old timey rural town. Compared to the lights and glamour of the city it almost feels out of place- like it is meant to be from another time.
+As you walk in some people look your way; an older gentleman tips his hat to you OR a woman who had been sitting on her porch takes one glance at you before going indoors. You can faintly hear the sound of the deadbolt being slid in.
 
 [[Visit | Visit Town]] or [[go back to the map | locations]]
 
 :: Visit Town
-No matter how many times you've been here its striking how different Cattle's Run is from the city. The squat wooden buildings line a central dirt road that radiates warmth from the sun. As you walk in, some people look your way; an older gentleman tips his hat to you OR a woman who had been sitting on her porch takes one glance at you before going indoors. You can faintly hear the sound of the deadbolt being slid in.
-The [[firearm store | cr.gun]], run by a retired bounty hunter sits at the edge of town, right next to [[the old grocery store. | cr.item]] One side of the central street is lined with stalls where the various farmers sell their goods. You recognize an [[old friend | Friend]] among their lots. Right in the center of town the liquor store is guarded by an old looking [[dog. | Dog]]
-
+You walk into town. 
+[[a firearm store | cr.gun]] 
+[[a general store | cr.item]]
 [[Go somewhere else | locations]]
+[[Old Friend | Friend]]
+[[Dog | Dog]]
 
 :: cr.gun
 An older man with a bowler hat and a well-groomed mustache waves to you as you enter. "Good to see you in. Whatcha lookin' for today?"
@@ -53,11 +56,11 @@ gun 3
 :: cr.item
 The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. People come in and out frequently, and the brass chimes hanging by the door ring every few seconds.
 
-As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. "Good to see you darlin' What are you in for?"
+As you enter, the woman at the counter smiles wide at you and waves you over to where she sits. "Good to see you darlin' What are you in for?"
 
 OR
 
-As you enter the store, the woman at the front counter's smile wavers. Her eyes scan you up and down and her lips twitch down into a small frown. She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter.
+As you enter, the woman at the front counter's smile wavers. Her eyes scan you up and down and her lips twitch down into a small frown. She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter.
 
 OR 
 
@@ -74,20 +77,14 @@ item 2
 item 3
 
 :: Friend
-Tom, an old childhood friend can be found selling meat at the local market. He used to do what you do, but after a bad incident he decided it was best for him to settle down and work at his family's ranch. 
 
 :: Dog
 Outside the old run down liquor store an old stray mutt sits passively. The brown fluffy thing is curled up into a ball, allowing its long droopy ears to waterfall over its stubby legs. It's cute in an ugly way. As you pass by the dog's nose twitches. [[Ignore it | Ignore Dog]]/[[Pet the dog | Pet]]
 
 :: Ignore Dog
-The dog's tail wags lazily as you [[pass by. | Visit Town]] It almost seems disappointed. 
+The dog's tail wags lazily as you pass by. 
 
 :: Pet
-You bend down to offer the old dog your hand. Its wet nose brushes against you gloved hand as it sniffs you. It seems to consider you for a moment before lazily rolling over for you to scratch its stomach. By the time you [[stand back up | Visit Town]] the dog has fallen back asleep.
-
-OR
-
-You bend down to offer the old dog your hand. Its wet nose brushes against you gloved hand as it sniffs you. It seems to consider you for a moment before its tail's steady wag comes to a halt. A soft growl emenates from its chest. You [[stand back up | Visit Town]] before the dog can bite you..
 
 /* House */
 
@@ -150,32 +147,10 @@ The neon lights and constant blanket of noise welcome you into the city. Skyscra
 [[Leave | locations]]
 
 :: Casino
-The giant sign above the casino with its colored lights that twinkle like stars seems to call you in. The smell of smoke strengthens as you get closer, but if anything it nearly feels comforting- like a blanket pulled tight on a cold afternoon. The security... robots? people? you're not sure, don't even look your way as you walk in. In the lobby there are several tables set up with dealers ready to play. The dealers themselves are some of the most augmented people you've ever seen- their entire faces transformed into an amalgamation of wires and lights. You [[sit down at a table | Gamble]]/[[go further in | investigate casino]]/[[leave | Visit City]].
-
-:: Gamble
-You sit down at a spider's eyes table and nod your head to the dealer. Its a simple game, one you played often in your youth. Both you and the dealer roll a die and whoever rolls the highest wins. The dealer is wearing one of the cleanest suits you've ever seen, its crisp black fabric is embroidered with gold thread along the lapels. He seems mostly human although you can't quite tell if the visor that wraps around his head is removable or not. Even still his voice sounds human enough. "Your wager?"
-
-<<if $money = 0>>[[The gambler shakes his head when your wallets turn up empty. You can't gamble if you have nothing to start with. | Casino]]
-<<if $money > 5>>[[5 | 5]]<</if>>
-<<if $money > 10>>[[10 | 10]]<</if>>
-<<if $money >50 [[50 | 50]]<</if>>
-<<if $money > 0>>[[ All in | All in]]<</if>>
-
-
-:: 5
-<<set $money = $money - 5>>
-
-
-:: 10
-<<set $money = $money - 10>>
-
-:: 50
-<<set $money = $money - 50>>
-
-:: All in
+The giant sign above the casino with its colored lights that twinkle like stars seems to call you in. The smell of smoke strengthens as you get closer, but if anything it nearly feels comforting- like a blanket pulled tight on a cold afternoon. The security robots? people? you're not sure, don't even look your way as you walk in. In the lobby there are several tables set up with dealers ready to play. The dealers themselves are some of the most augmented people you've ever seen- their entire faces transformed into an amalgamation of wires and lights. You [[sit down at a table | Gamble]]/[[go further in | investigate casino]]/[[leave | Visit City]].
 
 :: investigate casino
-The hustle and bustle of people here is nearly overwhelming.
+The hustle and bustle of people here is nearly overwhelming. 
 
 :: ec.augments1
 The husband greets you as you walk in, his one metal arm that he'd gotten done not too long ago still shines brightly- not a single scratch or dent in sight. "Hey partner, what you in for today?"
