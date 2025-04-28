@@ -157,7 +157,7 @@ The giant sign above the casino with its colored lights that twinkle like stars 
 :: Gamble
 You sit down at a spider's eyes table and nod your head to the dealer. Its a simple game, one you played often in your youth. Both you and the dealer roll a die and whoever rolls the highest wins. The dealer is wearing one of the cleanest suits you've ever seen, its crisp black fabric is embroidered with gold thread along the lapels. He seems mostly human although you can't quite tell if the visor that wraps around his head is removable or not. Even still his voice sounds human enough. "Your wager?"
 
-<<if $money = 0>>[[The gambler shakes his head when your wallets turn up empty. You can't gamble if you have nothing to start with. | Casino]]
+<<if $money = 0>>[[The gambler shakes his head when your wallets turn up empty. You can't gamble if you have nothing to start with. | Casino]]>>
 <<if $money > 5>>[[5 | 5]]<</if>>
 <<if $money > 10>>[[10 | 10]]<</if>>
 <<if $money > 50>>[[50 | 50]]<</if>>
