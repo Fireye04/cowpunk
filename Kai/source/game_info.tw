@@ -18,5 +18,3 @@ My Twine Game
 
 <<set $weaponsCatalog to new Map([["bob", new Weapon("bob", "fuck off", 1,2)]])>>
 <<set $augmentsCatalog to new Map([["elbow", new Augment("bob's elbow", "fuck off", 1,2, 3)]])>>
-
-
