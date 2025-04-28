@@ -6,20 +6,6 @@ config.ui.stowBarInitially = true;
 config.history.controls = false;
 */
 
-// function You(Power, Damage, Health) {
-// 	this.Power = $You_Power;
-// 	this.Damage = $You_Damage;
-// 	this.Health = $You_Health;
-// }
-//
-// const you = new You($You_Power, $You_Damage, $You_Health);
-//
-// function Enemy(Power, Damage, Health, Difficulty) {
-// 	this.Damage = $En_Damage;
-// 	this.Health = $En_Health;
-// 	this.Difficulty = $Difficulty;
-// }
-
 function roll(You_Power, Difficulty) {
 	let numRolls = You_Power - Difficulty;
 	if (numRolls <= 0) {
