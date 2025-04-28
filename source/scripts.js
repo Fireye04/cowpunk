@@ -32,7 +32,7 @@ function roll(You_Power, Difficulty) {
 	for (let i = 0; i < numRolls; i++) {
 		rolls.push(Math.floor(Math.random() * 10 + 0.5));
 	}
-	let max = Math.max(...array1);
+	let max = Math.max(...rolls);
 
 	if (max <= 3) {
 		return "falure";
