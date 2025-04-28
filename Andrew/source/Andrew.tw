@@ -1,4 +1,8 @@
 
+:: You died
+You died. Your legend ends here.
+
+[[Restart?|Bounties]]
 
 
 :: Bounties
@@ -124,15 +128,38 @@ You take the money and close the Lockbox.
 
 /* TODO: Add Bounty1 Encounter*/
 :: Barn Basement Door
-Rat encounter
-[[Complete Encounter|Bounty1 Complete]]
+You creep down the basements steps, readying your weapon.
+
+You hear the scuffling of many feet, expecting a few rats. Large claw marks line the walls.
+
+When you finally reach the bottom of the staircase, you see a shuffling mass the size of a bathtub.
+Each of the rats is the size of a large tumbleweed and they seem to be stuck together at the tails.
+No sense in reasoning with them.
+
+[[Start fighting.|Bounty1 Complete]]
+
+:: Bounty1 Encounter 
+<<script>> StartCombat(1, 20, 2) <</script>>
+<<if $health > 0>> [[You Win!|Bounty1 Encounter Win]] 
+<<else>> [[You Lose | You died]] 
+<</if>>
+
+:: Bounty1 Encounter Win
+Despite the amount of rats, your strength overpowered them and you laid each and last everyone to rest.
+You left quite a mess though.
+
+[[Head back to the farmer to tell him the job is done|Bounty1 Complete]]
 
 /* TODO: Add 10 dollars */
 :: Bounty1 Complete
 "Did you get 'em all? Oh thank goodness! I don't know what I would've done if those rats stirred up anymore trouble.
 Here's that reward that I promised. It ain't much, but it's honest work. Stay safe out there!"
-[[$10 reward (+$10)|Bounties]]
+[[$10 reward (+$10)|Bounty1 Reward]]
 
+:: Bounty1 Reward
+<<set $money = $money + 10>>
+You collect the money and head back to your house.
+[[Head home.|Bounties]]
 
 /* ------------------------ Bounty 2 ------------------------  */
 :: Bounty 2 Mission
