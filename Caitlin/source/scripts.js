@@ -61,17 +61,24 @@ function Damage(
 	} else {
 		You_Health -= En_Damage;
 	}
-	return You_Health, En_Health;
+	return [You_Health, En_Health];
 }
 function StartCombat(Difficulty, En_Health, En_Damage) {
 	let local = variables();
-	local.health = 99;
-	// while (En_Health > 0 && local.health > 0) {}
+	while (En_Health > 0 && local.health > 0) {
+		console.log(local.health);
+		console.log(En_Health);
+		[local.health, En_Health] = Damage(
+			local.power,
+			Difficulty,
+			local.health,
+			En_Damage,
+			En_Health,
+			local.damage,
+		);
+	}
 }
 
-window.test = function () {
-	console.log("mwahahah");
-};
 window.StartCombat = (Dif, En_Health, En_Damage) =>
 	StartCombat(Dif, En_Health, En_Damage);
 
