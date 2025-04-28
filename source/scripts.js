@@ -53,8 +53,8 @@ const Augment = (name, description, cost, power, health) => {
 	return Object.assign(state, Sellable(state), Changeable(state));
 };
 
-let gun = Weapon("bill", "shoots stuff", 3, 4);
-let arm = Augment("bill", "shoots stuff", 5, 8, 2);
-gun.damage();
-gun.buy();
-arm.buy();
+window.Weapon = (name, description, cost, damage) =>
+	Weapon(name, description, cost, damage);
+
+window.Augment = (name, description, cost, power, health) =>
+	Augment(name, description, cost, power, health);
