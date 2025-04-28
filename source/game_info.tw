@@ -14,3 +14,4 @@ Cowpunk
 <<set $money to 0>>
 <<set $power to 0>>
 <<set $health to 0>>
+<<set $humanity to 0>>

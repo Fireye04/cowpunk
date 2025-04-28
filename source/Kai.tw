@@ -1,3 +1,6 @@
 :: Kai Start
 Downtime! we vibin
-
+<<set $weapon to new Weapon("bob", "fuck off", 1,2)>>
+<<run $weapon.buy()>>
+<<= $weapon.canAfford()>>
+<<run $weapon.damage()>>
