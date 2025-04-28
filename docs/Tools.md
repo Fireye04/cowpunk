@@ -81,7 +81,7 @@ Contains the following:
 - Weapons (Array) - defaults to []
 - Augments (Map) - defaults to fully initialized & empty map of body part to the current occupying augmentation.
 
-To initialize, do so empty unless you know what you're doing: `Inventory();`
+To initialize, do so empty unless you know what you're doing: `Inventory(null, null);`
 
 Inventory also contains a couple helpful functions:
 
