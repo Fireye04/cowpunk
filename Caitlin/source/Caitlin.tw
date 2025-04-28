@@ -159,10 +159,10 @@ You sit down at a spider's eyes table and nod your head to the dealer. Its a sim
 
 :: Wager
     <<if $money = 0>>[[The gambler shakes his head when your wallets turn up empty. You can't gamble if you have nothing to start with. | Casino]]<</if>>
-    <<if $money > 5>>[[5 | 5]]<</if>>
-    <<if $money > 10>>[[10 | 10]]<</if>>
-    <<if $money > 50>>[[50 | 50]]<</if>>
-    <<if $money > 0>>[[ All in | All in]]<</if>>
+    <<if $money gt 5>>[[5 | 5]]<</if>>
+    <<if $money gt 10>>[[10 | 10]]<</if>>
+    <<if $money gt 50>>[[50 | 50]]<</if>>
+    <<if $money gt 0>>[[ All in | All in]]<</if>>
 
 
 :: 5
