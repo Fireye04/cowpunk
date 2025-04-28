@@ -37,7 +37,7 @@ class Changeable {
 
 class Damageable {
 	damage() {
-		return state.damage;
+		return this.damage;
 	}
 }
 
