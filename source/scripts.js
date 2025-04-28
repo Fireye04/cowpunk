@@ -77,6 +77,12 @@ function StartCombat(Difficulty, En_Health, En_Damage) {
 			local.damage,
 		);
 	}
+	if (En_Health <= 0) {
+		console.log("you win");
+		return true;
+	}
+	console.log("you lose :(");
+	return false;
 }
 
 window.StartCombat = (Dif, En_Health, En_Damage) =>
