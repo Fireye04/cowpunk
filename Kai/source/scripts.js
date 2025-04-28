@@ -12,6 +12,7 @@ class Sellable {
 		local.money -= this.cost;
 		// Apply any stat mods if applicable
 		//TODO: Update when augments are added to revert old augment
+		console.log(typeof this.changeable);
 		if (typeof this.change === "function") {
 			this.change();
 		}
@@ -36,7 +37,7 @@ class Changeable {
 }
 
 class Damageable {
-	damage() {
+	getDamage() {
 		return this.damage;
 	}
 }
