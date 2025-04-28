@@ -6,50 +6,49 @@ config.ui.stowBarInitially = true;
 config.history.controls = false;
 */
 
-const Sellable = (state) => ({
-	buy: () => {
+class Sellable {
+	buy() {
 		let local = variables();
-		local.money -= state.cost;
+		local.money -= this.cost;
 		// Apply any stat mods if applicable
 		//TODO: Update when augments are added to revert old augment
 		if (typeof this.change === "function") {
 			this.change();
 		}
-	},
-	canAfford: () => {
+	}
+	canAfford() {
 		let local = variables();
-		return local.money >= state.cost;
-	},
-});
+		return local.money >= this.cost;
+	}
+}
 
-const Changeable = (power, health) => ({
-	change: () => {
+class Changeable {
+	change() {
 		let local = variables();
-		local.power += power;
-		local.health += health;
-	},
-	revert: () => {
+		local.power += this.power;
+		local.health += this.health;
+	}
+	revert() {
 		let local = variables();
-		local.power -= power;
-		local.health -= health;
-	},
-});
+		local.power -= this.power;
+		local.health -= this.health;
+	}
+}
 
-const Damageable = (state) => ({
-	damage: () => {
+class Damageable {
+	damage() {
 		return state.damage;
-	},
-});
+	}
+}
 
 window.Weapon = class Weapon {
 	constructor(name, description, cost, damage) {
-		let state = { name, description, cost, damage };
 		this.name = name || "Default";
 		this.description = description || "Default";
 		this.cost = cost || 100;
 		this.damage = damage || 0;
-
-		Object.assign(state, Sellable(state), Damageable(state));
+		this.sellable = new Sellable();
+		this.damageable = new Damageable();
 	}
 	clone() {
 		return new Weapon(this.name, this.description, this.cost, this.damage);
@@ -65,18 +64,26 @@ window.Weapon = class Weapon {
 			),
 		);
 	}
+	buy() {
+		this.sellable.buy();
+	}
+	canAfford() {
+		return this.sellable.canAfford();
+	}
+	damage() {
+		return this.damageable.damage();
+	}
 };
 
 window.Augment = class Augment {
 	constructor(name, description, cost, power, health) {
-		let state = { name, description, cost, power, health };
 		this.name = name || "Default";
-		this.description || "Default";
+		this.description = description || "Default";
 		this.cost = cost || 100;
 		this.power = power || 0;
 		this.health = health || 0;
-
-		Object.assign(state, Sellable(state), Changeable(state));
+		this.sellable = new Sellable();
+		this.changeable = new Changeable();
 	}
 	clone() {
 		return new Augment(
@@ -98,5 +105,17 @@ window.Augment = class Augment {
 				JSON.stringify(this.health),
 			),
 		);
+	}
+	buy() {
+		this.sellable.buy();
+	}
+	canAfford() {
+		return this.sellable.canAfford();
+	}
+	change() {
+		this.changeable.change();
+	}
+	revert() {
+		this.changeable.revert();
 	}
 };
