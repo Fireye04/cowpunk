@@ -11,3 +11,5 @@ My Twine Game
 
 :: StoryInit
 <<set $health to 1>>
+<<set $power to 3>>
+<<set $damage to 3>>
