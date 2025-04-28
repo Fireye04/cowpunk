@@ -240,11 +240,15 @@ class Changeable {
 		let local = variables();
 		local.power += this.parent.power;
 		local.health += this.parent.health;
+		local.humanity += this.parent.humanity;
+		local.fame += this.parent.fame;
 	}
 	revert() {
 		let local = variables();
 		local.power -= this.parent.power;
 		local.health -= this.parent.health;
+		local.humanity -= this.parent.humanity;
+		local.fame -= this.parent.fame;
 	}
 }
 
@@ -303,13 +307,25 @@ window.Weapon = class Weapon {
 };
 
 window.Augment = class Augment {
-	constructor(name, description, location, cost, power, health, shops) {
+	constructor(
+		name,
+		description,
+		location,
+		cost,
+		power,
+		health,
+		humanity,
+		fame,
+		shops,
+	) {
 		this.name = name ??= "Default";
 		this.description = description ??= "Default";
 		this.location = location ??= "arms";
 		this.cost = cost ??= 100;
 		this.power = power ??= 0;
 		this.health = health ??= 0;
+		this.humanity = humanity ??= 0;
+		this.fame = fame ??= 0;
 		this.shops = shops ??= ["deadeye"];
 		this.sellable = new Sellable(this);
 		this.changeable = new Changeable(this);
@@ -322,19 +338,23 @@ window.Augment = class Augment {
 			this.cost,
 			this.power,
 			this.health,
+			this.humanity,
+			this.fame,
 			this.shops,
 		);
 	}
 	toJSON() {
 		return Serial.createReviver(
 			String.format(
-				"new Augment({0},{1},{2},{3},{4},{5},{6})",
+				"new Augment({0},{1},{2},{3},{4},{5},{6},{7},{8})",
 				JSON.stringify(this.name),
 				JSON.stringify(this.description),
 				JSON.stringify(this.location),
 				JSON.stringify(this.cost),
 				JSON.stringify(this.power),
 				JSON.stringify(this.health),
+				JSON.stringify(this.humanity),
+				JSON.stringify(this.fame),
 				JSON.stringify(this.shops),
 			),
 		);
@@ -450,13 +470,7 @@ window.Catalog = class Catalog {
 		return total;
 	}
 };
-
-// Shops //
-let shop1 = "deadeye"
-let shop2 = "the iron giant"
-let shop3 = "cyberwares"
-let shop4 = "blackmarket guns"
-let shop5 = "forge and flame"</script><tw-passagedata pid="1" name="Andrew Start" tags="" position="100,100" size="100,100">Andrew file</tw-passagedata><tw-passagedata pid="2" name="Caitlin Start" tags="" position="225,100" size="100,100">Caitlin file</tw-passagedata><tw-passagedata pid="3" name="Map" tags="" position="350,100" size="100,100">You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]</tw-passagedata><tw-passagedata pid="4" name="locations" tags="" position="475,100" size="100,100">[[Cattle&#39;s Run | Cow Town]]
+</script><tw-passagedata pid="1" name="Andrew Start" tags="" position="100,100" size="100,100">Andrew file</tw-passagedata><tw-passagedata pid="2" name="Caitlin Start" tags="" position="225,100" size="100,100">Caitlin file</tw-passagedata><tw-passagedata pid="3" name="Map" tags="" position="350,100" size="100,100">You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]</tw-passagedata><tw-passagedata pid="4" name="locations" tags="" position="475,100" size="100,100">[[Cattle&#39;s Run | Cow Town]]
     
     [[Home | Your house]]
     
@@ -627,6 +641,8 @@ Your gaze falls to the metal augments adorning your body. You nearly can&#39;t r
 &lt;&lt;set $damage to 3&gt;&gt;
 &lt;&lt;set $money to 1000&gt;&gt;
 &lt;&lt;set $diceroll to 0&gt;&gt;
+&lt;&lt;set $humanity to 0&gt;&gt;
+&lt;&lt;set $fame to 0&gt;&gt;
 
 
 &lt;&lt;set $inv to new Inventory(null, null)&gt;&gt;
