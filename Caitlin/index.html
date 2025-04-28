@@ -428,7 +428,7 @@ You [[stand up | Leave House]] from bed, ready to go about the rest of your day.
 &lt;&lt;if $money &gt; 0&gt;&gt;[[ All in | All in]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="5" tags="" position="1100,350" size="100,100">&lt;&lt;set $money = $money - 5&gt;&gt;
 &lt;&lt;set $diceroll = random(1,10)&gt;&gt;
 &lt;&lt;set $dealer = random (1,10)&gt;&gt;
-&lt;&lt;if $diceroll &gt; $dealer&gt;&gt;&lt;&lt;set $money = $money + 10&gt;&gt;
+&lt;&lt;if $diceroll &gt; $dealer&gt;&gt;&lt;&lt;set $money = $money + 10&gt;&gt;&gt;&gt;
 &lt;&lt;if $diceroll &gt; $dealer&gt;&gt;[[You win | GamblingWin]]&lt;&lt;else&gt;&gt;[[You lose | GamblingLose]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="10" tags="" position="1225,350" size="100,100">&lt;&lt;set $money = $money - 10&gt;&gt;
 &lt;&lt;set $diceroll = random(1,10)&gt;&gt;
 &lt;&lt;set $dealer = random (1,10)&gt;&gt;

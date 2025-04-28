@@ -168,7 +168,7 @@ You sit down at a spider's eyes table and nod your head to the dealer. Its a sim
 <<set $money = $money - 5>>
 <<set $diceroll = random(1,10)>>
 <<set $dealer = random (1,10)>>
-<<if $diceroll > $dealer>><<set $money = $money + 10>>
+<<if $diceroll > $dealer>><<set $money = $money + 10>>>>
 <<if $diceroll > $dealer>>[[You win | GamblingWin]]<<else>>[[You lose | GamblingLose]]<</if>>
 
 :: 10
