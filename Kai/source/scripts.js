@@ -279,17 +279,17 @@ window.Inventory = class Inventory {
 
 window.Catalog = class Catalog {
 	constructor(items) {
-		let items = (items ??= []);
+		let itTemp = (items ??= []);
 
 		// Removes items that have not implemented sellable
 		let toRemove = [];
-		for (let i = 0; i < items.length; i++) {
-			let item = items[i];
+		for (let i = 0; i < itTemp.length; i++) {
+			let item = itTemp[i];
 			if (typeof item.sellable !== "object") {
 				toRemove.push(item);
 			}
 		}
-		this.items = items.filter((item) => !toRemove.includes(item));
+		this.items = itTemp.filter((item) => !toRemove.includes(item));
 	}
 	clone() {
 		return new Catalog(this.items);

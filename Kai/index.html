@@ -419,17 +419,17 @@ window.Inventory = class Inventory {
 
 window.Catalog = class Catalog {
 	constructor(items) {
-		let items = (items ??= []);
+		let itTemp = (items ??= []);
 
 		// Removes items that have not implemented sellable
 		let toRemove = [];
-		for (let i = 0; i < items.length; i++) {
-			let item = items[i];
+		for (let i = 0; i < itTemp.length; i++) {
+			let item = itTemp[i];
 			if (typeof item.sellable !== "object") {
 				toRemove.push(item);
 			}
 		}
-		this.items = items.filter((item) => !toRemove.includes(item));
+		this.items = itTemp.filter((item) => !toRemove.includes(item));
 	}
 	clone() {
 		return new Catalog(this.items);
@@ -628,7 +628,7 @@ Your gaze falls to the metal augments adorning your body. You nearly can&#39;t r
 &lt;&lt;set $money to 0&gt;&gt;
 &lt;&lt;set $diceroll to 0&gt;&gt;
 
-&lt;&lt;set $inv to new Inventory()&gt;&gt;
+&lt;&lt;set $inv to new Inventory(null, null)&gt;&gt;
 
 &lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;deadeye&quot;])])&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
