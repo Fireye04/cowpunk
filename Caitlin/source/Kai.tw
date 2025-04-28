@@ -1,3 +1,4 @@
 :: Kai Start
 Kai file
 <<script>>StartCombat(1,2,3);<</script>>
+<<= $health>>
