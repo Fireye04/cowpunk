@@ -421,25 +421,25 @@ You [[stand up | Leave House]] from bed, ready to go about the rest of your day.
 
 [[Leave | locations]]</tw-passagedata><tw-passagedata pid="27" name="Casino" tags="" position="850,350" size="100,100">The giant sign above the casino with its colored lights that twinkle like stars seems to call you in. The smell of smoke strengthens as you get closer, but if anything it nearly feels comforting- like a blanket pulled tight on a cold afternoon. The security... robots? people? you&#39;re not sure, don&#39;t even look your way as you walk in. In the lobby there are several tables set up with dealers ready to play. The dealers themselves are some of the most augmented people you&#39;ve ever seen- their entire faces transformed into an amalgamation of wires and lights. You [[sit down at a table | Gamble]]/[[go further in | investigate casino]]/[[leave | Visit City]].</tw-passagedata><tw-passagedata pid="28" name="Gamble" tags="" position="975,350" size="100,100">You sit down at a spider&#39;s eyes table and nod your head to the dealer. Its a simple game, one you played often in your youth. Both you and the dealer roll a die and whoever rolls the highest wins. The dealer is wearing one of the cleanest suits you&#39;ve ever seen, its crisp black fabric is embroidered with gold thread along the lapels. He seems mostly human although you can&#39;t quite tell if the visor that wraps around his head is removable or not. Even still his voice sounds human enough. &quot;Your wager?&quot;
 
-&lt;&lt;if $money = 0&gt;&gt;[[The gambler shakes his head when your wallets turn up empty. You can&#39;t gamble if you have nothing to start with. | Casino]]&gt;&gt;
+&lt;&lt;if $money = 0&gt;&gt;[[The gambler shakes his head when your wallets turn up empty. You can&#39;t gamble if you have nothing to start with. | Casino]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $money &gt; 5&gt;&gt;[[5 | 5]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $money &gt; 10&gt;&gt;[[10 | 10]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $money &gt; 50&gt;&gt;[[50 | 50]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $money &gt; 0&gt;&gt;[[ All in | All in]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="5" tags="" position="1100,350" size="100,100">&lt;&lt;set $money = $money - 5&gt;&gt;
 &lt;&lt;set $diceroll = random(1,10)&gt;&gt;
 &lt;&lt;set $dealer = random (1,10)&gt;&gt;
-&lt;&lt;if $diceroll &gt; $dealer&gt;&gt;&lt;&lt;set $money = $money + 10&gt;&gt;&gt;&gt;
+&lt;&lt;if $diceroll &gt; $dealer&gt;&gt;&lt;&lt;set $money = $money + 10&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $diceroll &gt; $dealer&gt;&gt;[[You win | GamblingWin]]&lt;&lt;else&gt;&gt;[[You lose | GamblingLose]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="10" tags="" position="1225,350" size="100,100">&lt;&lt;set $money = $money - 10&gt;&gt;
 &lt;&lt;set $diceroll = random(1,10)&gt;&gt;
 &lt;&lt;set $dealer = random (1,10)&gt;&gt;
-&lt;&lt;if $diceroll &gt; $dealer&gt;&gt;&lt;&lt;set $money = $money + 20&gt;&gt;
+&lt;&lt;if $diceroll &gt; $dealer&gt;&gt;&lt;&lt;set $money = $money + 20&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $diceroll &gt; $dealer&gt;&gt;[[You win | GamblingWin]]&lt;&lt;else&gt;&gt;[[You lose | GamblingLose]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="50" tags="" position="100,475" size="100,100">&lt;&lt;set $money = $money - 50&gt;&gt;
 &lt;&lt;set $diceroll = random(1,10)&gt;&gt;
 &lt;&lt;set $dealer = random (1,10)&gt;&gt;
-&lt;&lt;if $diceroll &gt; $dealer&gt;&gt;&lt;&lt;set $money = $money + 100&gt;&gt;
+&lt;&lt;if $diceroll &gt; $dealer&gt;&gt;&lt;&lt;set $money = $money + 100&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $diceroll &gt; $dealer&gt;&gt;[[You win | GamblingWin]]&lt;&lt;else&gt;&gt;[[You lose | GamblingLose]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="All in" tags="" position="225,475" size="100,100">&lt;&lt;set $diceroll = random(1,10)&gt;&gt;
 &lt;&lt;set $dealer = random (1,10)&gt;&gt;
-&lt;&lt;if $diceroll &gt; $dealer&gt;&gt;&lt;&lt;set $money = $money * 2&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $money = 0&gt;&gt;
+&lt;&lt;if $diceroll &gt; $dealer&gt;&gt;&lt;&lt;set $money = $money * 2&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $money = 0&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $diceroll &gt; $dealer&gt;&gt;[[You win | GamblingWin]]&lt;&lt;else&gt;&gt;[[You lose | GamblingLose]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="investigate casino" tags="" position="350,475" size="100,100">The hustle and bustle of people here is nearly overwhelming.</tw-passagedata><tw-passagedata pid="34" name="ec.augments1" tags="" position="475,475" size="100,100">The husband greets you as you walk in, his one metal arm that he&#39;d gotten done not too long ago still shines brightly- not a single scratch or dent in sight. &quot;Hey partner, what you in for today?&quot;
 
 OR 
