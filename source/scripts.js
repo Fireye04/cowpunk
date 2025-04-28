@@ -100,11 +100,15 @@ class Changeable {
 		let local = variables();
 		local.power += this.parent.power;
 		local.health += this.parent.health;
+		local.humanity += this.parent.humanity;
+		local.fame += this.parent.fame;
 	}
 	revert() {
 		let local = variables();
 		local.power -= this.parent.power;
 		local.health -= this.parent.health;
+		local.humanity -= this.parent.humanity;
+		local.fame -= this.parent.fame;
 	}
 }
 
@@ -163,13 +167,25 @@ window.Weapon = class Weapon {
 };
 
 window.Augment = class Augment {
-	constructor(name, description, location, cost, power, health, shops) {
+	constructor(
+		name,
+		description,
+		location,
+		cost,
+		power,
+		health,
+		humanity,
+		fame,
+		shops,
+	) {
 		this.name = name ??= "Default";
 		this.description = description ??= "Default";
 		this.location = location ??= "arms";
 		this.cost = cost ??= 100;
 		this.power = power ??= 0;
 		this.health = health ??= 0;
+		this.humanity = humanity ??= 0;
+		this.fame = fame ??= 0;
 		this.shops = shops ??= ["deadeye"];
 		this.sellable = new Sellable(this);
 		this.changeable = new Changeable(this);
@@ -182,19 +198,23 @@ window.Augment = class Augment {
 			this.cost,
 			this.power,
 			this.health,
+			this.humanity,
+			this.fame,
 			this.shops,
 		);
 	}
 	toJSON() {
 		return Serial.createReviver(
 			String.format(
-				"new Augment({0},{1},{2},{3},{4},{5},{6})",
+				"new Augment({0},{1},{2},{3},{4},{5},{6},{7},{8})",
 				JSON.stringify(this.name),
 				JSON.stringify(this.description),
 				JSON.stringify(this.location),
 				JSON.stringify(this.cost),
 				JSON.stringify(this.power),
 				JSON.stringify(this.health),
+				JSON.stringify(this.humanity),
+				JSON.stringify(this.fame),
 				JSON.stringify(this.shops),
 			),
 		);
@@ -310,10 +330,3 @@ window.Catalog = class Catalog {
 		return total;
 	}
 };
-
-// Shops //
-let shop1 = "deadeye"
-let shop2 = "the iron giant"
-let shop3 = "cyberwares"
-let shop4 = "blackmarket guns"
-let shop5 = "forge and flame"
