@@ -120,6 +120,7 @@ A small puff of smoke dissipates from the wound. You take the lock off and look 
 There's 5 dollars and an old photograph of a woman wearing a tacky orange bandana. 
 [[Take the money (+$5) and keep looking around|Take the money]]
 
+/* Add Money */
 :: Take the money
 <<set $money = $money + 5>>
 You take the money and close the Lockbox.
@@ -138,6 +139,7 @@ No sense in reasoning with them.
 
 [[Start fighting.|Bounty1 Encounter]]
 
+/* Encounter */
 :: Bounty1 Encounter 
 <<script>> StartCombat(1, 20, 2) <</script>>
 <<if $health > 0>> [[You Win!|Bounty1 Encounter Win]] 
@@ -156,6 +158,7 @@ You left quite a mess though.
 Here's that reward that I promised. It ain't much, but it's honest work. Stay safe out there!"
 [[$10 reward (+$10)|Bounty1 Reward]]
 
+/* Add Money */
 :: Bounty1 Reward
 <<set $money = $money + 10>>
 You collect the money and head back to your house.
@@ -247,17 +250,24 @@ That's how you deal with violence down here... you mind your business. You look 
 
 [[Take his wallet|Take Slippery Samuel's Wallet]]
 
-/* TODO: Add 2 dollars */
 :: Take Slippery Samuel's Wallet
-You rip the wallet out of his pocket and open it up. [[2...dollars.|Take Slippery Samuel's Wallet 2]]
+You rip the wallet out of his pocket and open it up. [[5...dollars.|Take Slippery Samuel's Wallet 2]]
 
+/* Add Money */
 :: Take Slippery Samuel's Wallet 2
+<<set $money = $money + 5>>
 Well, at least you still have the bounty reward to look forward to.
 
 [[Head back to the bar|Collect Bounty2 Reward]]
 
 /* TODO: Remove 5 dollars */
 :: Pay for train ticket
+<<if $money >= 5>> [[You give him $5|Pay for train ticket 2]] 
+<<else>> You don't have enough money...[[Raise your gun|Confront Slippery Samuel with violence]] 
+<</if>>
+
+:: Pay for train ticket 2
+<<set $money = $money - 5>>
 "Wait... are you serious? Partner, I cannot thank you enough! I swear, I swear, I'll head back home and pack my stuff right away. 
 I'll be on the afternoon train tomorrow, don't you worry! You can tell whoever sent you that I'm dead, because I'll never be back here again.
 Before I go, I have something that might be of use to you and your profession. I have no use for it where I'm going."
