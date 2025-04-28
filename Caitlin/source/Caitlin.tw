@@ -318,7 +318,7 @@ Your gaze falls to the metal augments adorning your body. You nearly can't remem
 
 :: StartCombat
 <<script>>StartCombat(2,10,3)<</script>> 
-    <<if $health >0 [[Yeehaw| Yeehaw Cowboy]] <<else>> [[Sucks| Sucks to suck L]] <</if>>
+    <<if $health > 0 [[Yeehaw | Yeehaw Cowboy]] <<else>> [[Sucks | Sucks to suck L]] <</if>>
 
 :: Yeehaw Cowboy
 smile
