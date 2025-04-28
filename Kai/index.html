@@ -155,8 +155,7 @@ class Sellable {
 		local.money -= this.parent.cost;
 		// Apply any stat mods if applicable
 		//TODO: Update when augments are added to revert old augment
-		console.log(typeof this.parent.changeable);
-		if (typeof this.parent.change === "function") {
+		if (typeof this.parent.changeable === "object") {
 			this.parent.change();
 		}
 	}
