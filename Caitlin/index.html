@@ -145,7 +145,45 @@ config.ui.stowBarInitially = true;
 /* Hide the back / forward buttons
 config.history.controls = false;
 */
-</script><tw-passagedata pid="1" name="Andrew Start" tags="" position="100,100" size="100,100">Andrew file</tw-passagedata><tw-passagedata pid="2" name="Caitlin Start" tags="" position="225,100" size="100,100">Caitlin file</tw-passagedata><tw-passagedata pid="3" name="Map" tags="" position="350,100" size="100,100">You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]</tw-passagedata><tw-passagedata pid="4" name="locations" tags="" position="475,100" size="100,100">[[Cattle&#39;s Run | Cow Town]]
+
+let $You_Power;
+let $You_Damage;
+const $You_Health = 25
+let $Difficulty;
+let $En_Damage;
+let $En_Health;
+
+
+function You (Power, Damage, Health) {
+    this.Power= $You_Power;
+    this.Damage= $You_Damage;
+    this.Health= $You_Health;
+}
+
+const you = new You ($You_Power, $You_Damage, $You_Health);
+
+function Enemy (Power, Damage, Health, Difficulty) {
+    this.Damage= $En_Damage;
+    this.Health= $En_Health;
+    this.Difficulty= $Difficulty;
+}
+
+
+// Roll for Damage//
+function Damage (You_Power, Difficulty, You_Health, En_Damage, En_Health, You_Damage){
+    x= You_Power + Math.floor(Math.random() * 10 +.5) - Difficulty
+    if (x <= 3) {
+        You_Health - En_Damage
+    } else if (x >= 7) {
+        En_Health - You_Damage
+    } else {En_Health - You_Damage; You_Health - En_Damage }
+}
+function StartCombat (Difficulty, En_Health, En_Damage){
+    let local= variables();
+
+
+
+}</script><tw-passagedata pid="1" name="Andrew Start" tags="" position="100,100" size="100,100">Andrew file</tw-passagedata><tw-passagedata pid="2" name="Caitlin Start" tags="" position="225,100" size="100,100">Caitlin file</tw-passagedata><tw-passagedata pid="3" name="Map" tags="" position="350,100" size="100,100">You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]</tw-passagedata><tw-passagedata pid="4" name="locations" tags="" position="475,100" size="100,100">[[Cattle&#39;s Run | Cow Town]]
     
     [[Home | Your house]]
     
