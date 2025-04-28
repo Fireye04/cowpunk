@@ -3,7 +3,7 @@ Caitlin file
 
 :: Map
 You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]
-[[Fight | StartCombat]]
+
 
 :: locations
     [[Cattle's Run | Cow Town]]
@@ -316,12 +316,12 @@ Your gaze falls to the metal augments adorning your body. You nearly can't remem
 :: No Human
 "You've still gotta head on your shoulders don't ya? Seems man enough to me."
 
-:: StartCombat
-<<script>>StartCombat(2,10,3)<</script>> 
-    <<if $health > 0>>[[Yeehaw | Yeehaw Cowboy]] <<else>> [[Sucks | Sucks to suck L]] <</if>>
+/*:: StartCombat */
+/*<<script>>StartCombat(2,10,3)<</script>>*/
+   /* <<if $health > 0>>[[Yeehaw | Yeehaw Cowboy]] <<else>> [[Sucks | Sucks to suck L]] <</if>>*/
 
-:: Yeehaw Cowboy
-smile
+/* :: Yeehaw Cowboy
+smile */
 
-:: Sucks to suck L
-suck it loser
+/*:: Sucks to suck L
+suck it loser */
