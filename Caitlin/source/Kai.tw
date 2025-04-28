@@ -2,5 +2,5 @@
 Kai file
 
 <<script>>test()<</script>>
-<<script>>StartCombat(1,2,3);<</script>>
+<<script>>StartCombat(1,2,3)<</script>>
 <<= $health>>

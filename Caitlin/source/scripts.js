@@ -73,6 +73,6 @@ function StartCombat(Difficulty, En_Health, En_Damage) {
 window.test = function () {
 	console.log("mwahahah");
 };
-window.StartCombat = (Difficulty, En_Health, En_Damage) =>
-	StartCombat(Difficulty, En_Health, En_Damage);
+window.StartCombat = (Dif, En_Health, En_Damage) =>
+	StartCombat(Dif, En_Health, En_Damage);
 
