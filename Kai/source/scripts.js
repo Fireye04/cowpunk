@@ -71,8 +71,8 @@ window.Weapon = class Weapon {
 	canAfford() {
 		return this.sellable.canAfford();
 	}
-	damage() {
-		return this.damageable.damage();
+	getDamage() {
+		return this.damageable.getDamage();
 	}
 };
 
