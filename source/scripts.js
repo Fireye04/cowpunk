@@ -6,104 +6,126 @@ config.ui.stowBarInitially = true;
 config.history.controls = false;
 */
 
-const Sellable = (state) => ({
-	buy: () => {
+class Sellable {
+	constructor(parent) {
+		this.parent = parent;
+	}
+	buy() {
 		let local = variables();
-		local.money -= state.cost;
+		local.money -= this.parent.cost;
 		// Apply any stat mods if applicable
 		//TODO: Update when augments are added to revert old augment
-		if (typeof this.change === "function") {
-			this.change();
+		console.log(typeof this.parent.changeable);
+		if (typeof this.parent.change === "function") {
+			this.parent.change();
 		}
-	},
-	canAfford: () => {
+	}
+	canAfford() {
 		let local = variables();
-		return local.money >= state.cost;
-	},
-});
+		return local.money >= this.parent.cost;
+	}
+}
 
-const Changeable = (power, health) => ({
-	change: () => {
+class Changeable {
+	constructor(parent) {
+		this.parent = parent;
+	}
+	change() {
 		let local = variables();
-		local.power += power;
-		local.health += health;
-	},
-	revert: () => {
+		local.power += this.parent.power;
+		local.health += this.parent.health;
+	}
+	revert() {
 		let local = variables();
-		local.power -= power;
-		local.health -= health;
-	},
-});
+		local.power -= this.parent.power;
+		local.health -= this.parent.health;
+	}
+}
 
-const Damageable = (state) => ({
-	damage: () => {
-		return state.damage;
-	},
-});
+class Damageable {
+	constructor(parent) {
+		this.parent = parent;
+	}
+	getDamage() {
+		return this.parent.damage;
+	}
+}
 
-const Weapon = (name, description, cost, damage) => {
-	let state = { name, description, cost, damage };
-	this.name = name || "Default";
-	this.description = description || "Default";
-	this.cost = cost || 100;
-	this.damage = damage || 0;
-
-	return Object.assign(state, Sellable(state), Damageable(state));
+window.Weapon = class Weapon {
+	constructor(name, description, cost, damage) {
+		this.name = name || "Default";
+		this.description = description || "Default";
+		this.cost = cost || 100;
+		this.damage = damage || 0;
+		this.sellable = new Sellable(this);
+		this.damageable = new Damageable(this);
+	}
+	clone() {
+		return new Weapon(this.name, this.description, this.cost, this.damage);
+	}
+	toJSON() {
+		return Serial.createReviver(
+			String.format(
+				"new Weapon({0},{1},{2},{3})",
+				JSON.stringify(this.name),
+				JSON.stringify(this.description),
+				JSON.stringify(this.cost),
+				JSON.stringify(this.damage),
+			),
+		);
+	}
+	buy() {
+		this.sellable.buy();
+	}
+	canAfford() {
+		return this.sellable.canAfford();
+	}
+	getDamage() {
+		return this.damageable.getDamage();
+	}
 };
 
-Weapon.prototype.clone = function () {
-	// Return a new instance containing our own data.
-	return new Weapon(this.name, this.description, this.cost, this.damage);
+window.Augment = class Augment {
+	constructor(name, description, cost, power, health) {
+		this.name = name || "Default";
+		this.description = description || "Default";
+		this.cost = cost || 100;
+		this.power = power || 0;
+		this.health = health || 0;
+		this.sellable = new Sellable(this);
+		this.changeable = new Changeable(this);
+	}
+	clone() {
+		return new Augment(
+			this.name,
+			this.description,
+			this.cost,
+			this.power,
+			this.health,
+		);
+	}
+	toJSON() {
+		return Serial.createReviver(
+			String.format(
+				"new Augment({0},{1},{2},{3},{4})",
+				JSON.stringify(this.name),
+				JSON.stringify(this.description),
+				JSON.stringify(this.cost),
+				JSON.stringify(this.power),
+				JSON.stringify(this.health),
+			),
+		);
+	}
+	buy() {
+		this.sellable.buy();
+	}
+	canAfford() {
+		return this.sellable.canAfford();
+	}
+	change() {
+		this.changeable.change();
+	}
+	revert() {
+		this.changeable.revert();
+	}
 };
-
-Weapon.prototype.toJSON = function () {
-	// Return a code string that will create a new instance containing our
-	// own data.
-	return Serial.createReviver(
-		String.format(
-			"new Weapon({0},{1},{2},{3})",
-			JSON.stringify(this.name),
-			JSON.stringify(this.description),
-			JSON.stringify(this.cost),
-			JSON.stringify(this.damage),
-		),
-	);
-};
-
-const Augment = (name, description, cost, power, health) => {
-	let state = { name, description, cost, power, health };
-
-	return Object.assign(state, Sellable(state), Changeable(state));
-};
-
-Augment.prototype.clone = function () {
-	// Return a new instance containing our own data.
-	return new Augment(
-		this.name,
-		this.description,
-		this.cost,
-		this.power,
-		this.health,
-	);
-};
-
-Augment.prototype.toJSON = function () {
-	// Return a code string that will create a new instance containing our
-	// own data.
-	return Serial.createReviver(
-		String.format(
-			"new Augment({0},{1},{2},{3},{4})",
-			JSON.stringify(this.name),
-			JSON.stringify(this.description),
-			JSON.stringify(this.cost),
-			JSON.stringify(this.power),
-			JSON.stringify(this.health),
-		),
-	);
-};
-
-window.Weapon = (name, description, cost, damage) =>
-	Weapon(name, description, cost, damage);
-
-window.Augment = (name, description, cost, power, health) =>
-	Augment(name, description, cost, power, health);
