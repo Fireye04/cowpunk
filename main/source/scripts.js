@@ -5,3 +5,72 @@ config.ui.stowBarInitially = true;
 /* Hide the back / forward buttons
 config.history.controls = false;
 */
+
+function roll(You_Power, Difficulty) {
+	let numRolls = You_Power - Difficulty;
+	if (numRolls <= 0) {
+		if (Math.floor(Math.random() * 10 + 0.5) === 10) {
+			return "success_at_cost";
+		}
+		return "falure";
+	}
+	const rolls = [];
+	for (let i = 0; i < numRolls; i++) {
+		rolls.push(Math.floor(Math.random() * 10 + 0.5));
+	}
+	let max = Math.max(...rolls);
+
+	if (max <= 3) {
+		return "falure";
+	} else if (max <= 6) {
+		return "success_at_cost";
+	} else {
+		return "success";
+	}
+}
+
+// Roll for Damage//
+function Damage(
+	You_Power,
+	Difficulty,
+	You_Health,
+	En_Damage,
+	En_Health,
+	You_Damage,
+) {
+	let result = roll(You_Power, Difficulty);
+	if (result === "success") {
+		En_Health -= You_Damage;
+	} else if (result === "success_at_cost") {
+		En_Health -= You_Damage;
+		You_Health -= En_Damage;
+	} else {
+		You_Health -= En_Damage;
+	}
+	return [You_Health, En_Health];
+}
+function StartCombat(Difficulty, En_Health, En_Damage) {
+	let local = variables();
+	while (En_Health > 0 && local.health > 0) {
+		console.log(local.health);
+		console.log(En_Health);
+		[local.health, En_Health] = Damage(
+			local.power,
+			Difficulty,
+			local.health,
+			En_Damage,
+			En_Health,
+			local.damage,
+		);
+	}
+	if (En_Health <= 0) {
+		console.log("you win");
+		return true;
+	}
+	console.log("you lose :(");
+	return false;
+}
+
+window.StartCombat = (Dif, En_Health, En_Damage) =>
+	StartCombat(Dif, En_Health, En_Damage);
+

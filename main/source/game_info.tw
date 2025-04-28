@@ -10,4 +10,6 @@
 My Twine Game
 
 :: StoryInit
-<<set $myVariable to 1>>
+<<set $health to 10>>
+<<set $power to 3>>
+<<set $damage to 3>>

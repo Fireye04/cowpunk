@@ -1,2 +1,3 @@
 :: Kai Start
 Kai file
+<<script>>StartCombat(2,10,3)<</script>>

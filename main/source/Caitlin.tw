@@ -4,6 +4,7 @@ Caitlin file
 :: Map
 You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]
 
+
 :: locations
     [[Cattle's Run | Cow Town]]
     
@@ -28,13 +29,15 @@ You walk into town.
 [[a firearm store | cr.gun]] 
 [[a general store | cr.item]]
 [[Go somewhere else | locations]]
+[[Old Friend | Friend]]
+[[Dog | Dog]]
 
 :: cr.gun
 An older man with a bowler hat and a well-groomed mustache waves to you as you enter. "Good to see you in. Whatcha lookin' for today?"
 
 OR
 
-You walk into the store and the older usually kind store owner gives you a cold look. He nods to you, but his eyes never quiet meet your own.
+You walk into the store and the older usually kind store owner gives you a cold look. He nods to you, but his eyes never quiet meet your own. His voice is more clipped than usual as he opens up his drawer, revealing the firearms inside. "What do you want?"
 
 OR
 
@@ -72,6 +75,16 @@ item 1
 item 2
 
 item 3
+
+:: Friend
+
+:: Dog
+Outside the old run down liquor store an old stray mutt sits passively. The brown fluffy thing is curled up into a ball, allowing its long droopy ears to waterfall over its stubby legs. It's cute in an ugly way. As you pass by the dog's nose twitches. [[Ignore it | Ignore Dog]]/[[Pet the dog | Pet]]
+
+:: Ignore Dog
+The dog's tail wags lazily as you pass by. 
+
+:: Pet
 
 /* House */
 
@@ -116,10 +129,10 @@ You crack open a can of black beans with a small pocket knife and sit down at th
 [[Throw out the can | Trash]]
 
 :: Trash
-You throw the can into the small can thats functioned as your trash for years before heading for [[the door | Leave House]].
+You throw the can into the small bin thats functioned as your trash for years before heading for [[the door | Leave House]].
 
 :: Leave House
-You make sure to lock the door behind you as you face the sprawling desert outside. You [[open your map | locations]] to figure out where to go next.
+You make sure to lock the door behind you as you face the sprawling desert outside. The wind whips against your face, beckoning you forward. In an odd way its emptiness is beautiful, but you have no time to appreciate its glory. You [[open your map | locations]] to figure out where to go next.
 
 /* Ember City */
 
@@ -136,11 +149,8 @@ The neon lights and constant blanket of noise welcome you into the city. Skyscra
 :: Casino
 The giant sign above the casino with its colored lights that twinkle like stars seems to call you in. The smell of smoke strengthens as you get closer, but if anything it nearly feels comforting- like a blanket pulled tight on a cold afternoon. The security robots? people? you're not sure, don't even look your way as you walk in. In the lobby there are several tables set up with dealers ready to play. The dealers themselves are some of the most augmented people you've ever seen- their entire faces transformed into an amalgamation of wires and lights. You [[sit down at a table | Gamble]]/[[go further in | investigate casino]]/[[leave | Visit City]].
 
-:: Gamble
-
-
 :: investigate casino
-
+The hustle and bustle of people here is nearly overwhelming. 
 
 :: ec.augments1
 The husband greets you as you walk in, his one metal arm that he'd gotten done not too long ago still shines brightly- not a single scratch or dent in sight. "Hey partner, what you in for today?"
@@ -291,7 +301,7 @@ The stranger nods, his eyes following your own. "They'll bleed you dry out there
 "To live," the stranger replies, "Simple as that."
 
 :: Work
-You frown; the stress, both physical and mental, wears on your back. You can feel the sins you've committed just to live crawling under your skin. "I don't know if I'm doing the right thing."
+You frown; the stress, both physical and mental, wears heavy on you. You can feel the sins you've committed just to live crawling under your skin- writhing and ugly. "I don't know if I'm doing the right thing."
 
 "Well you're alive aint ya? That's gotta count for somethin' right?"
 
@@ -314,3 +324,13 @@ Your gaze falls to the metal augments adorning your body. You nearly can't remem
 
 :: No Human
 "You've still gotta head on your shoulders don't ya? Seems man enough to me."
+
+/*:: StartCombat */
+/*<<script>>StartCombat(2,10,3)<</script>>*/
+   /* <<if $health > 0>>[[Yeehaw | Yeehaw Cowboy]] <<else>> [[Sucks | Sucks to suck L]] <</if>>*/
+
+/* :: Yeehaw Cowboy
+smile */
+
+/*:: Sucks to suck L
+suck it loser */
