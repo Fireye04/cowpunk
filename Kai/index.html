@@ -147,38 +147,47 @@ config.history.controls = false;
 */
 
 class Sellable {
+	constructor(parent) {
+		this.parent = parent;
+	}
 	buy() {
 		let local = variables();
-		local.money -= this.cost;
+		local.money -= this.parent.cost;
 		// Apply any stat mods if applicable
 		//TODO: Update when augments are added to revert old augment
-		console.log(typeof this.changeable);
-		if (typeof this.change === "function") {
-			this.change();
+		console.log(typeof this.parent.changeable);
+		if (typeof this.parent.change === "function") {
+			this.parent.change();
 		}
 	}
 	canAfford() {
 		let local = variables();
-		return local.money >= this.cost;
+		return local.money >= this.parent.cost;
 	}
 }
 
 class Changeable {
+	constructor(parent) {
+		this.parent = parent;
+	}
 	change() {
 		let local = variables();
-		local.power += this.power;
-		local.health += this.health;
+		local.power += this.parent.power;
+		local.health += this.parent.health;
 	}
 	revert() {
 		let local = variables();
-		local.power -= this.power;
-		local.health -= this.health;
+		local.power -= this.parent.power;
+		local.health -= this.parent.health;
 	}
 }
 
 class Damageable {
+	constructor(parent) {
+		this.parent = parent;
+	}
 	getDamage() {
-		return this.damage;
+		return this.parent.damage;
 	}
 }
 
@@ -188,8 +197,8 @@ window.Weapon = class Weapon {
 		this.description = description || "Default";
 		this.cost = cost || 100;
 		this.damage = damage || 0;
-		this.sellable = new Sellable();
-		this.damageable = new Damageable();
+		this.sellable = new Sellable(this);
+		this.damageable = new Damageable(this);
 	}
 	clone() {
 		return new Weapon(this.name, this.description, this.cost, this.damage);
@@ -223,8 +232,8 @@ window.Augment = class Augment {
 		this.cost = cost || 100;
 		this.power = power || 0;
 		this.health = health || 0;
-		this.sellable = new Sellable();
-		this.changeable = new Changeable();
+		this.sellable = new Sellable(this);
+		this.changeable = new Changeable(this);
 	}
 	clone() {
 		return new Augment(
