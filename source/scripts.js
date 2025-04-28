@@ -71,5 +71,9 @@ function StartCombat(Difficulty, En_Health, En_Damage) {
 	while (En_Health > 0 && local.health > 0) {}
 }
 
+window.test = function () {
+
+	console.log("mwahahah");
+}
 window.StartCombat(Difficulty,En_Health,En_Damage) = StartCombat(Difficulty, En_Health, En_Damage);
 
