@@ -148,36 +148,53 @@ config.history.controls = false;
 
 const Sellable = (state) => ({
 	buy: () => {
-		console.log(state.cost);
-		if (typeof state.power !== "undefined") {
-			console.log(state.power);
+		let local = variables();
+		local.money -= state.cost;
+		// Apply any stat mods if applicable
+		//TODO: Update when augments are added to revert old augment
+		if (typeof this.change === "function") {
+			this.change();
 		}
-		if (typeof state.health !== "undefined") {
-			console.log(state.health);
-		}
+	},
+	canAfford: () => {
+		let local = variables();
+		return local.money >= state.cost;
+	},
+});
+
+const Changeable = (power, health) => ({
+	change: () => {
+		let local = variables();
+		local.power += power;
+		local.health += health;
+	},
+	revert: () => {
+		let local = variables();
+		local.power -= power;
+		local.health -= health;
 	},
 });
 
 const Damageable = (state) => ({
 	damage: () => {
-		console.log(state.damage);
+		return state.damage;
 	},
 });
 
-const Weapon = (cost, damage) => {
-	let state = { cost, damage };
+const Weapon = (name, description, cost, damage) => {
+	let state = { name, description, cost, damage };
 
 	return Object.assign(state, Sellable(state), Damageable(state));
 };
 
-const Augment = (cost, power, health) => {
-	let state = { cost, power, health };
+const Augment = (name, description, cost, power, health) => {
+	let state = { name, description, cost, power, health };
 
-	return Object.assign(state, Sellable(state));
+	return Object.assign(state, Sellable(state), Changeable(state));
 };
 
-let gun = Weapon(3, 4);
-let arm = Augment(5, 8, 2);
+let gun = Weapon("bill", "shoots stuff", 3, 4);
+let arm = Augment("bill", "shoots stuff", 5, 8, 2);
 gun.damage();
 gun.buy();
 arm.buy();
