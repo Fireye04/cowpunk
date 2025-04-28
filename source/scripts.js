@@ -67,6 +67,7 @@ function Damage(
 function StartCombat(Difficulty, En_Health, En_Damage) {
 	let local = variables();
 	local.health = 99;
+	console.log("mwahahah");
 	while (En_Health > 0 && local.health > 0) {}
 }
 
