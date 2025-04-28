@@ -10,4 +10,14 @@
 My Twine Game
 
 :: StoryInit
-<<set $myVariable to 1>>
+<<set $health to 10>>
+<<set $power to 3>>
+<<set $damage to 3>>
+<<set $money to 1000>>
+<<set $diceroll to 0>>
+
+
+<<set $inv to new Inventory(null, null)>>
+
+<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])])>>
+

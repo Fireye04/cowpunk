@@ -24,21 +24,25 @@ The fourth bounty is [[another wanted poster|Bounty 4]] covered in bullet holes.
 /* Bounties Section */
 :: Bounty 1
 A local Cattle Run farmer has been having some radioactive rat trouble. Seems like an easy way to make some money. 
+
 [[Accept?|Bounty 1 Mission]] or [[Look at the other bounties|Bounty Options]]
 
 :: Bounty 2
 "This scoundrel hasn't been paying his tab. Let's just say I have a lump some of cash for anyone that can collect that 
 money or at least make sure we never see him again. The Platinum Palace in the Ashes. He always hangs out in the back. Look for a green hat."
+
 [[Accept?|Bounty 2 Mission]] or [[Look at the other bounties|Bounty Options]]
 
 :: Bounty 3
 "WANTED: ALIVE - $10 Reward. Tumbleweed Terry is wanted for stealing horses.
 His whereabouts are unknown but there are rumours that he is in Ember City. Bring him and the horse back.
+
 [[Accept?|Bounty 3 Mission]] or [[Look at the other bounties|Bounty Options]]
 
 :: Bounty 4
 "WANTED: DEAD or ALIVE - $20 Reward. The notorious gunslinger Chrome Carl has been sited just outside the church.
 We cowpunks have enough trouble just trying to get by, we don't need to be killing each other anymore. Keep our Cattle Run safe and take him out"
+
 [[Accept?|Bounty 4 Mission]] or [[Look at the other bounties|Bounty Options]]
 
 :: Bounty 5
@@ -58,8 +62,10 @@ His eyes widen and a bright smile appears on his face. He's missing a few teeth 
 :: Farmer
 \"Hey cowpunk! I reckon with that look in your eye you've seen my little advertisement? 
 There's these huge rats chewing up all of my equipment! How's a farmer supposed to get any work done without my cyber tractor? 
+
 Anywho, I'll pay ya nicely if you can [[take care of those pesky little critters.|Help Farmer]]"
-[[Leave|Cattle Run]]
+or
+[[Leave (you won't be able to do this bounty again)|Bounties]]
 
 :: Help Farmer
 "I lured 'em into the basement with some bait a couple of nights ago. 
@@ -77,11 +83,21 @@ You see the [[basement door|Barn Basement Door]] in the far right corner of the 
 To the left you see some [[hay bales and buckets of animal feed.|Barn Leftwall]]
 Along the back wall you see a [[table|Barn Backwall]] with a few items on it.
 
+:: Look Around Barn
+You see the [[basement door|Barn Basement Door]] in the far right corner of the room. 
+To the left you see some [[hay bales and buckets of animal feed.|Barn Leftwall]]
+
 :: Barn Leftwall
 Just some hay and feed. 
 Living out in Cattle Run has familiarized you with with raising livestock and keeping western traditions alive. 
 It's hard to find people who want this lifestyle anymore, especially being able to see the neon lights of the city anywhere you walk in Cattle Run. 
 [[Keep looking around|Look Around Barn]]
+
+:: Barn Leftwall 2
+Just some hay and feed. 
+Living out in Cattle Run has familiarized you with with raising livestock and keeping western traditions alive. 
+It's hard to find people who want this lifestyle anymore, especially being able to see the neon lights of the city anywhere you walk in Cattle Run. 
+[[Keep looking around|Look Around Barn 2]]
 
 :: Barn Backwall
 You see a table covered in sawdust, metal shavings, and various wires all connecting to who knows what. 
@@ -93,13 +109,20 @@ Looks important. The farmer probably wouldn't want you messing around with his s
 [[Shoot the lock off?|Opened Lockbox]]
 [[Keep looking around|Look Around Barn]]
 
-/* TODO: Add 5 dollars */
+/* TODO: Add 5 dollars*/
 :: Opened Lockbox
 The bullet hits the center of the lock and shatters it like it was made of glass. 
 A small puff of smoke dissipates from the wound. You take the lock off and look inside. 
-There's 5 dollars and an old photograph of a woman wearing a tacky orange bandana. You take the money 
-[[Keep looking around|Look Around Barn]]
+There's 5 dollars and an old photograph of a woman wearing a tacky orange bandana. 
+[[Take the money (+$5) and keep looking around|Take the money]]
 
+:: Take the money
+<<set $money = $money + 5>>
+You take the money and close the Lockbox.
+[[Keep looking around the barn|Look Around Barn 2]]
+
+
+/* TODO: Add Bounty1 Encounter*/
 :: Barn Basement Door
 Rat encounter
 [[Complete Encounter|Bounty1 Complete]]
@@ -108,7 +131,7 @@ Rat encounter
 :: Bounty1 Complete
 "Did you get 'em all? Oh thank goodness! I don't know what I would've done if those rats stirred up anymore trouble.
 Here's that reward that I promised. It ain't much, but it's honest work. Stay safe out there!"
-[[$10 reward|Bounties]]
+[[$10 reward (+$10)|Bounties]]
 
 
 /* ------------------------ Bounty 2 ------------------------  */
@@ -385,7 +408,6 @@ is if we chrome up damnit. You think you meat sacks are gonna survive if all of 
 our home to be a thing of the past. I'm just jumpstarting our evolution, son."
 
 [[Raise your gun|Chrome Carl Encounter]]
-
 
 :: Chrome Carl Encounter
 Alright son, but they won't remember you if you die.
