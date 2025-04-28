@@ -181,7 +181,7 @@ const Damageable = (state) => ({
 	},
 });
 
-const Weapon = (name, description, cost, damage) => {
+function Weapon(name, description, cost, damage) {
 	let state = { name, description, cost, damage };
 	this.name = name || "Default";
 	this.description = description || "Default";
@@ -189,7 +189,7 @@ const Weapon = (name, description, cost, damage) => {
 	this.damage = damage || 0;
 
 	return Object.assign(state, Sellable(state), Damageable(state));
-};
+}
 
 Weapon.prototype.clone = function () {
 	// Return a new instance containing our own data.
@@ -210,11 +210,16 @@ Weapon.prototype.toJSON = function () {
 	);
 };
 
-const Augment = (name, description, cost, power, health) => {
+function Augment(name, description, cost, power, health) {
 	let state = { name, description, cost, power, health };
+	this.name = name || "Default";
+	this.description || "Default";
+	this.cost = cost || 100;
+	this.power = power || 0;
+	this.health = health || 0;
 
 	return Object.assign(state, Sellable(state), Changeable(state));
-};
+}
 
 Augment.prototype.clone = function () {
 	// Return a new instance containing our own data.
