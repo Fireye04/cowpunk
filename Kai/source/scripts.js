@@ -18,6 +18,7 @@ class Sellable {
 		console.log(typeof this.parent.changeable);
 		if (typeof this.parent.change === "function") {
 			this.parent.change();
+			console.log("gothere");
 		}
 	}
 	canAfford() {

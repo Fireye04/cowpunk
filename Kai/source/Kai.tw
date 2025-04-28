@@ -7,3 +7,4 @@ Downtime! we vibin
 <<= $weapon.getDamage()>>
 <<set $aug to new Weapon("bob", "fuck off", 1,2)>><<run $aug.buy()>>
 <<= $aug.canAfford()>>
+<<= $money>>
