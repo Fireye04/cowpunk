@@ -10,7 +10,7 @@ function roll(You_Power, Difficulty) {
 	let numRolls = You_Power - Difficulty;
 	if (numRolls <= 0) {
 		if (Math.floor(Math.random() * 10 + 0.5) === 10) {
-			return "success_at_cost";
+			return "success at cost";
 		}
 		return "falure";
 	}
@@ -23,7 +23,7 @@ function roll(You_Power, Difficulty) {
 	if (max <= 3) {
 		return "falure";
 	} else if (max <= 6) {
-		return "success_at_cost";
+		return "success at cost";
 	} else {
 		return "success";
 	}
@@ -41,7 +41,7 @@ function Damage(
 	let result = roll(You_Power, Difficulty);
 	if (result === "success") {
 		En_Health -= You_Damage;
-	} else if (result === "success_at_cost") {
+	} else if (result === "success at cost") {
 		En_Health -= You_Damage;
 		You_Health -= En_Damage;
 	} else {
@@ -81,15 +81,14 @@ class Sellable {
 	buy() {
 		let local = variables();
 		local.money -= this.parent.cost;
-		// Apply any stat mods if applicable
-		//TODO: Update when augments are added to revert old augment
-		if (typeof this.parent.changeable === "object") {
-			this.parent.change();
-		}
+		local.inventory.addItem(this.parent);
 	}
 	canAfford() {
 		let local = variables();
 		return local.money >= this.parent.cost;
+	}
+	getShops() {
+		return this.parent.shops;
 	}
 }
 
@@ -119,25 +118,33 @@ class Damageable {
 }
 
 window.Weapon = class Weapon {
-	constructor(name, description, cost, damage) {
-		this.name = name || "Default";
-		this.description = description || "Default";
-		this.cost = cost || 100;
-		this.damage = damage || 0;
+	constructor(name, description, cost, damage, shops) {
+		this.name = name ??= "Default";
+		this.description = description ??= "Default";
+		this.cost = cost ??= 100;
+		this.damage = damage ??= 0;
+		this.shops = shops ??= ["deadeye"];
 		this.sellable = new Sellable(this);
 		this.damageable = new Damageable(this);
 	}
 	clone() {
-		return new Weapon(this.name, this.description, this.cost, this.damage);
+		return new Weapon(
+			this.name,
+			this.description,
+			this.cost,
+			this.damage,
+			this.shops,
+		);
 	}
 	toJSON() {
 		return Serial.createReviver(
 			String.format(
-				"new Weapon({0},{1},{2},{3})",
+				"new Weapon({0},{1},{2},{3},{4})",
 				JSON.stringify(this.name),
 				JSON.stringify(this.description),
 				JSON.stringify(this.cost),
 				JSON.stringify(this.damage),
+				JSON.stringify(this.shops),
 			),
 		);
 	}
@@ -150,15 +157,20 @@ window.Weapon = class Weapon {
 	getDamage() {
 		return this.damageable.getDamage();
 	}
+	getShops() {
+		return this.sellable.getShops();
+	}
 };
 
 window.Augment = class Augment {
-	constructor(name, description, cost, power, health) {
-		this.name = name || "Default";
-		this.description = description || "Default";
-		this.cost = cost || 100;
-		this.power = power || 0;
-		this.health = health || 0;
+	constructor(name, description, location, cost, power, health, shops) {
+		this.name = name ??= "Default";
+		this.description = description ??= "Default";
+		this.location = location ??= "arms";
+		this.cost = cost ??= 100;
+		this.power = power ??= 0;
+		this.health = health ??= 0;
+		this.shops = shops ??= ["deadeye"];
 		this.sellable = new Sellable(this);
 		this.changeable = new Changeable(this);
 	}
@@ -166,20 +178,24 @@ window.Augment = class Augment {
 		return new Augment(
 			this.name,
 			this.description,
+			this.location,
 			this.cost,
 			this.power,
 			this.health,
+			this.shops,
 		);
 	}
 	toJSON() {
 		return Serial.createReviver(
 			String.format(
-				"new Augment({0},{1},{2},{3},{4})",
+				"new Augment({0},{1},{2},{3},{4},{5},{6})",
 				JSON.stringify(this.name),
 				JSON.stringify(this.description),
+				JSON.stringify(this.location),
 				JSON.stringify(this.cost),
 				JSON.stringify(this.power),
 				JSON.stringify(this.health),
+				JSON.stringify(this.shops),
 			),
 		);
 	}
@@ -194,6 +210,104 @@ window.Augment = class Augment {
 	}
 	revert() {
 		this.changeable.revert();
+	}
+	getShops() {
+		return this.sellable.getShops();
+	}
+};
+
+window.Inventory = class Inventory {
+	constructor(weapons, augments) {
+		this.weapons = weapons ??= [];
+		this.augments = augments ??= function () {
+			let m = new Map();
+			m.set("legs", null);
+			m.set("arms", null);
+			m.set("ears", null);
+			m.set("eyes", null);
+			m.set("head", null);
+			m.set("brain", null);
+			m.set("heart", null);
+			m.set("lungs", null);
+			return m;
+		};
+	}
+	clone() {
+		return new Inventory(this.weapons, this.augments);
+	}
+	toJSON() {
+		return Serial.createReviver(
+			String.format(
+				"new Inventory({0},{1})",
+				JSON.stringify(this.weapons),
+				JSON.stringify(this.augments),
+			),
+		);
+	}
+	getWeapon() {
+		let maxitem;
+		let max = 0;
+		for (let i = 0; i < this.weapons; i++) {
+			let weapon = this.weapons[i];
+			if (weapon.getDamage() >= max) {
+				maxitem = weapon;
+			}
+		}
+		return (maxitem ??= new Weapon(
+			"My bare fists",
+			"Hitting people has never been easier",
+			0,
+			1,
+		));
+	}
+	getDamage() {
+		return this.getWeapon().getDamage();
+	}
+	addItem(item) {
+		if (item instanceof Weapon) {
+			this.weapons.push(item);
+		} else if (item instanceof Augment) {
+			let old = this.augments.get(item.location);
+			if (old !== null) {
+				old.revert();
+			}
+			this.augments.set(item.location, item);
+			item.change();
+		}
+	}
+};
+
+window.Catalog = class Catalog {
+	constructor(items) {
+		let itTemp = (items ??= []);
+
+		// Removes items that have not implemented sellable
+		let toRemove = [];
+		for (let i = 0; i < itTemp.length; i++) {
+			let item = itTemp[i];
+			if (typeof item.sellable !== "object") {
+				toRemove.push(item);
+			}
+		}
+		this.items = itTemp.filter((item) => !toRemove.includes(item));
+	}
+	clone() {
+		return new Catalog(this.items);
+	}
+	toJSON() {
+		return Serial.createReviver(
+			String.format("new Catalog({0})", JSON.stringify(this.items)),
+		);
+	}
+	getItemsFromShop(shop) {
+		let total = [];
+		for (let i = 0; i < items.length; i++) {
+			let item = items[i];
+			if (item.getShops().includes(shop)) {
+				total.push(item);
+			}
+		}
+		return total;
 	}
 };
 

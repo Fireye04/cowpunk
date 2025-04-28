@@ -1,8 +1,2 @@
 :: Kai Start
 Downtime! we vibin
-<<set $money to 100>>
-<<set $weapon to new Weapon("bob", "fuck off", 1,2)>><<run $weapon.buy()>>
-<<= $weapon.canAfford()>>
-<<set $aug to new Augment("bob", "fuck off", 1,2, 3)>><<run $aug.buy()>>
-<<= $aug.canAfford()>>
-<<= $money>>
