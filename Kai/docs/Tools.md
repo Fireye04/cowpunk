@@ -1,6 +1,6 @@
 # Tools
 
-The internal doccumentation for the cowpunk project
+The internal documentation for the cowpunk project
 
 ## Weapons
 
