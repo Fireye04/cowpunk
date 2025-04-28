@@ -114,10 +114,12 @@ To initialize a new augment you'll need to provide:
 - Cost (Integer)
 - Power (Integer) - Should be a modifier, not the new total; Applied on purchase.
 - Health (Integer) - Should be a modifier, not the new total; Applied on purchase.
+- Humanity (Integer) - Should be a modifier, not the new total; Applied on purchase.
+- Fame(Integer) - Should be a modifier, not the new total; Applied on purchase.
 - Shops (Array)- array of shops where item is sold, see enums above
 
-Here is a valid augment constructor that names the augment "bill's elbow", gives it the "figure it out" description, a cost of $5, a damage modifier of 2, and a health modifier of 8, sold only at the deadeye shop:
-`Augment("bill's elbow", "figure it out", "arms", 5, 2, 8, ["deadeye"]);`
+Here is a valid augment constructor that names the augment "bill's elbow", gives it the "figure it out" description, a cost of $5, a damage modifier of 2, a health modifier of 8, a humanity modifier of -3, and a fame modifier of -5, sold only at the deadeye shop:
+`Augment("bill's elbow", "figure it out", "arms", 5, 2, 8, -3, -5, ["deadeye"]);`
 
 Implements the Damageable and Sellable interfaces
 
@@ -143,4 +145,3 @@ EX: All together, if you want to start a new battle against an enemy with a diff
 `:: StartCombat`
 `<script>>StartCombat(2,10,5)<</script>>`
 `<<if $health > 0>>[[You Win | Win]] <<else>> [[You Lose | Lose]] <</if>>`
-
