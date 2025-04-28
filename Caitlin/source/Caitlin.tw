@@ -85,11 +85,11 @@ Outside the old run down liquor store an old stray mutt sits passively. The brow
 The dog's tail wags lazily as you [[pass by. | Visit Town]] It almost seems disappointed. 
 
 :: Pet
-You bend down to offer the old dog your hand. Its wet nose brushes against you gloved hand as it sniffs you. It seems to consider you for a moment before lazily rolling over for you to scratch its stomach. By the time you [[stand back up | Visit Town]] the dog has fallen back asleep.
+You bend down to offer the old dog your hand. Its wet nose brushes against your gloved hand as it sniffs you. It seems to consider you for a moment before lazily rolling over for you to scratch its stomach. By the time you [[stand back up | Visit Town]] the dog has fallen back asleep.
 
 OR
 
-You bend down to offer the old dog your hand. Its wet nose brushes against you gloved hand as it sniffs you. It seems to consider you for a moment before its tail's steady wag comes to a halt. A soft growl emenates from its chest. You [[stand back up | Visit Town]] before the dog can bite you..
+You bend down to offer the old dog your hand. Its wet nose brushes against your gloved hand as it sniffs you. It seems to consider you for a moment before its tail's steady wag comes to a halt. A soft growl emenates from its chest. You [[stand back up | Visit Town]] before the dog can bite you..
 
 /* House */
 
@@ -102,7 +102,7 @@ An old rickety shed right outside Cattle's Run. You've lived here for ages after
 The old rickety door swings open with a whine of its rusted hinges. Light streams in from the thin curtains that cover the small window above your bed. An old dusty [[picture frame | Look]] glints under the light. Even so, [[the room | Bedroom]] feels homey and safe.
 
 :: Look
-You wipe the dust off with your gloved fingers. Under the thick coat of dirt two familiar faces stare back at you. Your parents were gone [[long before their time | Parents]]. Sometimes you still miss them.
+You wipe the dust off with your gloved fingers. Under the thick coat of dirt two familiar faces stare back at you. Your parents left this world [[long before their time | Parents]]. Sometimes you still miss them.
 
 :: Parents
 Your parents died in the city doing the same work you do now. It makes you wonder if you shouldn't just setlle down in Cattle's Run OR You can't find it in yourself to care.
@@ -113,11 +113,11 @@ Your parents died in the city doing the same work you do now. It makes you wonde
 Your boots click against the wooden floor. [[Your bed | Sleep]] calls to you after so many sleepless days. [[The pantry | Pantry]] is never fully stocked, but you're sure you could find something there. Behind you [[the door | Leave House]] stands as a barrier between you and the stressors of the outside world.
 
 :: Sleep
-Sleep comes easy to you after so much time fighting for your life. You dream of a better home, a safer place. In your dream there is no more fighting, your gun is safely tucked away, only to be touched inc ase of emergency. People greet you as you walk past without a hint of trepidation. You awaken feeling rejuvenated.
+Sleep comes easy to you after so much time fighting for your life. You dream of a better home, a safer place. In your dream there is no more fighting- your gun is safely tucked away, only to be touched in case of emergency. People greet you as you walk past without a hint of trepidation. You awaken feeling rejuvenated.
 
 OR 
 
-Sleep doesn't come easily today. No matter what you do you can't seem to find comfort under your sheets. The harsh metal planes of your body seem to pinch the skin around them. When sleep finally claims you your dreams are filled wih unease. Darkness surrounds you and all around you, standing tall, are large shadowy towers. Metal scrapes against metal and gears whir in the distance. No matter how far you walk you cant seem to escape their metalic gaze. You awaken feeling unsteady. 
+Sleep doesn't come easily today. No matter what you do you can't seem to find comfort under your sheets. The harsh metal planes of your body seem to pinch the skin around them. When sleep finally claims you, your dreams are filled wih unease. Darkness surrounds you and all around you, standing tall, are large shadowy towers. Metal scrapes against metal and gears whir in the distance. No matter how far you walk you cant seem to escape their metalic gaze. You awaken feeling unsteady. 
 
 OR
 
@@ -129,7 +129,7 @@ You [[stand up | Leave House]] from bed, ready to go about the rest of your day.
 You open the pantry door and are met with a few dented cans of food. It's not much, but you can [[have a snack | Snack]] if you would like.
 
 :: Snack
-You crack open a can of black beans with a small pocket knife and sit down at the small one-seat table in the middle of your bedroom. You eat it slowly, savoring the meal that could always be your last OR It takes you a moment for you to realize you don't feel hungry... You don't feel anything anymore. This is pointless.
+You crack open a can of black beans with a small pocket knife and sit down at the small one-seat table in the middle of your bedroom. You eat it slowly, savoring the meal like its your last since it very well could be OR It takes you a moment for you to realize you don't feel hungry... You don't feel anything anymore. This is pointless.
 
 [[Throw out the can | Trash]]
 
@@ -160,21 +160,36 @@ You sit down at a spider's eyes table and nod your head to the dealer. Its a sim
 <<if $money = 0>>[[The gambler shakes his head when your wallets turn up empty. You can't gamble if you have nothing to start with. | Casino]]
 <<if $money > 5>>[[5 | 5]]<</if>>
 <<if $money > 10>>[[10 | 10]]<</if>>
-<<if $money >50 [[50 | 50]]<</if>>
+<<if $money > 50>>[[50 | 50]]<</if>>
 <<if $money > 0>>[[ All in | All in]]<</if>>
 
 
 :: 5
 <<set $money = $money - 5>>
-
+<<set $diceroll = random(1,10)>>
+<<set $dealer = random (1,10)>>
+<<if $diceroll > $dealer>><<set $money = $money + 10>>
+<<if $diceroll > $dealer>>[[You win | GamblingWin]]<<else>>[[You lose | GamblingLose]]<</if>>
 
 :: 10
 <<set $money = $money - 10>>
+<<set $diceroll = random(1,10)>>
+<<set $dealer = random (1,10)>>
+<<if $diceroll > $dealer>><<set $money = $money + 20>>
+<<if $diceroll > $dealer>>[[You win | GamblingWin]]<<else>>[[You lose | GamblingLose]]<</if>>
 
 :: 50
 <<set $money = $money - 50>>
+<<set $diceroll = random(1,10)>>
+<<set $dealer = random (1,10)>>
+<<if $diceroll > $dealer>><<set $money = $money + 100>>
+<<if $diceroll > $dealer>>[[You win | GamblingWin]]<<else>>[[You lose | GamblingLose]]<</if>>
 
 :: All in
+<<set $diceroll = random(1,10)>>
+<<set $dealer = random (1,10)>>
+<<if $diceroll > $dealer>><<set $money = $money * 2>><<else>><<set $money = 0>>
+<<if $diceroll > $dealer>>[[You win | GamblingWin]]<<else>>[[You lose | GamblingLose]]<</if>>
 
 :: investigate casino
 The hustle and bustle of people here is nearly overwhelming.

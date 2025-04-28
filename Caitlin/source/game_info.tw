@@ -13,5 +13,6 @@ Cowpunk
 <<set $health to 10>>
 <<set $power to 3>>
 <<set $damage to 3>>
-<<set $money to 0>>
+<<set $money to 1000>>
 <<set $diceroll to 0>>
+<<set $dealer to 0>>
