@@ -136,7 +136,7 @@ When you finally reach the bottom of the staircase, you see a shuffling mass the
 Each of the rats is the size of a large tumbleweed and they seem to be stuck together at the tails.
 No sense in reasoning with them.
 
-[[Start fighting.|Bounty1 Complete]]
+[[Start fighting.|Bounty1 Encounter]]
 
 :: Bounty1 Encounter 
 <<script>> StartCombat(1, 20, 2) <</script>>
