@@ -73,5 +73,6 @@ function StartCombat(Difficulty, En_Health, En_Damage) {
 window.test = function () {
 	console.log("mwahahah");
 };
-window.StartCombat = StartCombat(Difficulty, En_Health, En_Damage);
+window.StartCombat = (Difficulty, En_Health, En_Damage) =>
+	StartCombat(Difficulty, En_Health, En_Damage);
 
