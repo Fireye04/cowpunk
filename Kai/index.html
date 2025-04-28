@@ -158,7 +158,6 @@ class Sellable {
 		console.log(typeof this.parent.changeable);
 		if (typeof this.parent.change === "function") {
 			this.parent.change();
-			console.log("gothere");
 		}
 	}
 	canAfford() {
@@ -429,11 +428,9 @@ Your gaze falls to the metal augments adorning your body. You nearly can&#39;t r
 [[&quot;Is it worth it if by the end I can&#39;t recognize myself?&quot; | Myself]]
 [[&quot;I don&#39;t think I&#39;m a man anymore | No Human&quot;]]</tw-passagedata><tw-passagedata pid="53" name="Myself" tags="" position="350,725" size="100,100">&quot;Thats up to you. You can stop whenever ya want; the world&#39;ll keep spinnin&#39;.&quot;</tw-passagedata><tw-passagedata pid="54" name="No Human" tags="" position="475,725" size="100,100">&quot;You&#39;ve still gotta head on your shoulders don&#39;t ya? Seems man enough to me.&quot;</tw-passagedata><tw-passagedata pid="55" name="Cassidy Start" tags="" position="600,725" size="100,100">Cassidy file</tw-passagedata><tw-passagedata pid="56" name="Kai Start" tags="" position="725,725" size="100,100">Downtime! we vibin
 &lt;&lt;set $money to 100&gt;&gt;
-&lt;&lt;set $weapon to new Weapon(&quot;bob&quot;, &quot;fuck off&quot;, 1,2)&gt;&gt;
-&lt;&lt;= $weapon.damage&gt;&gt;&lt;&lt;run $weapon.buy()&gt;&gt;
+&lt;&lt;set $weapon to new Weapon(&quot;bob&quot;, &quot;fuck off&quot;, 1,2)&gt;&gt;&lt;&lt;run $weapon.buy()&gt;&gt;
 &lt;&lt;= $weapon.canAfford()&gt;&gt;
-&lt;&lt;= $weapon.getDamage()&gt;&gt;
-&lt;&lt;set $aug to new Weapon(&quot;bob&quot;, &quot;fuck off&quot;, 1,2)&gt;&gt;&lt;&lt;run $aug.buy()&gt;&gt;
+&lt;&lt;set $aug to new Augment(&quot;bob&quot;, &quot;fuck off&quot;, 1,2, 3)&gt;&gt;&lt;&lt;run $aug.buy()&gt;&gt;
 &lt;&lt;= $aug.canAfford()&gt;&gt;
 &lt;&lt;= $money&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Start" tags="" position="850,725" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Andrew Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Caitlin&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
