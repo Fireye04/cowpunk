@@ -2,7 +2,7 @@
 Caitlin file
 
 :: Demo 
-Hi! Welcome to the demo of our game. While it is not entirely finished (read as: javascript is mean) you can play through various open world events. One of the game's main themes is the loss of humanity in a western cyberpunk setting.
+Hi! Welcome to the demo of our game. While it is not entirely finished (read as: we are battling with javascript) you can play through various open world events. One of the game's main themes is the loss of humanity in a western cyberpunk setting.
 As you progress through the game you will have the option to "enhance" yourself with cybernetic augmentations. This will impact your humanity and how you are perceived by the people around you.
 With the various links below you can try out how interactions will work with various levels of augmentations.
 
@@ -12,6 +12,7 @@ With the various links below you can try out how interactions will work with var
 [[None of you is still human | Demo 4]]
 
 Thank you for playing!!
+-Kai, Caitlin, Cassidy, and Megan 
 
 :: Demo 1
 <<set $humanity = 0>>
