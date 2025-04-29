@@ -2,6 +2,7 @@
 Caitlin file
 :: Map
 You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]
+<<set $shop1 "deadeye>>"
 <<script>>Catalog<</script>>
 <<script>>$cat.getItemsFromShop("deadeye")<</script>>
 
