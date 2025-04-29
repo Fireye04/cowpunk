@@ -1,5 +1,5 @@
 :: Cassidy Start
-<<set $CorpoBounties = ["retrieve rent","whistleblower","gamblers fallacy","the train station","Corpo bounty 5"]>>
+<<set $CorpoBounties = ["retrieve rent","whistleblower","gamblers fallacy","the train station"]>>
 Go to the [[bounty board | Bounty Board]]
 
 :: Bounty Board
@@ -9,7 +9,10 @@ Upon further inspecion, each piece of paper contains a bounty issued by one of t
 [[Check out the second bounty | $CorpoBounties[1]]]
 [[Check out the third bounty | $CorpoBounties[2]]]
 [[Check out the fourth bounty | $CorpoBounties[3]]]
-[[Check out the fifth bounty | $CorpoBounties[4]]]
+Bounty("retrieve rent", "Collect a local pubs overdue rent.", "available", 150, -10, -2, ["the first one","dennis","el pequenito caballero"]);
+Bounty("whistleblower", "Prevent a corporate whistleblower from releasing his findings.", "available", 250, -15, -10, ["the first one","dennis","el pequenito caballero"])
+Bounty("gamblers fallacy", "Hunt down a notorious gambler and end his winning streak.", "available", 250, -5, -1, ["the first one","dennis","el pequenito caballero"])
+Bounty("the train station", "Prevent citizens from dodging the trainfare.", "available", 100, -5, -10, ["the first one","dennis","el pequenito caballero"])
 
 :: retrieve rent
 In the corner of the bounty there is a corporate logo and four small stars.
@@ -41,7 +44,7 @@ He lit a cigarette and took a long draw, then continued, "Listen, neither one of
 [[Push for the rent | push for rent]]
 
 :: friend of bill
-You accept Bill's bribe and return to the [[bounty board | Bounty Board]] to go tear up any remaining copies of the bounty.
+You accept Bill's bribe and return [[home | Your house]].
 
 :: push for rent
 You need more money, and you stand on principle, Bill must pay his debt. 
@@ -64,7 +67,7 @@ There was a small safe, already opened, with just enough money to cover the miss
 [[Contact a corporation representative. | corpo rep]]
 
 :: corpo rep
-After a few minutes a corporate representative meets you outside The Lazy Cat and takes the owed rent, leaving you with [[$150 for the bounty. | Bounty Board]]
+After a few minutes a corporate representative meets you outside The Lazy Cat and takes the owed rent, leaving you with <<link"$150 for the bounty." "Map">><<set $money = $money + 150>><</link>>
 
 :: whistleblower
 You notice a corporate logo and two small stars in the top corner of the bounty.
@@ -75,7 +78,7 @@ Joshua Dean
 Wanted for theft of confidential company information, and threat to expose important company secrets.
 Eliminate or apprehend by any means necessary.
 Last known location: The Ashes
-Reward: $500
+Reward: $250
 
 <<link "Accept bounty" "accept whistleblower">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
@@ -143,10 +146,10 @@ You fire at Joshua Dean and before he can shoot back, his corpse slumps to the b
 [[Call in a corporate representative | corpo rep josh]]
 
 :: defeat over josh
-Against all odds, Joshua Dean manages to best you, surviving for now. [[It's over for you cowpunk. | ]]
+Against all odds, Joshua Dean manages to best you, surviving for now. [[It's over for now cowpunk. | Map]]
 
 :: corpo rep josh
-A man in a black suit meets you outside the motel and thanks you for dealing with their little problem, handing you <<link "$500" "Bounty Board">><<set $money = $money + 500>><</link>> in exchange.
+A man in a black suit meets you outside the motel and thanks you for dealing with their little problem, handing you <<link "$250" "Map">><<set $money = $money + 250>><</link>> in exchange.
 
 :: gamblers fallacy
 The thin sheet of paper's upper corner appears to be branded with a corporate logo and three small stars.
@@ -157,7 +160,7 @@ Name unknown
 Wanted for card counting and repeated return to the Blue Flame Casino following expulsion.
 Eliminate or apprehend by any means necessary.
 Last known location: Blue Flame Casino
-Reward: $500
+Reward: $250
 
 <<link "Accept bounty" "accept gamblers fallacy">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
@@ -215,10 +218,10 @@ Are you serious, that man is about to kill you and you want to gamble? [[Shoot h
 :: fight velvet man
 The man in velvet lunges at you with the knife, and you begin to fire back,
 <<script>>StartCombat(2,8,2)<</script>>
-<<if $health > 0>>You hit him dead on, and he lies bleeding out on the casino floor, you should probably [[call a corporate representative quick. | corpo rep velvet]] <<else>> Your thoughts of gambling slowed your draw, [[It's over for you cowpunk | ]] <</if>>
+<<if $health > 0>>You hit him dead on, and he lies bleeding out on the casino floor, you should probably [[call a corporate representative quick. | corpo rep velvet]] <<else>> Your thoughts of gambling slowed your draw, [[It's over for now cowpunk | Map]] <</if>>
 
 :: corpo rep velvet 
-A familiar man in a black suit arrives at the Blue Flame in minutes, ready to give you your reward, <<link "$500" "Bounty Board">><</link>>.
+A familiar man in a black suit arrives at the Blue Flame in minutes, ready to give you your reward, <<link "$250" "Map">><<set $money = $money + 250>><</link>>.
 
 :: the train station
 In the corner of the bounty there is a corporate logo with just one small star.
@@ -298,6 +301,4 @@ The woman lies sobbing behind him, her legs unrecognizable.
 [[No one will be skipping their fares for quite some time. | congrats]]
 
 :: congrats
-After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with <<link "$100." "Bounty Board">><<set $money = $money + 100>><</link>>
-
-:: Corpo bounty 5
+After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with <<link "$100." "Map">><<set $money = $money + 100>><</link>>
