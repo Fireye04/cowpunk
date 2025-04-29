@@ -20,9 +20,10 @@ Retrieve the owed sum of $650 by any means necessary.
 Last known location: The Iron Giant
 Reward: $100
 
-<<link "Accept bounty" "Bounty Board">><</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "accept corpo bounty 1">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
-:: 
+:: accept corpo bounty 1
+
 
 :: Corpo bounty 2
 You notice a corporate logo and three small stars in the top corner of the bounty.
@@ -111,7 +112,7 @@ It's not worth even trying, the person behind the camera knows for sure that you
 
 :: do something crazy
 You pull out your gun and point it at the man and woman across from you. The man in the suit perks up and looks at the gun.
-"What do you think yer doin there, I HAVE A MEETING TO GET TO!" 
+"What the hell do you think yer doin there, I HAVE A MEETING TO GET TO!" 
 The woman chimes in, "Just let us be, my boss won't be happy if I'm late."
 You start to feel the [[pressure | pressure]] of the situation.
 [[You could still leave, abandoning the assignment | Bounty Board]]
@@ -124,10 +125,10 @@ You know they won't pay their fares if you just keep pointing the gun, you need 
 :: shoot
 You fire your gun until it runs out of bullets. 
 The man lies on the ground in front of you, his suit now drenched in blood.
-The woman lies crying behind him, her legs unrecognizable.
+The woman lies sobbing behind him, her legs unrecognizable.
 [[No one will be skipping their fares for quite some time. | congrats]]
 
 :: congrats
-After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with <<link "$100" "Bounty Board">><<set $money = $money + 100>><</link>>
+After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with <<link "$100." "Bounty Board">><<set $money = $money + 100>><</link>>
 
 :: Corpo bounty 5
