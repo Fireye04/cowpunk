@@ -1,10 +1,10 @@
 :: Cassidy Start
 <<set $CorpoBounties = ["retrieve rent","whistleblower","gamblers fallacy","the train station"]>>
 Go to the [[bounty board | Bounty Board]]
-<<set $corpo1 to new bounty("retrieve rent", "Collect a local pubs overdue rent.", "available", 150, -10, -2, ["the first one","dennis","el pequenito caballero"])>>
-<<set $corpo2 to new bounty("whistleblower", "Prevent a corporate whistleblower from releasing his findings.", "available", 250, -15, -10, ["the first one","dennis","el pequenito caballero"])>>
-<<set $corpo3 to new bounty("gamblers fallacy", "Hunt down a notorious gambler and end his winning streak.", "available", 250, -5, -1, ["the first one","dennis","el pequenito caballero"])>>
-<<set $corpo4 to new bounty("the train station", "Prevent citizens from dodging the trainfare.", "available", 100, -5, -10, ["the first one","dennis","el pequenito caballero"])>>
+<<set $corpo1 to new Bounty("retrieve rent", "Collect a local pubs overdue rent.", "available", 150, -10, -2, "hard",["the first one","dennis","el pequenito caballero"])>>
+<<set $corpo2 to new Bounty("whistleblower", "Prevent a corporate whistleblower from releasing his findings.", "available", 250, -15, -10, "intermediate",["the first one","dennis","el pequenito caballero"])>>
+<<set $corpo3 to new Bounty("gamblers fallacy", "Hunt down a notorious gambler and end his winning streak.", "available", 250, -5, -1, "intermediate"["the first one","dennis","el pequenito caballero"])>>
+<<set $corpo4 to new Bounty("the train station", "Prevent citizens from dodging the trainfare.", "available", 100, -5, -10, "novice",["the first one","dennis","el pequenito caballero"])>>
 
 :: Bounty Board
 You approach a large board with a metal rim and torn, patchy cork board littered with an array of flimsy reused paper pinned up.
@@ -23,7 +23,7 @@ Retrieve the owed sum of $650 by any means necessary.
 Last known location: The Lazy Cat
 Reward: $150
 
-<<link "Accept bounty" "accept retrieve rent">><</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "accept retrieve rent">><<set $corpo1 to updateStatus("in-progress")>><</link>> or [[Return to Bounty Board | Bounty Board]]
 
 :: accept retrieve rent
 You make your way through the noise of the city and the aggressively neon lights to a small pub with a flickering neon sign that reads, "The Lazy Cat".
@@ -44,7 +44,8 @@ He lit a cigarette and took a long draw, then continued, "Listen, neither one of
 [[Push for the rent | push for rent]]
 
 :: friend of bill
-You accept Bill's bribe and return [[home | Your house]].
+You accept Bill's bribe and return [[home. | Your house]].
+<<set $corpo1 to updateStatus("failed")>>
 
 :: push for rent
 You need more money, and you stand on principle, Bill must pay his debt. 
@@ -56,7 +57,7 @@ You need more money, and you stand on principle, Bill must pay his debt.
 "All right I see how it is then" Bill said in a stern voice.
 The pub went quiet around the two of you, and Bill reached under the bar to pull out a shotgun, at the same time you pulled out your gun and began to fire.
 <<script>>StartCombat(3,7,5)<</script>>
-<<if $health > 0>>You shoot bill to death, ready to [[collect his overdue rent. | collect rent]]<<else>> Bill fires his shotgun quicker than you can lift your gun, once he's sure you're not getting back up he puts away his shotgun. [[It's over for you, cowpunk | ]]<</if>>
+<<if $health > 0>>You shoot bill to death, ready to [[collect his overdue rent. | collect rent]]<<else>> Bill fires his shotgun quicker than you can lift your gun, once he's sure you're not getting back up he puts away his shotgun. [[It's over for now cowpunk | Map]]<<set $corpo1 to updateStatus("failed")>><</if>>
 
 :: collect rent
 Stepping past the silent onlookers, still in shock of what just happened to Bill, you approach the bar and find where [[bill kept his money... | bills money]]
@@ -67,7 +68,7 @@ There was a small safe, already opened, with just enough money to cover the miss
 [[Contact a corporation representative. | corpo rep]]
 
 :: corpo rep
-After a few minutes a corporate representative meets you outside The Lazy Cat and takes the owed rent, leaving you with <<link"$150 for the bounty." "Map">><<set $money = $money + 150>><</link>>
+After a few minutes a corporate representative meets you outside The Lazy Cat and takes the owed rent, leaving you with <<link"$150 for the bounty." "Map">><<set $corpo1 to updateStatus("succeeded")>><</link>>
 
 :: whistleblower
 You notice a corporate logo and two small stars in the top corner of the bounty.
