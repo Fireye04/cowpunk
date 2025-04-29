@@ -19,7 +19,7 @@ My Twine Game
 <<set $fame to 0>>
 
 
-<<set $inv to new Inventory([new Weapon("Ol' Reliable", "A family heirloom, your dad gave it to you a long time ago and it has since worn down", 0,2,[])], null)>>
+<<set $inv to new Inventory(null, null)>>
 
 <<set $cat to new Catalog([new Weapon("Pea Shooter", "An old revolver that looks 'well loved'. It's nothing fancy but it'll get the job done", 2, 4, ["blackmarket guns"]),
 new Weapon("Bucky", "A double barrel shot gun", 8,6,["blackmarket guns"]),
