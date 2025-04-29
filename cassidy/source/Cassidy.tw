@@ -1,6 +1,10 @@
 :: Cassidy Start
 <<set $CorpoBounties = ["retrieve rent","whistleblower","gamblers fallacy","the train station"]>>
 Go to the [[bounty board | Bounty Board]]
+<<set $corpo1 to new Bounty("retrieve rent", "Collect a local pubs overdue rent.", "available", 150, -10, -2, ["the first one","dennis","el pequenito caballero"])>>
+<<set $corpo2 to new Bounty("whistleblower", "Prevent a corporate whistleblower from releasing his findings.", "available", 250, -15, -10, ["the first one","dennis","el pequenito caballero"])>>
+<<set $corpo3 to new Bounty("gamblers fallacy", "Hunt down a notorious gambler and end his winning streak.", "available", 250, -5, -1, ["the first one","dennis","el pequenito caballero"])>>
+<<set $corpo4 to new Bounty("the train station", "Prevent citizens from dodging the trainfare.", "available", 100, -5, -10, ["the first one","dennis","el pequenito caballero"])>>
 
 :: Bounty Board
 You approach a large board with a metal rim and torn, patchy cork board littered with an array of flimsy reused paper pinned up.
@@ -9,10 +13,6 @@ Upon further inspecion, each piece of paper contains a bounty issued by one of t
 [[Check out the second bounty | $CorpoBounties[1]]]
 [[Check out the third bounty | $CorpoBounties[2]]]
 [[Check out the fourth bounty | $CorpoBounties[3]]]
-<<set $corpo1 to new Bounty("retrieve rent", "Collect a local pubs overdue rent.", "available", 150, -10, -2, ["the first one","dennis","el pequenito caballero"])>>
-<<set $corpo2 to new Bounty("whistleblower", "Prevent a corporate whistleblower from releasing his findings.", "available", 250, -15, -10, ["the first one","dennis","el pequenito caballero"])>>
-<<set $corpo3 to new Bounty("gamblers fallacy", "Hunt down a notorious gambler and end his winning streak.", "available", 250, -5, -1, ["the first one","dennis","el pequenito caballero"])>>
-<<set $corpo4 to new Bounty("the train station", "Prevent citizens from dodging the trainfare.", "available", 100, -5, -10, ["the first one","dennis","el pequenito caballero"])>>
 
 :: retrieve rent
 In the corner of the bounty there is a corporate logo and four small stars.
