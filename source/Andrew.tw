@@ -49,11 +49,6 @@ We cowpunks have enough trouble just trying to get by, we don't need to be killi
 
 [[Accept?|Bounty 4 Mission]] or [[Look at the other bounties|Bounty Options]]
 
-:: Bounty 5
-"WANTED: DEAD - $30 Reward. There have been several occurences of people disappearing out in the desert. 
-Only accept if you are a very capable individual. Who knows if these disappearences are due to humans or beasts.
-Find out what is making people disappear and you will be rewarded handsomely.
-[[Accept?|Bounty 5 Mission]] or [[Look at the other bounties|Bounty Options]]
 
 
 /*--------------------------------------- Bounties Missions -----------------------------------------*/
@@ -550,6 +545,6 @@ Welp, here's [[your reward.|Bounty4 Reward 2]]"
 
 /* TODO: Add home location */
 :: Bounty4 Reward 2
-<<set $money = $money + 30>>
+<<set $money = $money + 20>>
 You take the money and [[head back to your house.|Bounties]] Cattle Run is safe again.
 
