@@ -707,7 +707,8 @@ Upon further inspecion, each piece of paper contains a bounty issued by one of t
 [[Check out the first bounty | $CorpoBounties[0]]]
 [[Check out the second bounty | $CorpoBounties[1]]]
 [[Check out the third bounty | $CorpoBounties[2]]]
-[[Check out the fourth bounty | $CorpoBounties[3]]]</tw-passagedata><tw-passagedata pid="62" name="retrieve rent" tags="" position="225,850" size="100,100">In the corner of the bounty there is a corporate logo and four small stars.
+[[Check out the fourth bounty | $CorpoBounties[3]]]
+&lt;&lt;run $corpo1.updateStatus(&quot;in-progress&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="retrieve rent" tags="" position="225,850" size="100,100">In the corner of the bounty there is a corporate logo and four small stars.
 The top of the bounty reads &quot;Retrieve&quot;, underneath is a photo of A muscular man with a glistening metal arm followed by the name &quot;Bill Westwood&quot; 
 The bounty&#39;s description reads:
 Wanted for repeated failure to fulfill property rent payments over a period of two months.
@@ -715,7 +716,7 @@ Retrieve the owed sum of $650 by any means necessary.
 Last known location: The Lazy Cat
 Reward: $150
 
-&lt;&lt;link &quot;Accept bounty&quot; &quot;accept retrieve rent&quot;&gt;&gt;&lt;&lt;run $corpo1.updateStatus(&quot;in-progress&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="63" name="accept retrieve rent" tags="" position="350,850" size="100,100">You make your way through the noise of the city and the aggressively neon lights to a small pub with a flickering neon sign that reads, &quot;The Lazy Cat&quot;.
+&lt;&lt;link &quot;Accept bounty&quot; &quot;accept retrieve rent&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="63" name="accept retrieve rent" tags="" position="350,850" size="100,100">You make your way through the noise of the city and the aggressively neon lights to a small pub with a flickering neon sign that reads, &quot;The Lazy Cat&quot;.
 [[enter | The Lazy Cat]]</tw-passagedata><tw-passagedata pid="64" name="The Lazy Cat" tags="" position="475,850" size="100,100">Pushing open the wooden doors, you enter the run down pub. There are various groups at different tables talking and drinking, as well as a particularly drunk group of bikers playing pool near the bar.
 Tending the bar you see a large man with a metal arm, he must be Bill Westwood. [[Approach the bar | approach Bill]]</tw-passagedata><tw-passagedata pid="65" name="approach Bill" tags="" position="600,850" size="100,100">As you approach the bar, Bill nods to you and says, &quot;Don&#39;t think I&#39;ve seen you round &#39;ere before, what can I do for ya?&quot;
 [[I&#39;m here for the rent you&#39;ve been missing | inquire on rent]]</tw-passagedata><tw-passagedata pid="66" name="inquire on rent" tags="" position="725,850" size="100,100">&quot;I see, so your one of them cowpunks then.&quot; Bill replied.
