@@ -2,7 +2,7 @@
 Caitlin file
 
 :: Demo 
-Hi! Welcome to the demo of our game. While it is not entirely finished (read as: javascript is mean) you can play through various open world events. One of the game's main themes is the loss of humanity in a western cyberpunk setting.
+Hi! Welcome to the demo of our game. While it is not entirely finished (read as: we are battling with javascript) you can play through various open world events. One of the game's main themes is the loss of humanity in a western cyberpunk setting.
 As you progress through the game you will have the option to "enhance" yourself with cybernetic augmentations. This will impact your humanity and how you are perceived by the people around you.
 With the various links below you can try out how interactions will work with various levels of augmentations.
 
@@ -12,6 +12,7 @@ With the various links below you can try out how interactions will work with var
 [[None of you is still human | Demo 4]]
 
 Thank you for playing!!
+-Kai, Caitlin, Cassidy, and Megan 
 
 :: Demo 1
 <<set $humanity = 0>>
@@ -84,15 +85,15 @@ gun 3
 The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
 People come in and out frequently, and the brass chimes hanging by the door ring every few seconds.
 
-<<if $humanity > -1 >> As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. "Good to see you darlin' What are you in for?" <<elseif $humanity > -41 >>
+<<if $humanity > -1 >> As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. "Good to see you darlin' What are you in for?" [[I'd like to look at your wares | cr.itemlist]] 
+[[Nothing | Visit Town ]]<<elseif $humanity > -41 >>
 As you enter the store, the woman at the front counter's smile wavers. 
 Her eyes scan you up and down and her lips twitch down into a small frown. 
-She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter.<<else>>
+She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter. [[I'd like to look at your wares | cr.itemlist]] 
+[[Nothing | Visit Town ]]<<else>>
 You walk up to the grocery store, but as you try to push the door open you are met with resistance. 
 The people still around on the street watch you with bairly hidden disdain.<</if>>
 
-[[I'd like to look at your wares | cr.itemlist]] 
-[[Nothing | Visit Town ]]
 
 :: cr.itemlist
 item 1
@@ -154,9 +155,9 @@ Sleep doesn't come easily today. No matter what you do you can't seem to find co
 
 <<else>>
 
-No matter how hard you try you can't seem to fall asleep. Your mind is awake, powered by metal and wires rather than blood and muscle. You stay there for a few more minutes before giving up.
+No matter how hard you try you can't seem to fall asleep. Your mind is awake, powered by metal and wires rather than blood and muscle. You stay there for a few more minutes before giving up.<</if>>
 
-You [[stand up | Leave House]] from bed, ready to go about the rest of your day.<</if>>
+You [[stand up | Leave House]] from bed, ready to go about the rest of your day.
 
 :: Pantry
 You open the pantry door and are met with a few dented cans of food. It's not much, but you can [[have a snack | Snack]] if you would like.
@@ -218,28 +219,32 @@ You sit down at a spider's eyes table and nod your head to the dealer. Its a sim
 The hustle and bustle of people here is nearly overwhelming.
 
 :: ec.augments1
-<<if $humanity > 1 >>The husband greets you as you walk in, his one metal arm that he'd gotten done not too long ago still shines brightly- not a single scratch or dent in sight. "Hey partner, what you in for today?"
+<<if $humanity > 1 >>The husband greets you as you walk in, his one metal arm that he'd gotten done not too long ago still shines brightly- not a single scratch or dent in sight. "Hey partner, what you in for today?" [[I'd like to look at your wares | ec.augmentlist1]] 
+[[Nothing | Visit City]]
 
 <<elseif $humanity > -31 >>
 
 The wife smiles widely at you as you enter, her long flowing black hair seems to shine under the city's ambient neon glow. "Hey darlin' what is it you need today?"
+[[I'd like to look at your wares | ec.augmentlist1]] 
+[[Nothing | Visit City]]
 
 <<elseif $humanity > -41 >>
 
 "Honey, I know its helpful but are you sure you want to do this? At this rate you'll be more metal than man."
-
+[[I'd like to look at your wares | ec.augmentlist1]] 
+[[Nothing | Visit City]]
 <<else>>
 
 "Oh darlin' theres nothing more we can do for you. I hope some of you is still in there, would be a shame to loose you."<</if>>
 [[Leave | Visit City]]
 
-[[I'd like to look at your wares | ec.augmentlist1]] 
-[[Nothing | Visit City]]
+
 
 :: ec.augmentlist1
 augment 1 (cheap)
 augment 2 (cheap)
 augment 3 (cheap)
+[[Leave | Visit City]]
 
 :: ec.augments2
 The massive neon sign for Cyberwares can be seen from nearly anywhere in the city- a constant reminder of how you could improve yourself if only you could afford it. 
@@ -340,7 +345,7 @@ With that the pastor offers his hand. You take it for a moment, and the human co
 
 :: Game
 You walk up to the group of women all entranced by the game on the table. It involves cards being laid out on the table, each one depicting various machines. 
-<<if $humanity > -11 >>Even when you are right behind them none of them look your way.<<else>> The women seem to tense up as you draw close.<</if>>There's [[nothing more | Visit Church]] to see here unless you want to interrupt their flow.
+<<if $humanity > -11 >>Even when you are right behind them none of them look your way.<<else>> The women seem to tense up as you draw close.<</if>> There's [[nothing more | Visit Church]] to see here unless you want to interrupt their flow.
 
 /* The Desert */
 
@@ -375,7 +380,7 @@ The man pats a spot on the dirt next to him and looks at you expectantly, drawin
 
 :: Stranger Talk
 You feels your knees protest as you take a seat on the warm dirt. Without even looking at you the man offers the cigar. 
-<<if $humanity > -51 >>You take it and take a long draw, letting the smoke calm your nerves. He seems pleased when you hand it back.<<else>>In the past you would have accepted the offer but now theres no part of you left that can enjoy the smoke. The man seems to notice your hesitance and shrugs.<</if>>
+<<if $humanity > -51 >>You take it and take a long draw, letting the smoke calm your nerves. He seems pleased when you hand it back.<<else>>In the past, you would have accepted the offer but now theres no part of you left that can enjoy the smoke. The man seems to notice your hesitance and shrugs.<</if>>
 "Folks only come here when they're trying to escape something. What's got ya runnin'?"
 
 [[I feel like I'm stuck | Anticorp]]

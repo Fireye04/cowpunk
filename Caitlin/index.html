@@ -540,7 +540,7 @@ let shop1 = "deadeye"
 let shop2 = "the iron giant"
 let shop3 = "cyberwares"
 let shop4 = "blackmarket guns"
-let shop5 = "forge and flame"</script><tw-passagedata pid="1" name="Andrew Start" tags="" position="100,100" size="100,100">Andrew file</tw-passagedata><tw-passagedata pid="2" name="Caitlin Start" tags="" position="225,100" size="100,100">Caitlin file</tw-passagedata><tw-passagedata pid="3" name="Demo" tags="" position="350,100" size="100,100">Hi! Welcome to the demo of our game. While it is not entirely finished (read as: javascript is mean) you can play through various open world events. One of the game&#39;s main themes is the loss of humanity in a western cyberpunk setting.
+let shop5 = "forge and flame"</script><tw-passagedata pid="1" name="Andrew Start" tags="" position="100,100" size="100,100">Andrew file</tw-passagedata><tw-passagedata pid="2" name="Caitlin Start" tags="" position="225,100" size="100,100">Caitlin file</tw-passagedata><tw-passagedata pid="3" name="Demo" tags="" position="350,100" size="100,100">Hi! Welcome to the demo of our game. While it is not entirely finished (read as: we are battling with javascript) you can play through various open world events. One of the game&#39;s main themes is the loss of humanity in a western cyberpunk setting.
 As you progress through the game you will have the option to &quot;enhance&quot; yourself with cybernetic augmentations. This will impact your humanity and how you are perceived by the people around you.
 With the various links below you can try out how interactions will work with various levels of augmentations.
 
@@ -549,7 +549,8 @@ With the various links below you can try out how interactions will work with var
 [[Many Augmentations | Demo 3]]
 [[None of you is still human | Demo 4]]
 
-Thank you for playing!!</tw-passagedata><tw-passagedata pid="4" name="Demo 1" tags="" position="475,100" size="100,100">&lt;&lt;set $humanity = 0&gt;&gt;
+Thank you for playing!!
+-Kai, Caitlin, Cassidy, and Megan</tw-passagedata><tw-passagedata pid="4" name="Demo 1" tags="" position="475,100" size="100,100">&lt;&lt;set $humanity = 0&gt;&gt;
 [[Play with no augments | Map]]</tw-passagedata><tw-passagedata pid="5" name="Demo 2" tags="" position="600,100" size="100,100">&lt;&lt;set $humanity = -20 &gt;&gt;
 [[Play with some augments | Map]]</tw-passagedata><tw-passagedata pid="6" name="Demo 3" tags="" position="725,100" size="100,100">&lt;&lt;set $humanity = -50 &gt;&gt;
 [[Play with many augments | Map]]</tw-passagedata><tw-passagedata pid="7" name="Demo 4" tags="" position="850,100" size="100,100">&lt;&lt;set $humanity = -100 &gt;&gt;
@@ -589,15 +590,14 @@ gun 3
 [[Leave | Visit Town]]</tw-passagedata><tw-passagedata pid="14" name="cr.item" tags="" position="475,225" size="100,100">The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
 People come in and out frequently, and the brass chimes hanging by the door ring every few seconds.
 
-&lt;&lt;if $humanity &gt; -1 &gt;&gt; As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. &quot;Good to see you darlin&#39; What are you in for?&quot; &lt;&lt;elseif $humanity &gt; -41 &gt;&gt;
+&lt;&lt;if $humanity &gt; -1 &gt;&gt; As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. &quot;Good to see you darlin&#39; What are you in for?&quot; [[I&#39;d like to look at your wares | cr.itemlist]] 
+[[Nothing | Visit Town ]]&lt;&lt;elseif $humanity &gt; -41 &gt;&gt;
 As you enter the store, the woman at the front counter&#39;s smile wavers. 
 Her eyes scan you up and down and her lips twitch down into a small frown. 
-She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter.&lt;&lt;else&gt;&gt;
+She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter. [[I&#39;d like to look at your wares | cr.itemlist]] 
+[[Nothing | Visit Town ]]&lt;&lt;else&gt;&gt;
 You walk up to the grocery store, but as you try to push the door open you are met with resistance. 
-The people still around on the street watch you with bairly hidden disdain.&lt;&lt;/if&gt;&gt;
-
-[[I&#39;d like to look at your wares | cr.itemlist]] 
-[[Nothing | Visit Town ]]</tw-passagedata><tw-passagedata pid="15" name="cr.itemlist" tags="" position="600,225" size="100,100">item 1
+The people still around on the street watch you with bairly hidden disdain.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="cr.itemlist" tags="" position="600,225" size="100,100">item 1
 
 item 2
 
@@ -626,9 +626,9 @@ Sleep doesn&#39;t come easily today. No matter what you do you can&#39;t seem to
 
 &lt;&lt;else&gt;&gt;
 
-No matter how hard you try you can&#39;t seem to fall asleep. Your mind is awake, powered by metal and wires rather than blood and muscle. You stay there for a few more minutes before giving up.
+No matter how hard you try you can&#39;t seem to fall asleep. Your mind is awake, powered by metal and wires rather than blood and muscle. You stay there for a few more minutes before giving up.&lt;&lt;/if&gt;&gt;
 
-You [[stand up | Leave House]] from bed, ready to go about the rest of your day.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Pantry" tags="" position="725,350" size="100,100">You open the pantry door and are met with a few dented cans of food. It&#39;s not much, but you can [[have a snack | Snack]] if you would like.</tw-passagedata><tw-passagedata pid="27" name="Snack" tags="" position="850,350" size="100,100">You crack open a can of black beans with a small pocket knife and sit down at the small one-seat table in the middle of your bedroom. &lt;&lt;if $humanity &gt; -41&gt;&gt;You eat it slowly, savoring the meal like its your last since it very well could be.&lt;&lt;else&gt;&gt; It takes you a moment for you to realize you don&#39;t feel hungry... You don&#39;t feel anything anymore. This is pointless.&lt;&lt;/if&gt;&gt;
+You [[stand up | Leave House]] from bed, ready to go about the rest of your day.</tw-passagedata><tw-passagedata pid="26" name="Pantry" tags="" position="725,350" size="100,100">You open the pantry door and are met with a few dented cans of food. It&#39;s not much, but you can [[have a snack | Snack]] if you would like.</tw-passagedata><tw-passagedata pid="27" name="Snack" tags="" position="850,350" size="100,100">You crack open a can of black beans with a small pocket knife and sit down at the small one-seat table in the middle of your bedroom. &lt;&lt;if $humanity &gt; -41&gt;&gt;You eat it slowly, savoring the meal like its your last since it very well could be.&lt;&lt;else&gt;&gt; It takes you a moment for you to realize you don&#39;t feel hungry... You don&#39;t feel anything anymore. This is pointless.&lt;&lt;/if&gt;&gt;
 
 [[Throw out the can | Trash]]</tw-passagedata><tw-passagedata pid="28" name="Trash" tags="" position="975,350" size="100,100">You throw the can into the small bin thats functioned as your trash for years before heading for [[the door | Leave House]].</tw-passagedata><tw-passagedata pid="29" name="Leave House" tags="" position="1100,350" size="100,100">You make sure to lock the door behind you as you face the sprawling desert outside. The wind whips against your face, beckoning you forward. In an odd way its emptiness is beautiful, but you have no time to appreciate its glory. You [[open your map | locations]] to figure out where to go next.
 
@@ -658,25 +658,27 @@ You&#39;re not sure what they are anymore, but they don&#39;t even look your way
 In the lobby there are several tables set up with dealers ready to play. The dealers themselves are some of the most augmented people you&#39;ve ever seen- their entire faces transformed into an amalgamation of wires and lights. 
 You can [[sit down at a table | Gamble]] or [[go further in | investigate casino]]
 
-[[leave casino | Visit City]].</tw-passagedata><tw-passagedata pid="33" name="Gamble" tags="" position="350,475" size="100,100">You sit down at a spider&#39;s eyes table and nod your head to the dealer. Its a simple game, one you played often in your youth. Both you and the dealer roll a die and whoever rolls the highest wins. The dealer is wearing one of the cleanest suits you&#39;ve ever seen, its crisp black fabric is embroidered with gold thread along the lapels. He seems mostly human although you can&#39;t quite tell if the visor that wraps around his head is removable or not. Even still his voice sounds human enough. &quot;[[Your wager? | Wager]]&quot;</tw-passagedata><tw-passagedata pid="34" name="Wager" tags="" position="475,475" size="100,100"></tw-passagedata><tw-passagedata pid="35" name="investigate casino" tags="" position="600,475" size="100,100">The hustle and bustle of people here is nearly overwhelming.</tw-passagedata><tw-passagedata pid="36" name="ec.augments1" tags="" position="725,475" size="100,100">&lt;&lt;if $humanity &gt; 1 &gt;&gt;The husband greets you as you walk in, his one metal arm that he&#39;d gotten done not too long ago still shines brightly- not a single scratch or dent in sight. &quot;Hey partner, what you in for today?&quot;
+[[leave casino | Visit City]].</tw-passagedata><tw-passagedata pid="33" name="Gamble" tags="" position="350,475" size="100,100">You sit down at a spider&#39;s eyes table and nod your head to the dealer. Its a simple game, one you played often in your youth. Both you and the dealer roll a die and whoever rolls the highest wins. The dealer is wearing one of the cleanest suits you&#39;ve ever seen, its crisp black fabric is embroidered with gold thread along the lapels. He seems mostly human although you can&#39;t quite tell if the visor that wraps around his head is removable or not. Even still his voice sounds human enough. &quot;[[Your wager? | Wager]]&quot;</tw-passagedata><tw-passagedata pid="34" name="Wager" tags="" position="475,475" size="100,100"></tw-passagedata><tw-passagedata pid="35" name="investigate casino" tags="" position="600,475" size="100,100">The hustle and bustle of people here is nearly overwhelming.</tw-passagedata><tw-passagedata pid="36" name="ec.augments1" tags="" position="725,475" size="100,100">&lt;&lt;if $humanity &gt; 1 &gt;&gt;The husband greets you as you walk in, his one metal arm that he&#39;d gotten done not too long ago still shines brightly- not a single scratch or dent in sight. &quot;Hey partner, what you in for today?&quot; [[I&#39;d like to look at your wares | ec.augmentlist1]] 
+[[Nothing | Visit City]]
 
 &lt;&lt;elseif $humanity &gt; -31 &gt;&gt;
 
 The wife smiles widely at you as you enter, her long flowing black hair seems to shine under the city&#39;s ambient neon glow. &quot;Hey darlin&#39; what is it you need today?&quot;
+[[I&#39;d like to look at your wares | ec.augmentlist1]] 
+[[Nothing | Visit City]]
 
 &lt;&lt;elseif $humanity &gt; -41 &gt;&gt;
 
 &quot;Honey, I know its helpful but are you sure you want to do this? At this rate you&#39;ll be more metal than man.&quot;
-
+[[I&#39;d like to look at your wares | ec.augmentlist1]] 
+[[Nothing | Visit City]]
 &lt;&lt;else&gt;&gt;
 
 &quot;Oh darlin&#39; theres nothing more we can do for you. I hope some of you is still in there, would be a shame to loose you.&quot;&lt;&lt;/if&gt;&gt;
-[[Leave | Visit City]]
-
-[[I&#39;d like to look at your wares | ec.augmentlist1]] 
-[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="37" name="ec.augmentlist1" tags="" position="850,475" size="100,100">augment 1 (cheap)
+[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="37" name="ec.augmentlist1" tags="" position="850,475" size="100,100">augment 1 (cheap)
 augment 2 (cheap)
-augment 3 (cheap)</tw-passagedata><tw-passagedata pid="38" name="ec.augments2" tags="" position="975,475" size="100,100">The massive neon sign for Cyberwares can be seen from nearly anywhere in the city- a constant reminder of how you could improve yourself if only you could afford it. 
+augment 3 (cheap)
+[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="38" name="ec.augments2" tags="" position="975,475" size="100,100">The massive neon sign for Cyberwares can be seen from nearly anywhere in the city- a constant reminder of how you could improve yourself if only you could afford it. 
 You let the sign guide you to its entrance- a massive set of pristine glass doors. 
 You are greeted by someone who is entirely more machine than man. You can see the pumps and wires pushing blood through its system.
 
@@ -728,7 +730,7 @@ The pastor at least has the mind to give a small apologetic smile.
 [[&quot;It&#39;s been hard.&quot; | Pastor End]]</tw-passagedata><tw-passagedata pid="52" name="Pastor End" tags="" position="225,725" size="100,100">&quot;Even as times become harder I hope you can find a safe place here. I&#39;m sure you&#39;re not here to entertain me though, I hope whatever you&#39;re here for finds you well.&quot;
 
 With that the pastor offers his hand. You take it for a moment, and the human contact feels comforting after so long alone. You give the man one last polite nod before [[turning back | Visit Church]] to the people flooding the church grounds.</tw-passagedata><tw-passagedata pid="53" name="Game" tags="" position="350,725" size="100,100">You walk up to the group of women all entranced by the game on the table. It involves cards being laid out on the table, each one depicting various machines. 
-&lt;&lt;if $humanity &gt; -11 &gt;&gt;Even when you are right behind them none of them look your way.&lt;&lt;else&gt;&gt; The women seem to tense up as you draw close.&lt;&lt;/if&gt;&gt;There&#39;s [[nothing more | Visit Church]] to see here unless you want to interrupt their flow.
+&lt;&lt;if $humanity &gt; -11 &gt;&gt;Even when you are right behind them none of them look your way.&lt;&lt;else&gt;&gt; The women seem to tense up as you draw close.&lt;&lt;/if&gt;&gt; There&#39;s [[nothing more | Visit Church]] to see here unless you want to interrupt their flow.
 
 /* The Desert */</tw-passagedata><tw-passagedata pid="54" name="Desert" tags="" position="475,725" size="100,100">A sprawling desert that goes on for miles between the various cities and towns. Not much happens here, but some trains pass through on their way to the city. 
 Every few miles you may be able to spot some dust-beaten buildings long-abandoned by their owners.
@@ -745,7 +747,7 @@ A figure sits near it; smoke billows from their lips as they bring a cigar to th
 The man pats a spot on the dirt next to him and looks at you expectantly, drawing his cigar back between his lips. 
 
 [[Sit | Stranger Talk]]/ [[Turn Away | Stranger Leave]]</tw-passagedata><tw-passagedata pid="59" name="Stranger Talk" tags="" position="1100,725" size="100,100">You feels your knees protest as you take a seat on the warm dirt. Without even looking at you the man offers the cigar. 
-&lt;&lt;if $humanity &gt; -51 &gt;&gt;You take it and take a long draw, letting the smoke calm your nerves. He seems pleased when you hand it back.&lt;&lt;else&gt;&gt;In the past you would have accepted the offer but now theres no part of you left that can enjoy the smoke. The man seems to notice your hesitance and shrugs.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $humanity &gt; -51 &gt;&gt;You take it and take a long draw, letting the smoke calm your nerves. He seems pleased when you hand it back.&lt;&lt;else&gt;&gt;In the past, you would have accepted the offer but now theres no part of you left that can enjoy the smoke. The man seems to notice your hesitance and shrugs.&lt;&lt;/if&gt;&gt;
 &quot;Folks only come here when they&#39;re trying to escape something. What&#39;s got ya runnin&#39;?&quot;
 
 [[I feel like I&#39;m stuck | Anticorp]]
