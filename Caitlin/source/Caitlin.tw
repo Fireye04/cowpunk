@@ -54,8 +54,8 @@ A large old timey rural town. Compared to the lights and glamour of the city it 
 :: Visit Town
 No matter how many times you've been here its striking how different Cattle's Run is from the city. 
 The squat wooden buildings line a central dirt road that radiates warmth from the sun. 
-As you walk in, some people look your way; an older gentleman tips his hat to you OR a woman who had been sitting on her porch takes one glance at you before going indoors. 
-You can faintly hear the sound of the deadbolt being slid in.
+As you walk in, some people look your way; <<if $humanity > -21 >>an older gentleman tips his hat to you.<<else>>a woman who had been sitting on her porch takes one glance at you before going indoors. 
+You can faintly hear the sound of the deadbolt being slid in.<</if>>
 The [[weapons shop | cr.gun]], Deadeye, run by a retired bounty hunter sits at the edge of town, right next to the old grocery store. 
 One side of the central street is lined with stalls where the various farmers sell their goods. 
 You recognize an [[old friend | Friend]] among their lots. 
