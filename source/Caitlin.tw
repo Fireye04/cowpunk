@@ -65,18 +65,12 @@ gun 3
 The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
 People come in and out frequently, and the brass chimes hanging by the door ring every few seconds.
 
-As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. "Good to see you darlin' What are you in for?"
-
-OR
-
+<<if $humanity > -1 >> As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. "Good to see you darlin' What are you in for?" <<else if $humanity > -41 >>
 As you enter the store, the woman at the front counter's smile wavers. 
 Her eyes scan you up and down and her lips twitch down into a small frown. 
-She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter.
-
-OR 
-
+She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter.<<else>>
 You walk up to the grocery store, but as you try to push the door open you are met with resistance. 
-The people still around on the street watch you with bairly hidden disdain.
+The people still around on the street watch you with bairly hidden disdain.<</if>>
 
 [[I'd like to look at your wares | cr.itemlist]] 
 [[Nothing | Visit Town ]]
