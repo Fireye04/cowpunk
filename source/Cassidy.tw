@@ -53,7 +53,7 @@ You need more money, and you stand on principle, Bill must pay his debt.
 "All right I see how it is then" Bill said in a stern voice.
 The pub went quiet around the two of you, and Bill reached under the bar to pull out a shotgun, at the same time you pulled out your gun and began to fire.
 <<script>>StartCombat(2,6,5)<</script>>
-<<if $health > 0>>You shoot bill to death, ready to [[collect his overdue rent> | collect rent]]<<else>> Bill fires his shotgun quicker than you can lift your gun, once he's sure you're not getting back up he puts away his shotgun. [[It's over for you, cowpunk | ]]<</if>>
+<<if $health > 0>>You shoot bill to death, ready to [[collect his overdue rent. | collect rent]]<<else>> Bill fires his shotgun quicker than you can lift your gun, once he's sure you're not getting back up he puts away his shotgun. [[It's over for you, cowpunk | ]]<</if>>
 
 :: collect rent
 Stepping past the silent onlookers, still in shock of what just happened to Bill, you approach the bar and find where [[bill kept his money... | bills money]]
@@ -67,7 +67,7 @@ There was a small safe, already opened, with just enough money to cover the miss
 After a few minutes a corporate representative meets you outside The Lazy Cat and takes the owed rent, leaving you with [[$150 for the bounty. | Bounty Board]]
 
 :: whistleblower
-You notice a corporate logo and three small stars in the top corner of the bounty.
+You notice a corporate logo and two small stars in the top corner of the bounty.
 In bold red text, the top of the bounty reads "Wanted dead or alive"
 Underneath is a photo of a young man with greasy blonde hair and a circular scar on his left temple.
 The bounty's description reads:
@@ -77,9 +77,76 @@ Eliminate or apprehend by any means necessary.
 Last known location: The Ashes
 Reward: $500
 
-<<link "Accept bounty" "Bounty Board">><</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "accept whistleblower">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
+:: accept whistleblower
+Making your way through the dark alleyways of Ember city you find yourself in the undercity known as The Ashes. 
+The image of Joshea Dean strong in your mind, you wander through The Ashes, you find yourself at the Pine Motel, known for hiding their guests identity.
+[[Enter the motel | pine motel]]
 
+:: pine motel
+"What can I do for you friend?" A woman with bright green hair working the desk asks as you cross through the doors. 
+[[I'm looking for someone... | pine motel dialogue 1]]
+
+:: pine motel dialogue 1
+"What can I do for you friend?" A woman with bright green hair working the desk asks as you cross through the doors. 
+"I'm looking for someone, greasy blonde hair, scar about here" you say gesturing to your temple.
+"I'm afraid we don't keep a guest book, and I can't disclose any customer information. But if you'd like a room I think I could help you out."
+[[Threaten the desk attendant | threaten pine motel]] or <<link "Bribe the desk attendant (-$20)" "bribe pine motel">><<set $money = $money - 20>><</link>>
+
+:: bribe pine motel
+"What can I do for you friend?" A woman with bright green hair working the desk asks as you cross through the doors. 
+"I'm looking for someone, greasy blonde hair, scar about here" you say gesturing to your temple.
+"I'm afraid we don't keep a guest book, and I can't disclose any customer information. But if you'd like a room I think I could help you out."
+You hand the woman $20 and she stashes it away behind the desk, "There's a room on the second floor, room 213. The man your looking for booked that room."
+[[Thank you. | room 213]]
+
+:: threaten pine motel
+"What can I do for you friend?" A woman with bright green hair working the desk asks as you cross through the doors. 
+"I'm looking for someone, greasy blonde hair, scar about here" you say gesturing to your temple.
+"I'm afraid we don't keep a guest book, and I can't disclose any customer information. But if you'd like a room I think I could help you out."
+You put your hand on your holster and repeat yourself, "I'm looking for a man with greasy blonde hair and a scar on his temple, make the right choice."
+The woman cowers a little and nods saying, "He's in [[room 213 | room 213]]"
+
+:: room 213
+You climb the rickety motel stairs and walk down the faded red carpets of the cramped hallways, eventually finding room 213.
+The door is cracked open slightly, letting soft yellow light stream into the otherwise dark room.
+You creak the door open, alerting the man inside.
+Joshea Dean sits curled up on the bed, [[muttering to himself. | insane man]]
+
+:: insane man
+After noticing your entrance he turns to look at you, now muttering to you, "I didn't think it would be like this. I didn't think it would be like this."
+His eyes begin to water as he stares at you, "Please. you have to believe me. I won't tell a soul, I'll-" he stopped to frantically think, "-I'll burn the drive, I'll destroy the data, just please, please let me go."
+[[I'm afraid I can't do that | insane man 2]]
+
+:: insane man 2
+"Yes, yes you can" He stuttered barely holding composure, "because if you don't, I swear to god I will [[shoot | kill Joshua]] you." Joshua pulled out a gun from beside him, still talking.
+[[Keep listening | insane man 3]]
+
+:: insane man 3
+"Oh what am I doing." The gun fell to his side, "They killed him. My son, I mean. My wife died in child birth, he was all I had, and they just killed him."
+"What I did was wrong. Was it? No, what the corporations are doing is wrong."
+[[Spare him | Bounty Board]]
+[[Attempt to apprehend him | apprehend josh]]
+[[Shoot him | victory over josh]]
+
+:: apprehend josh
+<<set rng = random(1,6)>>
+<<if rng > 3>>You manage to wrestle the man down and put him in cuffs. [[Call in a corporate representative | corpo rep josh]]<<else>> You are unable to make Joshua submit. [[Shoot him | kill joshua]]<</if>>
+
+:: kill joshua
+<<script>>StartCombat(1,4,3)<</script>>
+<<if $health > 0>>[[You win the scuffle | victory over josh]] <<else>> [[You lose the scuffle | defeat over josh]] <</if>>
+
+:: victory over josh
+You fire at Joshua Dean and before he can shoot back, his corpse slumps to the bed.
+[[Call in a corporate representative | corpo rep josh]]
+
+:: defeat over josh
+Against all odds, Joshua Dean manages to best you, surviving for now. [[It's over for you cowpunk. | ]]
+
+:: corpo rep josh
+A man in a black suit meets you outside the motel and thanks you for dealing with their little problem, handing you <<link "$500" "Bounty Board">><<set $money = $money + 500>><</link>> in exchange.
 
 :: Corpo bounty 3
 The thin sheet of paper's upper corner appears to be branded with a corporate logo and three small stars.
