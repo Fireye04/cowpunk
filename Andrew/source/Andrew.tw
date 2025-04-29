@@ -523,7 +523,7 @@ Alright son, but they won't remember you if you die.
 [[Draw!|Chrome Carl Encounter]]
 
 :: Chrome Carl Encounter
-<<script>> StartCombat(1, 20, 2) <</script>>
+<<script>> StartCombat(5, 20, 5) <</script>>
 <<if $health > 0>> [[After trading blows, you finally got the upper hand and overpowered him.|Bounty4 Encounter Win]] 
 <<else>> [[He was too powerful. His bullets cut through you like butter.|You died]] 
 <</if>>
