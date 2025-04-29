@@ -38,7 +38,7 @@ Right in the center of town the liquor store is guarded by an old looking [[dog.
 [[Dog | Dog]]
 
 :: cr.gun
-<<if $humanity > -1 >> An older man with a bowler hat and a well-groomed mustache waves to you as you enter. "Good to see you in. Whatcha lookin' for today?"<<else if $humanity > -41 >>You walk into the store and the older usually kind store owner gives you a cold look. 
+<<if $humanity > -1 >> An older man with a bowler hat and a well-groomed mustache waves to you as you enter. "Good to see you in. Whatcha lookin' for today?"<<elseif $humanity > -41 >>You walk into the store and the older usually kind store owner gives you a cold look. 
 He nods to you, but his eyes never quiet meet your own. His voice is more clipped than usual as he opens up his drawer, revealing the firearms inside. "What do you want?"<<else>>Your spurs jingle across the wooden steps into the store, but as you reach out to push the door open you hear a click. The door doesn't budge. From the windows you can see a light flicker off as the curtains are pulled tight.<</if>>
 
 [[I'd like to look at your wares | cr.gunlist]] 
@@ -51,11 +51,12 @@ gun 2
 
 gun 3
 
+[[Leave | Visit Town]]
 :: cr.item
 The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
 People come in and out frequently, and the brass chimes hanging by the door ring every few seconds.
 
-<<if $humanity > -1 >> As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. "Good to see you darlin' What are you in for?" <<else if $humanity > -41 >>
+<<if $humanity > -1 >> As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. "Good to see you darlin' What are you in for?" <<elseif $humanity > -41 >>
 As you enter the store, the woman at the front counter's smile wavers. 
 Her eyes scan you up and down and her lips twitch down into a small frown. 
 She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter.<<else>>
@@ -75,6 +76,7 @@ item 3
 :: Friend
 Tom, an old childhood friend can be found selling meat at the local market. 
 He used to do what you do, but after a bad incident he decided it was best for him to settle down and work at his family's ranch. 
+<<if $humanity > -1 >>He waves to you, with a wide smile.<<else>>You can tell he saw you by the way he tenses, but his eyes don't quiet meet your own. [[Keep walking | Visit Town]]
 
 :: Dog
 Outside the old run down liquor store an old stray mutt sits passively. 
