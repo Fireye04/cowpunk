@@ -1,5 +1,5 @@
 :: Cassidy Start
-<<set $CorpoBounties = ["retrieve rent","Corpo bounty 2","Corpo bounty 3","the train station","Corpo bounty 5"]>>
+<<set $CorpoBounties = ["retrieve rent","whistleblower","Corpo bounty 3","the train station","Corpo bounty 5"]>>
 Go to the [[bounty board | Bounty Board]]
 
 :: Bounty Board
@@ -15,12 +15,12 @@ Upon further inspecion, each piece of paper contains a bounty issued by one of t
 In the corner of the bounty there is a corporate logo and three small stars.
 The top of the bounty reads "Retrieve", underneath is a photo of A muscular man with a glistening metal arm followed by the name "Bill Westwood" 
 The bounty's description reads:
-Wanted for repeated failure to fulfill property tax payments over a period of two months.
+Wanted for repeated failure to fulfill property rent payments over a period of two months.
 Retrieve the owed sum of $650 by any means necessary.
 Last known location: The Lazy Cat
 Reward: $150
 
-<<link "Accept bounty" "retrieve rent">><</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "accept retrieve rent">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
 :: accept retrieve rent
 You make your way through the noise of the city and the aggressively neon lights to a small pub with a flickering neon sign that reads, "The Lazy Cat".
@@ -66,7 +66,7 @@ There was a small safe, already opened, with just enough money to cover the miss
 :: corpo rep
 After a few minutes a corporate representative meets you outside The Lazy Cat and takes the owed rent, leaving you with [[$150 for the bounty. | Bounty Board]]
 
-:: Corpo bounty 2
+:: whistleblower
 You notice a corporate logo and three small stars in the top corner of the bounty.
 In bold red text, the top of the bounty reads "Wanted dead or alive"
 Underneath is a photo of a young man with greasy blonde hair and a circular scar on his left temple.
@@ -78,6 +78,8 @@ Last known location: The Ashes
 Reward: $500
 
 <<link "Accept bounty" "Bounty Board">><</link>> or [[Return to Bounty Board | Bounty Board]]
+
+
 
 :: Corpo bounty 3
 The thin sheet of paper's upper corner appears to be branded with a corporate logo and three small stars.
