@@ -63,8 +63,7 @@ You recognize an [[old friend | Friend]] among their lots.
 Right in the center of town the liquor store is guarded by an old looking [[dog. | Dog]]
 
 [[Go somewhere else | locations]]
-[[Old Friend | Friend]]
-[[Dog | Dog]]
+
 
 :: cr.gun
 <<if $humanity > -1 >> An older man with a bowler hat and a well-groomed mustache waves to you as you enter. "Good to see you in. Whatcha lookin' for today?" [[I'd like to look at your wares | cr.gunlist]] 
@@ -106,7 +105,7 @@ item 3
 :: Friend
 Tom, an old childhood friend can be found selling meat at the local market. 
 He used to do what you do, but after a bad incident he decided it was best for him to settle down and work at his family's ranch. 
-<<if $humanity > -1 >>He waves to you, with a wide smile.<<else>>You can tell he saw you by the way he tenses, but his eyes don't quiet meet your own. [[Keep walking | Visit Town]]
+<<if $humanity > -1 >>He waves to you, with a wide smile.<<else>>You can tell he saw you by the way he tenses, but his eyes don't quiet meet your own.<</if>> [[Keep walking | Visit Town]]
 
 :: Dog
 Outside the old run down liquor store an old stray mutt sits passively. 
@@ -140,7 +139,7 @@ The old rickety door swings open with a whine of its rusted hinges. Light stream
 You wipe the dust off with your gloved fingers. Under the thick coat of dirt two familiar faces stare back at you. Your parents left this world [[long before their time | Parents]]. Sometimes you still miss them.
 
 :: Parents
-Your parents died in the city doing the same work you do now. It makes you wonder if you shouldn't just setlle down in Cattle's Run OR You can't find it in yourself to care.
+Your parents died in the city doing the same work you do now. <<if $humanity > -41 >>It makes you wonder if you shouldn't just setlle down in Cattle's Run<<else>>You can't find it in yourself to care.<</if>>
 
 [[Look away from the photo | Bedroom]]
 
@@ -276,7 +275,9 @@ The black market here thrives...just don't expect good quality.
 The entrance to the ashes isn't hard to find. If you go far enough into any alleyway in the city you'll end up there. 
 You choose to follow a path near one of the city's large apartment buildings. You don't have to walk long before the glitz and glamour of the city melts away into smog and ruin. 
 It's darker here, like the sun itself isn't willing to set foot within. Most people here do not have augments, but the ones who do have mechanical limbs that are massive and gaudy. 
-There are only two places here of interest to you: the [[black market | a.item]] and [[the makeshift cybernetics store, | a.augments]] Forge and Flame.
+There are only two places here of interest to you: the [[black market | a.gun]] and [[the makeshift cybernetics store, | a.augments]] Forge and Flame.
+
+[[Go back to the city | Visit City]]
 
 :: a.gun
 The blackmarket can be found tucked between two levels of the Ashes. Various stands vendors line the narrow street. 
@@ -317,9 +318,11 @@ An old church town, not too crowded but still well-kept. Religious folk tend to 
 The church is busy today with people using the old building as a community center more than anything. A [[pastor | Pastor]] watches the people from a stand at the far end of the church. 
 At one of the tables a group of older women sit around a [[board game | Game]] you don't recognize.
 
+[[Leave church | Locations]]
+
 :: Pastor
 The pastor is familiar to you, when your parents were still alive they would take you to his sermons. His hair has thinned over the years but his kind patient face remains the same. 
-For a momnt his eyes catch your own. You [[look away | Visit Church]]/[[walk up to him | Pastor Talk]]
+For a momnt his eyes catch your own. You [[look away | Visit Church]] or [[walk up to him. | Pastor Talk]]
 
 :: Pastor Talk
 The pastor nods to you as you approach, his lips tugging upwards into a smile. "I haven't seen you at mass in a long time," he laughs, "Have you been doing well?"
@@ -365,11 +368,11 @@ or
 
 :: Train
 The walk through the desert is uncomfortable but peaceful. The only thing that interrupts your thoughts is the howling wind and dust that whips across your face. 
-When the train comes into view you spot a light- a fire next to the tracks. [[Investigate | Investigate Fire]]/ [[Leave | Visit Desert]]
+When the train comes into view you spot a light- a fire next to the tracks. [[Investigate | Investigate Fire]] or [[Leave | Visit Desert]]
 
 :: Investigate Fire
 Only a few meters away the dust gives way to the small camfire set up near the rusted metal train tracks. 
-A figure sits near it; smoke billows from their lips as they bring a cigar to their lips. [[Talk to them | Stranger]]/[[Leave | Visit Desert]]
+A figure sits near it; smoke billows from their lips as they bring a cigar to their lips. [[Talk to them | Stranger]] or [[Leave | Visit Desert]]
 
 :: Stranger
 You approach the stranger with hands raised. The figure tenses for a moment before turning to face you. You are met by the face of an older man. His dark eyes seem to see right through you.
@@ -378,6 +381,10 @@ You approach the stranger with hands raised. The figure tenses for a moment befo
 The man pats a spot on the dirt next to him and looks at you expectantly, drawing his cigar back between his lips. 
 
 [[Sit | Stranger Talk]]/ [[Turn Away | Stranger Leave]]
+
+:: Stranger Leave
+You walk away. You can feel the man's eyes burning holes into the back of your head, but he doesn't try to stop you. 
+You should open your [[map | locations]] to figure out where to go next.
 
 :: Stranger Talk
 You feels your knees protest as you take a seat on the warm dirt. Without even looking at you the man offers the cigar. 
@@ -400,7 +407,7 @@ The stranger nods, his eyes following your own. "They'll bleed you dry out there
 
 [[Leave | Visit Desert]]
 
-:: Work
+:: AntiWork
 You frown; the stress, both physical and mental, wears heavy on you. You can feel the sins you've committed just to live crawling under your skin- writhing and ugly. "I don't know if I'm doing the right thing."
 
 "Well you're alive aint ya? That's gotta count for somethin' right?"
