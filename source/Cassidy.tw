@@ -13,15 +13,16 @@ Upon further inspecion, each piece of paper contains a bounty issued by one of t
 
 :: Corpo bounty 1
 In the corner of the bounty there is a corporate logo and two small stars.
-The top of the bounty reads "Retrieve", underneath is a photo of (description of shopkeeper) followed by (name of shopkeeper) 
+The top of the bounty reads "Retrieve", underneath is a photo of A muscular man with a glistening metal arm followed by the name "Bill Westwood" 
 The bounty's description reads:
 Wanted for repeated failure to fulfill property tax payments over a period of two months.
 Retrieve the owed sum of $650 by any means necessary.
-Last known location: (name of shopkeepers shop)
+Last known location: The Iron Giant
 Reward: $100
 
 <<link "Accept bounty" "Bounty Board">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
+:: 
 
 :: Corpo bounty 2
 You notice a corporate logo and three small stars in the top corner of the bounty.
@@ -62,7 +63,7 @@ Reward: $100
 <<link "Accept bounty" "Defend train station">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
 :: Defend train station
-You make your way to the train station where you find an line of turnstiles blocking your path through to the train.
+You make your way to the train station where you find a line of turnstiles blocking your path through to the train.
 <<if $money >= 5>><<link "Pay to pass through (-$5)" "pass into station">><<set $money = $money - 5>><</link>><<else>><<link "Pay to pass through (-$5)" "poor">><</link>><</if>> or [[Abandon the bounty | Bounty Board]]
 
 :: poor
@@ -88,6 +89,7 @@ With seemingly no other option, you must decide to [[escalate things | escalate]
 :: escalate
 Feeling like you don't have any other choice, you raise your gun towards the man. 
 He throws his arms upward, "Woah! What the hell man! god damn I'll just pay my damn fare."
+[[Collect the man's fare | next]]
 
 :: leave it
 You decide to let the man go and you watch as he boards the train. [[It's time to start keeping watch | next]]
