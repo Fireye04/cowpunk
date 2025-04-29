@@ -1,10 +1,10 @@
 :: Caitlin Start
 Caitlin file
-
+<<set >>
 :: Map
 You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]
 
-getItemsFromShop(shop1)
+getItemsFromShop("deadeye")
 
 
 :: locations
