@@ -1,16 +1,15 @@
 :: Cassidy Start
-<<set $CorpoBounties = ["Corpo bounty 1","Corpo bounty 2","Corpo bounty 3","Corpo bounty 4"]>>
-<<set $CivilianBounties = ["Bounty 2"]>>
-<<set $current_bounty = "None">>
+<<set $CorpoBounties = ["Corpo bounty 1","Corpo bounty 2","Corpo bounty 3","Corpo bounty 4","Corpo bounty 5"]>>
 Go to the [[bounty board | Bounty Board]]
 
 :: Bounty Board
-Before you lies an array of various bounties.
+You approach a large board with a metal rim and torn, patchy cork board littered with an array of flimsy reused paper pinned up.
+Upon further inspecion, each piece of paper contains a bounty issued by one of the many corporations.
 [[Check out the first bounty | $CorpoBounties[0]]]
 [[Check out the second bounty | $CorpoBounties[1]]]
 [[Check out the third bounty | $CorpoBounties[2]]]
 [[Check out the fourth bounty | $CorpoBounties[3]]]
-Current bounty: <<print $current_bounty>>
+[[Check out the fifth bounty | $CorpoBounties[4]]]
 
 :: Corpo bounty 1
 In the corner of the bounty there is a corporate logo and two small stars.
@@ -21,7 +20,7 @@ Retrieve the owed sum of $650 by any means necessary.
 Last known location: (name of shopkeepers shop)
 Reward: $100
 
-<<link "Accept bounty" "Bounty Board">><<set $current_bounty = "Corpo bounty 1">><</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "Bounty Board">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
 
 :: Corpo bounty 2
@@ -35,7 +34,7 @@ Eliminate or apprehend by any means necessary.
 Last known location: The Ashes
 Reward: $500
 
-<<link "Accept bounty" "Bounty Board">><<set $current_bounty = "Corpo bounty 2">><</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "Bounty Board">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
 :: Corpo bounty 3
 The thin sheet of paper's upper corner appears to be branded with a corporate logo and three small stars.
@@ -48,7 +47,7 @@ Eliminate or apprehend by any means necessary.
 Last known location: (name of casino)
 Reward: $500
 
-<<link "Accept bounty" "Bounty Board">><<set $current_bounty = "Corpo bounty 3">><</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "Bounty Board">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
 :: Corpo bounty 4
 In the corner of the bounty there is a corporate logo with just one small star.
@@ -60,4 +59,73 @@ Use any means to prevent citizens from avoiding the fare.
 Location: Train station
 Reward: $100
 
-<<link "Accept bounty" "Bounty Board">><<set $current_bounty = "Corpo bounty 4">><</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "Defend train station">><</link>> or [[Return to Bounty Board | Bounty Board]]
+
+:: Defend train station
+You make your way to the train station where you find an line of turnstiles blocking your path through to the train.
+<<if $money >= 5>><<link "Pay to pass through (-$5)" "pass into station">><<set $money = $money - 5>><</link>><<else>><<link "Pay to pass through (-$5)" "poor">><</link>><</if>> or [[Abandon the bounty | Bounty Board]]
+
+:: poor
+You don't have the funds to enter. You must [[Vault the turnstile. | vault into station]]
+
+:: pass into station
+You pay the fare and pass through as the turnstile clicks loudly. At the same time that you pass through, a man climbs over the turnstile next to you. 
+You notice a security camera on the wall watching you closely, [[Say something to the man | shill]] or [[Ignore it and get the next person | not a shill]].
+
+:: vault into station
+You vault yourself over the turnstile and hit the ground loudly. At the same time that you pass over, a man climbs over the turnstile next to you. 
+You notice a security camera on the wall watching you closely, [[Say something to the man | shill]] or [[Ignore it and get the next person | not a shill]].
+
+:: shill
+You call out to the man, accusing him of dodging the train fare. 
+"Welcome to the real world goodie two shoes." He sneers back, as he keeps walking towards the train.
+[["I said stop, you must pay your fare like everybody else" | argue]] you retort.
+
+:: argue
+"Nobody else cares, you corpo shill." The man responds, offended that you had the audacity to call him out.
+With seemingly no other option, you must decide to [[escalate things | escalate]] or [[just leave it | leave it]]
+
+:: escalate
+Feeling like you don't have any other choice, you raise your gun towards the man. 
+He throws his arms upward, "Woah! What the hell man! god damn I'll just pay my damn fare."
+
+:: leave it
+You decide to let the man go and you watch as he boards the train. [[It's time to start keeping watch | next]]
+
+:: not a shill
+You ignore the man and hope that whoever's behind the camera didn't notice. 
+[[Stand at guard | next]] or [[Abandon the bounty | Bounty Board]]
+
+:: next
+Shortly after turning back to guard the turnstiles you see a man in a nice suit and a woman vault over the turnstiles in short succession. 
+[[Call out to them, the fare must be payed. | two of them now]]
+
+:: two of them now
+The man seems to ignore you, but the woman turns to you and looks at you for a moment before responding, "Filthy cowpunks like you should mind their own business"
+[[Mind your own business | do nothing]] or [[escalate things | do something crazy]]
+
+:: do nothing
+It's not worth even trying, the person behind the camera knows for sure that your heart isn't in it by now, you likely won't get paid at this point anyway. you should just [[leave | Bounty Board]].
+
+:: do something crazy
+You pull out your gun and point it at the man and woman across from you. The man in the suit perks up and looks at the gun.
+"What do you think yer doin there, I HAVE A MEETING TO GET TO!" 
+The woman chimes in, "Just let us be, my boss won't be happy if I'm late."
+You start to feel the [[pressure | pressure]] of the situation.
+[[You could still leave, abandoning the assignment | Bounty Board]]
+
+:: pressure
+As you don't stand down, the man and woman start to berate you, but it all becomes a blur. 
+You know they won't pay their fares if you just keep pointing the gun, you need to do something more to show them you're serious.
+[[Shoot them | shoot]] 
+
+:: shoot
+You fire your gun until it runs out of bullets. 
+The man lies on the ground in front of you, his suit now drenched in blood.
+The woman lies crying behind him, her legs unrecognizable.
+[[No one will be skipping their fares for quite some time. | congrats]]
+
+:: congrats
+After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with <<link "$100" "Bounty Board">><<set $money = $money + 100>><</link>>
+
+:: Corpo bounty 5

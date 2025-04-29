@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://1F012455-6A83-4CCB-BCB1-49B9D77D4E03// --><tw-storydata name="My Twine Game" startnode="67" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="1F012455-6A83-4CCB-BCB1-49B9D77D4E03" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* The body is everything displayed in the main text delivery area
+	<!-- UUID://1F012455-6A83-4CCB-BCB1-49B9D77D4E03// --><tw-storydata name="My Twine Game" startnode="84" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="1F012455-6A83-4CCB-BCB1-49B9D77D4E03" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* The body is everything displayed in the main text delivery area
 body {
 	background: blue;
 }
@@ -618,15 +618,14 @@ The stranger nods, looking you up and down. &quot;You&#39;re a man tryin&#39; hi
 Your gaze falls to the metal augments adorning your body. You nearly can&#39;t remember how it felt before the metal started to encroach on your skin like a plague you can&#39;t escape. 
 
 [[&quot;Is it worth it if by the end I can&#39;t recognize myself?&quot; | Myself]]
-[[&quot;I don&#39;t think I&#39;m a man anymore | No Human&quot;]]</tw-passagedata><tw-passagedata pid="58" name="Myself" tags="" position="975,725" size="100,100">&quot;Thats up to you. You can stop whenever ya want; the world&#39;ll keep spinnin&#39;.&quot;</tw-passagedata><tw-passagedata pid="59" name="No Human" tags="" position="1100,725" size="100,100">&quot;You&#39;ve still gotta head on your shoulders don&#39;t ya? Seems man enough to me.&quot;</tw-passagedata><tw-passagedata pid="60" name="Cassidy Start" tags="" position="1225,725" size="100,100">&lt;&lt;set $CorpoBounties = [&quot;Corpo bounty 1&quot;,&quot;Corpo bounty 2&quot;,&quot;Corpo bounty 3&quot;,&quot;Corpo bounty 4&quot;]&gt;&gt;
-&lt;&lt;set $CivilianBounties = [&quot;Bounty 2&quot;]&gt;&gt;
-&lt;&lt;set $current_bounty = &quot;None&quot;&gt;&gt;
-Go to the [[bounty board | Bounty Board]]</tw-passagedata><tw-passagedata pid="61" name="Bounty Board" tags="" position="100,850" size="100,100">Before you lies an array of various bounties.
+[[&quot;I don&#39;t think I&#39;m a man anymore | No Human&quot;]]</tw-passagedata><tw-passagedata pid="58" name="Myself" tags="" position="975,725" size="100,100">&quot;Thats up to you. You can stop whenever ya want; the world&#39;ll keep spinnin&#39;.&quot;</tw-passagedata><tw-passagedata pid="59" name="No Human" tags="" position="1100,725" size="100,100">&quot;You&#39;ve still gotta head on your shoulders don&#39;t ya? Seems man enough to me.&quot;</tw-passagedata><tw-passagedata pid="60" name="Cassidy Start" tags="" position="1225,725" size="100,100">&lt;&lt;set $CorpoBounties = [&quot;Corpo bounty 1&quot;,&quot;Corpo bounty 2&quot;,&quot;Corpo bounty 3&quot;,&quot;Corpo bounty 4&quot;,&quot;Corpo bounty 5&quot;]&gt;&gt;
+Go to the [[bounty board | Bounty Board]]</tw-passagedata><tw-passagedata pid="61" name="Bounty Board" tags="" position="100,850" size="100,100">You approach a large board with a metal rim and torn, patchy cork board littered with an array of flimsy reused paper pinned up.
+Upon further inspecion, each piece of paper contains a bounty issued by one of the many corporations.
 [[Check out the first bounty | $CorpoBounties[0]]]
 [[Check out the second bounty | $CorpoBounties[1]]]
 [[Check out the third bounty | $CorpoBounties[2]]]
 [[Check out the fourth bounty | $CorpoBounties[3]]]
-Current bounty: &lt;&lt;print $current_bounty&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="Corpo bounty 1" tags="" position="225,850" size="100,100">In the corner of the bounty there is a corporate logo and two small stars.
+[[Check out the fifth bounty | $CorpoBounties[4]]]</tw-passagedata><tw-passagedata pid="62" name="Corpo bounty 1" tags="" position="225,850" size="100,100">In the corner of the bounty there is a corporate logo and two small stars.
 The top of the bounty reads &quot;Retrieve&quot;, underneath is a photo of (description of shopkeeper) followed by (name of shopkeeper) 
 The bounty&#39;s description reads:
 Wanted for repeated failure to fulfill property tax payments over a period of two months.
@@ -634,7 +633,7 @@ Retrieve the owed sum of $650 by any means necessary.
 Last known location: (name of shopkeepers shop)
 Reward: $100
 
-&lt;&lt;link &quot;Accept bounty&quot; &quot;Bounty Board&quot;&gt;&gt;&lt;&lt;set $current_bounty = &quot;Corpo bounty 1&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="63" name="Corpo bounty 2" tags="" position="350,850" size="100,100">You notice a corporate logo and three small stars in the top corner of the bounty.
+&lt;&lt;link &quot;Accept bounty&quot; &quot;Bounty Board&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="63" name="Corpo bounty 2" tags="" position="350,850" size="100,100">You notice a corporate logo and three small stars in the top corner of the bounty.
 In bold red text, the top of the bounty reads &quot;Wanted dead or alive&quot;
 Underneath is a photo of a young man with greasy blonde hair and a circular scar on his left temple.
 The bounty&#39;s description reads:
@@ -644,7 +643,7 @@ Eliminate or apprehend by any means necessary.
 Last known location: The Ashes
 Reward: $500
 
-&lt;&lt;link &quot;Accept bounty&quot; &quot;Bounty Board&quot;&gt;&gt;&lt;&lt;set $current_bounty = &quot;Corpo bounty 2&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="64" name="Corpo bounty 3" tags="" position="475,850" size="100,100">The thin sheet of paper&#39;s upper corner appears to be branded with a corporate logo and three small stars.
+&lt;&lt;link &quot;Accept bounty&quot; &quot;Bounty Board&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="64" name="Corpo bounty 3" tags="" position="475,850" size="100,100">The thin sheet of paper&#39;s upper corner appears to be branded with a corporate logo and three small stars.
 In bold red text, the top of the bounty reads &quot;Wanted dead or alive&quot;
 Underneath is a dark photo of a man in a bright red velvet suit.
 The bounty&#39;s description reads:
@@ -654,7 +653,7 @@ Eliminate or apprehend by any means necessary.
 Last known location: (name of casino)
 Reward: $500
 
-&lt;&lt;link &quot;Accept bounty&quot; &quot;Bounty Board&quot;&gt;&gt;&lt;&lt;set $current_bounty = &quot;Corpo bounty 3&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="65" name="Corpo bounty 4" tags="" position="600,850" size="100,100">In the corner of the bounty there is a corporate logo with just one small star.
+&lt;&lt;link &quot;Accept bounty&quot; &quot;Bounty Board&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="65" name="Corpo bounty 4" tags="" position="600,850" size="100,100">In the corner of the bounty there is a corporate logo with just one small star.
 The top of the bounty reads &quot;Defend&quot; followed by a picture of the train station.
 The bounty&#39;s description reads:
 Duration: 1 day
@@ -663,11 +662,30 @@ Use any means to prevent citizens from avoiding the fare.
 Location: Train station
 Reward: $100
 
-&lt;&lt;link &quot;Accept bounty&quot; &quot;Bounty Board&quot;&gt;&gt;&lt;&lt;set $current_bounty = &quot;Corpo bounty 4&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="66" name="Kai Start" tags="" position="725,850" size="100,100">Downtime! we vibin</tw-passagedata><tw-passagedata pid="67" name="Start" tags="" position="850,850" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Andrew Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Accept bounty&quot; &quot;Defend train station&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="66" name="Defend train station" tags="" position="725,850" size="100,100">You make your way to the train station where you find an line of turnstiles blocking your path through to the train.
+&lt;&lt;if $money &gt;= 5&gt;&gt;&lt;&lt;link &quot;Pay to pass through (-$5)&quot; &quot;pass into station&quot;&gt;&gt;&lt;&lt;set $money = $money - 5&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link &quot;Pay to pass through (-$5)&quot; &quot;poor&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt; or [[Abandon the bounty | Bounty Board]]</tw-passagedata><tw-passagedata pid="67" name="poor" tags="" position="850,850" size="100,100">You don&#39;t have the funds to enter. You must [[Vault the turnstile. | vault into station]]</tw-passagedata><tw-passagedata pid="68" name="pass into station" tags="" position="975,850" size="100,100">You pay the fare and pass through as the turnstile clicks loudly. At the same time that you pass through, a man climbs over the turnstile next to you. 
+You notice a security camera on the wall watching you closely, [[Say something to the man | shill]] or [[Ignore it and get the next person | not a shill]].</tw-passagedata><tw-passagedata pid="69" name="vault into station" tags="" position="1100,850" size="100,100">You vault yourself over the turnstile and hit the ground loudly. At the same time that you pass over, a man climbs over the turnstile next to you. 
+You notice a security camera on the wall watching you closely, [[Say something to the man | shill]] or [[Ignore it and get the next person | not a shill]].</tw-passagedata><tw-passagedata pid="70" name="shill" tags="" position="1225,850" size="100,100">You call out to the man, accusing him of dodging the train fare. 
+&quot;Welcome to the real world goodie two shoes.&quot; He sneers back, as he keeps walking towards the train.
+[[&quot;I said stop, you must pay your fare like everybody else&quot; | argue]] you retort.</tw-passagedata><tw-passagedata pid="71" name="argue" tags="" position="100,975" size="100,100">&quot;Nobody else cares, you corpo shill.&quot; The man responds, offended that you had the audacity to call him out.
+With seemingly no other option, you must decide to [[escalate things | escalate]] or [[just leave it | leave it]]</tw-passagedata><tw-passagedata pid="72" name="escalate" tags="" position="225,975" size="100,100">Feeling like you don&#39;t have any other choice, you raise your gun towards the man. 
+He throws his arms upward, &quot;Woah! What the hell man! god damn I&#39;ll just pay my damn fare.&quot;</tw-passagedata><tw-passagedata pid="73" name="leave it" tags="" position="350,975" size="100,100">You decide to let the man go and you watch as he boards the train. [[It&#39;s time to start keeping watch | next]]</tw-passagedata><tw-passagedata pid="74" name="not a shill" tags="" position="475,975" size="100,100">You ignore the man and hope that whoever&#39;s behind the camera didn&#39;t notice. 
+[[Stand at guard | next]] or [[Abandon the bounty | Bounty Board]]</tw-passagedata><tw-passagedata pid="75" name="next" tags="" position="600,975" size="100,100">Shortly after turning back to guard the turnstiles you see a man in a nice suit and a woman vault over the turnstiles in short succession. 
+[[Call out to them, the fare must be payed. | two of them now]]</tw-passagedata><tw-passagedata pid="76" name="two of them now" tags="" position="725,975" size="100,100">The man seems to ignore you, but the woman turns to you and looks at you for a moment before responding, &quot;Filthy cowpunks like you should mind their own business&quot;
+[[Mind your own business | do nothing]] or [[escalate things | do something crazy]]</tw-passagedata><tw-passagedata pid="77" name="do nothing" tags="" position="850,975" size="100,100">It&#39;s not worth even trying, the person behind the camera knows for sure that your heart isn&#39;t in it by now, you likely won&#39;t get paid at this point anyway. you should just [[leave | Bounty Board]].</tw-passagedata><tw-passagedata pid="78" name="do something crazy" tags="" position="975,975" size="100,100">You pull out your gun and point it at the man and woman across from you. The man in the suit perks up and looks at the gun.
+&quot;What do you think yer doin there, I HAVE A MEETING TO GET TO!&quot; 
+The woman chimes in, &quot;Just let us be, my boss won&#39;t be happy if I&#39;m late.&quot;
+You start to feel the [[pressure | pressure]] of the situation.
+[[You could still leave, abandoning the assignment | Bounty Board]]</tw-passagedata><tw-passagedata pid="79" name="pressure" tags="" position="1100,975" size="100,100">As you don&#39;t stand down, the man and woman start to berate you, but it all becomes a blur. 
+You know they won&#39;t pay their fares if you just keep pointing the gun, you need to do something more to show them you&#39;re serious.
+[[Shoot them | shoot]]</tw-passagedata><tw-passagedata pid="80" name="shoot" tags="" position="1225,975" size="100,100">You fire your gun until it runs out of bullets. 
+The man lies on the ground in front of you, his suit now drenched in blood.
+The woman lies crying behind him, her legs unrecognizable.
+[[No one will be skipping their fares for quite some time. | congrats]]</tw-passagedata><tw-passagedata pid="81" name="congrats" tags="" position="100,1100" size="100,100">After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with &lt;&lt;link &quot;$100&quot; &quot;Bounty Board&quot;&gt;&gt;&lt;&lt;set $money = $money + 100&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="Corpo bounty 5" tags="" position="225,1100" size="100,100"></tw-passagedata><tw-passagedata pid="83" name="Kai Start" tags="" position="350,1100" size="100,100">Downtime! we vibin</tw-passagedata><tw-passagedata pid="84" name="Start" tags="" position="475,1100" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Andrew Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Caitlin&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Cassidy&quot; &quot;Cassidy Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Kai&quot; &quot;Kai Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Megan&quot; &quot;Megan Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Megan Start" tags="" position="975,850" size="100,100">Megan file</tw-passagedata><tw-passagedata pid="69" name="StoryInit" tags="" position="1100,850" size="100,100">&lt;&lt;set $health to 10&gt;&gt;
+&lt;&lt;link &quot;Megan&quot; &quot;Megan Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="Megan Start" tags="" position="600,1100" size="100,100">Megan file</tw-passagedata><tw-passagedata pid="86" name="StoryInit" tags="" position="725,1100" size="100,100">&lt;&lt;set $health to 10&gt;&gt;
 &lt;&lt;set $power to 3&gt;&gt;
 &lt;&lt;set $damage to 3&gt;&gt;
 &lt;&lt;set $money to 1000&gt;&gt;
