@@ -395,3 +395,9 @@ window.Catalog = class Catalog {
 		return total;
 	}
 };
+
+let shop1 = "deadeye"
+let shop2 = "the iron giant"
+let shop3 = "cyberwares"
+let shop4 = "blackmarket guns"
+let shop5 = "forge and flame"
