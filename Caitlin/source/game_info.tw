@@ -21,4 +21,4 @@ My Twine Game
 
 <<set $inv to new Inventory(null, null)>>
 
-<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])])>>
+<<set $catalog to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])])>>
