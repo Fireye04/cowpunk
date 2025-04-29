@@ -156,7 +156,7 @@ You left quite a mess though.
 :: Bounty1 Complete
 "Did you get 'em all? Oh thank goodness! I don't know what I would've done if those rats stirred up anymore trouble.
 Here's that reward that I promised. It ain't much, but it's honest work. Stay safe out there!"
-[[$10 reward (+$10)|Bounty1 Reward]]
+[[Take Reward (+$10)|Bounty1 Reward]]
 
 /* Add Money */
 :: Bounty1 Reward
@@ -244,6 +244,11 @@ I didn't think that old man would send a cowpunk after my ass. Now you let me go
 or
 [[Offer to pay for his train ticket (-$5)|Pay for train ticket]]
 
+:: Confront Slippery Samuel with violence 2
+Partner...please... I've been down on my luck and a drink is the only way I can keep my mind clear of everything. 
+I didn't think that old man would send a cowpunk after my ass. Now you let me go on my way...or you shoot me dead here son. Ain't much to live for anyways.
+[[Shoot him|Shoot Slippery Samuel]]
+
 :: Shoot Slippery Samuel
 You shoot Slippery Samuel and he falls backward against the wall of the alleyway. You look around and notice several windows of the upper level buildings closing swiftly.
 That's how you deal with violence down here... you mind your business. You look back towards his body and notice his wallet peaking out of his pocket. 
@@ -260,10 +265,10 @@ Well, at least you still have the bounty reward to look forward to.
 
 [[Head back to the bar|Collect Bounty2 Reward]]
 
-/* TODO: Remove 5 dollars */
+/* Remove Money */
 :: Pay for train ticket
 <<if $money >= 5>> [[You give him $5|Pay for train ticket 2]] 
-<<else>> You don't have enough money...[[Raise your gun|Confront Slippery Samuel with violence]] 
+<<else>> You don't have enough money...[[Raise your gun|Confront Slippery Samuel with violence 2]] 
 <</if>>
 
 :: Pay for train ticket 2
@@ -281,7 +286,7 @@ He reaches into his coat and pulls out a revolver. It's a very dark metal and lo
 He hands you the revolver and it's much heavier than yours. It takes a little extra strength to lift up, 
 but it fits perfectly in your hand. You look up and he's already walking away.
 
-[[Farewell partner.|Bounties]]
+Farewell partner. [[Head back to the bar.|Collect Bounty2 Reward]]
 
 :: Collect Bounty2 Reward
 You head back to the bar. As you walk in you notice that it's pretty much empty. The bartender is still there, drying off some glasses.
@@ -305,14 +310,16 @@ Now that's what I call fast response time! I know you probably don't mind, but I
 informal nature of this business. Couldn't risk getting involved with the law and I'll be damned if I sign a contract with those Corpos. 
 I guess sometimes all you need is a hungry cowpunk. Here, [[your reward|Bounty2 reward]]"
 
-/* TODO: Add 15 dollars */
 :: Bounty2 reward
 He throws $15 on the table and turns back around to continue counting a large pile of money.
 
 "Hey, and anytime you're up at the bar, tell em I got you for a free drink. Cheers"
 
-You're stunned with the irony of that statement for a few seconds.
-You take your money and [[leave without saying a word.|Bounties]]
+You're stunned with the irony of that statement for a few seconds. [[Take the money|Bountt2 reward 2]]
+
+:: Bounty2 reward 2
+<<set $money = $money + 15>>
+You take the money and [[leave without saying a word.|Bounties]]
 
 
 /* ------------------------ Bounty 3 ------------------------  */
@@ -325,7 +332,7 @@ With anger in your heart you walk through the city square. Nothing looks out of 
 Skyscrapers line the corners of your vision. You do stand out among the Ember City folk, but no one fears you just because you're a cowpunk.
 
 As you scan your surroundings, you notice a trail of dirt that leads around one of the buildings.
-You follow it and with each step the density of the town folk grows. You sidle by each person coming and going from this loud event and 
+You follow it and with each step, the density of the town folk grows. You sidle by each person coming and going from this loud event and 
 you eventually reach a point where you can see what they are all looking at.
 
 In the center of the town, you see a haphazardly thrown together desert environment made out of cardboard.
@@ -362,7 +369,7 @@ He shuffles around uncomfortably and notices the judgemental murmers in the crow
 He leans in closer to whisper to you.
 
 "Come on pal, you're making me look bad. What, do you want a cut of the money or something?
-I'm making a killing here. I know you're a cowpunk, but hey these folk don't know any better. 
+I'm making a killing here. I know you're a cowpunk, but these folk don't know any better. 
 What do ya say?"
 
 [[Accept his offer (+$10)|Accept Tumbleweed Terry Bribe]]
@@ -375,35 +382,68 @@ He hands you the money and gives you handshake.
 "See, was that so hard? Now [[beat it|Bounties]] I got a horse to sell."
 
 :: Confront Tumbleweed Terry
-Oh yeah? You really think I'm going back there after making all of this money? Once I get these horse gone I'm going to be living the high life!
-Now unless you want to pay me for these horse you can beat it.
+Oh yeah? What are you going to do, shoot me? I bet you don't even know how to use that thing.
 
-[[Pay him for the horses(-$10)|Pay for the horses]]
+[[Intimidate him.|Pay for the horses]]
 
-:: Pay for the horses
-"Really? Well I guess you are a bonafide cowpunk then. Fine. Take it, I get paid either way."
+:: Intimidate encounter
+There are balloons floating from the top of the fake cactus. You decide to show how deadly you are to intimidate Terry.
+You quickly draw your gun and let off 3 shots in quick succession. [[Did you succeed?(Based off of your strength)}Intimidate encounter 2]]
 
-He leans back up and addresses the crowd.
+:: Intimidate encounter 2
+<<if $damage > 10>> [[*pop* *pop* *pop*|Intimidate Encounter Win]] 
+<<else>> [[*Silence* |Intimidate Encounter Win]] 
+<</if>>
 
-"Alright folks! I'm sad to announce that we finally had an offer big enough! Our cowpunk fan will be taking this horse off my hands!
-Thank you all for showing up!"
+:: Intimidate Encounter Win
+You quickly holster your gun while making eye contact with Tumbleweed Terry.
 
-You saddle up on the horse and give it a nice gentle brush with your hand. You slowly make your way through the crowd and people part the way for you.
-Time to head back to [[Cattle Run|Bounty3 Reward]] empty handed.
+"Uhhhhh...woah. Shows over folks! We have a lucky winner here!"
+
+He leans back in closer. 
+
+"Well, what now cowpunk?"
+
+[[You're going to jail.|Take Terry to jail]]
+
+:: Take Terru to jail
+He lets out a long sigh. "Welp, I guess a few weeks in the slammer is better than having my head shot like those balloons."
+
+You help him up onto the horse and after you get on you tie his hands together.
+
+"Is that really necessary?" He shouts?
+
+You tap your gun on your hip as a reminder and he withdraws his attitude.
+
+[["...Take us home cowpunk"|Bounty3 Reward]]
+
 
 :: Bounty3 Reward
 You head back to Cattle Run and approach the local jail. The sherrif notices you on one of the horses that was stolen and smiles.
 
-"Hey cowpunk! I see that you've got one of the horses back. Where's [[Tumbleweed Terry?| Bounty3 Reward 2]]"
+"Hey cowpunk! I see that you've brought me a little prize! Mr. Terry...How long did you think you could get away for"
+ [[Terry Answers| Bounty3 Reward 2]]"
 
 :: Bounty3 Reward 2
-He's in the middle of Ember City just selling horses? By golly I guess the rumors are true. Well then, we'll dispatch some lawmen out their and bring him in.
-At least you got one of the horse back. Here, we'll give you [[half of the bounty (+$5)|Bounty3 Reward 3]] for traveling all the way out there for the horse.
+"Well, I managed to get 5 before this cowpunk decided to mind my business."
+
+The adjusts his belt before firing his response back. 
+"5 huh? Well...5 months it is then. Help me [[get him inside cowpunk.|Bounty3 Reward 3]]"
 
 :: Bounty3 Reward 3
+<<set $money = $money + 15>>
+Upon hearing his jail time, Terry starts kicking his feet and starts barking at the sheriff. 
+The sheriff pays him no mind and even starts whistling as he helps you get Terry off the horse and into the cell inside.
+
+After shutting the bars behind him, the sheriff walks around to his desk and pulls out the cleanest money you've ever seen.
+He hands it to you and pats you on the shoulder.
+
+Thanks a lot son. We're kind of low on horses out here as it is, so I'm glad we don't have someone thinning the heard anymore."
+
 "And you know what...I think that horse suits you. You wouldn't mind taking good care of her now would ya?
 It'll do you good as a cowpunk to have your own horse. Thanks again son, see you around."
 
+/* TODO: Add horse */
 You take your newly earned horse [[back home.|Bounties]]
 
 
@@ -420,15 +460,45 @@ or
 [[Talk to the church-folk|Talk to church-folk]]
 
 :: Talk to church-folk
+You notice all of them in a placid mood. You dont know if you're going to find him here, but you also remember that many outlaws find religion eventually.
+Something about their life path causes them to find seek a meaning and a purpose despite all of their wrong doing.
+
+"Hello young man...what brings you here?" An old woman asks you.
+
+[[I'm searching for an outlaw|Talk to church-folk 2]]
+
+:: Talk to church-folk 2
+"Oh well you'll find a lot of them here. We accept anyone who wishes to change their outlook on life. We wish not to endanger anyone to the law either.
+Our community is very kind to eachother...[[but...|Talk to church-folk 3]]"
+
+:: Talk to church-folk 2
+"There is someone who we do not yet know their intentions. They have been coming to church recently. 
+Despite other's hesitations to accept them, there is not much we can do.
+
+[[Who is it?|Talk to church-folk 3]]
+
+:: Talk to church-folk 3
+"I believe it is who you may be looking for cowpunk. He's still inside the church.
+But be warned. He is a dangerous man. I cannot tell you what to do, but all I believe only God should determine who is worthy of life.
+
+[[Be safe cowpunk|Decide wether to leave or enter the church]]
+
+
+:: Decide wether to leave or enter the church
+[[Enter the church?|Enter the Church]]
+or 
+[[Go home.|Bounties]]
 
 
 :: Enter the Church
 You enter the church and look up at the beautifully shaped walls and ceilings. Ornate designs made out of marble with steel accents
-highlight the original interior plus modern rennovations thanks to donations from Ember City.
+highlight the original interior, plus modern rennovations thanks to donations from Ember City.
 
 At the very front row of the church, you see a lone person dressed in all black. You walk closer and start to notice how bright the surrounding area is.
-From what you can tell, most of his body is covered in cybernetic enhancements. His chrome skin was reflecting the light from the stained-glass windows.
-His presence was haunting, yet beautiful. Your eyes watched as the colors danced upon the church walls. The uncomfortable silence was broken by a single word.
+From what you can tell, most of his body is covered in cybernetic enhancements. His chrome skin is reflecting the light from the stained-glass windows.
+Your eyes watched as the colors danced upon the church walls. 
+
+His presence was haunting, yet beautiful.  The uncomfortable silence was broken by a single word.
 
 "[[Leave.|Chrome Carl]]"
 
@@ -445,13 +515,26 @@ is if we chrome up damnit. You think you meat sacks are gonna survive if all of 
 our home to be a thing of the past. I'm just jumpstarting our evolution, son."
 
 [[Raise your gun|Chrome Carl Encounter]]
+or 
+[[Leave|Leave Bounty4]]
+
+:: Leave Bounty4
+"Good decision son. My advice is that you go home and get yourself some enhancements before someone thinks of you as their next victim."
+[[Leave|Bounties]]
 
 :: Chrome Carl Encounter
 Alright son, but they won't remember you if you die.
 
-[[Fight Chrome Carl|Kill Chrome Carl]]
+[[Draw!|Chrome Carl Encounter]]
 
-:: Kill Chrome Carl
+:: Chrome Carl Encounter
+<<script>> StartCombat(1, 20, 2) <</script>>
+<<if $health > 0>> [[After trading blows, you finally got the upper hand and overpowered him.|Bounty4 Encounter Win]] 
+<<else>> [[He was too powerful. His bullets cut through you like butter.|You died]] 
+<</if>>
+
+
+:: Bounty4 Encounter Win
 "Good job kid... maybe there's hope for cowpunks yet." 
 
 You take his hat as proof of his death.
@@ -463,4 +546,10 @@ The sherriff looks at you holding Chrome Carl's hat and his eyes widen.
 
 "Kid...you really did it? I can't believe it. He was a legend. It's so sad to see the path he went down.
 Thank you for your help...us cowpunks need to work together instead of taking each other out. 
-Welp, here's [[your reward. (+$30)|Bounties]]"
+Welp, here's [[your reward.|Bounty4 Reward 2]]"
+
+/* TODO: Add home location */
+:: Bounty4 Reward 2
+<<set $money = $money + 30>>
+You take the money and [[head back to your house.|Bounties]] Cattle Run is safe again.
+
