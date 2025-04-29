@@ -1,0 +1,25 @@
+:: StoryData
+{
+"ifid": "1F012455-6A83-4CCB-BCB1-49B9D77D4E03",
+"format": "SugarCube",
+"format-version": "2.37.3",
+"start": "Start"
+}
+
+:: StoryTitle
+My Twine Game
+
+:: StoryInit
+<<set $health to 10>>
+<<set $power to 3>>
+<<set $damage to 3>>
+<<set $money to 1000>>
+<<set $diceroll to 0>>
+<<set $humanity to 0>>
+<<set $fame to 0>>
+
+
+<<set $inv to new Inventory(null, null)>>
+
+<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])])>>
+
