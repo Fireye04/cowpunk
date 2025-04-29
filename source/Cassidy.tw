@@ -52,7 +52,7 @@ The pub went quiet around the two of you, and [[Bill reached under the bar... | 
 You need more money, and you stand on principle, Bill must pay his debt. 
 "All right I see how it is then" Bill said in a stern voice.
 The pub went quiet around the two of you, and Bill reached under the bar to pull out a shotgun, at the same time you pulled out your gun and began to fire.
-<<script>>StartCombat(3,6,6)<</script>>
+<<script>>StartCombat(2,6,5)<</script>>
 <<if $health > 0>>You shoot bill to death, ready to [[collect his overdue rent> | collect rent]]<<else>> Bill fires his shotgun quicker than you can lift your gun, once he's sure you're not getting back up he puts away his shotgun. [[It's over for you, cowpunk | ]]<</if>>
 
 :: collect rent
