@@ -2,7 +2,6 @@
 Caitlin file
 :: Map
 You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]
-<<script>>item.getShops("deadeye")<</script>>
 
 
 
@@ -25,8 +24,14 @@ A large old timey rural town. Compared to the lights and glamour of the city it 
 [[Visit | Visit Town]] or [[go back to the map | locations]]
 
 :: Visit Town
-No matter how many times you've been here its striking how different Cattle's Run is from the city. The squat wooden buildings line a central dirt road that radiates warmth from the sun. As you walk in, some people look your way; an older gentleman tips his hat to you OR a woman who had been sitting on her porch takes one glance at you before going indoors. You can faintly hear the sound of the deadbolt being slid in.
-The [[firearm store | cr.gun]], Deadeye, run by a retired bounty hunter sits at the edge of town, right next to the old grocery store. One side of the central street is lined with stalls where the various farmers sell their goods. You recognize an [[old friend | Friend]] among their lots. Right in the center of town the liquor store is guarded by an old looking [[dog. | Dog]]
+No matter how many times you've been here its striking how different Cattle's Run is from the city. 
+The squat wooden buildings line a central dirt road that radiates warmth from the sun. 
+As you walk in, some people look your way; an older gentleman tips his hat to you OR a woman who had been sitting on her porch takes one glance at you before going indoors. 
+You can faintly hear the sound of the deadbolt being slid in.
+The [[weapons shop | cr.gun]], Deadeye, run by a retired bounty hunter sits at the edge of town, right next to the old grocery store. 
+One side of the central street is lined with stalls where the various farmers sell their goods. 
+You recognize an [[old friend | Friend]] among their lots. 
+Right in the center of town the liquor store is guarded by an old looking [[dog. | Dog]]
 
 [[Go somewhere else | locations]]
 [[Old Friend | Friend]]
@@ -37,34 +42,41 @@ An older man with a bowler hat and a well-groomed mustache waves to you as you e
 
 OR
 
-You walk into the store and the older usually kind store owner gives you a cold look. He nods to you, but his eyes never quiet meet your own. His voice is more clipped than usual as he opens up his drawer, revealing the firearms inside. "What do you want?"
+You walk into the store and the older usually kind store owner gives you a cold look. 
+He nods to you, but his eyes never quiet meet your own. His voice is more clipped than usual as he opens up his drawer, revealing the firearms inside. "What do you want?"
 
 OR
 
-Your spurs jingle across the wooden steps into the store, but as you reach out to push the door open you hear a click. The door doesn't budge. From the windows you can see a light flicker off as the curtains are pulled tight.
+Your spurs jingle across the wooden steps into the store, but as you reach out to push the door open you hear a click. 
+The door doesn't budge. 
+From the windows you can see a light flicker off as the curtains are pulled tight.
 
 [[I'd like to look at your wares | cr.gunlist]] 
 [[Nothing | Visit Town ]]
 
 :: cr.gunlist
-<<if $money >>
+gun 1
 
 gun 2
 
 gun 3
 
 :: cr.item
-The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. People come in and out frequently, and the brass chimes hanging by the door ring every few seconds.
+The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
+People come in and out frequently, and the brass chimes hanging by the door ring every few seconds.
 
 As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. "Good to see you darlin' What are you in for?"
 
 OR
 
-As you enter the store, the woman at the front counter's smile wavers. Her eyes scan you up and down and her lips twitch down into a small frown. She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter.
+As you enter the store, the woman at the front counter's smile wavers. 
+Her eyes scan you up and down and her lips twitch down into a small frown. 
+She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter.
 
 OR 
 
-You walk up to the grocery store, but as you try to push the door open you are met with resistance. The people still around on the street watch you with bairly hidden disdain.
+You walk up to the grocery store, but as you try to push the door open you are met with resistance. 
+The people still around on the street watch you with bairly hidden disdain.
 
 [[I'd like to look at your wares | cr.itemlist]] 
 [[Nothing | Visit Town ]]
@@ -77,20 +89,26 @@ item 2
 item 3
 
 :: Friend
-Tom, an old childhood friend can be found selling meat at the local market. He used to do what you do, but after a bad incident he decided it was best for him to settle down and work at his family's ranch. 
+Tom, an old childhood friend can be found selling meat at the local market. 
+He used to do what you do, but after a bad incident he decided it was best for him to settle down and work at his family's ranch. 
 
 :: Dog
-Outside the old run down liquor store an old stray mutt sits passively. The brown fluffy thing is curled up into a ball, allowing its long droopy ears to waterfall over its stubby legs. It's cute in an ugly way. As you pass by the dog's nose twitches. [[Ignore it | Ignore Dog]]/[[Pet the dog | Pet]]
+Outside the old run down liquor store an old stray mutt sits passively. 
+The brown fluffy thing is curled up into a ball, allowing its long droopy ears to waterfall over its stubby legs. 
+It's cute in an ugly way. As you pass by the dog's nose twitches. [[Ignore it | Ignore Dog]] or [[Pet the dog | Pet]]
 
 :: Ignore Dog
 The dog's tail wags lazily as you [[pass by. | Visit Town]] It almost seems disappointed. 
 
 :: Pet
-You bend down to offer the old dog your hand. Its wet nose brushes against your gloved hand as it sniffs you. It seems to consider you for a moment before lazily rolling over for you to scratch its stomach. By the time you [[stand back up | Visit Town]] the dog has fallen back asleep.
-
-OR
-
-You bend down to offer the old dog your hand. Its wet nose brushes against your gloved hand as it sniffs you. It seems to consider you for a moment before its tail's steady wag comes to a halt. A soft growl emenates from its chest. You [[stand back up | Visit Town]] before the dog can bite you..
+<<if $humanity > -30 >>You bend down to offer the old dog your hand. 
+Its wet nose brushes against your gloved hand as it sniffs you. 
+It seems to consider you for a moment before lazily rolling over for you to scratch its stomach. 
+By the time you [[stand back up | Visit Town]] the dog has fallen back asleep. <<else>> You bend down to offer the old dog your hand. 
+Its wet nose brushes against your gloved hand as it sniffs you. 
+It seems to consider you for a moment before its tail's steady wag comes to a halt. 
+A soft growl emenates from its chest. 
+You [[stand back up | Visit Town]] before the dog can bite you.<</if>>
 
 /* House */
 
