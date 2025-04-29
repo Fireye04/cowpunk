@@ -2,7 +2,8 @@
 Caitlin file
 :: Map
 You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]
-$catalogNameHere.getItemsFromShop("deadeye")
+<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])])>>
+$cat.getItemsFromShop("deadeye")
 
 
 :: locations
