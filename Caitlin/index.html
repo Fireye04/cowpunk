@@ -584,18 +584,12 @@ gun 2
 gun 3</tw-passagedata><tw-passagedata pid="9" name="cr.item" tags="" position="1100,100" size="100,100">The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
 People come in and out frequently, and the brass chimes hanging by the door ring every few seconds.
 
-As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. &quot;Good to see you darlin&#39; What are you in for?&quot;
-
-OR
-
+&lt;&lt;if $humanity &gt; -1 &gt;&gt; As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. &quot;Good to see you darlin&#39; What are you in for?&quot; &lt;&lt;else if $humanity &gt; -41 &gt;&gt;
 As you enter the store, the woman at the front counter&#39;s smile wavers. 
 Her eyes scan you up and down and her lips twitch down into a small frown. 
-She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter.
-
-OR 
-
+She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter.&lt;&lt;else&gt;&gt;
 You walk up to the grocery store, but as you try to push the door open you are met with resistance. 
-The people still around on the street watch you with bairly hidden disdain.
+The people still around on the street watch you with bairly hidden disdain.&lt;&lt;/if&gt;&gt;
 
 [[I&#39;d like to look at your wares | cr.itemlist]] 
 [[Nothing | Visit Town ]]</tw-passagedata><tw-passagedata pid="10" name="cr.itemlist" tags="" position="1225,100" size="100,100">item 1
@@ -730,7 +724,7 @@ Your gaze falls to the metal augments adorning your body. You nearly can&#39;t r
 &lt;&lt;set $damage to 3&gt;&gt;
 &lt;&lt;set $money to 0&gt;&gt;
 &lt;&lt;set $diceroll to 0&gt;&gt;
-&lt;&lt;set $humanity to -40&gt;&gt;
+&lt;&lt;set $humanity to 0&gt;&gt;
 &lt;&lt;set $fame to 0&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
