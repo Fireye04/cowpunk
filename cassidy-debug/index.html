@@ -698,14 +698,13 @@ Your gaze falls to the metal augments adorning your body. You nearly can&#39;t r
 
 [[&quot;Is it worth it if by the end I can&#39;t recognize myself?&quot; | Myself]]
 [[&quot;I don&#39;t think I&#39;m a man anymore | No Human&quot;]]</tw-passagedata><tw-passagedata pid="58" name="Myself" tags="" position="975,725" size="100,100">&quot;Thats up to you. You can stop whenever ya want; the world&#39;ll keep spinnin&#39;.&quot;</tw-passagedata><tw-passagedata pid="59" name="No Human" tags="" position="1100,725" size="100,100">&quot;You&#39;ve still gotta head on your shoulders don&#39;t ya? Seems man enough to me.&quot;</tw-passagedata><tw-passagedata pid="60" name="Cassidy Start" tags="" position="1225,725" size="100,100">&lt;&lt;set $CorpoBounties = [&quot;retrieve rent&quot;,&quot;whistleblower&quot;,&quot;gamblers fallacy&quot;,&quot;the train station&quot;]&gt;&gt;
-Go to the [[bounty board | Bounty Board]]
 &lt;&lt;set $corpo1 to new Bounty(&quot;retrieve rent&quot;, &quot;Collect a local pubs overdue rent.&quot;, &quot;available&quot;, 150, -10, -2, &quot;hard&quot;,[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;
 &lt;&lt;set $corpo2 to new Bounty(&quot;whistleblower&quot;, &quot;Prevent a corporate whistleblower from releasing his findings.&quot;, &quot;available&quot;, 250, -15, -10, &quot;intermediate&quot;,[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;
 &lt;&lt;set $corpo3 to new Bounty(&quot;gamblers fallacy&quot;, &quot;Hunt down a notorious gambler and end his winning streak.&quot;, &quot;available&quot;, 250, -5, -1, &quot;intermediate&quot;[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;
-&lt;&lt;set $corpo4 to new Bounty(&quot;the train station&quot;, &quot;Prevent citizens from dodging the trainfare.&quot;, &quot;available&quot;, 100, -5, -10, &quot;novice&quot;,[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Bounty Board" tags="" position="100,850" size="100,100">You approach a large board with a metal rim and torn, patchy cork board littered with an array of flimsy reused paper pinned up.
+&lt;&lt;set $corpo4 to new Bounty(&quot;the train station&quot;, &quot;Prevent citizens from dodging the trainfare.&quot;, &quot;available&quot;, 100, -5, -10, &quot;novice&quot;,[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;
+Go to the [[bounty board | Bounty Board]]</tw-passagedata><tw-passagedata pid="61" name="Bounty Board" tags="" position="100,850" size="100,100">You approach a large board with a metal rim and torn, patchy cork board littered with an array of flimsy reused paper pinned up.
 Upon further inspecion, each piece of paper contains a bounty issued by one of the many corporations.
-&lt;&lt;= $CorpoBounties[0]&gt;&gt;
-[[Check out the first bounty | &quot;retrieve rent&quot;]]
+[[Check out the first bounty | $CorpoBounties[0]]]
 [[Check out the second bounty | $CorpoBounties[1]]]
 [[Check out the third bounty | $CorpoBounties[2]]]
 [[Check out the fourth bounty | $CorpoBounties[3]]]</tw-passagedata><tw-passagedata pid="62" name="retrieve rent" tags="" position="225,850" size="100,100">In the corner of the bounty there is a corporate logo and four small stars.
