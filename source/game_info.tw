@@ -15,6 +15,8 @@ My Twine Game
 <<set $damage to 3>>
 <<set $money to 1000>>
 <<set $diceroll to 0>>
+<<set $humanity to 0>>
+<<set $fame to 0>>
 
 
 <<set $inv to new Inventory(null, null)>>

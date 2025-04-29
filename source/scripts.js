@@ -81,6 +81,7 @@ class Sellable {
 	buy() {
 		let local = variables();
 		local.money -= this.parent.cost;
+		// Changeable behaviors handled by inventory
 		local.inventory.addItem(this.parent);
 	}
 	canAfford() {
@@ -98,13 +99,19 @@ class Changeable {
 	}
 	change() {
 		let local = variables();
-		local.power += this.parent.power;
-		local.health += this.parent.health;
+		local.power += this.parent.power ??= 0;
+		local.health += this.parent.health ??= 0;
+		local.humanity += this.parent.humanity ??= 0;
+		local.fame += this.parent.fame ??= 0;
+		local.money += this.parent.payout ??= 0;
 	}
 	revert() {
 		let local = variables();
-		local.power -= this.parent.power;
-		local.health -= this.parent.health;
+		local.power -= this.parent.power ??= 0;
+		local.health -= this.parent.health ??= 0;
+		local.humanity -= this.parent.humanity ??= 0;
+		local.fame -= this.parent.fame ??= 0;
+		local.money -= this.parent.payout ??= 0;
 	}
 }
 
@@ -163,13 +170,25 @@ window.Weapon = class Weapon {
 };
 
 window.Augment = class Augment {
-	constructor(name, description, location, cost, power, health, shops) {
+	constructor(
+		name,
+		description,
+		location,
+		cost,
+		power,
+		health,
+		humanity,
+		fame,
+		shops,
+	) {
 		this.name = name ??= "Default";
 		this.description = description ??= "Default";
 		this.location = location ??= "arms";
 		this.cost = cost ??= 100;
 		this.power = power ??= 0;
 		this.health = health ??= 0;
+		this.humanity = humanity ??= 0;
+		this.fame = fame ??= 0;
 		this.shops = shops ??= ["deadeye"];
 		this.sellable = new Sellable(this);
 		this.changeable = new Changeable(this);
@@ -182,19 +201,23 @@ window.Augment = class Augment {
 			this.cost,
 			this.power,
 			this.health,
+			this.humanity,
+			this.fame,
 			this.shops,
 		);
 	}
 	toJSON() {
 		return Serial.createReviver(
 			String.format(
-				"new Augment({0},{1},{2},{3},{4},{5},{6})",
+				"new Augment({0},{1},{2},{3},{4},{5},{6},{7},{8})",
 				JSON.stringify(this.name),
 				JSON.stringify(this.description),
 				JSON.stringify(this.location),
 				JSON.stringify(this.cost),
 				JSON.stringify(this.power),
 				JSON.stringify(this.health),
+				JSON.stringify(this.humanity),
+				JSON.stringify(this.fame),
 				JSON.stringify(this.shops),
 			),
 		);
@@ -213,6 +236,68 @@ window.Augment = class Augment {
 	}
 	getShops() {
 		return this.sellable.getShops();
+	}
+};
+
+window.Bounty = class Bounty {
+	constructor(
+		name,
+		description,
+		status,
+		payout,
+		fame,
+		humanity,
+		difficulty,
+		postings,
+	) {
+		this.name = name ??= "Default";
+		this.description = description ??= "Default";
+		this.status = status ??= "available";
+		this.payout = payout ??= 0;
+		this.fame = fame ??= 0;
+		this.humanity = humanity ??= 0;
+		this.difficulty = difficulty ??= 0;
+		this.postings = postings ??= [];
+		this.changeable = new Changeable(this);
+	}
+	clone() {
+		return new Bounty(
+			this.name,
+			this.description,
+			this.status,
+			this.payout,
+			this.fame,
+			this.humanity,
+			this.difficulty,
+			this.postings,
+		);
+	}
+	toJSON() {
+		return Serial.createReviver(
+			String.format(
+				"new Bounty({0},{1},{2},{3},{4},{5},{6},{7})",
+				JSON.stringify(this.name),
+				JSON.stringify(this.description),
+				JSON.stringify(this.status),
+				JSON.stringify(this.payout),
+				JSON.stringify(this.fame),
+				JSON.stringify(this.humanity),
+				JSON.stringify(this.difficulty),
+				JSON.stringify(this.postings),
+			),
+		);
+	}
+	updateStatus(newStatus) {
+		if (newStatus === "succeeded") {
+			this.change();
+		}
+		this.status = newStatus;
+	}
+	change() {
+		this.changeable.change();
+	}
+	revert() {
+		this.changeable.revert();
 	}
 };
 
@@ -310,10 +395,3 @@ window.Catalog = class Catalog {
 		return total;
 	}
 };
-
-// Shops //
-let shop1 = "deadeye"
-let shop2 = "the iron giant"
-let shop3 = "cyberwares"
-let shop4 = "blackmarket guns"
-let shop5 = "forge and flame"
