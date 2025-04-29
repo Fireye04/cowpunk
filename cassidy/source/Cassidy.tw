@@ -13,14 +13,16 @@ Upon further inspecion, each piece of paper contains a bounty issued by one of t
 
 :: Corpo bounty 1
 In the corner of the bounty there is a corporate logo and two small stars.
-The top of the bounty reads "Retrieve", underneath is a photo of (description of shopkeeper) followed by (name of shopkeeper) 
+The top of the bounty reads "Retrieve", underneath is a photo of A muscular man with a glistening metal arm followed by the name "Bill Westwood" 
 The bounty's description reads:
 Wanted for repeated failure to fulfill property tax payments over a period of two months.
 Retrieve the owed sum of $650 by any means necessary.
-Last known location: (name of shopkeepers shop)
+Last known location: The Iron Giant
 Reward: $100
 
-<<link "Accept bounty" "Bounty Board">><</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "accept corpo bounty 1">><</link>> or [[Return to Bounty Board | Bounty Board]]
+
+:: accept corpo bounty 1
 
 
 :: Corpo bounty 2
@@ -62,7 +64,7 @@ Reward: $100
 <<link "Accept bounty" "Defend train station">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
 :: Defend train station
-You make your way to the train station where you find an line of turnstiles blocking your path through to the train.
+You make your way to the train station where you find a line of turnstiles blocking your path through to the train.
 <<if $money >= 5>><<link "Pay to pass through (-$5)" "pass into station">><<set $money = $money - 5>><</link>><<else>><<link "Pay to pass through (-$5)" "poor">><</link>><</if>> or [[Abandon the bounty | Bounty Board]]
 
 :: poor
@@ -88,6 +90,7 @@ With seemingly no other option, you must decide to [[escalate things | escalate]
 :: escalate
 Feeling like you don't have any other choice, you raise your gun towards the man. 
 He throws his arms upward, "Woah! What the hell man! god damn I'll just pay my damn fare."
+[[Collect the man's fare | next]]
 
 :: leave it
 You decide to let the man go and you watch as he boards the train. [[It's time to start keeping watch | next]]
@@ -109,7 +112,7 @@ It's not worth even trying, the person behind the camera knows for sure that you
 
 :: do something crazy
 You pull out your gun and point it at the man and woman across from you. The man in the suit perks up and looks at the gun.
-"What do you think yer doin there, I HAVE A MEETING TO GET TO!" 
+"What the hell do you think yer doin there, I HAVE A MEETING TO GET TO!" 
 The woman chimes in, "Just let us be, my boss won't be happy if I'm late."
 You start to feel the [[pressure | pressure]] of the situation.
 [[You could still leave, abandoning the assignment | Bounty Board]]
@@ -122,10 +125,10 @@ You know they won't pay their fares if you just keep pointing the gun, you need 
 :: shoot
 You fire your gun until it runs out of bullets. 
 The man lies on the ground in front of you, his suit now drenched in blood.
-The woman lies crying behind him, her legs unrecognizable.
+The woman lies sobbing behind him, her legs unrecognizable.
 [[No one will be skipping their fares for quite some time. | congrats]]
 
 :: congrats
-After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with <<link "$100" "Bounty Board">><<set $money = $money + 100>><</link>>
+After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with <<link "$100." "Bounty Board">><<set $money = $money + 100>><</link>>
 
 :: Corpo bounty 5
