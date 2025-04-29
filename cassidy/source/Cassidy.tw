@@ -1,5 +1,5 @@
 :: Cassidy Start
-<<set $CorpoBounties = ["Corpo bounty 1","Corpo bounty 2","Corpo bounty 3","Corpo bounty 4","Corpo bounty 5"]>>
+<<set $CorpoBounties = ["retrieve rent","Corpo bounty 2","Corpo bounty 3","the train station","Corpo bounty 5"]>>
 Go to the [[bounty board | Bounty Board]]
 
 :: Bounty Board
