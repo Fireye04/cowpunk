@@ -11,19 +11,60 @@ Upon further inspecion, each piece of paper contains a bounty issued by one of t
 [[Check out the fourth bounty | $CorpoBounties[3]]]
 [[Check out the fifth bounty | $CorpoBounties[4]]]
 
-:: Corpo bounty 1
-In the corner of the bounty there is a corporate logo and two small stars.
+:: retrieve rent
+In the corner of the bounty there is a corporate logo and three small stars.
 The top of the bounty reads "Retrieve", underneath is a photo of A muscular man with a glistening metal arm followed by the name "Bill Westwood" 
 The bounty's description reads:
 Wanted for repeated failure to fulfill property tax payments over a period of two months.
 Retrieve the owed sum of $650 by any means necessary.
-Last known location: The Iron Giant
-Reward: $100
+Last known location: The Lazy Cat
+Reward: $150
 
-<<link "Accept bounty" "accept corpo bounty 1">><</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "retrieve rent">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
-:: accept corpo bounty 1
+:: accept retrieve rent
+You make your way through the noise of the city and the aggressively neon lights to a small pub with a flickering neon sign that reads, "The Lazy Cat".
+[[enter | The Lazy Cat]]
 
+:: The Lazy Cat
+Pushing open the wooden doors, you enter the run down pub. There are various groups at different tables talking and drinking, as well as a particularly drunk group of bikers playing pool near the bar.
+Tending the bar you see a large man with a metal arm, he must be Bill Westwood. [[Approach the bar | approach Bill]]
+
+:: approach Bill
+As you approach the bar, Bill nods to you and says, "Don't think I've seen you round 'ere before, what can I do for ya?"
+[[I'm here for the rent you've been missing | inquire on rent]]
+
+:: inquire on rent
+"I see, so your one of them cowpunks then." Bill replied.
+He lit a cigarette and took a long draw, then continued, "Listen, neither one of us wants this to get ugly, I've been having to pay fer my family's meds, and the booze barely pays for itself round this part of town, so what say you we just forget about the bounty and I give you $50 to tear it up?"
+<<link "Accept Bill's deal" "friend of bill">><<set $money = $money + 50>><</link>>
+[[Push for the rent | push for rent]]
+
+:: friend of bill
+You accept Bill's bribe and return to the [[bounty board | Bounty Board]] to go tear up any remaining copies of the bounty.
+
+:: push for rent
+You need more money, and you stand on principle, Bill must pay his debt. 
+"All right I see how it is then" Bill said in a stern voice.
+The pub went quiet around the two of you, and [[Bill reached under the bar... | fight bill]]
+
+:: fight bill
+You need more money, and you stand on principle, Bill must pay his debt. 
+"All right I see how it is then" Bill said in a stern voice.
+The pub went quiet around the two of you, and Bill reached under the bar to pull out a shotgun, at the same time you pulled out your gun and began to fire.
+<<script>>StartCombat(3,6,6)<</script>>
+<<if $health > 0>>You shoot bill to death, ready to [[collect his overdue rent> | collect rent]]<<else>> Bill fires his shotgun quicker than you can lift your gun, once he's sure you're not getting back up he puts away his shotgun. [[It's over for you, cowpunk | ]]<</if>>
+
+:: collect rent
+Stepping past the silent onlookers, still in shock of what just happened to Bill, you approach the bar and find where [[bill kept his money... | bills money]]
+
+:: bills money
+Stepping past the silent onlookers, still in shock of what just happened to Bill, you approach the bar and find where bill kept his money.
+There was a small safe, already opened, with just enough money to cover the missing rent, and a picture of him with a woman who could only be his wife.
+[[Contact a corporation representative. | corpo rep]]
+
+:: corpo rep
+After a few minutes a corporate representative meets you outside The Lazy Cat and takes the owed rent, leaving you with [[$150 for the bounty. | Bounty Board]]
 
 :: Corpo bounty 2
 You notice a corporate logo and three small stars in the top corner of the bounty.
@@ -51,7 +92,7 @@ Reward: $500
 
 <<link "Accept bounty" "Bounty Board">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
-:: Corpo bounty 4
+:: the train station
 In the corner of the bounty there is a corporate logo with just one small star.
 The top of the bounty reads "Defend" followed by a picture of the train station.
 The bounty's description reads:
