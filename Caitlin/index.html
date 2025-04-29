@@ -563,7 +563,7 @@ Right in the center of town the liquor store is guarded by an old looking [[dog.
 
 [[Go somewhere else | locations]]
 [[Old Friend | Friend]]
-[[Dog | Dog]]</tw-passagedata><tw-passagedata pid="7" name="cr.gun" tags="" position="850,100" size="100,100">&lt;&lt;if $humanity &gt; -1 &gt;&gt; An older man with a bowler hat and a well-groomed mustache waves to you as you enter. &quot;Good to see you in. Whatcha lookin&#39; for today?&quot;&lt;&lt;else if $humanity &gt; -41 &gt;&gt;You walk into the store and the older usually kind store owner gives you a cold look. 
+[[Dog | Dog]]</tw-passagedata><tw-passagedata pid="7" name="cr.gun" tags="" position="850,100" size="100,100">&lt;&lt;if $humanity &gt; -1 &gt;&gt; An older man with a bowler hat and a well-groomed mustache waves to you as you enter. &quot;Good to see you in. Whatcha lookin&#39; for today?&quot;&lt;&lt;elseif $humanity &gt; -41 &gt;&gt;You walk into the store and the older usually kind store owner gives you a cold look. 
 He nods to you, but his eyes never quiet meet your own. His voice is more clipped than usual as he opens up his drawer, revealing the firearms inside. &quot;What do you want?&quot;&lt;&lt;else&gt;&gt;Your spurs jingle across the wooden steps into the store, but as you reach out to push the door open you hear a click. The door doesn&#39;t budge. From the windows you can see a light flicker off as the curtains are pulled tight.&lt;&lt;/if&gt;&gt;
 
 [[I&#39;d like to look at your wares | cr.gunlist]] 
@@ -571,10 +571,12 @@ He nods to you, but his eyes never quiet meet your own. His voice is more clippe
 
 gun 2
 
-gun 3</tw-passagedata><tw-passagedata pid="9" name="cr.item" tags="" position="1100,100" size="100,100">The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
+gun 3
+
+[[Leave | Visit Town]]</tw-passagedata><tw-passagedata pid="9" name="cr.item" tags="" position="1100,100" size="100,100">The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
 People come in and out frequently, and the brass chimes hanging by the door ring every few seconds.
 
-&lt;&lt;if $humanity &gt; -1 &gt;&gt; As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. &quot;Good to see you darlin&#39; What are you in for?&quot; &lt;&lt;else if $humanity &gt; -41 &gt;&gt;
+&lt;&lt;if $humanity &gt; -1 &gt;&gt; As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. &quot;Good to see you darlin&#39; What are you in for?&quot; &lt;&lt;elseif $humanity &gt; -41 &gt;&gt;
 As you enter the store, the woman at the front counter&#39;s smile wavers. 
 Her eyes scan you up and down and her lips twitch down into a small frown. 
 She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter.&lt;&lt;else&gt;&gt;
@@ -587,7 +589,8 @@ The people still around on the street watch you with bairly hidden disdain.&lt;&
 item 2
 
 item 3</tw-passagedata><tw-passagedata pid="11" name="Friend" tags="" position="100,225" size="100,100">Tom, an old childhood friend can be found selling meat at the local market. 
-He used to do what you do, but after a bad incident he decided it was best for him to settle down and work at his family&#39;s ranch.</tw-passagedata><tw-passagedata pid="12" name="Dog" tags="" position="225,225" size="100,100">Outside the old run down liquor store an old stray mutt sits passively. 
+He used to do what you do, but after a bad incident he decided it was best for him to settle down and work at his family&#39;s ranch. 
+&lt;&lt;if $humanity &gt; -1 &gt;&gt;He waves to you, with a wide smile.&lt;&lt;else&gt;&gt;You can tell he saw you by the way he tenses, but his eyes don&#39;t quiet meet your own. [[Keep walking | Visit Town]]</tw-passagedata><tw-passagedata pid="12" name="Dog" tags="" position="225,225" size="100,100">Outside the old run down liquor store an old stray mutt sits passively. 
 The brown fluffy thing is curled up into a ball, allowing its long droopy ears to waterfall over its stubby legs. 
 It&#39;s cute in an ugly way. As you pass by the dog&#39;s nose twitches. [[Ignore it | Ignore Dog]] or [[Pet the dog | Pet]]</tw-passagedata><tw-passagedata pid="13" name="Ignore Dog" tags="" position="350,225" size="100,100">The dog&#39;s tail wags lazily as you [[pass by. | Visit Town]] It almost seems disappointed.</tw-passagedata><tw-passagedata pid="14" name="Pet" tags="" position="475,225" size="100,100">&lt;&lt;if $humanity &gt; -30 &gt;&gt;You bend down to offer the old dog your hand. 
 Its wet nose brushes against your gloved hand as it sniffs you. 
