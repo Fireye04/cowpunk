@@ -1,5 +1,5 @@
 :: Cassidy Start
-<<set $CorpoBounties = ["retrieve rent","whistleblower","Corpo bounty 3","the train station","Corpo bounty 5"]>>
+<<set $CorpoBounties = ["retrieve rent","whistleblower","gamblers fallacy","the train station","Corpo bounty 5"]>>
 Go to the [[bounty board | Bounty Board]]
 
 :: Bounty Board
@@ -12,7 +12,7 @@ Upon further inspecion, each piece of paper contains a bounty issued by one of t
 [[Check out the fifth bounty | $CorpoBounties[4]]]
 
 :: retrieve rent
-In the corner of the bounty there is a corporate logo and three small stars.
+In the corner of the bounty there is a corporate logo and four small stars.
 The top of the bounty reads "Retrieve", underneath is a photo of A muscular man with a glistening metal arm followed by the name "Bill Westwood" 
 The bounty's description reads:
 Wanted for repeated failure to fulfill property rent payments over a period of two months.
@@ -52,7 +52,7 @@ The pub went quiet around the two of you, and [[Bill reached under the bar... | 
 You need more money, and you stand on principle, Bill must pay his debt. 
 "All right I see how it is then" Bill said in a stern voice.
 The pub went quiet around the two of you, and Bill reached under the bar to pull out a shotgun, at the same time you pulled out your gun and began to fire.
-<<script>>StartCombat(2,6,5)<</script>>
+<<script>>StartCombat(3,7,5)<</script>>
 <<if $health > 0>>You shoot bill to death, ready to [[collect his overdue rent. | collect rent]]<<else>> Bill fires his shotgun quicker than you can lift your gun, once he's sure you're not getting back up he puts away his shotgun. [[It's over for you, cowpunk | ]]<</if>>
 
 :: collect rent
@@ -148,18 +148,77 @@ Against all odds, Joshua Dean manages to best you, surviving for now. [[It's ove
 :: corpo rep josh
 A man in a black suit meets you outside the motel and thanks you for dealing with their little problem, handing you <<link "$500" "Bounty Board">><<set $money = $money + 500>><</link>> in exchange.
 
-:: Corpo bounty 3
+:: gamblers fallacy
 The thin sheet of paper's upper corner appears to be branded with a corporate logo and three small stars.
 In bold red text, the top of the bounty reads "Wanted dead or alive"
 Underneath is a dark photo of a man in a bright red velvet suit.
 The bounty's description reads:
 Name unknown
-Wanted for card counting and repeated return to (name of casino) following expulsion.
+Wanted for card counting and repeated return to the Blue Flame Casino following expulsion.
 Eliminate or apprehend by any means necessary.
-Last known location: (name of casino)
+Last known location: Blue Flame Casino
 Reward: $500
 
-<<link "Accept bounty" "Bounty Board">><</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "accept gamblers fallacy">><</link>> or [[Return to Bounty Board | Bounty Board]]
+
+:: accept gamblers fallacy
+You ascend through Ember City drawing ever nearer to the enchanting allure of the Blue Flame, sitting atop its paramount.
+When you reach the casino you are drawn into it by the dazzling stars making up its sign, its as though you had no recollection of approaching or entering the casino, you simply appeared inside.
+Passing from table to table you have the urge to [[gamble | gamble?]], but that would be unwise, best to [[keep searching | keep searching]].
+
+:: gamble?
+Now's not the time, your on a job. [[Keep searching | keep searching]]
+
+:: keep searching
+As you search deeper into the casino, you approach the [[high rollers tables | the velvet suit]], It wouls be so nice to [[gamble | gamble??]], even just a little.
+
+:: gamble??
+What is wrong with you, you have to find the man in the velevet suit. [[Go to the high rollers table. | the velvet suit]]
+
+:: the velvet suit
+Once you make it to the high rollers table you sit down, sitting next to you is the man you've been looking for, the man in the velvet suit.
+[[Gamble at the high rollers table | gamble???]]
+[[Interrogate the man | interrogate]]
+
+:: gamble???
+You have a serious problem, you need that money, so start [[interrogating the man in the velvet suit | interrogate]].
+
+:: interrogate
+You turn to the man, "you don't belong here." He interrupts before you can say anything.
+"I can tell your poor, so run along little cowpunk."
+[[Excuse me? | asshole]]
+
+:: asshole
+You turn to the man, "you don't belong here." He interrupts before you can say anything.
+"I can tell your poor, so run along little cowpunk."
+"excuse me?"
+"You heard me." After a moment of staring his eyes widened in realization, "Oh shit, your here to get me, those corpo bastards hired you."
+[[Come peacefully or I'll have to take matters into my own hands. | take matters]]
+
+:: take matters
+You turn to the man, "you don't belong here." He interrupts before you can say anything.
+"I can tell your poor, so run along little cowpunk."
+"excuse me?"
+"You heard me." After a moment of staring his eyes widened in realization, "Oh shit, your here to get me, those corpo bastards hired you."
+"Come peacefully or I'll have to take matters into my own hands."
+"I'm afraid I can't do that." The man stood up and flashed a knife.
+[[Draw your gun | draw gun casino]]
+
+:: draw gun casino
+You draw your weapon as the man in the velvet suit charges towards you with his knife.
+[[Fire away | fight velvet man]]
+[[Gamble real quick | gamble????]]
+
+:: gamble????
+Are you serious, that man is about to kill you and you want to gamble? [[Shoot him. | fight velvet man]]
+
+:: fight velvet man
+The man in velvet lunges at you with the knife, and you begin to fire back,
+<<script>>StartCombat(2,8,2)<</script>>
+<<if $health > 0>>You hit him dead on, and he lies bleeding out on the casino floor, you should probably [[call a corporate representative quick. | corpo rep velvet]] <<else>> Your thoughts of gambling slowed your draw, [[It's over for you cowpunk | ]] <</if>>
+
+:: corpo rep velvet 
+A familiar man in a black suit arrives at the Blue Flame in minutes, ready to give you your reward, <<link "$500" "Bounty Board">><</link>>.
 
 :: the train station
 In the corner of the bounty there is a corporate logo with just one small star.
