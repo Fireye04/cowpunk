@@ -3,7 +3,7 @@
 "ifid": "1F012455-6A83-4CCB-BCB1-49B9D77D4E03",
 "format": "SugarCube",
 "format-version": "2.37.3",
-"start": "Start"
+"start": "Demo"
 }
 
 :: StoryTitle
@@ -15,6 +15,10 @@ My Twine Game
 <<set $damage to 3>>
 <<set $money to 0>>
 <<set $diceroll to 0>>
-<<set $humanity to 0>>
+<<set $humanity to -50>>
 <<set $fame to 0>>
 
+
+<<set $inv to new Inventory(null, null)>>
+
+<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])])>>
