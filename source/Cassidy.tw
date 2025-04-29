@@ -13,7 +13,6 @@ Upon further inspecion, each piece of paper contains a bounty issued by one of t
 [[Check out the second bounty | $CorpoBounties[1]]]
 [[Check out the third bounty | $CorpoBounties[2]]]
 [[Check out the fourth bounty | $CorpoBounties[3]]]
-<<run $corpo1.updateStatus("in-progress")>>
 
 :: retrieve rent
 In the corner of the bounty there is a corporate logo and four small stars.
@@ -24,9 +23,9 @@ Retrieve the owed sum of $650 by any means necessary.
 Last known location: The Lazy Cat
 Reward: $150
 
-<<link "Accept bounty" "accept retrieve rent">><</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "accep">><<run $corpo1.updateStatus("in-progress")>><</link>> or [[Return to Bounty Board | Bounty Board]]
 
-:: accept retrieve rent
+:: accep
 You make your way through the noise of the city and the aggressively neon lights to a small pub with a flickering neon sign that reads, "The Lazy Cat".
 [[enter | The Lazy Cat]]
 
