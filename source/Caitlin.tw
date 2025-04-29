@@ -38,18 +38,18 @@ Right in the center of town the liquor store is guarded by an old looking [[dog.
 [[Dog | Dog]]
 
 :: cr.gun
-An older man with a bowler hat and a well-groomed mustache waves to you as you enter. "Good to see you in. Whatcha lookin' for today?"
+<<if $humanity > -1 >> An older man with a bowler hat and a well-groomed mustache waves to you as you enter. "Good to see you in. Whatcha lookin' for today?"
 
-OR
+<<else if $humanity > -41 >
 
 You walk into the store and the older usually kind store owner gives you a cold look. 
 He nods to you, but his eyes never quiet meet your own. His voice is more clipped than usual as he opens up his drawer, revealing the firearms inside. "What do you want?"
 
-OR
+<<else>>
 
 Your spurs jingle across the wooden steps into the store, but as you reach out to push the door open you hear a click. 
 The door doesn't budge. 
-From the windows you can see a light flicker off as the curtains are pulled tight.
+From the windows you can see a light flicker off as the curtains are pulled tight.<</if>>
 
 [[I'd like to look at your wares | cr.gunlist]] 
 [[Nothing | Visit Town ]]
