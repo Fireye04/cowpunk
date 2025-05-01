@@ -6,11 +6,13 @@ You died. Your legend ends here.
 
 
 :: Bounties
+@@color:red;text@@
 
+@@color:green;
 You approach the giant wooden board littered with wanted posters, body augmentation adverts, and bullet holes. 
 
 There's [[several options|Bounty Options]] to choose from. 
-
+@@
 
 
 :: Bounty Options
