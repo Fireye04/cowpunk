@@ -10,6 +10,8 @@ With the various links below you can try out how interactions will work with var
 <<run $cat.getItemsFromShop("deadeye")>>
 <<$cat.getItemsFromShop("deadeye")>>
 
+<<run $cat.items>>
+
 [[No augmentation | Demo 1]]
 [[Some Augmentations | Demo 2]]
 [[Many Augmentations | Demo 3]]
