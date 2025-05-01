@@ -7,13 +7,17 @@ body {
 
 /* This class is specific to the text in the passages*/
 .passage {
-    border: 1px solid red;
+    border: 5px solid black;
+}
+
+.text1 {
+    color: orange;
 }
 
 
 /* This id is specific to the sidebar*/
 #ui-bar {
-	background-color: black;
+	background-color: brown;
 }
 
 
