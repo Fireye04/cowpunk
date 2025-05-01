@@ -18,7 +18,3 @@ body {
 
 
 
-/* This class will override any styles on passages tagged "forest"*/
-.forest {
-	background: green;
-}

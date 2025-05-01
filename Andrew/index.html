@@ -124,10 +124,6 @@ body {
 
 
 
-/* This class will override any styles on passages tagged "forest"*/
-.forest {
-	background: green;
-}
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">/* Stow the sidebar initially
 config.ui.stowBarInitially = true;
 */
@@ -448,9 +444,7 @@ let shop3 = "cyberwares"
 let shop4 = "blackmarket guns"
 let shop5 = "forge and flame"</script><tw-passagedata pid="1" name="You died" tags="" position="100,100" size="100,100">You died. Your legend ends here.
 
-[[Restart?|Bounties]]</tw-passagedata><tw-passagedata pid="2" name="Bounties" tags="" position="225,100" size="100,100">@@color:red;text@@
-
-@@color:green;
+[[Restart?|Bounties]]</tw-passagedata><tw-passagedata pid="2" name="Bounties" tags="" position="225,100" size="100,100">@@.passage
 You approach the giant wooden board littered with wanted posters, body augmentation adverts, and bullet holes. 
 
 There&#39;s [[several options|Bounty Options]] to choose from. 
