@@ -6,6 +6,7 @@ Hi! Welcome to the demo of our game. While it is not entirely finished (read as:
 As you progress through the game you will have the option to "enhance" yourself with cybernetic augmentations. This will impact your humanity and how you are perceived by the people around you.
 With the various links below you can try out how interactions will work with various levels of augmentations.
 
+<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])])>>
 <<script>>$cat.getItemsFromShop("deadeye")<</script>>
 
 [[No augmentation | Demo 1]]
