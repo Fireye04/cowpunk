@@ -545,7 +545,7 @@ As you progress through the game you will have the option to &quot;enhance&quot;
 With the various links below you can try out how interactions will work with various levels of augmentations.
 
 &lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;deadeye&quot;])])&gt;&gt;
-&lt;&lt;run getItemsFromShop(&quot;deadeye&quot;)&gt;&gt;
+&lt;&lt;run $Catalog.getItemsFromShop(&quot;deadeye&quot;)&gt;&gt;
 &lt;&lt;$cat.getItemsFromShop(&quot;deadeye&quot;)&gt;&gt;
 
 [[No augmentation | Demo 1]]
