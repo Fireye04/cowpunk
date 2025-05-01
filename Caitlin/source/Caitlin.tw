@@ -7,7 +7,7 @@ As you progress through the game you will have the option to "enhance" yourself 
 With the various links below you can try out how interactions will work with various levels of augmentations.
 
 <<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])])>>
-<<print $cat>>
+<<print <<script>> $cat.getItemsFromShop("deadeye")<</script>>>>
 
 
 [[No augmentation | Demo 1]]
