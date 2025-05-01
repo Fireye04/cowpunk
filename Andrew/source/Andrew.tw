@@ -278,6 +278,7 @@ He reaches into his coat and pulls out a revolver. It's a very dark metal and lo
 
 /* TODO: Add revolver */
 :: Samuel's Revolver
+$Inventory.addItem(TheWidower)
 He hands you the revolver and it's much heavier than yours. It takes a little extra strength to lift up, 
 but it fits perfectly in your hand. You look up and he's already walking away.
 
