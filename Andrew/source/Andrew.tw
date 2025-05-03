@@ -87,7 +87,7 @@ Along the back wall you see a [[table|Barn Backwall]] with a few items on it.
 
 :: Look Around Barn 2
 You see the [[basement door|Barn Basement Door]] in the far right corner of the room. 
-To the left you see some [[hay bales and buckets of animal feed.|Barn Leftwall]]
+To the left you see some [[hay bales and buckets of animal feed.|Barn Leftwall 2]]
 
 :: Barn Leftwall
 Just some hay and feed. 
@@ -111,12 +111,11 @@ Looks important. The farmer probably wouldn't want you messing around with his s
 [[Shoot the lock off?|Opened Lockbox]]
 [[Keep looking around|Look Around Barn]]
 
-/* TODO: Add 5 dollars*/
 :: Opened Lockbox
 The bullet hits the center of the lock and shatters it like it was made of glass. 
 A small puff of smoke dissipates from the wound. You take the lock off and look inside. 
 There's 5 dollars and an old photograph of a woman wearing a tacky orange bandana. 
-[[Take the money (+$5) and keep looking around|Take the money]]
+[[Take the money (+$5)|Take the money]]
 
 /* Add Money */
 :: Take the money
@@ -139,7 +138,7 @@ No sense in reasoning with them.
 
 /* Encounter */
 :: Bounty1 Encounter 
-<<script>> StartCombat(1, 20, 2) <</script>>
+<<script>> StartCombat(1, 10, 2) <</script>>
 <<if $health > 0>> [[You Win!|Bounty1 Encounter Win]] 
 <<else>> [[You Lose | You died]] 
 <</if>>

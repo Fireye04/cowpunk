@@ -515,7 +515,7 @@ Is he really that scared of a few rats?
 [[Look around|Look Around Barn]]</tw-passagedata><tw-passagedata pid="12" name="Look Around Barn" tags="" position="225,225" size="100,100">You see the [[basement door|Barn Basement Door]] in the far right corner of the room. 
 To the left you see some [[hay bales and buckets of animal feed.|Barn Leftwall]]
 Along the back wall you see a [[table|Barn Backwall]] with a few items on it.</tw-passagedata><tw-passagedata pid="13" name="Look Around Barn 2" tags="" position="350,225" size="100,100">You see the [[basement door|Barn Basement Door]] in the far right corner of the room. 
-To the left you see some [[hay bales and buckets of animal feed.|Barn Leftwall]]</tw-passagedata><tw-passagedata pid="14" name="Barn Leftwall" tags="" position="475,225" size="100,100">Just some hay and feed. 
+To the left you see some [[hay bales and buckets of animal feed.|Barn Leftwall 2]]</tw-passagedata><tw-passagedata pid="14" name="Barn Leftwall" tags="" position="475,225" size="100,100">Just some hay and feed. 
 Living out in Cattle Run has familiarized you with with raising livestock and keeping western traditions alive. 
 It&#39;s hard to find people who want this lifestyle anymore, especially being able to see the neon lights of the city anywhere you walk in Cattle Run. 
 [[Keep looking around|Look Around Barn]]</tw-passagedata><tw-passagedata pid="15" name="Barn Leftwall 2" tags="" position="600,225" size="100,100">Just some hay and feed. 
@@ -525,12 +525,10 @@ It&#39;s hard to find people who want this lifestyle anymore, especially being a
 Must be the farmers workbench. Under the table you see a [[metal box|Farmer&#39;s Lockbox]] with a lock on it.
 [[Keep looking around|Look Around Barn]]</tw-passagedata><tw-passagedata pid="17" name="Farmer&#39;s Lockbox" tags="" position="850,225" size="100,100">Looks important. The farmer probably wouldn&#39;t want you messing around with his stuff. But there might be something good in there.
 [[Shoot the lock off?|Opened Lockbox]]
-[[Keep looking around|Look Around Barn]]
-
-/* TODO: Add 5 dollars*/</tw-passagedata><tw-passagedata pid="18" name="Opened Lockbox" tags="" position="975,225" size="100,100">The bullet hits the center of the lock and shatters it like it was made of glass. 
+[[Keep looking around|Look Around Barn]]</tw-passagedata><tw-passagedata pid="18" name="Opened Lockbox" tags="" position="975,225" size="100,100">The bullet hits the center of the lock and shatters it like it was made of glass. 
 A small puff of smoke dissipates from the wound. You take the lock off and look inside. 
 There&#39;s 5 dollars and an old photograph of a woman wearing a tacky orange bandana. 
-[[Take the money (+$5) and keep looking around|Take the money]]
+[[Take the money (+$5)|Take the money]]
 
 /* Add Money */</tw-passagedata><tw-passagedata pid="19" name="Take the money" tags="" position="1100,225" size="100,100">&lt;&lt;set $money = $money + 5&gt;&gt;
 You take the money and close the Lockbox.
@@ -547,7 +545,7 @@ No sense in reasoning with them.
 
 [[Start fighting.|Bounty1 Encounter]]
 
-/* Encounter */</tw-passagedata><tw-passagedata pid="21" name="Bounty1 Encounter" tags="" position="100,350" size="100,100">&lt;&lt;script&gt;&gt; StartCombat(1, 20, 2) &lt;&lt;/script&gt;&gt;
+/* Encounter */</tw-passagedata><tw-passagedata pid="21" name="Bounty1 Encounter" tags="" position="100,350" size="100,100">&lt;&lt;script&gt;&gt; StartCombat(1, 10, 2) &lt;&lt;/script&gt;&gt;
 &lt;&lt;if $health &gt; 0&gt;&gt; [[You Win!|Bounty1 Encounter Win]] 
 &lt;&lt;else&gt;&gt; [[You Lose | You died]] 
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Bounty1 Encounter Win" tags="" position="225,350" size="100,100">Despite the amount of rats, your strength overpowered them and you laid each and last everyone to rest.
