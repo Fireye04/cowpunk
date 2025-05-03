@@ -1,2 +1,6 @@
 :: Kai Start
-Downtime! we vibin
+<<set $CorpoBounties = ["retrieve rent","whistleblower","gamblers fallacy","the train station"]>>
+[[Check out the first bounty | $CorpoBounties[0]]]
+
+:: retrieve rent
+placeholder text that definitely didn't say anything inappropriate for a school project

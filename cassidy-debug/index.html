@@ -704,18 +704,10 @@ Your gaze falls to the metal augments adorning your body. You nearly can&#39;t r
 &lt;&lt;set $corpo4 to new Bounty(&quot;the train station&quot;, &quot;Prevent citizens from dodging the trainfare.&quot;, &quot;available&quot;, 100, -5, -10, &quot;novice&quot;,[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;
 Go to the [[bounty board | Bounty Board]]</tw-passagedata><tw-passagedata pid="61" name="Bounty Board" tags="" position="100,850" size="100,100">You approach a large board with a metal rim and torn, patchy cork board littered with an array of flimsy reused paper pinned up.
 Upon further inspecion, each piece of paper contains a bounty issued by one of the many corporations.
-&lt;&lt;link &quot;Check out the first bounty&quot; $CorpoBounties[0]&gt;&gt;&lt;&lt;/link&gt;&gt;
+[[Check out the first bounty | $CorpoBounties[0]]]
 [[Check out the second bounty | $CorpoBounties[1]]]
 [[Check out the third bounty | $CorpoBounties[2]]]
-[[Check out the fourth bounty | $CorpoBounties[3]]]</tw-passagedata><tw-passagedata pid="62" name="retrieve rent" tags="" position="225,850" size="100,100">In the corner of the bounty there is a corporate logo and four small stars.
-The top of the bounty reads &quot;Retrieve&quot;, underneath is a photo of A muscular man with a glistening metal arm followed by the name &quot;Bill Westwood&quot; 
-The bounty&#39;s description reads:
-Wanted for repeated failure to fulfill property rent payments over a period of two months.
-Retrieve the owed sum of $650 by any means necessary.
-Last known location: The Lazy Cat
-Reward: $150
-
-&lt;&lt;link &quot;Accept bounty&quot; &quot;accep&quot;&gt;&gt;&lt;&lt;run $corpo1.updateStatus(&quot;in-progress&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="63" name="accep" tags="" position="350,850" size="100,100">You make your way through the noise of the city and the aggressively neon lights to a small pub with a flickering neon sign that reads, &quot;The Lazy Cat&quot;.
+[[Check out the fourth bounty | $CorpoBounties[3]]]</tw-passagedata><tw-passagedata pid="62" name="retrieve rent" tags="" position="225,850" size="100,100">placeholder text that definitely didn&#39;t say anything inappropriate for a school project</tw-passagedata><tw-passagedata pid="63" name="accep" tags="" position="350,850" size="100,100">You make your way through the noise of the city and the aggressively neon lights to a small pub with a flickering neon sign that reads, &quot;The Lazy Cat&quot;.
 [[enter | The Lazy Cat]]</tw-passagedata><tw-passagedata pid="64" name="The Lazy Cat" tags="" position="475,850" size="100,100">Pushing open the wooden doors, you enter the run down pub. There are various groups at different tables talking and drinking, as well as a particularly drunk group of bikers playing pool near the bar.
 Tending the bar you see a large man with a metal arm, he must be Bill Westwood. [[Approach the bar | approach Bill]]</tw-passagedata><tw-passagedata pid="65" name="approach Bill" tags="" position="600,850" size="100,100">As you approach the bar, Bill nods to you and says, &quot;Don&#39;t think I&#39;ve seen you round &#39;ere before, what can I do for ya?&quot;
 [[I&#39;m here for the rent you&#39;ve been missing | inquire on rent]]</tw-passagedata><tw-passagedata pid="66" name="inquire on rent" tags="" position="725,850" size="100,100">&quot;I see, so your one of them cowpunks then.&quot; Bill replied.
@@ -826,7 +818,8 @@ You know they won&#39;t pay their fares if you just keep pointing the gun, you n
 [[Shoot them | shoot]]</tw-passagedata><tw-passagedata pid="117" name="shoot" tags="" position="850,1475" size="100,100">You fire your gun until it runs out of bullets. 
 The man lies on the ground in front of you, his suit now drenched in blood.
 The woman lies sobbing behind him, her legs unrecognizable.
-[[No one will be skipping their fares for quite some time. | congrats]]</tw-passagedata><tw-passagedata pid="118" name="congrats" tags="" position="975,1475" size="100,100">After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with &lt;&lt;link &quot;$100.&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $money = $money + 100&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="119" name="Kai Start" tags="" position="1100,1475" size="100,100">Downtime! we vibin</tw-passagedata><tw-passagedata pid="120" name="Start" tags="" position="1225,1475" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Andrew Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+[[No one will be skipping their fares for quite some time. | congrats]]</tw-passagedata><tw-passagedata pid="118" name="congrats" tags="" position="975,1475" size="100,100">After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with &lt;&lt;link &quot;$100.&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $money = $money + 100&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="119" name="Kai Start" tags="" position="1100,1475" size="100,100">&lt;&lt;set $CorpoBounties = [&quot;retrieve rent&quot;,&quot;whistleblower&quot;,&quot;gamblers fallacy&quot;,&quot;the train station&quot;]&gt;&gt;
+[[Check out the first bounty | $CorpoBounties[0]]]</tw-passagedata><tw-passagedata pid="120" name="Start" tags="" position="1225,1475" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Andrew Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Caitlin&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Cassidy&quot; &quot;Cassidy Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Kai&quot; &quot;Kai Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
