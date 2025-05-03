@@ -3,4 +3,7 @@
 [[Check out the first bounty | $CorpoBounties[0]]]
 
 :: retrieve rent
+<<link "Accept bounty" "accep">><<run $corpo1.updateStatus("in-progress")>><</link>> or [[Return to Bounty Board | Kai Start]]
+
+:: accep
 placeholder text that definitely didn't say anything inappropriate for a school project
