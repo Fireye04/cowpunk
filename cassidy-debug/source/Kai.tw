@@ -1,6 +1,7 @@
 :: Kai Start
 <<set $CorpoBounties = ["retrieve rent","whistleblower","gamblers fallacy","the train station"]>>
 [[Check out the first bounty | $CorpoBounties[0]]]
+<<set $corpo1 to new Bounty("retrieve rent", "Collect a local pubs overdue rent.", "available", 150, -10, -2, "hard",["the first one","dennis","el pequenito caballero"])>>
 
 :: retrieve rent
 <<link "Accept bounty" "accep">><<run $corpo1.updateStatus("in-progress")>><</link>> or [[Return to Bounty Board | Kai Start]]
