@@ -1,13 +1,17 @@
 
 /*The body is everything displayed in the main text delivery area*/
 body {
-	background: brown;
+	background: #833322;
 }
 
 
 /* This class is specific to the text in the passages*/
-.passage {
-    border: 5px solid #833322;
+.bountyboard {
+    border: 10px solid #948a76;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .text1 {
@@ -21,7 +25,7 @@ a.link-internal {
 
 /* This id is specific to the sidebar*/
 #ui-bar {
-	background-color: #c5003c;
+	background-color: #ce2741;
 }
 
 
