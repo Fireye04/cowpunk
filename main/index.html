@@ -104,41 +104,49 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://1F012455-6A83-4CCB-BCB1-49B9D77D4E03// --><tw-storydata name="My Twine Game" startnode="136" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="1F012455-6A83-4CCB-BCB1-49B9D77D4E03" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* The body is everything displayed in the main text delivery area
+	<!-- UUID://1F012455-6A83-4CCB-BCB1-49B9D77D4E03// --><tw-storydata name="My Twine Game" startnode="136" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="1F012455-6A83-4CCB-BCB1-49B9D77D4E03" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+/*The body is everything displayed in the main text delivery area*/
 body {
-	background: blue;
+	background: #685f4d ;
+	color: black;
 }
-*/
 
-/* This class is specific to the text in the passages
-.passage {
-    border: 1px solid red;
+
+/* This class is specific to the text in the passages*/
+.bountyboard {
+    border: 10px solid #948a76;
+	border-top: 10px;
+	border-bottom: 10px;
+	border-left: 10px;
+	border-right: 10px;
+
 }
-*/
 
-/* This id is specific to the sidebar
+.text1 {
+    color:orangered;
+}
+
+a.link-internal {
+	color: white
+}
+
+.death {
+	background: #ce2741;
+	color: black;
+	
+}
+
+
+/* This id is specific to the sidebar*/
 #ui-bar {
-	display: none;
+	background-color: gray;
 }
-*/
 
-/* This id is specific to the header
-#header {
-	
+.important {
+	color: #ff0000;
 }
-*/
 
-/* This id is specific to the footer
-#footer {
-	
-}
-*/
-
-/* This class will override any styles on passages tagged "forest"
-.forest {
-	background: green;
-}
-*/</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* Stow the sidebar initially
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* Stow the sidebar initially
 config.ui.stowBarInitially = true;
 */
 
@@ -535,19 +543,24 @@ window.Catalog = class Catalog {
 		return total;
 	}
 };
-</script><tw-passagedata pid="1" name="You died" tags="" position="100,100" size="100,100">You died. Your legend ends here.
+</script><tw-passagedata pid="1" name="You died" tags="" position="100,100" size="100,100">@@.death;
+You died. Your legend ends here.
 
-[[Restart?|Bounties]]</tw-passagedata><tw-passagedata pid="2" name="Bounties" tags="" position="225,100" size="100,100">You approach the giant wooden board littered with wanted posters, body augmentation adverts, and bullet holes. 
+[[Restart?|Bounties]]
+@@</tw-passagedata><tw-passagedata pid="2" name="Bounties" tags="" position="225,100" size="100,100">You approach the giant wooden board littered with wanted posters, body augmentation adverts, and bullet holes. 
 
-There&#39;s [[several options|Bounty Options]] to choose from.</tw-passagedata><tw-passagedata pid="3" name="Bounty Options" tags="" position="350,100" size="100,100">The first bounty is an advert for [[rat extermination?|Bounty 1]]
+There&#39;s [[several options|Bounty Options]] to choose from.</tw-passagedata><tw-passagedata pid="3" name="Bounty Options" tags="" position="350,100" size="100,100">@@.bountyboard;
+The first bounty is an advert for [[rat extermination?|Bounty 1]]
 
 The second bounty is written on an [[old diner napkin.|Bounty 2]]
 
 The third bounty is actually an official [[wanted poster.|Bounty 3]]
 
 The fourth bounty is [[another wanted poster|Bounty 4]] covered in bullet holes.
+@@
 
 [[Leave|Bounties]]
+
 
 
 /* Bounties Section */</tw-passagedata><tw-passagedata pid="4" name="Bounty 1" tags="" position="475,100" size="100,100">A local Cattle Run farmer has been having some radioactive rat trouble. Seems like an easy way to make some money. 
@@ -581,7 +594,7 @@ Is he really that scared of a few rats?
 [[Look around|Look Around Barn]]</tw-passagedata><tw-passagedata pid="12" name="Look Around Barn" tags="" position="225,225" size="100,100">You see the [[basement door|Barn Basement Door]] in the far right corner of the room. 
 To the left you see some [[hay bales and buckets of animal feed.|Barn Leftwall]]
 Along the back wall you see a [[table|Barn Backwall]] with a few items on it.</tw-passagedata><tw-passagedata pid="13" name="Look Around Barn 2" tags="" position="350,225" size="100,100">You see the [[basement door|Barn Basement Door]] in the far right corner of the room. 
-To the left you see some [[hay bales and buckets of animal feed.|Barn Leftwall]]</tw-passagedata><tw-passagedata pid="14" name="Barn Leftwall" tags="" position="475,225" size="100,100">Just some hay and feed. 
+To the left you see some [[hay bales and buckets of animal feed.|Barn Leftwall 2]]</tw-passagedata><tw-passagedata pid="14" name="Barn Leftwall" tags="" position="475,225" size="100,100">Just some hay and feed. 
 Living out in Cattle Run has familiarized you with with raising livestock and keeping western traditions alive. 
 It&#39;s hard to find people who want this lifestyle anymore, especially being able to see the neon lights of the city anywhere you walk in Cattle Run. 
 [[Keep looking around|Look Around Barn]]</tw-passagedata><tw-passagedata pid="15" name="Barn Leftwall 2" tags="" position="600,225" size="100,100">Just some hay and feed. 
@@ -591,12 +604,10 @@ It&#39;s hard to find people who want this lifestyle anymore, especially being a
 Must be the farmers workbench. Under the table you see a [[metal box|Farmer&#39;s Lockbox]] with a lock on it.
 [[Keep looking around|Look Around Barn]]</tw-passagedata><tw-passagedata pid="17" name="Farmer&#39;s Lockbox" tags="" position="850,225" size="100,100">Looks important. The farmer probably wouldn&#39;t want you messing around with his stuff. But there might be something good in there.
 [[Shoot the lock off?|Opened Lockbox]]
-[[Keep looking around|Look Around Barn]]
-
-/* TODO: Add 5 dollars*/</tw-passagedata><tw-passagedata pid="18" name="Opened Lockbox" tags="" position="975,225" size="100,100">The bullet hits the center of the lock and shatters it like it was made of glass. 
+[[Keep looking around|Look Around Barn]]</tw-passagedata><tw-passagedata pid="18" name="Opened Lockbox" tags="" position="975,225" size="100,100">The bullet hits the center of the lock and shatters it like it was made of glass. 
 A small puff of smoke dissipates from the wound. You take the lock off and look inside. 
 There&#39;s 5 dollars and an old photograph of a woman wearing a tacky orange bandana. 
-[[Take the money (+$5) and keep looking around|Take the money]]
+[[Take the money (+$5)|Take the money]]
 
 /* Add Money */</tw-passagedata><tw-passagedata pid="19" name="Take the money" tags="" position="1100,225" size="100,100">&lt;&lt;set $money = $money + 5&gt;&gt;
 You take the money and close the Lockbox.
@@ -613,7 +624,7 @@ No sense in reasoning with them.
 
 [[Start fighting.|Bounty1 Encounter]]
 
-/* Encounter */</tw-passagedata><tw-passagedata pid="21" name="Bounty1 Encounter" tags="" position="100,350" size="100,100">&lt;&lt;script&gt;&gt; StartCombat(1, 20, 2) &lt;&lt;/script&gt;&gt;
+/* Encounter */</tw-passagedata><tw-passagedata pid="21" name="Bounty1 Encounter" tags="" position="100,350" size="100,100">&lt;&lt;script&gt;&gt; StartCombat(1, 10, 2) &lt;&lt;/script&gt;&gt;
 &lt;&lt;if $health &gt; 0&gt;&gt; [[You Win!|Bounty1 Encounter Win]] 
 &lt;&lt;else&gt;&gt; [[You Lose | You died]] 
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Bounty1 Encounter Win" tags="" position="225,350" size="100,100">Despite the amount of rats, your strength overpowered them and you laid each and last everyone to rest.
@@ -640,9 +651,11 @@ or
 [[What&#39;s wrong with him?|Slippery Samuel]]</tw-passagedata><tw-passagedata pid="28" name="Where is Slippery Samuel" tags="" position="975,350" size="100,100">&quot;Umm... I wouldn&#39;t...know&quot;&quot;
 
 You notice their eyes keep darting towards a certain corner of the room. You turn to see what he&#39;s looking at and you see a table
-in the corner of the room. There&#39;s a half empty glasss on it...and a green hat. [[You look back towards the bartender|Where is Slippery Samuel 2]]</tw-passagedata><tw-passagedata pid="29" name="Slippery Samuel" tags="" position="1100,350" size="100,100">&quot;You haven&#39;t heard? His wife and child died in a freak accident last month. He&#39;s been a mess ever since. Us barfolk have been keeping him company.
+in the corner. There&#39;s a half empty glasss on it...and a green hat. [[You look back towards the bartender|Where is Slippery Samuel 2]]</tw-passagedata><tw-passagedata pid="29" name="Slippery Samuel" tags="" position="1100,350" size="100,100">&quot;You haven&#39;t heard? His wife and child died in a freak accident last month. He&#39;s been a mess ever since. Us barfolk have been keeping him company.
 We all have our stories to share with eachother. Our manager doesn&#39;t seem to like our gratitude, but it&#39;s hard not to feel for the guy.
-He only ever orders that one bottle that no one likes anyways. Anyways, [[why do you ask?|Where is Slippery Samuel]]&quot;</tw-passagedata><tw-passagedata pid="30" name="Where is Slippery Samuel 2" tags="" position="1225,350" size="100,100">&quot;Hey...if you&#39;re going to do anything, just please don&#39;t hurt him?&quot;
+He only ever orders that one bottle that no one likes anyways. Anyways, why do you ask?
+
+[[Where is Slippery Samuel?|Where is Slippery Samuel]]&quot;</tw-passagedata><tw-passagedata pid="30" name="Where is Slippery Samuel 2" tags="" position="1225,350" size="100,100">&quot;Hey...if you&#39;re going to do anything, just please don&#39;t hurt him?&quot;
 
 [[You wait|Where is Slippery Samuel 3]] at the bar for Slippery Samuel to come back.</tw-passagedata><tw-passagedata pid="31" name="Where is Slippery Samuel 3" tags="" position="100,475" size="100,100">After 15 minutes, you see someone walk in from the back entrance and head over to the table with the green hat. 
 They gulp down the rest of the drink and pick up their hat. He neatly adjusts it over his head and gives a wave to the bartender without even looking at him.
@@ -713,7 +726,7 @@ I guess sometimes all you need is a hungry cowpunk. Here, [[your reward|Bounty2 
 
 &quot;Hey, and anytime you&#39;re up at the bar, tell em I got you for a free drink. Cheers&quot;
 
-You&#39;re stunned with the irony of that statement for a few seconds. [[Take the money|Bountt2 reward 2]]</tw-passagedata><tw-passagedata pid="49" name="Bounty2 reward 2" tags="" position="1100,600" size="100,100">&lt;&lt;set $money = $money + 15&gt;&gt;
+You&#39;re stunned with the irony of that statement for a few seconds. [[Take the money|Bounty2 reward 2]]</tw-passagedata><tw-passagedata pid="49" name="Bounty2 reward 2" tags="" position="1100,600" size="100,100">&lt;&lt;set $money = $money + 15&gt;&gt;
 You take the money and [[leave without saying a word.|Bounties]]
 
 
