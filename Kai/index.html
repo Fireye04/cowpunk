@@ -1019,7 +1019,9 @@ Your gaze falls to the metal augments adorning your body. You nearly can&#39;t r
 [[&quot;I don&#39;t think I&#39;m a man anymore | No Human&quot;]]</tw-passagedata><tw-passagedata pid="132" name="Myself" tags="" position="225,1725" size="100,100">&quot;Thats up to you. You can stop whenever ya want; the world&#39;ll keep spinnin&#39;.&quot;</tw-passagedata><tw-passagedata pid="133" name="No Human" tags="" position="350,1725" size="100,100">&quot;You&#39;ve still gotta head on your shoulders don&#39;t ya? Seems man enough to me.&quot;</tw-passagedata><tw-passagedata pid="134" name="Cassidy Start" tags="" position="475,1725" size="100,100">Cassidy file</tw-passagedata><tw-passagedata pid="135" name="Kai Start" tags="" position="600,1725" size="100,100">Downtime! we vibin
 &lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;deadeye&quot;])])&gt;&gt;
 &lt;&lt;set $deadeyeShops to $cat.getItemsFromShop(&quot;deadeye&quot;)&gt;&gt;
-&lt;&lt;= $deadeyeShops&gt;&gt;</tw-passagedata><tw-passagedata pid="136" name="Start" tags="" position="725,1725" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Bounties&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;for _item range $deadeyeShops&gt;&gt;
+&lt;&lt;= _item.name&gt;&gt;
+&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="136" name="Start" tags="" position="725,1725" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Bounties&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Caitlin&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Cassidy&quot; &quot;Cassidy Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Kai&quot; &quot;Kai Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
