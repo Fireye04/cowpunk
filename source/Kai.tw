@@ -2,4 +2,6 @@
 Downtime! we vibin
 <<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])])>>
 <<set $deadeyeShops to $cat.getItemsFromShop("deadeye")>>
-<<= $deadeyeShops>>
+<<for _item range $deadeyeShops>>
+<<= _item.name>>
+<</for>>
