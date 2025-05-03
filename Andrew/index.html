@@ -107,7 +107,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 	<!-- UUID://1F012455-6A83-4CCB-BCB1-49B9D77D4E03// --><tw-storydata name="My Twine Game" startnode="136" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="1F012455-6A83-4CCB-BCB1-49B9D77D4E03" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 /*The body is everything displayed in the main text delivery area*/
 body {
-	background: #833322;
+	background: #685f4d ;
 	color: black;
 }
 
@@ -130,10 +130,16 @@ a.link-internal {
 	color: white
 }
 
+.death {
+	background: #ce2741;
+	color: black;
+	
+}
+
 
 /* This id is specific to the sidebar*/
 #ui-bar {
-	background-color: #ce2741;
+	background-color: gray;
 }
 
 
@@ -456,13 +462,13 @@ let shop1 = "deadeye"
 let shop2 = "the iron giant"
 let shop3 = "cyberwares"
 let shop4 = "blackmarket guns"
-let shop5 = "forge and flame"</script><tw-passagedata pid="1" name="You died" tags="" position="100,100" size="100,100">You died. Your legend ends here.
+let shop5 = "forge and flame"</script><tw-passagedata pid="1" name="You died" tags="" position="100,100" size="100,100">@@.death
+You died. Your legend ends here.
 
-[[Restart?|Bounties]]</tw-passagedata><tw-passagedata pid="2" name="Bounties" tags="" position="225,100" size="100,100">@@.text1;
-You approach the giant wooden board littered with wanted posters, body augmentation adverts, and bullet holes. 
+[[Restart?|Bounties]]
+@@</tw-passagedata><tw-passagedata pid="2" name="Bounties" tags="" position="225,100" size="100,100">You approach the giant wooden board littered with wanted posters, body augmentation adverts, and bullet holes. 
 
-There&#39;s [[several options|Bounty Options]] to choose from. 
-@@</tw-passagedata><tw-passagedata pid="3" name="Bounty Options" tags="" position="350,100" size="100,100">@@.bountyboard;
+There&#39;s [[several options|Bounty Options]] to choose from.</tw-passagedata><tw-passagedata pid="3" name="Bounty Options" tags="" position="350,100" size="100,100">@@.bountyboard;
 The first bounty is an advert for [[rat extermination?|Bounty 1]]
 
 The second bounty is written on an [[old diner napkin.|Bounty 2]]
