@@ -183,12 +183,14 @@ or
 "Umm... I wouldn't...know""
 
 You notice their eyes keep darting towards a certain corner of the room. You turn to see what he's looking at and you see a table
-in the corner of the room. There's a half empty glasss on it...and a green hat. [[You look back towards the bartender|Where is Slippery Samuel 2]]
+in the corner. There's a half empty glasss on it...and a green hat. [[You look back towards the bartender|Where is Slippery Samuel 2]]
 
 :: Slippery Samuel
 "You haven't heard? His wife and child died in a freak accident last month. He's been a mess ever since. Us barfolk have been keeping him company.
 We all have our stories to share with eachother. Our manager doesn't seem to like our gratitude, but it's hard not to feel for the guy.
-He only ever orders that one bottle that no one likes anyways. Anyways, [[why do you ask?|Where is Slippery Samuel]]"
+He only ever orders that one bottle that no one likes anyways. Anyways, why do you ask?
+
+[[Where is Slippery Samuel?|Where is Slippery Samuel]]"
 
 :: Where is Slippery Samuel 2
 "Hey...if you're going to do anything, just please don't hurt him?"
@@ -313,7 +315,7 @@ He throws $15 on the table and turns back around to continue counting a large pi
 
 "Hey, and anytime you're up at the bar, tell em I got you for a free drink. Cheers"
 
-You're stunned with the irony of that statement for a few seconds. [[Take the money|Bountt2 reward 2]]
+You're stunned with the irony of that statement for a few seconds. [[Take the money|Bounty2 reward 2]]
 
 :: Bounty2 reward 2
 <<set $money = $money + 15>>
