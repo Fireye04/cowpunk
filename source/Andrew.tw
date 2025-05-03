@@ -1,6 +1,6 @@
 
 :: You died
-@@.death
+@@.death;
 You died. Your legend ends here.
 
 [[Restart?|Bounties]]
