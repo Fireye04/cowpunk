@@ -36,5 +36,7 @@ a.link-internal {
 	background-color: gray;
 }
 
-
+.important {
+	color: #ff0000;
+}
 
