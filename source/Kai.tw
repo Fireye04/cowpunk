@@ -2,5 +2,6 @@
 Downtime! we vibin
 <<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])])>>
 <<set $deadeyeShops = []>>
-<<script>> variables().deadeyeShops = variables().cat.getItemsFromShop("deadeye")<</script>>
+<<script>> let cat = new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])]);console.log(cat.items);
+variables().deadeyeShops = cat.getItemsFromShop("deadeye")<</script>>
 <<= $deadeyeShops>>
