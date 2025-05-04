@@ -53,7 +53,7 @@ He nods to you, but his eyes never quiet meet your own. His voice is more clippe
 <<for _item range $deadeyeShops>>
 <b><<= _item.name>></b>
 _item.description
-$_item.cost
+Price: _item.cost
 <</for>>
 
 <<if $money gte 1 >>[[Bob]]<</if>>
