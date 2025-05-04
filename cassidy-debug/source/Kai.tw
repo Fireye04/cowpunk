@@ -4,8 +4,6 @@
 <<set $corpo1 to new Bounty("retrieve rent", "Collect a local pubs overdue rent.", "available", 150, -10, -2, "hard",["the first one","dennis","el pequenito caballero"])>>
 
 :: retrieve rent
-<<run $corpo1.updateStatus("in-progress")>>
-<<= $corpo1.status>>
 [[accept thing | accept]]
 
 :: accept
