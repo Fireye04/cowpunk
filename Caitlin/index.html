@@ -899,9 +899,7 @@ He nods to you, but his eyes never quiet meet your own. His voice is more clippe
 [[Nothing | Visit Town ]]&lt;&lt;else&gt;&gt;Your spurs jingle across the wooden steps into the store, but as you reach out to push the door open you hear a click. The door doesn&#39;t budge. From the windows you can see a light flicker off as the curtains are pulled tight. [[Leave | Visit Town]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="cr.gunlist" tags="" position="225,1100" size="100,100">&lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;deadeye&quot;])])&gt;&gt;
 &lt;&lt;set $deadeyeShops to $cat.getItemsFromShop(&quot;deadeye&quot;)&gt;&gt;
 &lt;&lt;for _item range $deadeyeShops&gt;&gt;
-&lt;&lt;= _item.name
-_item.description
-Price: _item.cost&gt;&gt;
+&lt;&lt;= _item.name&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
 &lt;&lt;if $money &gt;.9 &gt;&gt;[[Bob]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="Bob" tags="" position="350,1100" size="100,100">You can [[Purchase Bob]]
