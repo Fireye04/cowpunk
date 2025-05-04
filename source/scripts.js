@@ -284,6 +284,7 @@ window.Bounty = class Bounty {
 		this.difficulty = difficulty ??= "hard";
 		this.postings = postings ??= [];
 		this.changeable = new Changeable(this);
+		console.log(":3");
 	}
 	clone() {
 		return new Bounty(
