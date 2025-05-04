@@ -51,13 +51,14 @@ He nods to you, but his eyes never quiet meet your own. His voice is more clippe
 <<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])])>>
 <<set $deadeyeShops to $cat.getItemsFromShop("deadeye")>>
 <<for _item range $deadeyeShops>>
-[[<<= _item.name>> | Buy]]
+<<= _item.name>>
 <</for>>
 
-
+<<If $money >1 >>[[Buy]]<</if>>
 
 :: Buy
-You can [[Purchase Bob]]
+Testing
+
 
 
 [[Leave | Visit Town]]
@@ -221,9 +222,11 @@ The wife smiles widely at you as you enter, her long flowing black hair seems to
 
 
 :: ec.augmentlist1
-augment 1 (cheap)
-augment 2 (cheap)
-augment 3 (cheap)
+<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["the iron giant"])])>>
+<<set $theirongiantShops to $cat.getItemsFromShop("the iron giant")>>
+<<for _item range $theirongiantShops>>
+<<= _item.name>>
+<</for>>
 [[Leave | Visit City]]
 
 :: ec.augments2
@@ -236,9 +239,11 @@ You are greeted by someone who is entirely more machine than man. You can see th
 [[Nothing | Visit City]]
 
 :: ec.augmentlist2
-augment 1 (expensive)
-augment 2 (expensive)
-augment 3 (expensive)
+<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["cyberwares"])])>>
+<<set $cyberwaresShops to $cat.getItemsFromShop("cyberwares")>>
+<<for _item range $cyberwaresShops>>
+<<= _item.name>>
+<</for>>
 [[Leave | Visit City]]
 
 /* The Ashes */
@@ -267,9 +272,11 @@ When he smiles his metallic lower jaw glints under the neon lights. "Howdy partn
 [[Nothing | Visit City]]
 
 :: a.gunlist
-gun
-cool gun
-cooler gun
+<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["blackmarket guns"])])>>
+<<set $blackmarketgunsShops to $cat.getItemsFromShop("blackmarket guns")>>
+<<for _item range $blackmarketgunsShops>>
+<<= _item.name>>
+<</for>>
 [[Leave | Visit Ashes]]
 
 
@@ -281,9 +288,11 @@ You stop in front of a desk where a thin man with metal arms emerging from his b
 [[Nothing | Visit City]]
 
 :: a.augmentlist
-augment 1 
-augment 2 
-augment 3
+<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["forge and flame"])])>>
+<<set $forgeandflameShops to $cat.getItemsFromShop("forge and flame")>>
+<<for _item range $forgeandflameShops>>
+<<= _item.name>>
+<</for>>
 
 [[Leave | Visit Ashes]]
 
