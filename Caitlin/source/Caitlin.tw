@@ -54,7 +54,7 @@ He nods to you, but his eyes never quiet meet your own. His voice is more clippe
 <<= _item.name>>
 <</for>>
 
-[[Buy Goods]]
+[[Buy Goods | Bob]]
 [[Leave | Visit Town]]
 
 :: Bob
