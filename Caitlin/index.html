@@ -899,8 +899,11 @@ He nods to you, but his eyes never quiet meet your own. His voice is more clippe
 [[Nothing | Visit Town ]]&lt;&lt;else&gt;&gt;Your spurs jingle across the wooden steps into the store, but as you reach out to push the door open you hear a click. The door doesn&#39;t budge. From the windows you can see a light flicker off as the curtains are pulled tight. [[Leave | Visit Town]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="cr.gunlist" tags="" position="225,1100" size="100,100">&lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;deadeye&quot;])])&gt;&gt;
 &lt;&lt;set $deadeyeShops to $cat.getItemsFromShop(&quot;deadeye&quot;)&gt;&gt;
 &lt;&lt;for _item range $deadeyeShops&gt;&gt;
-[[&lt;&lt;= _item.name&gt;&gt; | Buy]]
-&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="Buy" tags="" position="350,1100" size="100,100">You can [[Purchase Bob]]
+&lt;&lt;= _item.name&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+
+&lt;&lt;If $money &gt;1 &gt;&gt;[[Buy]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="Buy" tags="" position="350,1100" size="100,100">Testing
+
 
 
 [[Leave | Visit Town]]</tw-passagedata><tw-passagedata pid="84" name="cr.item" tags="" position="475,1100" size="100,100">The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
@@ -991,18 +994,22 @@ The wife smiles widely at you as you enter, her long flowing black hair seems to
 &lt;&lt;else&gt;&gt;
 
 &quot;Oh darlin&#39; theres nothing more we can do for you. I hope some of you is still in there, would be a shame to loose you.&quot;&lt;&lt;/if&gt;&gt;
-[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="107" name="ec.augmentlist1" tags="" position="850,1350" size="100,100">augment 1 (cheap)
-augment 2 (cheap)
-augment 3 (cheap)
+[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="107" name="ec.augmentlist1" tags="" position="850,1350" size="100,100">&lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;the iron giant&quot;])])&gt;&gt;
+&lt;&lt;set $theirongiantShops to $cat.getItemsFromShop(&quot;the iron giant&quot;)&gt;&gt;
+&lt;&lt;for _item range $theirongiantShops&gt;&gt;
+&lt;&lt;= _item.name&gt;&gt;
+&lt;&lt;/for&gt;&gt;
 [[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="108" name="ec.augments2" tags="" position="975,1350" size="100,100">The massive neon sign for Cyberwares can be seen from nearly anywhere in the city- a constant reminder of how you could improve yourself if only you could afford it. 
 You let the sign guide you to its entrance- a massive set of pristine glass doors. 
 You are greeted by someone who is entirely more machine than man. You can see the pumps and wires pushing blood through its system.
 
 &quot;Are you looking to get enhancements?&quot; The robotic voice chirps. Even though the man&#39;s face does not move, the synthetic voice modulator purrs as if he was some pleased cat.
 [[I&#39;d like to look at your wares | ec.augmentlist2]] 
-[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="109" name="ec.augmentlist2" tags="" position="1100,1350" size="100,100">augment 1 (expensive)
-augment 2 (expensive)
-augment 3 (expensive)
+[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="109" name="ec.augmentlist2" tags="" position="1100,1350" size="100,100">&lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;cyberwares&quot;])])&gt;&gt;
+&lt;&lt;set $cyberwaresShops to $cat.getItemsFromShop(&quot;cyberwares&quot;)&gt;&gt;
+&lt;&lt;for _item range $cyberwaresShops&gt;&gt;
+&lt;&lt;= _item.name&gt;&gt;
+&lt;&lt;/for&gt;&gt;
 [[Leave | Visit City]]
 
 /* The Ashes */</tw-passagedata><tw-passagedata pid="110" name="Ashes" tags="" position="1225,1350" size="100,100">In the deepest parts of Ember City there lies a maze of alleyways and ruins stacked on top of eachother. 
@@ -1019,16 +1026,20 @@ There are only two places here of interest to you: the [[black market | a.gun]] 
 One stand in particular draws your attention, run by a dealer you&#39;ve worked with before. &lt;&lt;if $humanity &gt; -21 &gt;&gt;The man nods to you and you tip your hat in response. 
 When he smiles his metallic lower jaw glints under the neon lights. &quot;Howdy partner,&quot; he grins, &quot;Good to see you back?&quot;&lt;&lt;else&gt;&gt;The man looks at you in shock, his eyes drifting over your nearly all-metal form. &quot;Well, pall. If there&#39;s any of you left in there I guess you can see what I&#39;ve got.&quot;&lt;&lt;/if&gt;&gt;
 [[I&#39;d like to see what you have | a.gunlist]] 
-[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="113" name="a.gunlist" tags="" position="350,1475" size="100,100">gun
-cool gun
-cooler gun
+[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="113" name="a.gunlist" tags="" position="350,1475" size="100,100">&lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;blackmarket guns&quot;])])&gt;&gt;
+&lt;&lt;set $blackmarketgunsShops to $cat.getItemsFromShop(&quot;blackmarket guns&quot;)&gt;&gt;
+&lt;&lt;for _item range $blackmarketgunsShops&gt;&gt;
+&lt;&lt;= _item.name&gt;&gt;
+&lt;&lt;/for&gt;&gt;
 [[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="114" name="a.augments" tags="" position="475,1475" size="100,100">Most cybernetics from the Ashes come from one place. A large ramshackle storefront that was taken over to become a place for surgeons and augment dealers to do business. 
 &lt;&lt;if $humanity &gt; -11 &gt;&gt;When you walk in people look at you like a piece of fresh meat- their eyes follow you, hungry and wanting.&lt;&lt;else&gt;&gt; only a few people look your way. You fit right in with the over-the-top augments that are fitted against the skin of the people here.&lt;&lt;/if&gt;&gt;
 You stop in front of a desk where a thin man with metal arms emerging from his back barely looks up at you. Behind him several augments are attached to the wall by hooks.
 [[I&#39;d like to look at your wares | a.augmentlist]] 
-[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="115" name="a.augmentlist" tags="" position="600,1475" size="100,100">augment 1 
-augment 2 
-augment 3
+[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="115" name="a.augmentlist" tags="" position="600,1475" size="100,100">&lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;forge and flame&quot;])])&gt;&gt;
+&lt;&lt;set $forgeandflameShops to $cat.getItemsFromShop(&quot;forge and flame&quot;)&gt;&gt;
+&lt;&lt;for _item range $forgeandflameShops&gt;&gt;
+&lt;&lt;= _item.name&gt;&gt;
+&lt;&lt;/for&gt;&gt;
 
 [[Leave | Visit Ashes]]
 
