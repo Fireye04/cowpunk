@@ -1,7 +1,6 @@
 :: Kai Start
 <<set $CorpoBounties = ["retrieve rent","whistleblower","gamblers fallacy","the train station"]>>
 [[Check out the first bounty | $CorpoBounties[0]]]
-<<set $corpo1 to new Bounty(null,null,null,null,null,null,null,null)>>
 
 :: retrieve rent
 [[accept thing | accept]]
