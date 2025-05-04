@@ -56,7 +56,7 @@ _item.description
 Price: _item.cost
 <</for>>
 
-<<if $money gte 0 >>[[Bob]]<</if>>
+<<if $money >= 0 >>[[Bob]]<</if>>
 
 :: Bob
 [[Purchase Bob]]
