@@ -59,6 +59,7 @@ Price: _item.cost
 <<if $money gte 0 >>[[Bob]]<</if>>
 
 :: Bob
+[[Purchase Bob]]
 
 
 [[Leave | Visit Town]]
