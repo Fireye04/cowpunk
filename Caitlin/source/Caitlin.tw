@@ -10,6 +10,7 @@ You open up your old dirtied map to decide where you should go next. There are [
 <<= _item.name>>
 <</for>>
 
+
 :: locations
     [[Cattle's Run | Cow Town]]
     
