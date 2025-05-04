@@ -52,11 +52,11 @@ He nods to you, but his eyes never quiet meet your own. His voice is more clippe
 <<set $deadeyeShops to $cat.getItemsFromShop("deadeye")>>
 <<for _item range $deadeyeShops>>
 <b><<= _item.name>></b>
-<<_item.description>>
-<<_item.cost>>
+_item.description
+$_item.cost
 <</for>>
 
-<<if $money gte 1 >>[[Bob]]
+<<if $money gte 1 >>[[Bob]]<</if>>
 
 :: Bob
 
