@@ -4,7 +4,7 @@
 <<set $corpo1 to new Bounty("retrieve rent", "Collect a local pubs overdue rent.", "available", 150, -10, -2, "hard",["the first one","dennis","el pequenito caballero"])>>
 
 :: retrieve rent
-<<link "Accept bounty" "accep">><<run $corpo1.updateStatus("in-progress")>><</link>> or [[Return to Bounty Board | Kai Start]]
+<<run $corpo1.updateStatus("in-progress")>>
 
 :: accep
 placeholder text that definitely didn't say anything inappropriate for a school project
