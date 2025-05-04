@@ -287,6 +287,7 @@ window.Bounty = class Bounty {
 		console.log(":3");
 	}
 	clone() {
+		console.log("dupe");
 		return new Bounty(
 			this.name,
 			this.description,
@@ -299,6 +300,7 @@ window.Bounty = class Bounty {
 		);
 	}
 	toJSON() {
+		console.log("json");
 		return Serial.createReviver(
 			String.format(
 				"new Bounty({0},{1},{2},{3},{4},{5},{6},{7})",
@@ -314,15 +316,18 @@ window.Bounty = class Bounty {
 		);
 	}
 	updateStatus(newStatus) {
+		console.log("update");
 		if (newStatus === "succeeded") {
 			this.change();
 		}
 		this.status = newStatus;
 	}
 	change() {
+		console.log("change");
 		this.changeable.change();
 	}
 	revert() {
+		console.log("revert");
 		this.changeable.revert();
 	}
 };
