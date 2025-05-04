@@ -54,7 +54,7 @@ He nods to you, but his eyes never quiet meet your own. His voice is more clippe
 <<= _item.name>>
 <</for>>
 
-<<If $money >1 >>[[Buy]]<</if>>
+<<if $money >1 >>[[Buy]]<</if>>
 
 :: Buy
 Testing
