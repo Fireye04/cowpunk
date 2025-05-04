@@ -56,10 +56,10 @@ _item.description
 Price: _item.cost
 <</for>>
 
-<<if $money >= 0 >>[[Bob]]<</if>>
+<<if $money > .9 >>[[Bob]]<</if>>
 
 :: Bob
-[[Purchase Bob]]
+You can [[Purchase Bob]]
 
 
 [[Leave | Visit Town]]
