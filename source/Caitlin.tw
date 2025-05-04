@@ -51,11 +51,13 @@ He nods to you, but his eyes never quiet meet your own. His voice is more clippe
 <<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])])>>
 <<set $deadeyeShops to $cat.getItemsFromShop("deadeye")>>
 <<for _item range $deadeyeShops>>
-<<= [[_item.name | Buy]]>>
+[[<<= _item.name>> | Buy]]
 <</for>>
 
+
+
 :: Buy
-buy shit
+You can [[Purchase Bob]]
 
 
 [[Leave | Visit Town]]
