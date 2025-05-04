@@ -54,6 +54,8 @@ He nods to you, but his eyes never quiet meet your own. His voice is more clippe
 <<= [[_item.name]]>>
 <</for>>
 
+[[_item.name]]
+
 [[Leave | Visit Town]]
 :: cr.item
 The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
