@@ -23,9 +23,10 @@ Retrieve the owed sum of $650 by any means necessary.
 Last known location: The Lazy Cat
 Reward: $150
 
-<<link "Accept bounty" "accep">><<run $corpo1.updateStatus("in-progress")>><</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "accep">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
 :: accep
+<<run $corpo1.updateStatus("in-progress")>>
 You make your way through the noise of the city and the aggressively neon lights to a small pub with a flickering neon sign that reads, "The Lazy Cat".
 [[enter | The Lazy Cat]]
 
