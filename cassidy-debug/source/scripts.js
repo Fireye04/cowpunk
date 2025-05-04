@@ -290,21 +290,21 @@ window.Bounty = class Bounty {
 			),
 		);
 	}
-	updateStatus(newStatus) {
-		console.log("update");
-		if (newStatus === "succeeded") {
-			this.change();
-		}
-		this.status = newStatus;
-	}
-	change() {
-		console.log("change");
-		this.changeable.change();
-	}
-	revert() {
-		console.log("revert");
-		this.changeable.revert();
-	}
+	// updateStatus(newStatus) {
+	// 	console.log("update");
+	// 	if (newStatus === "succeeded") {
+	// 		this.change();
+	// 	}
+	// 	this.status = newStatus;
+	// }
+	// change() {
+	// 	console.log("change");
+	// 	this.changeable.change();
+	// }
+	// revert() {
+	// 	console.log("revert");
+	// 	this.changeable.revert();
+	// }
 };
 
 window.Inventory = class Inventory {
