@@ -98,6 +98,16 @@ Methods:
 
 - getItemsFromShop(shop) - takes a shop enum string (see above) as a parameter and returns an array of Sellable items that can be purchased at that shop.
 
+Example catalog usage:
+
+```
+<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["deadeye"])])>>
+<<set $deadeyeShops to $cat.getItemsFromShop("deadeye")>>
+<<for _item range $deadeyeShops>>
+<<= _item.name>>
+<</for>>
+```
+
 ### Inventory
 
 Contains the following:
