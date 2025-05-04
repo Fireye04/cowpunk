@@ -877,10 +877,8 @@ You take the money and [[head back to your house.|Bounties]] Cattle Run is safe 
 &lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;deadeye&quot;])])&gt;&gt;
 &lt;&lt;set $deadeyeShops to $cat.getItemsFromShop(&quot;deadeye&quot;)&gt;&gt;
 &lt;&lt;for _item range $deadeyeShops&gt;&gt;
-&lt;&lt;= _item.name&gt;&gt;
-&lt;&lt;/for&gt;&gt;
-
-&lt;&lt;run $deadeyeShops&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="locations" tags="" position="975,975" size="100,100">[[Cattle&#39;s Run | Cow Town]]
+&lt;&lt;print item.name&gt;&gt;
+&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="locations" tags="" position="975,975" size="100,100">[[Cattle&#39;s Run | Cow Town]]
     
     [[Home | Your house]]
     
