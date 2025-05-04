@@ -874,7 +874,7 @@ Welp, here&#39;s [[your reward.|Bounty4 Reward 2]]&quot;
 /* TODO: Add home location */</tw-passagedata><tw-passagedata pid="75" name="Bounty4 Reward 2" tags="" position="600,975" size="100,100">&lt;&lt;set $money = $money + 20&gt;&gt;
 You take the money and [[head back to your house.|Bounties]] Cattle Run is safe again.</tw-passagedata><tw-passagedata pid="76" name="Caitlin Start" tags="" position="725,975" size="100,100">Caitlin file</tw-passagedata><tw-passagedata pid="77" name="Map" tags="" position="850,975" size="100,100">You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]
 &lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;deadeye&quot;])])&gt;&gt;
-getItemsFromShop(&quot;deadeye&quot;)</tw-passagedata><tw-passagedata pid="78" name="locations" tags="" position="975,975" size="100,100">[[Cattle&#39;s Run | Cow Town]]
+&lt;&lt;script&gt;&gt;$cat.getItemsFromShop(&quot;deadeye&quot;)&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="locations" tags="" position="975,975" size="100,100">[[Cattle&#39;s Run | Cow Town]]
     
     [[Home | Your house]]
     
