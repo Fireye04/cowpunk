@@ -396,7 +396,7 @@ window.Bounty = class Bounty {
 		this.payout = payout ??= 0;
 		this.fame = fame ??= 0;
 		this.humanity = humanity ??= 0;
-		this.difficulty = difficulty ??= 0;
+		this.difficulty = difficulty ??= "hard";
 		this.postings = postings ??= [];
 		this.changeable = new Changeable(this);
 	}
@@ -820,7 +820,8 @@ You know they won&#39;t pay their fares if you just keep pointing the gun, you n
 The man lies on the ground in front of you, his suit now drenched in blood.
 The woman lies sobbing behind him, her legs unrecognizable.
 [[No one will be skipping their fares for quite some time. | congrats]]</tw-passagedata><tw-passagedata pid="118" name="congrats" tags="" position="975,1475" size="100,100">After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with &lt;&lt;link &quot;$100.&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $money = $money + 100&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="119" name="Kai Start" tags="" position="1100,1475" size="100,100">&lt;&lt;set $CorpoBounties = [&quot;retrieve rent&quot;,&quot;whistleblower&quot;,&quot;gamblers fallacy&quot;,&quot;the train station&quot;]&gt;&gt;
-[[Check out the first bounty | $CorpoBounties[0]]]</tw-passagedata><tw-passagedata pid="120" name="accept" tags="" position="1225,1475" size="100,100">placeholder text that definitely didn&#39;t say anything inappropriate for a school project</tw-passagedata><tw-passagedata pid="121" name="Start" tags="" position="100,1600" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Andrew Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+[[Check out the first bounty | $CorpoBounties[0]]]
+&lt;&lt;set $corpo1 to new Bounty(&quot;a&quot;, &quot;b&quot;, &quot;available&quot;, 0, 0, 0, &quot;hard&quot;, [])&gt;&gt;</tw-passagedata><tw-passagedata pid="120" name="accept" tags="" position="1225,1475" size="100,100">placeholder text that definitely didn&#39;t say anything inappropriate for a school project</tw-passagedata><tw-passagedata pid="121" name="Start" tags="" position="100,1600" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Andrew Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Caitlin&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Cassidy&quot; &quot;Cassidy Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Kai&quot; &quot;Kai Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
