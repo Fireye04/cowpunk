@@ -5,6 +5,7 @@
 
 :: retrieve rent
 <<run $corpo1.updateStatus("in-progress")>>
-<<= $corpo1>>
+<<= $corpo1.status>>
+
 :: accep
 placeholder text that definitely didn't say anything inappropriate for a school project
