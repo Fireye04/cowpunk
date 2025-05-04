@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://1F012455-6A83-4CCB-BCB1-49B9D77D4E03// --><tw-storydata name="My Twine Game" startnode="77" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="1F012455-6A83-4CCB-BCB1-49B9D77D4E03" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+	<!-- UUID://1F012455-6A83-4CCB-BCB1-49B9D77D4E03// --><tw-storydata name="My Twine Game" startnode="137" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="1F012455-6A83-4CCB-BCB1-49B9D77D4E03" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 /*The body is everything displayed in the main text delivery area*/
 body {
 	background: #685f4d ;
@@ -872,26 +872,9 @@ Thank you for your help...us cowpunks need to work together instead of taking ea
 Welp, here&#39;s [[your reward.|Bounty4 Reward 2]]&quot;
 
 /* TODO: Add home location */</tw-passagedata><tw-passagedata pid="75" name="Bounty4 Reward 2" tags="" position="600,975" size="100,100">&lt;&lt;set $money = $money + 20&gt;&gt;
-You take the money and [[head back to your house.|Bounties]] Cattle Run is safe again.</tw-passagedata><tw-passagedata pid="76" name="Caitlin Start" tags="" position="725,975" size="100,100">Caitlin file</tw-passagedata><tw-passagedata pid="77" name="Demo" tags="" position="850,975" size="100,100">Hi! Welcome to the demo of our game. While it is not entirely finished (read as: we are battling with javascript) you can play through various open world events. One of the game&#39;s main themes is the loss of humanity in a western cyberpunk setting.
-As you progress through the game you will have the option to &quot;enhance&quot; yourself with cybernetic augmentations. This will impact your humanity and how you are perceived by the people around you.
-With the various links below you can try out how interactions will work with various levels of augmentations.
-
+You take the money and [[head back to your house.|Bounties]] Cattle Run is safe again.</tw-passagedata><tw-passagedata pid="76" name="Caitlin Start" tags="" position="725,975" size="100,100">Caitlin file</tw-passagedata><tw-passagedata pid="77" name="Map" tags="" position="850,975" size="100,100">You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]
 &lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;deadeye&quot;])])&gt;&gt;
-&lt;&lt;print $items(Array)&gt;&gt;
-
-
-
-[[No augmentation | Demo 1]]
-[[Some Augmentations | Demo 2]]
-[[Many Augmentations | Demo 3]]
-[[None of you is still human | Demo 4]]
-
-Thank you for playing!!
--Kai, Caitlin, Cassidy, and Megan</tw-passagedata><tw-passagedata pid="78" name="Demo 1" tags="" position="975,975" size="100,100">&lt;&lt;set $humanity = 0&gt;&gt;
-[[Play with no augments | Map]]</tw-passagedata><tw-passagedata pid="79" name="Demo 2" tags="" position="1100,975" size="100,100">&lt;&lt;set $humanity = -20 &gt;&gt;
-[[Play with some augments | Map]]</tw-passagedata><tw-passagedata pid="80" name="Demo 3" tags="" position="1225,975" size="100,100">&lt;&lt;set $humanity = -50 &gt;&gt;
-[[Play with many augments | Map]]</tw-passagedata><tw-passagedata pid="81" name="Demo 4" tags="" position="100,1100" size="100,100">&lt;&lt;set $humanity = -100 &gt;&gt;
-[[Play with all augments | Map]]</tw-passagedata><tw-passagedata pid="82" name="Map" tags="" position="225,1100" size="100,100">You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]</tw-passagedata><tw-passagedata pid="83" name="locations" tags="" position="350,1100" size="100,100">[[Cattle&#39;s Run | Cow Town]]
+&lt;&lt;getItemsFromShop(&quot;deadeye&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="locations" tags="" position="975,975" size="100,100">[[Cattle&#39;s Run | Cow Town]]
     
     [[Home | Your house]]
     
@@ -901,9 +884,9 @@ Thank you for playing!!
 
     [[Devil&#39;s Pass | Desert]]
 
-/* Cattle&#39;s Run */</tw-passagedata><tw-passagedata pid="84" name="Cow Town" tags="" position="475,1100" size="100,100">A large old timey rural town. Compared to the lights and glamour of the city it almost feels out of place- like it is meant to be from another time.
+/* Cattle&#39;s Run */</tw-passagedata><tw-passagedata pid="79" name="Cow Town" tags="" position="1100,975" size="100,100">A large old timey rural town. Compared to the lights and glamour of the city it almost feels out of place- like it is meant to be from another time.
 
-[[Visit | Visit Town]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="85" name="Visit Town" tags="" position="600,1100" size="100,100">No matter how many times you&#39;ve been here its striking how different Cattle&#39;s Run is from the city. 
+[[Visit | Visit Town]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="80" name="Visit Town" tags="" position="1225,975" size="100,100">No matter how many times you&#39;ve been here its striking how different Cattle&#39;s Run is from the city. 
 The squat wooden buildings line a central dirt road that radiates warmth from the sun. 
 As you walk in, some people look your way; &lt;&lt;if $humanity &gt; -21 &gt;&gt;an older gentleman tips his hat to you.&lt;&lt;else&gt;&gt;a woman who had been sitting on her porch takes one glance at you before going indoors. 
 You can faintly hear the sound of the deadbolt being slid in.&lt;&lt;/if&gt;&gt;
@@ -912,16 +895,16 @@ One side of the central street is lined with stalls where the various farmers se
 You recognize an [[old friend | Friend]] among their lots. 
 Right in the center of town the liquor store is guarded by an old looking [[dog. | Dog]]
 
-[[Go somewhere else | locations]]</tw-passagedata><tw-passagedata pid="86" name="cr.gun" tags="" position="725,1100" size="100,100">&lt;&lt;if $humanity &gt; -1 &gt;&gt; An older man with a bowler hat and a well-groomed mustache waves to you as you enter. &quot;Good to see you in. Whatcha lookin&#39; for today?&quot; [[I&#39;d like to look at your wares | cr.gunlist]] 
+[[Go somewhere else | locations]]</tw-passagedata><tw-passagedata pid="81" name="cr.gun" tags="" position="100,1100" size="100,100">&lt;&lt;if $humanity &gt; -1 &gt;&gt; An older man with a bowler hat and a well-groomed mustache waves to you as you enter. &quot;Good to see you in. Whatcha lookin&#39; for today?&quot; [[I&#39;d like to look at your wares | cr.gunlist]] 
 [[Nothing | Visit Town ]]&lt;&lt;elseif $humanity &gt; -41 &gt;&gt;You walk into the store and the older usually kind store owner gives you a cold look. 
 He nods to you, but his eyes never quiet meet your own. His voice is more clipped than usual as he opens up his drawer, revealing the firearms inside. &quot;What do you want?&quot; [[I&#39;d like to look at your wares | cr.gunlist]] 
-[[Nothing | Visit Town ]]&lt;&lt;else&gt;&gt;Your spurs jingle across the wooden steps into the store, but as you reach out to push the door open you hear a click. The door doesn&#39;t budge. From the windows you can see a light flicker off as the curtains are pulled tight. [[Leave | Visit Town]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="cr.gunlist" tags="" position="850,1100" size="100,100">gun 1
+[[Nothing | Visit Town ]]&lt;&lt;else&gt;&gt;Your spurs jingle across the wooden steps into the store, but as you reach out to push the door open you hear a click. The door doesn&#39;t budge. From the windows you can see a light flicker off as the curtains are pulled tight. [[Leave | Visit Town]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="cr.gunlist" tags="" position="225,1100" size="100,100">gun 1
 
 gun 2
 
 gun 3
 
-[[Leave | Visit Town]]</tw-passagedata><tw-passagedata pid="88" name="cr.item" tags="" position="975,1100" size="100,100">The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
+[[Leave | Visit Town]]</tw-passagedata><tw-passagedata pid="83" name="cr.item" tags="" position="350,1100" size="100,100">The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
 People come in and out frequently, and the brass chimes hanging by the door ring every few seconds.
 
 &lt;&lt;if $humanity &gt; -1 &gt;&gt; As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. &quot;Good to see you darlin&#39; What are you in for?&quot; [[I&#39;d like to look at your wares | cr.itemlist]] 
@@ -931,15 +914,15 @@ Her eyes scan you up and down and her lips twitch down into a small frown.
 She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter. [[I&#39;d like to look at your wares | cr.itemlist]] 
 [[Nothing | Visit Town ]]&lt;&lt;else&gt;&gt;
 You walk up to the grocery store, but as you try to push the door open you are met with resistance. 
-The people still around on the street watch you with bairly hidden disdain.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="cr.itemlist" tags="" position="1100,1100" size="100,100">item 1
+The people still around on the street watch you with bairly hidden disdain.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="cr.itemlist" tags="" position="475,1100" size="100,100">item 1
 
 item 2
 
-item 3</tw-passagedata><tw-passagedata pid="90" name="Friend" tags="" position="1225,1100" size="100,100">Tom, an old childhood friend can be found selling meat at the local market. 
+item 3</tw-passagedata><tw-passagedata pid="85" name="Friend" tags="" position="600,1100" size="100,100">Tom, an old childhood friend can be found selling meat at the local market. 
 He used to do what you do, but after a bad incident he decided it was best for him to settle down and work at his family&#39;s ranch. 
-&lt;&lt;if $humanity &gt; -1 &gt;&gt;He waves to you, with a wide smile.&lt;&lt;else&gt;&gt;You can tell he saw you by the way he tenses, but his eyes don&#39;t quiet meet your own.&lt;&lt;/if&gt;&gt; [[Keep walking | Visit Town]]</tw-passagedata><tw-passagedata pid="91" name="Dog" tags="" position="100,1225" size="100,100">Outside the old run down liquor store an old stray mutt sits passively. 
+&lt;&lt;if $humanity &gt; -1 &gt;&gt;He waves to you, with a wide smile.&lt;&lt;else&gt;&gt;You can tell he saw you by the way he tenses, but his eyes don&#39;t quiet meet your own.&lt;&lt;/if&gt;&gt; [[Keep walking | Visit Town]]</tw-passagedata><tw-passagedata pid="86" name="Dog" tags="" position="725,1100" size="100,100">Outside the old run down liquor store an old stray mutt sits passively. 
 The brown fluffy thing is curled up into a ball, allowing its long droopy ears to waterfall over its stubby legs. 
-It&#39;s cute in an ugly way. As you pass by the dog&#39;s nose twitches. [[Ignore it | Ignore Dog]] or [[Pet the dog | Pet]]</tw-passagedata><tw-passagedata pid="92" name="Ignore Dog" tags="" position="225,1225" size="100,100">The dog&#39;s tail wags lazily as you [[pass by. | Visit Town]] It almost seems disappointed.</tw-passagedata><tw-passagedata pid="93" name="Pet" tags="" position="350,1225" size="100,100">&lt;&lt;if $humanity &gt; -30 &gt;&gt;You bend down to offer the old dog your hand. 
+It&#39;s cute in an ugly way. As you pass by the dog&#39;s nose twitches. [[Ignore it | Ignore Dog]] or [[Pet the dog | Pet]]</tw-passagedata><tw-passagedata pid="87" name="Ignore Dog" tags="" position="850,1100" size="100,100">The dog&#39;s tail wags lazily as you [[pass by. | Visit Town]] It almost seems disappointed.</tw-passagedata><tw-passagedata pid="88" name="Pet" tags="" position="975,1100" size="100,100">&lt;&lt;if $humanity &gt; -30 &gt;&gt;You bend down to offer the old dog your hand. 
 Its wet nose brushes against your gloved hand as it sniffs you. 
 It seems to consider you for a moment before lazily rolling over for you to scratch its stomach. 
 By the time you [[stand back up | Visit Town]] the dog has fallen back asleep. &lt;&lt;else&gt;&gt; You bend down to offer the old dog your hand. 
@@ -948,11 +931,11 @@ It seems to consider you for a moment before its tail&#39;s steady wag comes to 
 A soft growl emenates from its chest. 
 You [[stand back up | Visit Town]] before the dog can bite you.&lt;&lt;/if&gt;&gt;
 
-/* House */</tw-passagedata><tw-passagedata pid="94" name="Your house" tags="" position="475,1225" size="100,100">An old rickety shed right outside Cattle&#39;s Run. You&#39;ve lived here for ages after some hermit sold the place. It&#39;s not nice, but it&#39;s a safe place to lie low for a while.
+/* House */</tw-passagedata><tw-passagedata pid="89" name="Your house" tags="" position="1100,1100" size="100,100">An old rickety shed right outside Cattle&#39;s Run. You&#39;ve lived here for ages after some hermit sold the place. It&#39;s not nice, but it&#39;s a safe place to lie low for a while.
 
-[[Visit | Visit House]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="95" name="Visit House" tags="" position="600,1225" size="100,100">The old rickety door swings open with a whine of its rusted hinges. Light streams in from the thin curtains that cover the small window above your bed. An old dusty [[picture frame | Look]] glints under the light. Even so, [[the room | Bedroom]] feels homey and safe.</tw-passagedata><tw-passagedata pid="96" name="Look" tags="" position="725,1225" size="100,100">You wipe the dust off with your gloved fingers. Under the thick coat of dirt two familiar faces stare back at you. Your parents left this world [[long before their time | Parents]]. Sometimes you still miss them.</tw-passagedata><tw-passagedata pid="97" name="Parents" tags="" position="850,1225" size="100,100">Your parents died in the city doing the same work you do now. &lt;&lt;if $humanity &gt; -41 &gt;&gt;It makes you wonder if you shouldn&#39;t just setlle down in Cattle&#39;s Run&lt;&lt;else&gt;&gt;You can&#39;t find it in yourself to care.&lt;&lt;/if&gt;&gt;
+[[Visit | Visit House]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="90" name="Visit House" tags="" position="1225,1100" size="100,100">The old rickety door swings open with a whine of its rusted hinges. Light streams in from the thin curtains that cover the small window above your bed. An old dusty [[picture frame | Look]] glints under the light. Even so, [[the room | Bedroom]] feels homey and safe.</tw-passagedata><tw-passagedata pid="91" name="Look" tags="" position="100,1225" size="100,100">You wipe the dust off with your gloved fingers. Under the thick coat of dirt two familiar faces stare back at you. Your parents left this world [[long before their time | Parents]]. Sometimes you still miss them.</tw-passagedata><tw-passagedata pid="92" name="Parents" tags="" position="225,1225" size="100,100">Your parents died in the city doing the same work you do now. &lt;&lt;if $humanity &gt; -41 &gt;&gt;It makes you wonder if you shouldn&#39;t just setlle down in Cattle&#39;s Run&lt;&lt;else&gt;&gt;You can&#39;t find it in yourself to care.&lt;&lt;/if&gt;&gt;
 
-[[Look away from the photo | Bedroom]]</tw-passagedata><tw-passagedata pid="98" name="Bedroom" tags="" position="975,1225" size="100,100">Your boots click against the wooden floor. [[Your bed | Sleep]] calls to you after so many sleepless days. [[The pantry | Pantry]] is never fully stocked, but you&#39;re sure you could find something there. Behind you [[the door | Leave House]] stands as a barrier between you and the stressors of the outside world.</tw-passagedata><tw-passagedata pid="99" name="Sleep" tags="" position="1100,1225" size="100,100">&lt;&lt;if $humanity &gt; -1&gt;&gt;Sleep comes easy to you after so much time fighting for your life. You dream of a better home, a safer place. In your dream there is no more fighting- your gun is safely tucked away, only to be touched in case of emergency. People greet you as you walk past without a hint of trepidation. You awaken feeling rejuvenated.
+[[Look away from the photo | Bedroom]]</tw-passagedata><tw-passagedata pid="93" name="Bedroom" tags="" position="350,1225" size="100,100">Your boots click against the wooden floor. [[Your bed | Sleep]] calls to you after so many sleepless days. [[The pantry | Pantry]] is never fully stocked, but you&#39;re sure you could find something there. Behind you [[the door | Leave House]] stands as a barrier between you and the stressors of the outside world.</tw-passagedata><tw-passagedata pid="94" name="Sleep" tags="" position="475,1225" size="100,100">&lt;&lt;if $humanity &gt; -1&gt;&gt;Sleep comes easy to you after so much time fighting for your life. You dream of a better home, a safer place. In your dream there is no more fighting- your gun is safely tucked away, only to be touched in case of emergency. People greet you as you walk past without a hint of trepidation. You awaken feeling rejuvenated.
 
 &lt;&lt;elseif $humanity &gt; -41 &gt;&gt;
 
@@ -962,15 +945,15 @@ Sleep doesn&#39;t come easily today. No matter what you do you can&#39;t seem to
 
 No matter how hard you try you can&#39;t seem to fall asleep. Your mind is awake, powered by metal and wires rather than blood and muscle. You stay there for a few more minutes before giving up.&lt;&lt;/if&gt;&gt;
 
-You [[stand up | Leave House]] from bed, ready to go about the rest of your day.</tw-passagedata><tw-passagedata pid="100" name="Pantry" tags="" position="1225,1225" size="100,100">You open the pantry door and are met with a few dented cans of food. It&#39;s not much, but you can [[have a snack | Snack]] if you would like.</tw-passagedata><tw-passagedata pid="101" name="Snack" tags="" position="100,1350" size="100,100">You crack open a can of black beans with a small pocket knife and sit down at the small one-seat table in the middle of your bedroom. &lt;&lt;if $humanity &gt; -41&gt;&gt;You eat it slowly, savoring the meal like its your last since it very well could be.&lt;&lt;else&gt;&gt; It takes you a moment for you to realize you don&#39;t feel hungry... You don&#39;t feel anything anymore. This is pointless.&lt;&lt;/if&gt;&gt;
+You [[stand up | Leave House]] from bed, ready to go about the rest of your day.</tw-passagedata><tw-passagedata pid="95" name="Pantry" tags="" position="600,1225" size="100,100">You open the pantry door and are met with a few dented cans of food. It&#39;s not much, but you can [[have a snack | Snack]] if you would like.</tw-passagedata><tw-passagedata pid="96" name="Snack" tags="" position="725,1225" size="100,100">You crack open a can of black beans with a small pocket knife and sit down at the small one-seat table in the middle of your bedroom. &lt;&lt;if $humanity &gt; -41&gt;&gt;You eat it slowly, savoring the meal like its your last since it very well could be.&lt;&lt;else&gt;&gt; It takes you a moment for you to realize you don&#39;t feel hungry... You don&#39;t feel anything anymore. This is pointless.&lt;&lt;/if&gt;&gt;
 
-[[Throw out the can | Trash]]</tw-passagedata><tw-passagedata pid="102" name="Trash" tags="" position="225,1350" size="100,100">You throw the can into the small bin thats functioned as your trash for years before heading for [[the door | Leave House]].</tw-passagedata><tw-passagedata pid="103" name="Leave House" tags="" position="350,1350" size="100,100">You make sure to lock the door behind you as you face the sprawling desert outside. The wind whips against your face, beckoning you forward. In an odd way its emptiness is beautiful, but you have no time to appreciate its glory. You [[open your map | locations]] to figure out where to go next.
+[[Throw out the can | Trash]]</tw-passagedata><tw-passagedata pid="97" name="Trash" tags="" position="850,1225" size="100,100">You throw the can into the small bin thats functioned as your trash for years before heading for [[the door | Leave House]].</tw-passagedata><tw-passagedata pid="98" name="Leave House" tags="" position="975,1225" size="100,100">You make sure to lock the door behind you as you face the sprawling desert outside. The wind whips against your face, beckoning you forward. In an odd way its emptiness is beautiful, but you have no time to appreciate its glory. You [[open your map | locations]] to figure out where to go next.
 
-/* Ember City */</tw-passagedata><tw-passagedata pid="104" name="City" tags="" position="475,1350" size="100,100">A sprawling urban city with large skyscrapers and a constant blanket of light and smog. 
+/* Ember City */</tw-passagedata><tw-passagedata pid="99" name="City" tags="" position="1100,1225" size="100,100">A sprawling urban city with large skyscrapers and a constant blanket of light and smog. 
 The people here reak of wealth. 
 Underneath the city&#39;s image lies another name [[The Ashes | Ashes]]
 
-[[Visit | Visit City]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="105" name="Visit City" tags="" position="600,1350" size="100,100">The neon lights and constant blanket of noise welcome you into the city. Skyscrapers tower above you like mountain tops you could never hope to climb. 
+[[Visit | Visit City]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="100" name="Visit City" tags="" position="1225,1225" size="100,100">The neon lights and constant blanket of noise welcome you into the city. Skyscrapers tower above you like mountain tops you could never hope to climb. 
 People pass by without offering you a second glance as they go about their days. 
 
 There are numerous stores here, but you know the best ones... at least for your needs. 
@@ -981,7 +964,7 @@ There&#39;s also [[a fancy shop | ec.augments2]] uptown where the more well-off 
 
 Towering above the rest of the city, like its own personal sun, the glowing lights of the Blue Flame Casino cast a dim light upon the other steal and glass buildings around it.
 
-[[Leave the city | locations]]</tw-passagedata><tw-passagedata pid="106" name="Casino" tags="" position="725,1350" size="100,100">The giant sign above the casino with its colored lights that twinkle like stars seems to call you in. 
+[[Leave the city | locations]]</tw-passagedata><tw-passagedata pid="101" name="Casino" tags="" position="100,1350" size="100,100">The giant sign above the casino with its colored lights that twinkle like stars seems to call you in. 
 The smell of smoke strengthens as you get closer, but if anything it nearly feels comforting- like a blanket pulled tight on a cold afternoon. 
 The security... robots? 
 
@@ -992,7 +975,7 @@ You&#39;re not sure what they are anymore, but they don&#39;t even look your way
 In the lobby there are several tables set up with dealers ready to play. The dealers themselves are some of the most augmented people you&#39;ve ever seen- their entire faces transformed into an amalgamation of wires and lights. 
 You can [[sit down at a table | Gamble]] or [[go further in | investigate casino]]
 
-[[leave casino | Visit City]].</tw-passagedata><tw-passagedata pid="107" name="Gamble" tags="" position="850,1350" size="100,100">You sit down at a spider&#39;s eyes table and nod your head to the dealer. Its a simple game, one you played often in your youth. Both you and the dealer roll a die and whoever rolls the highest wins. The dealer is wearing one of the cleanest suits you&#39;ve ever seen, its crisp black fabric is embroidered with gold thread along the lapels. He seems mostly human although you can&#39;t quite tell if the visor that wraps around his head is removable or not. Even still his voice sounds human enough. &quot;[[Your wager? | Wager]]&quot;</tw-passagedata><tw-passagedata pid="108" name="Wager" tags="" position="975,1350" size="100,100"></tw-passagedata><tw-passagedata pid="109" name="investigate casino" tags="" position="1100,1350" size="100,100">The hustle and bustle of people here is nearly overwhelming.</tw-passagedata><tw-passagedata pid="110" name="ec.augments1" tags="" position="1225,1350" size="100,100">&lt;&lt;if $humanity &gt; 1 &gt;&gt;The husband greets you as you walk in, his one metal arm that he&#39;d gotten done not too long ago still shines brightly- not a single scratch or dent in sight. &quot;Hey partner, what you in for today?&quot; [[I&#39;d like to look at your wares | ec.augmentlist1]] 
+[[leave casino | Visit City]].</tw-passagedata><tw-passagedata pid="102" name="Gamble" tags="" position="225,1350" size="100,100">You sit down at a spider&#39;s eyes table and nod your head to the dealer. Its a simple game, one you played often in your youth. Both you and the dealer roll a die and whoever rolls the highest wins. The dealer is wearing one of the cleanest suits you&#39;ve ever seen, its crisp black fabric is embroidered with gold thread along the lapels. He seems mostly human although you can&#39;t quite tell if the visor that wraps around his head is removable or not. Even still his voice sounds human enough. &quot;[[Your wager? | Wager]]&quot;</tw-passagedata><tw-passagedata pid="103" name="Wager" tags="" position="350,1350" size="100,100"></tw-passagedata><tw-passagedata pid="104" name="investigate casino" tags="" position="475,1350" size="100,100">The hustle and bustle of people here is nearly overwhelming.</tw-passagedata><tw-passagedata pid="105" name="ec.augments1" tags="" position="600,1350" size="100,100">&lt;&lt;if $humanity &gt; 1 &gt;&gt;The husband greets you as you walk in, his one metal arm that he&#39;d gotten done not too long ago still shines brightly- not a single scratch or dent in sight. &quot;Hey partner, what you in for today?&quot; [[I&#39;d like to look at your wares | ec.augmentlist1]] 
 [[Nothing | Visit City]]
 
 &lt;&lt;elseif $humanity &gt; -31 &gt;&gt;
@@ -1009,89 +992,89 @@ The wife smiles widely at you as you enter, her long flowing black hair seems to
 &lt;&lt;else&gt;&gt;
 
 &quot;Oh darlin&#39; theres nothing more we can do for you. I hope some of you is still in there, would be a shame to loose you.&quot;&lt;&lt;/if&gt;&gt;
-[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="111" name="ec.augmentlist1" tags="" position="100,1475" size="100,100">augment 1 (cheap)
+[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="106" name="ec.augmentlist1" tags="" position="725,1350" size="100,100">augment 1 (cheap)
 augment 2 (cheap)
 augment 3 (cheap)
-[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="112" name="ec.augments2" tags="" position="225,1475" size="100,100">The massive neon sign for Cyberwares can be seen from nearly anywhere in the city- a constant reminder of how you could improve yourself if only you could afford it. 
+[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="107" name="ec.augments2" tags="" position="850,1350" size="100,100">The massive neon sign for Cyberwares can be seen from nearly anywhere in the city- a constant reminder of how you could improve yourself if only you could afford it. 
 You let the sign guide you to its entrance- a massive set of pristine glass doors. 
 You are greeted by someone who is entirely more machine than man. You can see the pumps and wires pushing blood through its system.
 
 &quot;Are you looking to get enhancements?&quot; The robotic voice chirps. Even though the man&#39;s face does not move, the synthetic voice modulator purrs as if he was some pleased cat.
 [[I&#39;d like to look at your wares | ec.augmentlist2]] 
-[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="113" name="ec.augmentlist2" tags="" position="350,1475" size="100,100">augment 1 (expensive)
+[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="108" name="ec.augmentlist2" tags="" position="975,1350" size="100,100">augment 1 (expensive)
 augment 2 (expensive)
 augment 3 (expensive)
 [[Leave | Visit City]]
 
-/* The Ashes */</tw-passagedata><tw-passagedata pid="114" name="Ashes" tags="" position="475,1475" size="100,100">In the deepest parts of Ember City there lies a maze of alleyways and ruins stacked on top of eachother. 
+/* The Ashes */</tw-passagedata><tw-passagedata pid="109" name="Ashes" tags="" position="1100,1350" size="100,100">In the deepest parts of Ember City there lies a maze of alleyways and ruins stacked on top of eachother. 
 It&#39;s filled with those who earn their income in less trustworthy ways. 
 If you are willing to take the chance there are &quot;doctors&quot; here you can visit for cybernetics and merchants selling under the table goods. 
 The black market here thrives...just don&#39;t expect good quality.
 
-[[Visit | Visit Ashes]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="115" name="Visit Ashes" tags="" position="600,1475" size="100,100">The entrance to the ashes isn&#39;t hard to find. If you go far enough into any alleyway in the city you&#39;ll end up there. 
+[[Visit | Visit Ashes]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="110" name="Visit Ashes" tags="" position="1225,1350" size="100,100">The entrance to the ashes isn&#39;t hard to find. If you go far enough into any alleyway in the city you&#39;ll end up there. 
 You choose to follow a path near one of the city&#39;s large apartment buildings. You don&#39;t have to walk long before the glitz and glamour of the city melts away into smog and ruin. 
 It&#39;s darker here, like the sun itself isn&#39;t willing to set foot within. Most people here do not have augments, but the ones who do have mechanical limbs that are massive and gaudy. 
 There are only two places here of interest to you: the [[black market | a.gun]] and [[the makeshift cybernetics store, | a.augments]] Forge and Flame.
 
-[[Go back to the city | Visit City]]</tw-passagedata><tw-passagedata pid="116" name="a.gun" tags="" position="725,1475" size="100,100">The blackmarket can be found tucked between two levels of the Ashes. Various stands vendors line the narrow street. 
+[[Go back to the city | Visit City]]</tw-passagedata><tw-passagedata pid="111" name="a.gun" tags="" position="100,1475" size="100,100">The blackmarket can be found tucked between two levels of the Ashes. Various stands vendors line the narrow street. 
 One stand in particular draws your attention, run by a dealer you&#39;ve worked with before. &lt;&lt;if $humanity &gt; -21 &gt;&gt;The man nods to you and you tip your hat in response. 
 When he smiles his metallic lower jaw glints under the neon lights. &quot;Howdy partner,&quot; he grins, &quot;Good to see you back?&quot;&lt;&lt;else&gt;&gt;The man looks at you in shock, his eyes drifting over your nearly all-metal form. &quot;Well, pall. If there&#39;s any of you left in there I guess you can see what I&#39;ve got.&quot;&lt;&lt;/if&gt;&gt;
 [[I&#39;d like to see what you have | a.gunlist]] 
-[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="117" name="a.gunlist" tags="" position="850,1475" size="100,100">gun
+[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="112" name="a.gunlist" tags="" position="225,1475" size="100,100">gun
 cool gun
 cooler gun
-[[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="118" name="a.augments" tags="" position="975,1475" size="100,100">Most cybernetics from the Ashes come from one place. A large ramshackle storefront that was taken over to become a place for surgeons and augment dealers to do business. 
+[[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="113" name="a.augments" tags="" position="350,1475" size="100,100">Most cybernetics from the Ashes come from one place. A large ramshackle storefront that was taken over to become a place for surgeons and augment dealers to do business. 
 &lt;&lt;if $humanity &gt; -11 &gt;&gt;When you walk in people look at you like a piece of fresh meat- their eyes follow you, hungry and wanting.&lt;&lt;else&gt;&gt; only a few people look your way. You fit right in with the over-the-top augments that are fitted against the skin of the people here.&lt;&lt;/if&gt;&gt;
 You stop in front of a desk where a thin man with metal arms emerging from his back barely looks up at you. Behind him several augments are attached to the wall by hooks.
 [[I&#39;d like to look at your wares | a.augmentlist]] 
-[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="119" name="a.augmentlist" tags="" position="1100,1475" size="100,100">augment 1 
+[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="114" name="a.augmentlist" tags="" position="475,1475" size="100,100">augment 1 
 augment 2 
 augment 3
 
 [[Leave | Visit Ashes]]
 
-/* Church Town */</tw-passagedata><tw-passagedata pid="120" name="Church town" tags="" position="1225,1475" size="100,100">An old church town, not too crowded but still well-kept. Religious folk tend to gather here (and people looking to escape the law).
+/* Church Town */</tw-passagedata><tw-passagedata pid="115" name="Church town" tags="" position="600,1475" size="100,100">An old church town, not too crowded but still well-kept. Religious folk tend to gather here (and people looking to escape the law).
 
-[[Visit | Visit Church]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="121" name="Visit Church" tags="" position="100,1600" size="100,100">The church is busy today with people using the old building as a community center more than anything. A [[pastor | Pastor]] watches the people from a stand at the far end of the church. 
+[[Visit | Visit Church]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="116" name="Visit Church" tags="" position="725,1475" size="100,100">The church is busy today with people using the old building as a community center more than anything. A [[pastor | Pastor]] watches the people from a stand at the far end of the church. 
 At one of the tables a group of older women sit around a [[board game | Game]] you don&#39;t recognize.
 
-[[Leave church | locations]]</tw-passagedata><tw-passagedata pid="122" name="Pastor" tags="" position="225,1600" size="100,100">The pastor is familiar to you, when your parents were still alive they would take you to his sermons. His hair has thinned over the years but his kind patient face remains the same. 
-For a momnt his eyes catch your own. You [[look away | Visit Church]] or [[walk up to him. | Pastor Talk]]</tw-passagedata><tw-passagedata pid="123" name="Pastor Talk" tags="" position="350,1600" size="100,100">The pastor nods to you as you approach, his lips tugging upwards into a smile. &quot;I haven&#39;t seen you at mass in a long time,&quot; he laughs, &quot;Have you been doing well?&quot;
+[[Leave church | locations]]</tw-passagedata><tw-passagedata pid="117" name="Pastor" tags="" position="850,1475" size="100,100">The pastor is familiar to you, when your parents were still alive they would take you to his sermons. His hair has thinned over the years but his kind patient face remains the same. 
+For a momnt his eyes catch your own. You [[look away | Visit Church]] or [[walk up to him. | Pastor Talk]]</tw-passagedata><tw-passagedata pid="118" name="Pastor Talk" tags="" position="975,1475" size="100,100">The pastor nods to you as you approach, his lips tugging upwards into a smile. &quot;I haven&#39;t seen you at mass in a long time,&quot; he laughs, &quot;Have you been doing well?&quot;
 
 [[&quot;I&#39;ve been alright.&quot; | Alright]]
-[[&quot;Things have been better.&quot; | Better]]</tw-passagedata><tw-passagedata pid="124" name="Alright" tags="" position="475,1600" size="100,100">The pastor nods, &quot;That is good to hear. The church is always a safe place for you, if you need it.&quot;
+[[&quot;Things have been better.&quot; | Better]]</tw-passagedata><tw-passagedata pid="119" name="Alright" tags="" position="1100,1475" size="100,100">The pastor nods, &quot;That is good to hear. The church is always a safe place for you, if you need it.&quot;
 
-[[&quot;Thank you, but I&#39;m not much of a holy person.&quot; | Pastor End]]</tw-passagedata><tw-passagedata pid="125" name="Better" tags="" position="600,1600" size="100,100">The pastor&#39;s smile drops for only a moment before he waves you closer. &quot;Unfortunately, that&#39;s what I&#39;ve been hearing a lot of these days. I&#39;m quite sorry about your parents.&quot; You know not far from the church your parents lie six feet under unmarked graves. 
+[[&quot;Thank you, but I&#39;m not much of a holy person.&quot; | Pastor End]]</tw-passagedata><tw-passagedata pid="120" name="Better" tags="" position="1225,1475" size="100,100">The pastor&#39;s smile drops for only a moment before he waves you closer. &quot;Unfortunately, that&#39;s what I&#39;ve been hearing a lot of these days. I&#39;m quite sorry about your parents.&quot; You know not far from the church your parents lie six feet under unmarked graves. 
 
 The pastor at least has the mind to give a small apologetic smile.
 
-[[&quot;It&#39;s been hard.&quot; | Pastor End]]</tw-passagedata><tw-passagedata pid="126" name="Pastor End" tags="" position="725,1600" size="100,100">&quot;Even as times become harder I hope you can find a safe place here. I&#39;m sure you&#39;re not here to entertain me though, I hope whatever you&#39;re here for finds you well.&quot;
+[[&quot;It&#39;s been hard.&quot; | Pastor End]]</tw-passagedata><tw-passagedata pid="121" name="Pastor End" tags="" position="100,1600" size="100,100">&quot;Even as times become harder I hope you can find a safe place here. I&#39;m sure you&#39;re not here to entertain me though, I hope whatever you&#39;re here for finds you well.&quot;
 
-With that the pastor offers his hand. You take it for a moment, and the human contact feels comforting after so long alone. You give the man one last polite nod before [[turning back | Visit Church]] to the people flooding the church grounds.</tw-passagedata><tw-passagedata pid="127" name="Game" tags="" position="850,1600" size="100,100">You walk up to the group of women all entranced by the game on the table. It involves cards being laid out on the table, each one depicting various machines. 
+With that the pastor offers his hand. You take it for a moment, and the human contact feels comforting after so long alone. You give the man one last polite nod before [[turning back | Visit Church]] to the people flooding the church grounds.</tw-passagedata><tw-passagedata pid="122" name="Game" tags="" position="225,1600" size="100,100">You walk up to the group of women all entranced by the game on the table. It involves cards being laid out on the table, each one depicting various machines. 
 &lt;&lt;if $humanity &gt; -11 &gt;&gt;Even when you are right behind them none of them look your way.&lt;&lt;else&gt;&gt; The women seem to tense up as you draw close.&lt;&lt;/if&gt;&gt; There&#39;s [[nothing more | Visit Church]] to see here unless you want to interrupt their flow.
 
-/* The Desert */</tw-passagedata><tw-passagedata pid="128" name="Desert" tags="" position="975,1600" size="100,100">A sprawling desert that goes on for miles between the various cities and towns. Not much happens here, but some trains pass through on their way to the city. 
+/* The Desert */</tw-passagedata><tw-passagedata pid="123" name="Desert" tags="" position="350,1600" size="100,100">A sprawling desert that goes on for miles between the various cities and towns. Not much happens here, but some trains pass through on their way to the city. 
 Every few miles you may be able to spot some dust-beaten buildings long-abandoned by their owners.
 
-[[Visit | Visit Desert]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="129" name="Visit Desert" tags="" position="1100,1600" size="100,100">Just outside of town the desert winds start to buffet your face. The sun beats down on you, warming your skin. In the distance, a lone train blows its whistle.
+[[Visit | Visit Desert]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="124" name="Visit Desert" tags="" position="475,1600" size="100,100">Just outside of town the desert winds start to buffet your face. The sun beats down on you, warming your skin. In the distance, a lone train blows its whistle.
 
 [[Walk towards the train tracks | Train]] 
 or
-[[Go back to town | Cow Town]]</tw-passagedata><tw-passagedata pid="130" name="Train" tags="" position="1225,1600" size="100,100">The walk through the desert is uncomfortable but peaceful. The only thing that interrupts your thoughts is the howling wind and dust that whips across your face. 
-When the train comes into view you spot a light- a fire next to the tracks. [[Investigate | Investigate Fire]] or [[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="131" name="Investigate Fire" tags="" position="100,1725" size="100,100">Only a few meters away the dust gives way to the small camfire set up near the rusted metal train tracks. 
-A figure sits near it; smoke billows from their lips as they bring a cigar to their lips. [[Talk to them | Stranger]] or [[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="132" name="Stranger" tags="" position="225,1725" size="100,100">You approach the stranger with hands raised. The figure tenses for a moment before turning to face you. You are met by the face of an older man. His dark eyes seem to see right through you.
+[[Go back to town | Cow Town]]</tw-passagedata><tw-passagedata pid="125" name="Train" tags="" position="600,1600" size="100,100">The walk through the desert is uncomfortable but peaceful. The only thing that interrupts your thoughts is the howling wind and dust that whips across your face. 
+When the train comes into view you spot a light- a fire next to the tracks. [[Investigate | Investigate Fire]] or [[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="126" name="Investigate Fire" tags="" position="725,1600" size="100,100">Only a few meters away the dust gives way to the small camfire set up near the rusted metal train tracks. 
+A figure sits near it; smoke billows from their lips as they bring a cigar to their lips. [[Talk to them | Stranger]] or [[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="127" name="Stranger" tags="" position="850,1600" size="100,100">You approach the stranger with hands raised. The figure tenses for a moment before turning to face you. You are met by the face of an older man. His dark eyes seem to see right through you.
 &quot;Not often I find company here,&quot; he drawls, &quot;Come. Sit.&quot;
 
 The man pats a spot on the dirt next to him and looks at you expectantly, drawing his cigar back between his lips. 
 
-[[Sit | Stranger Talk]] or [[Turn Away | Stranger Leave]]</tw-passagedata><tw-passagedata pid="133" name="Stranger Leave" tags="" position="350,1725" size="100,100">You walk away. You can feel the man&#39;s eyes burning holes into the back of your head, but he doesn&#39;t try to stop you. 
-You should open your [[map | locations]] to figure out where to go next.</tw-passagedata><tw-passagedata pid="134" name="Stranger Talk" tags="" position="475,1725" size="100,100">You feels your knees protest as you take a seat on the warm dirt. Without even looking at you the man offers the cigar. 
+[[Sit | Stranger Talk]] or [[Turn Away | Stranger Leave]]</tw-passagedata><tw-passagedata pid="128" name="Stranger Leave" tags="" position="975,1600" size="100,100">You walk away. You can feel the man&#39;s eyes burning holes into the back of your head, but he doesn&#39;t try to stop you. 
+You should open your [[map | locations]] to figure out where to go next.</tw-passagedata><tw-passagedata pid="129" name="Stranger Talk" tags="" position="1100,1600" size="100,100">You feels your knees protest as you take a seat on the warm dirt. Without even looking at you the man offers the cigar. 
 &lt;&lt;if $humanity &gt; -51 &gt;&gt;You take it and take a long draw, letting the smoke calm your nerves. He seems pleased when you hand it back.&lt;&lt;else&gt;&gt;In the past, you would have accepted the offer but now theres no part of you left that can enjoy the smoke. The man seems to notice your hesitance and shrugs.&lt;&lt;/if&gt;&gt;
 &quot;Folks only come here when they&#39;re trying to escape something. What&#39;s got ya runnin&#39;?&quot;
 
 [[I feel like I&#39;m stuck | Anticorp]]
 [[I don&#39;t know if I&#39;m doing the right thing | Antiwork]]
-&lt;&lt;if $humanity &lt; -49&gt;&gt;[[Am I human still? | Human]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="135" name="Anticorp" tags="" position="600,1725" size="100,100">You shrug, staring at the lights of the city in the distance. &quot;Too much noise. Feel like no matter what I do I&#39;m not going nowhere,&quot; you frown.
+&lt;&lt;if $humanity &lt; -49&gt;&gt;[[Am I human still? | Human]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Anticorp" tags="" position="1225,1600" size="100,100">You shrug, staring at the lights of the city in the distance. &quot;Too much noise. Feel like no matter what I do I&#39;m not going nowhere,&quot; you frown.
 
 The stranger nods, his eyes following your own. &quot;They&#39;ll bleed you dry out there kid. No fault of your own its just how it works.&quot;
 
@@ -1099,7 +1082,7 @@ The stranger nods, his eyes following your own. &quot;They&#39;ll bleed you dry 
 
 &quot;To live,&quot; the stranger replies, &quot;Simple as that.&quot;
 
-[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="136" name="AntiWork" tags="" position="725,1725" size="100,100">You frown; the stress, both physical and mental, wears heavy on you. You can feel the sins you&#39;ve committed just to live crawling under your skin- writhing and ugly. &quot;I don&#39;t know if I&#39;m doing the right thing.&quot;
+[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="131" name="AntiWork" tags="" position="100,1725" size="100,100">You frown; the stress, both physical and mental, wears heavy on you. You can feel the sins you&#39;ve committed just to live crawling under your skin- writhing and ugly. &quot;I don&#39;t know if I&#39;m doing the right thing.&quot;
 
 &quot;Well you&#39;re alive aint ya? That&#39;s gotta count for somethin&#39; right?&quot;
 
@@ -1109,22 +1092,22 @@ You shrug, reaching over to grab the cigar from the man again. He lets you take 
 
 &lt;&lt;if $humanity &lt; -39&gt;&gt;&gt; The man seems to think on his words before letting out a soft breathy laugh. &quot;Although at this rate kid, I&#39;m not sure how much of you is eft that can die.&quot;&lt;&lt;/if&gt;&gt;
 
-[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="137" name="Human" tags="" position="850,1725" size="100,100">You frown, the metal in your body feels like its heavier than normal. &quot;I&#39;m doing everything right but... I don&#39;t know what I am anymore.&quot;
+[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="132" name="Human" tags="" position="225,1725" size="100,100">You frown, the metal in your body feels like its heavier than normal. &quot;I&#39;m doing everything right but... I don&#39;t know what I am anymore.&quot;
 
 The stranger nods, looking you up and down. &quot;You&#39;re a man tryin&#39; his best.&quot;
 
 Your gaze falls to the metal augments adorning your body. You nearly can&#39;t remember how it felt before the metal started to encroach on your skin like a plague you can&#39;t escape. 
 
 [[&quot;Is it worth it if by the end I can&#39;t recognize myself?&quot; | Myself]]
-[[&quot;I don&#39;t think I&#39;m a man anymore | No Human&quot;]]</tw-passagedata><tw-passagedata pid="138" name="Myself" tags="" position="975,1725" size="100,100">&quot;Thats up to you. You can stop whenever ya want; the world&#39;ll keep spinnin&#39;.&quot;
+[[&quot;I don&#39;t think I&#39;m a man anymore | No Human&quot;]]</tw-passagedata><tw-passagedata pid="133" name="Myself" tags="" position="350,1725" size="100,100">&quot;Thats up to you. You can stop whenever ya want; the world&#39;ll keep spinnin&#39;.&quot;
 
-[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="139" name="No Human" tags="" position="1100,1725" size="100,100">&quot;You&#39;ve still gotta head on your shoulders don&#39;t ya? Seems man enough to me.&quot;
+[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="134" name="No Human" tags="" position="475,1725" size="100,100">&quot;You&#39;ve still gotta head on your shoulders don&#39;t ya? Seems man enough to me.&quot;
 
-[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="140" name="Cassidy Start" tags="" position="1225,1725" size="100,100">Cassidy file</tw-passagedata><tw-passagedata pid="141" name="Kai Start" tags="" position="100,1850" size="100,100">Downtime! we vibin</tw-passagedata><tw-passagedata pid="142" name="Start" tags="" position="225,1850" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Bounties&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="135" name="Cassidy Start" tags="" position="600,1725" size="100,100">Cassidy file</tw-passagedata><tw-passagedata pid="136" name="Kai Start" tags="" position="725,1725" size="100,100">Downtime! we vibin</tw-passagedata><tw-passagedata pid="137" name="Start" tags="" position="850,1725" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Bounties&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Caitlin&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Cassidy&quot; &quot;Cassidy Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Kai&quot; &quot;Kai Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Megan&quot; &quot;Megan Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="143" name="Megan Start" tags="" position="350,1850" size="100,100">Megan file</tw-passagedata><tw-passagedata pid="144" name="StoryInit" tags="" position="475,1850" size="100,100">&lt;&lt;set $health to 10&gt;&gt;
+&lt;&lt;link &quot;Megan&quot; &quot;Megan Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="138" name="Megan Start" tags="" position="975,1725" size="100,100">Megan file</tw-passagedata><tw-passagedata pid="139" name="StoryInit" tags="" position="1100,1725" size="100,100">&lt;&lt;set $health to 10&gt;&gt;
 &lt;&lt;set $power to 3&gt;&gt;
 &lt;&lt;set $damage to 3&gt;&gt;
 &lt;&lt;set $money to 0&gt;&gt;
