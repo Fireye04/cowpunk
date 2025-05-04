@@ -899,8 +899,12 @@ He nods to you, but his eyes never quiet meet your own. His voice is more clippe
 [[Nothing | Visit Town ]]&lt;&lt;else&gt;&gt;Your spurs jingle across the wooden steps into the store, but as you reach out to push the door open you hear a click. The door doesn&#39;t budge. From the windows you can see a light flicker off as the curtains are pulled tight. [[Leave | Visit Town]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="cr.gunlist" tags="" position="225,1100" size="100,100">&lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;deadeye&quot;])])&gt;&gt;
 &lt;&lt;set $deadeyeShops to $cat.getItemsFromShop(&quot;deadeye&quot;)&gt;&gt;
 &lt;&lt;for _item range $deadeyeShops&gt;&gt;
-&lt;&lt;= [[_item.name]]&gt;&gt;
-&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="_item.name" tags="" position="350,1100" size="100,100">[[Leave | Visit Town]]</tw-passagedata><tw-passagedata pid="84" name="cr.item" tags="" position="475,1100" size="100,100">The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
+&lt;b&gt;&lt;&lt;= _item.name&gt;&gt;&lt;/b&gt;
+&lt;&lt;_item.description&gt;&gt;
+&lt;&lt;_item.cost&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+
+&lt;&lt;if $money gte 1 &gt;&gt;[[Bob]]</tw-passagedata><tw-passagedata pid="83" name="Bob" tags="" position="350,1100" size="100,100">[[Leave | Visit Town]]</tw-passagedata><tw-passagedata pid="84" name="cr.item" tags="" position="475,1100" size="100,100">The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
 People come in and out frequently, and the brass chimes hanging by the door ring every few seconds.
 
 &lt;&lt;if $humanity &gt; -1 &gt;&gt; As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. &quot;Good to see you darlin&#39; What are you in for?&quot; [[I&#39;d like to look at your wares | cr.itemlist]] 
