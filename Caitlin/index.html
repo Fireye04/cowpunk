@@ -534,8 +534,8 @@ window.Catalog = class Catalog {
 	}
 	getItemsFromShop(shop) {
 		let total = [];
-		for (let i = 0; i < items.length; i++) {
-			let item = items[i];
+		for (let i = 0; i < this.items.length; i++) {
+			let item = this.items[i];
 			if (item.getShops().includes(shop)) {
 				total.push(item);
 			}
@@ -1107,7 +1107,12 @@ Your gaze falls to the metal augments adorning your body. You nearly can&#39;t r
 
 [[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="134" name="No Human" tags="" position="475,1725" size="100,100">&quot;You&#39;ve still gotta head on your shoulders don&#39;t ya? Seems man enough to me.&quot;
 
-[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="135" name="Cassidy Start" tags="" position="600,1725" size="100,100">Cassidy file</tw-passagedata><tw-passagedata pid="136" name="Kai Start" tags="" position="725,1725" size="100,100">Downtime! we vibin</tw-passagedata><tw-passagedata pid="137" name="Start" tags="" position="850,1725" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Bounties&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="135" name="Cassidy Start" tags="" position="600,1725" size="100,100">Cassidy file</tw-passagedata><tw-passagedata pid="136" name="Kai Start" tags="" position="725,1725" size="100,100">Downtime! we vibin
+&lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;deadeye&quot;])])&gt;&gt;
+&lt;&lt;set $deadeyeShops to $cat.getItemsFromShop(&quot;deadeye&quot;)&gt;&gt;
+&lt;&lt;for _item range $deadeyeShops&gt;&gt;
+&lt;&lt;= _item.name&gt;&gt;
+&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="137" name="Start" tags="" position="850,1725" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Bounties&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Caitlin&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Cassidy&quot; &quot;Cassidy Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Kai&quot; &quot;Kai Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;

@@ -386,8 +386,8 @@ window.Catalog = class Catalog {
 	}
 	getItemsFromShop(shop) {
 		let total = [];
-		for (let i = 0; i < items.length; i++) {
-			let item = items[i];
+		for (let i = 0; i < this.items.length; i++) {
+			let item = this.items[i];
 			if (item.getShops().includes(shop)) {
 				total.push(item);
 			}
