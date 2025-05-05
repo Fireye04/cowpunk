@@ -78,6 +78,14 @@ class Sellable {
 	constructor(parent) {
 		this.parent = parent;
 	}
+	clone() {
+		return new Sellable(this.parent);
+	}
+	toJSON() {
+		return Serial.createReviver(
+			String.format("new Sellable({0})", JSON.stringify(this.parent)),
+		);
+	}
 	buy() {
 		let local = variables();
 		local.money -= this.parent.cost;
@@ -96,6 +104,14 @@ class Sellable {
 class Changeable {
 	constructor(parent) {
 		this.parent = parent;
+	}
+	clone() {
+		return new Changeable(this.parent);
+	}
+	toJSON() {
+		return Serial.createReviver(
+			String.format("new Changeable({0})", JSON.stringify(this.parent)),
+		);
 	}
 	change() {
 		let local = variables();
@@ -119,6 +135,15 @@ class Damageable {
 	constructor(parent) {
 		this.parent = parent;
 	}
+	clone() {
+		return new Damageable(this.parent);
+	}
+	toJSON() {
+		return Serial.createReviver(
+			String.format("new Damageable({0})", JSON.stringify(this.parent)),
+		);
+	}
+
 	getDamage() {
 		return this.parent.damage;
 	}
