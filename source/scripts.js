@@ -220,9 +220,8 @@ window.Bounty = class Bounty {
 		this.payout = payout ??= 0;
 		this.fame = fame ??= 0;
 		this.humanity = humanity ??= 0;
-		this.difficulty = difficulty ??= 0;
+		this.difficulty = difficulty ??= "hard";
 		this.postings = postings ??= [];
-		this.changeable = new Changeable(this);
 	}
 	clone() {
 		return new Bounty(
