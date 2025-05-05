@@ -74,49 +74,6 @@ function StartCombat(Difficulty, En_Health, En_Damage) {
 window.StartCombat = (Dif, En_Health, En_Damage) =>
 	StartCombat(Dif, En_Health, En_Damage);
 
-class Sellable {
-	constructor(parent) {
-		this.parent = parent;
-	}
-	buy() {
-		let local = variables();
-		local.money -= this.parent.cost;
-		local.inventory.addItem(this.parent);
-	}
-	canAfford() {
-		let local = variables();
-		return local.money >= this.parent.cost;
-	}
-	getShops() {
-		return this.parent.shops;
-	}
-}
-
-class Changeable {
-	constructor(parent) {
-		this.parent = parent;
-	}
-	change() {
-		let local = variables();
-		local.power += this.parent.power;
-		local.health += this.parent.health;
-	}
-	revert() {
-		let local = variables();
-		local.power -= this.parent.power;
-		local.health -= this.parent.health;
-	}
-}
-
-class Damageable {
-	constructor(parent) {
-		this.parent = parent;
-	}
-	getDamage() {
-		return this.parent.damage;
-	}
-}
-
 window.Weapon = class Weapon {
 	constructor(name, description, cost, damage, shops) {
 		this.name = name ??= "Default";
@@ -124,8 +81,6 @@ window.Weapon = class Weapon {
 		this.cost = cost ??= 100;
 		this.damage = damage ??= 0;
 		this.shops = shops ??= ["deadeye"];
-		this.sellable = new Sellable(this);
-		this.damageable = new Damageable(this);
 	}
 	clone() {
 		return new Weapon(
@@ -149,30 +104,44 @@ window.Weapon = class Weapon {
 		);
 	}
 	buy() {
-		this.sellable.buy();
+		let local = variables();
+		local.money -= this.cost;
+		// Changeable behaviors handled by inventory
+		local.inventory.addItem(this);
 	}
 	canAfford() {
-		return this.sellable.canAfford();
-	}
-	getDamage() {
-		return this.damageable.getDamage();
+		let local = variables();
+		return local.money >= this.cost;
 	}
 	getShops() {
-		return this.sellable.getShops();
+		return this.shops;
+	}
+	getDamage() {
+		return this.damage;
 	}
 };
 
 window.Augment = class Augment {
-	constructor(name, description, location, cost, power, health, shops) {
+	constructor(
+		name,
+		description,
+		location,
+		cost,
+		power,
+		health,
+		humanity,
+		fame,
+		shops,
+	) {
 		this.name = name ??= "Default";
 		this.description = description ??= "Default";
 		this.location = location ??= "arms";
 		this.cost = cost ??= 100;
 		this.power = power ??= 0;
 		this.health = health ??= 0;
+		this.humanity = humanity ??= 0;
+		this.fame = fame ??= 0;
 		this.shops = shops ??= ["deadeye"];
-		this.sellable = new Sellable(this);
-		this.changeable = new Changeable(this);
 	}
 	clone() {
 		return new Augment(
@@ -182,37 +151,126 @@ window.Augment = class Augment {
 			this.cost,
 			this.power,
 			this.health,
+			this.humanity,
+			this.fame,
 			this.shops,
 		);
 	}
 	toJSON() {
 		return Serial.createReviver(
 			String.format(
-				"new Augment({0},{1},{2},{3},{4},{5},{6})",
+				"new Augment({0},{1},{2},{3},{4},{5},{6},{7},{8})",
 				JSON.stringify(this.name),
 				JSON.stringify(this.description),
 				JSON.stringify(this.location),
 				JSON.stringify(this.cost),
 				JSON.stringify(this.power),
 				JSON.stringify(this.health),
+				JSON.stringify(this.humanity),
+				JSON.stringify(this.fame),
 				JSON.stringify(this.shops),
 			),
 		);
 	}
 	buy() {
-		this.sellable.buy();
+		let local = variables();
+		local.money -= this.cost;
+		// Changeable behaviors handled by inventory
+		local.inventory.addItem(this);
 	}
 	canAfford() {
-		return this.sellable.canAfford();
-	}
-	change() {
-		this.changeable.change();
-	}
-	revert() {
-		this.changeable.revert();
+		let local = variables();
+		return local.money >= this.cost;
 	}
 	getShops() {
-		return this.sellable.getShops();
+		return this.shops;
+	}
+	change() {
+		let local = variables();
+		local.power += this.parent.power ??= 0;
+		local.health += this.parent.health ??= 0;
+		local.humanity += this.parent.humanity ??= 0;
+		local.fame += this.parent.fame ??= 0;
+		local.money += this.parent.payout ??= 0;
+	}
+	revert() {
+		let local = variables();
+		local.power -= this.parent.power ??= 0;
+		local.health -= this.parent.health ??= 0;
+		local.humanity -= this.parent.humanity ??= 0;
+		local.fame -= this.parent.fame ??= 0;
+		local.money -= this.parent.payout ??= 0;
+	}
+};
+
+window.Bounty = class Bounty {
+	constructor(
+		name,
+		description,
+		status,
+		payout,
+		fame,
+		humanity,
+		difficulty,
+		postings,
+	) {
+		this.name = name ??= "Default";
+		this.description = description ??= "Default";
+		this.status = status ??= "available";
+		this.payout = payout ??= 0;
+		this.fame = fame ??= 0;
+		this.humanity = humanity ??= 0;
+		this.difficulty = difficulty ??= "hard";
+		this.postings = postings ??= [];
+	}
+	clone() {
+		return new Bounty(
+			this.name,
+			this.description,
+			this.status,
+			this.payout,
+			this.fame,
+			this.humanity,
+			this.difficulty,
+			this.postings,
+		);
+	}
+	toJSON() {
+		return Serial.createReviver(
+			String.format(
+				"new Bounty({0},{1},{2},{3},{4},{5},{6},{7})",
+				JSON.stringify(this.name),
+				JSON.stringify(this.description),
+				JSON.stringify(this.status),
+				JSON.stringify(this.payout),
+				JSON.stringify(this.fame),
+				JSON.stringify(this.humanity),
+				JSON.stringify(this.difficulty),
+				JSON.stringify(this.postings),
+			),
+		);
+	}
+	updateStatus(newStatus) {
+		if (newStatus === "succeeded") {
+			this.change();
+		}
+		this.status = newStatus;
+	}
+	change() {
+		let local = variables();
+		local.power += this.parent.power ??= 0;
+		local.health += this.parent.health ??= 0;
+		local.humanity += this.parent.humanity ??= 0;
+		local.fame += this.parent.fame ??= 0;
+		local.money += this.parent.payout ??= 0;
+	}
+	revert() {
+		let local = variables();
+		local.power -= this.parent.power ??= 0;
+		local.health -= this.parent.health ??= 0;
+		local.humanity -= this.parent.humanity ??= 0;
+		local.fame -= this.parent.fame ??= 0;
+		local.money -= this.parent.payout ??= 0;
 	}
 };
 
@@ -301,8 +359,8 @@ window.Catalog = class Catalog {
 	}
 	getItemsFromShop(shop) {
 		let total = [];
-		for (let i = 0; i < items.length; i++) {
-			let item = items[i];
+		for (let i = 0; i < this.items.length; i++) {
+			let item = this.items[i];
 			if (item.getShops().includes(shop)) {
 				total.push(item);
 			}
@@ -310,10 +368,3 @@ window.Catalog = class Catalog {
 		return total;
 	}
 };
-
-// Shops //
-let shop1 = "deadeye"
-let shop2 = "the iron giant"
-let shop3 = "cyberwares"
-let shop4 = "blackmarket guns"
-let shop5 = "forge and flame"

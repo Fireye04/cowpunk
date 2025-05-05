@@ -13,8 +13,10 @@ My Twine Game
 <<set $health to 10>>
 <<set $power to 3>>
 <<set $damage to 3>>
-<<set $money to 1000>>
+<<set $money to 0>>
 <<set $diceroll to 0>>
+<<set $humanity to 0>>
+<<set $fame to 0>>
 
 
 <<set $inv to new Inventory([new Weapon("Ol' Reliable", "A family heirloom, your dad gave it to you a long time ago and it has since worn down", 0,2,[])], null)>>
