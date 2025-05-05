@@ -47,6 +47,6 @@ new Augment("HexSpitter Appendage-X","Forearm-integrated micro-munitions system.
 new Augment("Bass Reflex","Enhances low-frequency perception and allows you to experience the bass physically through vibrational feedback. Feel the sound, live the beat, Bass Reflex.","ears",15,2,5,-10,-30,["cyberwares"]),
 
 new Augment("VisionX","The final word in adaptive sight technology. VisionX™ features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays","eyes",15,3,5,-10,-40,["forge and flame"]),
-new Augment("Vanta-Knife Limb Unit","Built for vertical dominance. Hydraulics deliver wall-scale jumping, and elevated agility. Mobility meets mayhem.","legs",10,3,20,-20,-20,["forge and flame"])
+new Augment("Vanta-Knife Limb Unit","Built for vertical dominance. Hydraulics deliver wall-scale jumping, and elevated agility. Mobility meets mayhem.","legs",10,3,20,-20,-20,["forge and flame"]),
 new Augment("GravMaul TactArm","Augmented muscle density paired with shockwave knuckle tech. Land a punch and generate a localized impact radius. Your handshake just became a hazard","arms",20,2,20,-20,-20,["forge and flame"]),
 new Augment("MantiEyes","The final word in adaptive sight technology. VisionX™ features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays.","eyes",15,3,5,-30,-20["forge and flame"])])>>
