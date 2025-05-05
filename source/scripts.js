@@ -220,11 +220,13 @@ window.Bounty = class Bounty {
 		this.payout = payout ??= 0;
 		this.fame = fame ??= 0;
 		this.humanity = humanity ??= 0;
-		this.difficulty = difficulty ??= 0;
+		this.difficulty = difficulty ??= "hard";
 		this.postings = postings ??= [];
 		this.changeable = new Changeable(this);
+		console.log(":3");
 	}
 	clone() {
+		console.log("dupe");
 		return new Bounty(
 			this.name,
 			this.description,
@@ -237,6 +239,7 @@ window.Bounty = class Bounty {
 		);
 	}
 	toJSON() {
+		console.log("json");
 		return Serial.createReviver(
 			String.format(
 				"new Bounty({0},{1},{2},{3},{4},{5},{6},{7})",
