@@ -11,4 +11,8 @@ When did I get $money dollars? Wow!
 
 :: upgrades
 
+
+
 <<if $augments='None'>>It's just me. The old boots my dad gave me before I left home and my cowboy hat.<<else>>Somewhat odd looking. <</if>>
+
+
