@@ -254,8 +254,7 @@ window.Weapon = class Weapon {
 	buy() {
 		let local = variables();
 		local.money -= this.cost;
-		// Changeable behaviors handled by inventory
-		local.inventory.addItem(this);
+		local.inv.addItem(this);
 	}
 	canAfford() {
 		let local = variables();
@@ -323,8 +322,7 @@ window.Augment = class Augment {
 	buy() {
 		let local = variables();
 		local.money -= this.cost;
-		// Changeable behaviors handled by inventory
-		local.inventory.addItem(this);
+		local.inv.addItem(this);
 	}
 	canAfford() {
 		let local = variables();
@@ -491,7 +489,7 @@ window.Catalog = class Catalog {
 		let toRemove = [];
 		for (let i = 0; i < itTemp.length; i++) {
 			let item = itTemp[i];
-			if (typeof item.sellable !== "object") {
+			if (typeof item.buy !== "function") {
 				toRemove.push(item);
 			}
 		}
@@ -516,12 +514,7 @@ window.Catalog = class Catalog {
 		return total;
 	}
 };
-
-let shop1 = "deadeye"
-let shop2 = "the iron giant"
-let shop3 = "cyberwares"
-let shop4 = "blackmarket guns"
-let shop5 = "forge and flame"</script><tw-passagedata pid="1" name="You died" tags="" position="100,100" size="100,100">@@.death;
+</script><tw-passagedata pid="1" name="You died" tags="" position="100,100" size="100,100">@@.death;
 You died. Your legend ends here.
 
 [[Restart?|Bounties]]

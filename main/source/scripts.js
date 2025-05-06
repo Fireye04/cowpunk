@@ -106,8 +106,7 @@ window.Weapon = class Weapon {
 	buy() {
 		let local = variables();
 		local.money -= this.cost;
-		// Changeable behaviors handled by inventory
-		local.inventory.addItem(this);
+		local.inv.addItem(this);
 	}
 	canAfford() {
 		let local = variables();
@@ -175,8 +174,7 @@ window.Augment = class Augment {
 	buy() {
 		let local = variables();
 		local.money -= this.cost;
-		// Changeable behaviors handled by inventory
-		local.inventory.addItem(this);
+		local.inv.addItem(this);
 	}
 	canAfford() {
 		let local = variables();
@@ -343,7 +341,7 @@ window.Catalog = class Catalog {
 		let toRemove = [];
 		for (let i = 0; i < itTemp.length; i++) {
 			let item = itTemp[i];
-			if (typeof item.sellable !== "object") {
+			if (typeof item.buy !== "function") {
 				toRemove.push(item);
 			}
 		}
@@ -368,9 +366,3 @@ window.Catalog = class Catalog {
 		return total;
 	}
 };
-
-let shop1 = "deadeye"
-let shop2 = "the iron giant"
-let shop3 = "cyberwares"
-let shop4 = "blackmarket guns"
-let shop5 = "forge and flame"
