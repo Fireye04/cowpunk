@@ -1,12 +1,12 @@
 
 :: You died
+@@.death;
 You died. Your legend ends here.
 
 [[Restart?|Bounties]]
-
+@@
 
 :: Bounties
-
 You approach the giant wooden board littered with wanted posters, body augmentation adverts, and bullet holes. 
 
 There's [[several options|Bounty Options]] to choose from. 
@@ -14,6 +14,7 @@ There's [[several options|Bounty Options]] to choose from.
 
 
 :: Bounty Options
+@@.bountyboard;
 The first bounty is an advert for [[rat extermination?|Bounty 1]]
 
 The second bounty is written on an [[old diner napkin.|Bounty 2]]
@@ -21,8 +22,10 @@ The second bounty is written on an [[old diner napkin.|Bounty 2]]
 The third bounty is actually an official [[wanted poster.|Bounty 3]]
 
 The fourth bounty is [[another wanted poster|Bounty 4]] covered in bullet holes.
+@@
 
 [[Leave|Bounties]]
+
 
 
 /* Bounties Section */
@@ -84,7 +87,7 @@ Along the back wall you see a [[table|Barn Backwall]] with a few items on it.
 
 :: Look Around Barn 2
 You see the [[basement door|Barn Basement Door]] in the far right corner of the room. 
-To the left you see some [[hay bales and buckets of animal feed.|Barn Leftwall]]
+To the left you see some [[hay bales and buckets of animal feed.|Barn Leftwall 2]]
 
 :: Barn Leftwall
 Just some hay and feed. 
@@ -108,12 +111,11 @@ Looks important. The farmer probably wouldn't want you messing around with his s
 [[Shoot the lock off?|Opened Lockbox]]
 [[Keep looking around|Look Around Barn]]
 
-/* TODO: Add 5 dollars*/
 :: Opened Lockbox
 The bullet hits the center of the lock and shatters it like it was made of glass. 
 A small puff of smoke dissipates from the wound. You take the lock off and look inside. 
 There's 5 dollars and an old photograph of a woman wearing a tacky orange bandana. 
-[[Take the money (+$5) and keep looking around|Take the money]]
+[[Take the money (+$5)|Take the money]]
 
 /* Add Money */
 :: Take the money
@@ -136,7 +138,7 @@ No sense in reasoning with them.
 
 /* Encounter */
 :: Bounty1 Encounter 
-<<script>> StartCombat(1, 20, 2) <</script>>
+<<script>> StartCombat(1, 10, 2) <</script>>
 <<if $health > 0>> [[You Win!|Bounty1 Encounter Win]] 
 <<else>> [[You Lose | You died]] 
 <</if>>
@@ -181,12 +183,14 @@ or
 "Umm... I wouldn't...know""
 
 You notice their eyes keep darting towards a certain corner of the room. You turn to see what he's looking at and you see a table
-in the corner of the room. There's a half empty glasss on it...and a green hat. [[You look back towards the bartender|Where is Slippery Samuel 2]]
+in the corner. There's a half empty glasss on it...and a green hat. [[You look back towards the bartender|Where is Slippery Samuel 2]]
 
 :: Slippery Samuel
 "You haven't heard? His wife and child died in a freak accident last month. He's been a mess ever since. Us barfolk have been keeping him company.
 We all have our stories to share with eachother. Our manager doesn't seem to like our gratitude, but it's hard not to feel for the guy.
-He only ever orders that one bottle that no one likes anyways. Anyways, [[why do you ask?|Where is Slippery Samuel]]"
+He only ever orders that one bottle that no one likes anyways. Anyways, why do you ask?
+
+[[Where is Slippery Samuel?|Where is Slippery Samuel]]"
 
 :: Where is Slippery Samuel 2
 "Hey...if you're going to do anything, just please don't hurt him?"
@@ -311,7 +315,7 @@ He throws $15 on the table and turns back around to continue counting a large pi
 
 "Hey, and anytime you're up at the bar, tell em I got you for a free drink. Cheers"
 
-You're stunned with the irony of that statement for a few seconds. [[Take the money|Bountt2 reward 2]]
+You're stunned with the irony of that statement for a few seconds. [[Take the money|Bounty2 reward 2]]
 
 :: Bounty2 reward 2
 <<set $money = $money + 15>>

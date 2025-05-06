@@ -106,7 +106,7 @@ window.Weapon = class Weapon {
 	buy() {
 		let local = variables();
 		local.money -= this.cost;
-		local.inventory.addItem(this);
+		local.inv.addItem(this);
 	}
 	canAfford() {
 		let local = variables();
@@ -174,7 +174,7 @@ window.Augment = class Augment {
 	buy() {
 		let local = variables();
 		local.money -= this.cost;
-		local.inventory.addItem(this);
+		local.inv.addItem(this);
 	}
 	canAfford() {
 		let local = variables();
@@ -366,3 +366,10 @@ window.Catalog = class Catalog {
 		return total;
 	}
 };
+
+let shop1 = "deadeye";
+let shop2 = "the iron giant";
+let shop3 = "cyberwares";
+let shop4 = "blackmarket guns";
+let shop5 = "forge and flame";
+
