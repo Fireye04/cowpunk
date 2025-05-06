@@ -106,7 +106,6 @@ window.Weapon = class Weapon {
 	buy() {
 		let local = variables();
 		local.money -= this.cost;
-		// Changeable behaviors handled by inventory
 		local.inventory.addItem(this);
 	}
 	canAfford() {
@@ -175,7 +174,6 @@ window.Augment = class Augment {
 	buy() {
 		let local = variables();
 		local.money -= this.cost;
-		// Changeable behaviors handled by inventory
 		local.inventory.addItem(this);
 	}
 	canAfford() {
@@ -343,6 +341,7 @@ window.Catalog = class Catalog {
 		let toRemove = [];
 		for (let i = 0; i < itTemp.length; i++) {
 			let item = itTemp[i];
+			console.log(typeof item.buy());
 			if (typeof item.sellable !== "object") {
 				toRemove.push(item);
 			}
