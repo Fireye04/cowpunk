@@ -481,8 +481,7 @@ window.Catalog = class Catalog {
 		let toRemove = [];
 		for (let i = 0; i < itTemp.length; i++) {
 			let item = itTemp[i];
-			console.log(typeof item.buy);
-			if (typeof item.sellable !== "object") {
+			if (typeof item.buy !== "function") {
 				toRemove.push(item);
 			}
 		}
