@@ -514,13 +514,6 @@ window.Catalog = class Catalog {
 		return total;
 	}
 };
-
-let shop1 = "deadeye";
-let shop2 = "the iron giant";
-let shop3 = "cyberwares";
-let shop4 = "blackmarket guns";
-let shop5 = "forge and flame";
-
 </script><tw-passagedata pid="1" name="You died" tags="" position="100,100" size="100,100">@@.death;
 You died. Your legend ends here.
 
@@ -1086,7 +1079,6 @@ Your gaze falls to the metal augments adorning your body. You nearly can&#39;t r
 [[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="136" name="Cassidy Start" tags="" position="725,1725" size="100,100">Cassidy file</tw-passagedata><tw-passagedata pid="137" name="Kai Start" tags="" position="850,1725" size="100,100">Downtime! we vibin
 &lt;&lt;set $cat to new Catalog([new Weapon(&quot;bob&quot;, &quot;im a silly lil cowboy&quot;, 1,2, [&quot;deadeye&quot;])])&gt;&gt;
 &lt;&lt;set $deadeyeShops to $cat.getItemsFromShop(&quot;deadeye&quot;)&gt;&gt;
-&lt;&lt;script&gt;&gt;console.log(variables().deadeyeShops);console.log(variables().cat);&lt;&lt;/script&gt;&gt;
 &lt;&lt;for _item range $deadeyeShops&gt;&gt;
 &lt;&lt;= _item.name&gt;&gt;
 &lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="138" name="Start" tags="" position="975,1725" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Bounties&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
