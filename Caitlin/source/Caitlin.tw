@@ -55,7 +55,7 @@ new Augment("RiftSaw Limb Suite","Under the wrist: a concealed rotary blade for 
 new Augment("Crossover Frequency","Dynamically splits and prioritizes incoming sounds, allowing you to isolate even the quietest of noises. Achive perfect auditory balance.","ears",15,3,5,-15,-20,["deadeye"]))])>>
 <<set $deadeyeShops to $cat.getItemsFromShop("deadeye")>>
 <<for _item range $deadeyeShops>>
-<<print>>item.name<</print>>
+<<= _item.name>>
 <</for>>
 
 
