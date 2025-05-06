@@ -74,56 +74,6 @@ function StartCombat(Difficulty, En_Health, En_Damage) {
 window.StartCombat = (Dif, En_Health, En_Damage) =>
 	StartCombat(Dif, En_Health, En_Damage);
 
-class Sellable {
-	constructor(parent) {
-		this.parent = parent;
-	}
-	buy() {
-		let local = variables();
-		local.money -= this.parent.cost;
-		// Changeable behaviors handled by inventory
-		local.inventory.addItem(this.parent);
-	}
-	canAfford() {
-		let local = variables();
-		return local.money >= this.parent.cost;
-	}
-	getShops() {
-		return this.parent.shops;
-	}
-}
-
-class Changeable {
-	constructor(parent) {
-		this.parent = parent;
-	}
-	change() {
-		let local = variables();
-		local.power += this.parent.power ??= 0;
-		local.health += this.parent.health ??= 0;
-		local.humanity += this.parent.humanity ??= 0;
-		local.fame += this.parent.fame ??= 0;
-		local.money += this.parent.payout ??= 0;
-	}
-	revert() {
-		let local = variables();
-		local.power -= this.parent.power ??= 0;
-		local.health -= this.parent.health ??= 0;
-		local.humanity -= this.parent.humanity ??= 0;
-		local.fame -= this.parent.fame ??= 0;
-		local.money -= this.parent.payout ??= 0;
-	}
-}
-
-class Damageable {
-	constructor(parent) {
-		this.parent = parent;
-	}
-	getDamage() {
-		return this.parent.damage;
-	}
-}
-
 window.Weapon = class Weapon {
 	constructor(name, description, cost, damage, shops) {
 		this.name = name ??= "Default";
@@ -131,8 +81,6 @@ window.Weapon = class Weapon {
 		this.cost = cost ??= 100;
 		this.damage = damage ??= 0;
 		this.shops = shops ??= ["deadeye"];
-		this.sellable = new Sellable(this);
-		this.damageable = new Damageable(this);
 	}
 	clone() {
 		return new Weapon(
@@ -156,16 +104,20 @@ window.Weapon = class Weapon {
 		);
 	}
 	buy() {
-		this.sellable.buy();
+		let local = variables();
+		local.money -= this.cost;
+		// Changeable behaviors handled by inventory
+		local.inventory.addItem(this);
 	}
 	canAfford() {
-		return this.sellable.canAfford();
-	}
-	getDamage() {
-		return this.damageable.getDamage();
+		let local = variables();
+		return local.money >= this.cost;
 	}
 	getShops() {
-		return this.sellable.getShops();
+		return this.shops;
+	}
+	getDamage() {
+		return this.damage;
 	}
 };
 
@@ -190,8 +142,6 @@ window.Augment = class Augment {
 		this.humanity = humanity ??= 0;
 		this.fame = fame ??= 0;
 		this.shops = shops ??= ["deadeye"];
-		this.sellable = new Sellable(this);
-		this.changeable = new Changeable(this);
 	}
 	clone() {
 		return new Augment(
@@ -223,19 +173,33 @@ window.Augment = class Augment {
 		);
 	}
 	buy() {
-		this.sellable.buy();
+		let local = variables();
+		local.money -= this.cost;
+		// Changeable behaviors handled by inventory
+		local.inventory.addItem(this);
 	}
 	canAfford() {
-		return this.sellable.canAfford();
-	}
-	change() {
-		this.changeable.change();
-	}
-	revert() {
-		this.changeable.revert();
+		let local = variables();
+		return local.money >= this.cost;
 	}
 	getShops() {
-		return this.sellable.getShops();
+		return this.shops;
+	}
+	change() {
+		let local = variables();
+		local.power += this.parent.power ??= 0;
+		local.health += this.parent.health ??= 0;
+		local.humanity += this.parent.humanity ??= 0;
+		local.fame += this.parent.fame ??= 0;
+		local.money += this.parent.payout ??= 0;
+	}
+	revert() {
+		let local = variables();
+		local.power -= this.parent.power ??= 0;
+		local.health -= this.parent.health ??= 0;
+		local.humanity -= this.parent.humanity ??= 0;
+		local.fame -= this.parent.fame ??= 0;
+		local.money -= this.parent.payout ??= 0;
 	}
 };
 
@@ -256,9 +220,8 @@ window.Bounty = class Bounty {
 		this.payout = payout ??= 0;
 		this.fame = fame ??= 0;
 		this.humanity = humanity ??= 0;
-		this.difficulty = difficulty ??= 0;
+		this.difficulty = difficulty ??= "hard";
 		this.postings = postings ??= [];
-		this.changeable = new Changeable(this);
 	}
 	clone() {
 		return new Bounty(
@@ -294,10 +257,20 @@ window.Bounty = class Bounty {
 		this.status = newStatus;
 	}
 	change() {
-		this.changeable.change();
+		let local = variables();
+		local.power += this.parent.power ??= 0;
+		local.health += this.parent.health ??= 0;
+		local.humanity += this.parent.humanity ??= 0;
+		local.fame += this.parent.fame ??= 0;
+		local.money += this.parent.payout ??= 0;
 	}
 	revert() {
-		this.changeable.revert();
+		let local = variables();
+		local.power -= this.parent.power ??= 0;
+		local.health -= this.parent.health ??= 0;
+		local.humanity -= this.parent.humanity ??= 0;
+		local.fame -= this.parent.fame ??= 0;
+		local.money -= this.parent.payout ??= 0;
 	}
 };
 
