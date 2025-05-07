@@ -18,6 +18,11 @@ My Twine Game
 <<set $humanity to 150>>
 <<set $fame to 0>>
 
+<<set $rent_done = false>>
+<<set $whistleblown = false>>
+<<set $gambled = false>>
+<<set $trained = false>>
+
 
 
 <<set $inv to new Inventory([new Weapon("Ol' Reliable", "A family heirloom, your dad gave it to you a long time ago and it has since worn down", 0,2,[])], null)>>

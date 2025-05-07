@@ -1294,10 +1294,6 @@ Your gaze falls to the metal augments adorning your body. You nearly can&#39;t r
 
 [[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="173" name="Cassidy Start" tags="" position="350,2225" size="100,100">&lt;&lt;set $CorpoBounties = [&quot;retrieve rent&quot;,&quot;whistleblower&quot;,&quot;gamblers fallacy&quot;,&quot;the train station&quot;]&gt;&gt;
 Go to the [[bounty board | Bounty Board]]
-&lt;&lt;set $rent_done = false&gt;&gt;
-&lt;&lt;set $whistleblown = false&gt;&gt;
-&lt;&lt;set $gambled = false&gt;&gt;
-&lt;&lt;set $trained = false&gt;&gt;
 &lt;&lt;set $corpo1 to new Bounty(&quot;retrieve rent&quot;, &quot;Collect a local pubs overdue rent.&quot;, &quot;available&quot;, 150, -10, -2, &quot;hard&quot;,[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;
 &lt;&lt;set $corpo2 to new Bounty(&quot;whistleblower&quot;, &quot;Prevent a corporate whistleblower from releasing his findings.&quot;, &quot;available&quot;, 250, -15, -10, &quot;intermediate&quot;,[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;
 &lt;&lt;set $corpo3 to new Bounty(&quot;gamblers fallacy&quot;, &quot;Hunt down a notorious gambler and end his winning streak.&quot;, &quot;available&quot;, 250, -5, -1, &quot;intermediate&quot;[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;
@@ -1437,6 +1433,11 @@ The woman lies sobbing behind him, her legs unrecognizable.
 &lt;&lt;set $diceroll to 0&gt;&gt;
 &lt;&lt;set $humanity to 150&gt;&gt;
 &lt;&lt;set $fame to 0&gt;&gt;
+
+&lt;&lt;set $rent_done = false&gt;&gt;
+&lt;&lt;set $whistleblown = false&gt;&gt;
+&lt;&lt;set $gambled = false&gt;&gt;
+&lt;&lt;set $trained = false&gt;&gt;
 
 
 
