@@ -278,7 +278,77 @@ We've got some good stuff in. Why don't you take a look. We have...
 <<for _item range $theirongiantShops>>
 <<= [[_item.name]]>>
 <</for>>
-[[Leave | Visit City]]
+
+<<if $money < 2>>[[You can't afford anthing | Visit City]]<</if>>
+
+<<if $money > 2>>[[Purchase Leg Replacement | Leg]]<</if>>
+
+<<if $money > 7>>[[Purchase the Final Step | final step]]<</if>>
+
+<<if $money > 5>>[[Purchase Rebar | rebar]]<</if>>
+
+<<if $money > 7>>[[Purchase Firearm | firearm]]<</if>>
+
+:: Leg
+An augment for your leg (duh). It's a rusty piece of metal that vaguely looks like a leg... It's only slightly better than your own.
+Cost: 2
+
+[[Nevermind | ec.augmentlist1]]
+[[Buy Leg]]
+
+:: Buy Leg
+The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of rusted metal.
+<<set$money = $money - 2>>
+<<set $power = $power + 2>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 2>>
+<<set $fame = $fame - 10>>
+
+
+:: final step
+A slightly less rusty leg with some bronze detailing. The heel has a sharp piece of metal which could be used to kick someone with... YEOWCH.
+Cost: 7
+
+[[Nevermind | ec.augmentlist1]]
+[[Buy final step]]
+
+:: Buy final step
+The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of elegantly designed metal. For some reason, you feel like kicking someone.
+<<set$money = $money - 7>>
+<<set $power = $power + 2>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 2>>
+<<set $fame = $fame - 10>>
+
+:: rebar
+A rusty metal arm that is held together by welding burns and prayers. Might help lift... might seize up.
+Cost: 5
+
+[[Nevermind | ec.augmentlist1]]
+[[Buy rebar]]
+
+:: Buy rebar
+The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of rusted metal.
+<<set$money = $money - 5>>
+<<set $power = $power + 2>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 4>>
+<<set $fame = $fame - 10>>
+
+:: firearm
+A slightly less rusty arm with an airsoft gun attached to it... it's technically a firearm... you think.
+Cost: 7
+
+[[Nevermind | ec.augmentlist1]]
+[[Buy firearm]]
+
+:: Bur firearm
+The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of rusted metal.
+<<set$money = $money - 7>>
+<<set $power = $power + 2>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 6>>
+<<set $fame = $fame - 10>>
 
 :: ec.augments2
 The massive neon sign for Cyberwares can be seen from nearly anywhere in the city- a constant reminder of how you could improve yourself if only you could afford it. 
@@ -290,11 +360,85 @@ You are greeted by someone who is entirely more machine than man. You can see th
 [[Nothing | Visit City]]
 
 :: ec.augmentlist2
-<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["cyberwares"])])>>
+We've got some good stuff in. Why don't you take a look. We have...
+<<set $cat to new Catalog([new Augment("Oracle Optics","See the future before it happens. Oracle Optics™ delivers predictive motion tracking, target leading algorithms, and real-time behavioral analysis.","eyes",15,3,5,-30,-20,["cyberwares"]), new Augment("Opulent Crown","Headgear for the truly refined. Cast in 24 Karrot Gold threaded with rose-gold filigree,  it serves no function, and that's the point. Elegance has never been less efficient","head",100,0,0,-20,-100,["cyberwares"]), new Augment("StrikerStep VX-9","Forged from milspec alloys, this leg is a blade in disguise. It transforms into a curved cleaver for rotational attacks. They'll never see the spin coming","legs",15,4,15,-30,-30,["cyberwares"]), new Augment("HexSpitter Appendage-X","Forearm-integrated micro-munitions system. Load dart pods or neurotoxin needles. Precision targeting via ocular sync. The future of ranged subtlety.","arms",30,4,10,-30,-30,["cyberwares"])])>>
 <<set $cyberwaresShops to $cat.getItemsFromShop("cyberwares")>>
 <<for _item range $cyberwaresShops>>
-<<= _item.name>>
+<<= [[_item.name]]>>
 <</for>>
+
+<<if $money < 14.5>>[[You can not afford anything | Visit City]]<</if>>
+<<if $money > 14.5>>[[Look at the Oracle Optics | oracle]]<</if>>
+<<if $money > 99>>[[Look at the opulent crown | crown]]<</if>>
+<<if $money > 14.5>>[[Look at the Strikerstep VX-9 | striker]]<</if>>
+<<if $money > 29 >>[[Look at the Hexspitter Appendage-X | hexspit]]<</if>>
+
+:: oracle
+An augment for your eyes. See the future before it happens. Oracle optics delivers predictive motion tracking, target leading algorithms, and real-time behavioral analysis.
+Cost: 15
+
+[[Nevermind | ec.augmentlist2]]
+[[Buy | buy oracle]]
+
+:: buy oracle
+You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you seem to be able to see things in slow motion. Even the tiniest of dust particles is clear in your vision.
+<<set$money = $money - 15>>
+<<set $power = $power + 3>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 30>>
+<<set $fame = $fame - 20>>
+
+[[Leave | Visit City]]
+
+:: crown
+Headgear for the truly refined. Cast in 24 K gold and threaded with rose-gold filigree. It serves no function, and that's the point! Elegance is worth the cost.
+Cost: 100
+
+[[Nevermind | ec.augmentlist2]]
+[[Buy | buy crown]]
+
+:: buy crown
+You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you don't feel too much different. There's a weight on your head, but nothing about your senses has changed... You do feel quite fashionable though.
+<<set$money = $money - 100>>
+<<set $power = $power + 0>>
+<<set $health = $health + 0>>
+<<set $humanity = $humanity - 20>>
+<<set $fame = $fame - 100>>
+
+[[Leave | Visit City]]
+
+:: striker
+The strikerstep VX-9 is forged from milspec alloys. This leg is a blade in disguise. It transforms into a curved cleaver for rotational attacks. They'll never see the spin coming.
+Cost: 15
+
+[[Nevermind | ec.augmentlist2]]
+[[Buy | buy striker]]
+
+:: buy striker
+You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you feel barely anything where your leg once was. When you look down you see elegantly designed metal. It feels right.
+<<set$money = $money - 15>>
+<<set $power = $power + 4>>
+<<set $health = $health + 15>>
+<<set $humanity = $humanity - 30>>
+<<set $fame = $fame - 30>>
+
+[[Leave | Visit City]]
+
+:: hexspit
+The hexspitter Appendage-X, the forearms integrated ammunitions system. Load dart pods of neurotoxin needles. Includes precision targeting via ocular sync. The future of ranged subtlety.
+Cost: 30
+
+[[Nevermind | ec.augmentlist2]]
+[[Buy | buy hexspit]]
+
+:: buy hexspit
+You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you go to wipe your face only to find that where there once was skin there is now metal. It should be helpful on missions.
+<<set$money = $money - 30>>
+<<set $power = $power + 4>>
+<<set $health = $health + 10>>
+<<set $humanity = $humanity - 30>>
+<<set $fame = $fame - 30>>
+
 [[Leave | Visit City]]
 
 /* The Ashes */
@@ -323,12 +467,60 @@ When he smiles his metallic lower jaw glints under the neon lights. "Howdy partn
 [[Nothing | Visit City]]
 
 :: a.gunlist
-<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["blackmarket guns"])])>>
-<<set $blackmarketgunsShops to $cat.getItemsFromShop("blackmarket guns")>>
-<<for _item range $blackmarketgunsShops>>
-<<= _item.name>>
+We've got some good stuff in. Why don't you take a look. We have...
+<<set $cat to new Catalog([new Weapon("Pea Shooter", "An old revolver that looks 'well loved'. It's nothing fancy but it'll get the job done", 2, 4, ["blackmarket guns"]), new Weapon("Bucky", "A double barrel shot gun", 8,6,["blackmarket guns"]), new Weapon("Big Iron", "A comically large rifle", 10,8,["blackmarket guns"])])>>
+<<set $blackmarketShops to $cat.getItemsFromShop("blackmarket guns")>>
+<<for _item range $blackmarketShops>>
+<<= [[_item.name]]>>
 <</for>>
 [[Leave | Visit Ashes]]
+<<if $money < 1.5>>[[You can't afford anything here | Visit Ashes]]<</if>>
+<<if $money > 1>>[[Look at pea shooter | pea]]<</if>>
+<<if $money > 7>>[[Look at bucky | bucky]]<</if>>
+<<if $money > 9>>[[Look at big iron | iron]]<</if>>
+
+:: pea
+An old revolver that looks... well loved. It's nothing fancy, but it'll get the job done.
+Cost: 2
+
+[[Nevermind | a.gunlist]]
+[[Buy | buy pea]]
+
+:: buy pea
+The man at the stall hands over the gun to you with a grin. "Hope it treats you well."
+<<set$money = $money - 2>>
+<<set $power = $power + 4>>
+
+[[Leave | Visit Ashes]]
+
+:: bucky
+A double barrel shot gun. It has obvious signs of ware.
+Cost: 8
+
+[[Nevermind | a.gunlist]]
+[[Buy | buy bucky]]
+
+:: buy bucky
+The man at the stall hands over the gun to you with a grin. "Hope it treats you well."
+<<set$money = $money - 8>>
+<<set $power = $power + 6>>
+
+[[Leave | Visit Ashes]]
+
+:: iron
+A comically large rifle. Not sneaky, but definitely strong.
+Cost: 10
+
+[[Nevermind | a.gunlist]]
+[[Buy | buy iron]]
+
+:: buy iron
+The man at the stall hands over the gun to you with a grin. "Hope it treats you well."
+<<set$money = $money - 10>>
+<<set $power = $power + 8>>
+
+[[Leave | Visit Ashes]]
+
 
 
 :: a.augments
@@ -336,16 +528,92 @@ Most cybernetics from the Ashes come from one place. A large ramshackle storefro
 <<if $humanity > -11 >>When you walk in people look at you like a piece of fresh meat- their eyes follow you, hungry and wanting.<<else>> only a few people look your way. You fit right in with the over-the-top augments that are fitted against the skin of the people here.<</if>>
 You stop in front of a desk where a thin man with metal arms emerging from his back barely looks up at you. Behind him several augments are attached to the wall by hooks.
 [[I'd like to look at your wares | a.augmentlist]] 
-[[Nothing | Visit City]]
+[[Nothing | Visit Ashes]]
 
 :: a.augmentlist
-<<set $cat to new Catalog([new Weapon("bob", "im a silly lil cowboy", 1,2, ["forge and flame"])])>>
-<<set $forgeandflameShops to $cat.getItemsFromShop("forge and flame")>>
-<<for _item range $forgeandflameShops>>
-<<= _item.name>>
+Behind the quiet man you see plaques above the augments. They read...
+<<set $cat to new Catalog([new Augment("VisionX","The final word in adaptive sight technology. VisionX™ features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays","eyes",15,3,5,-10,-40,["forge and flame"]), new Augment("Vanta-Knife Limb Unit","Built for vertical dominance. Hydraulics deliver wall-scale jumping, and elevated agility. Mobility meets mayhem.","legs",10,3,20,-20,-20,["forge and flame"]), new Augment("GravMaul TactArm","Augmented muscle density paired with shockwave knuckle tech. Land a punch and generate a localized impact radius. Your handshake just became a hazard","arms",20,2,20,-20,-20,["forge and flame"]), new Augment("MantiEyes","The final word in adaptive sight technology. VisionX™ features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays.","eyes",15,3,5,-30,-20["forge and flame"])])>>
+<<set $forgeShops to $cat.getItemsFromShop("forge and flame")>>
+<<for _item range $forgeShops>>
+<<= [[_item.name]]>>
 <</for>>
 
+<<if $money < 9.5>>[[You can't afford anything. The man waves you away | Visit Ashes]]<</if>>
+<<if $money > 14>>[[Look at VisionX | visionx]]<</if>>
+<<if $money > 9>>[[Look at vanta-knife limb unit | vanta]]<</if>>
+<<if $money > 19>>[[Look at gravmaul tactarm | tactarm]]<</if>>
+<<if $money > 14>>[[Look at MantiEyes | mantieyes]]<</if>>
+
 [[Leave | Visit Ashes]]
+
+:: visionx
+The final world in adaptive sight technology. VisionX features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays.
+Cost: 15
+
+[[Nevermind | a.augmentlist]]
+[[Buy | buy visionx]]
+
+:: buy visionx
+You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up you can see the world clearer than you ever have before.
+<<set$money = $money - 15>>
+<<set $power = $power + 3>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 10>>
+<<set $fame = $fame - 40>>
+
+[[Leave | Visit Ashes]]
+
+:: vanta
+Built for vertical dominance. Hydraulics deliver wall-scale jumping, and elevated agility. Mobility meets mayhem.
+Cost: 10
+
+[[Nevermind | a.augmentlist]]
+[[Buy | buy vanta]]
+
+:: buy vanta
+You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up your legs feel more agile than ever before.
+<<set$money = $money - 10>>
+<<set $power = $power + 3>>
+<<set $health = $health + 20>>
+<<set $humanity = $humanity - 20>>
+<<set $fame = $fame - 20>>
+
+[[Leave | Visit Ashes]]
+
+
+:: tactarm
+Augmented muscle density paired with a shockwave knuckle tech. Land a punch and generate a loacalized impact radius. Your handshake just became a hazard.
+Cost: 20
+
+[[Nevermind | a.augmentlist]]
+[[Buy | buy tactarm]]
+
+:: buy tactarm
+You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up your arm feels stronger than ever. The metal muscles flex with your will.
+<<set$money = $money - 20>>
+<<set $power = $power + 2>>
+<<set $health = $health + 20>>
+<<set $humanity = $humanity - 20>>
+<<set $fame = $fame - 20>>
+
+:: mantieyes
+With scales like an insect these new and improved eyes offer heat sensing technology and nearly 360 vision. No one can hide from your sights with these.
+Cost: 15
+
+[[Nevermind | a.augmentlist]]
+[[Buy | buy mantieyes]]
+
+:: buy mantieyes
+You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up your vision swims for a moment. It takes you a second to focus, but when you do you can see the outline of all living things nearby.
+<<set$money = $money - 15>>
+<<set $power = $power + 3>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 30>>
+<<set $fame = $fame - 20>>
+
+[[Leave | Visit Ashes]]
+
+
 
 /* Church Town */
 
