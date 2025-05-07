@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://1F012455-6A83-4CCB-BCB1-49B9D77D4E03// --><tw-storydata name="My Twine Game" startnode="77" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="1F012455-6A83-4CCB-BCB1-49B9D77D4E03" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+	<!-- UUID://1F012455-6A83-4CCB-BCB1-49B9D77D4E03// --><tw-storydata name="My Twine Game" startnode="232" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="1F012455-6A83-4CCB-BCB1-49B9D77D4E03" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 /*The body is everything displayed in the main text delivery area*/
 body {
 	background: #685f4d ;
@@ -838,11 +838,7 @@ Thank you for your help...us cowpunks need to work together instead of taking ea
 Welp, here&#39;s [[your reward.|Bounty4 Reward 2]]&quot;
 
 /* TODO: Add home location */</tw-passagedata><tw-passagedata pid="75" name="Bounty4 Reward 2" tags="" position="600,975" size="100,100">&lt;&lt;set $money = $money + 20&gt;&gt;
-You take the money and [[head back to your house.|Bounties]] Cattle Run is safe again.</tw-passagedata><tw-passagedata pid="76" name="Caitlin Start" tags="" position="725,975" size="100,100">Caitlin file</tw-passagedata><tw-passagedata pid="77" name="Start" tags="" position="850,975" size="100,100">&lt;&lt;link &quot;Andrew&quot; &quot;Bounties&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Caitlin&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Cassidy&quot; &quot;Cassidy Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Kai&quot; &quot;Kai Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Megan&quot; &quot;Megan Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="Map" tags="" position="975,975" size="100,100">You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]</tw-passagedata><tw-passagedata pid="79" name="locations" tags="" position="1100,975" size="100,100">[[Cattle&#39;s Run | Cow Town]]
+You take the money and [[head back to your house.|Bounties]] Cattle Run is safe again.</tw-passagedata><tw-passagedata pid="76" name="Caitlin Start" tags="" position="725,975" size="100,100">Caitlin file</tw-passagedata><tw-passagedata pid="77" name="Map" tags="" position="850,975" size="100,100">You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]</tw-passagedata><tw-passagedata pid="78" name="locations" tags="" position="975,975" size="100,100">[[Cattle&#39;s Run | Cow Town]]
     
     [[Home | Your house]]
     
@@ -852,9 +848,9 @@ You take the money and [[head back to your house.|Bounties]] Cattle Run is safe 
 
     [[Devil&#39;s Pass | Desert]]
 
-/* Cattle&#39;s Run */</tw-passagedata><tw-passagedata pid="80" name="Cow Town" tags="" position="1225,975" size="100,100">A large old timey rural town. Compared to the lights and glamour of the city it almost feels out of place- like it is meant to be from another time.
+/* Cattle&#39;s Run */</tw-passagedata><tw-passagedata pid="79" name="Cow Town" tags="" position="1100,975" size="100,100">A large old timey rural town. Compared to the lights and glamour of the city it almost feels out of place- like it is meant to be from another time.
 
-[[Visit | Visit Town]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="81" name="Visit Town" tags="" position="100,1100" size="100,100">No matter how many times you&#39;ve been here its striking how different Cattle&#39;s Run is from the city. 
+[[Visit | Visit Town]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="80" name="Visit Town" tags="" position="1225,975" size="100,100">No matter how many times you&#39;ve been here its striking how different Cattle&#39;s Run is from the city. 
 The squat wooden buildings line a central dirt road that radiates warmth from the sun. 
 As you walk in, some people look your way; &lt;&lt;if $humanity &gt; -21 &gt;&gt;an older gentleman tips his hat to you.&lt;&lt;else&gt;&gt;a woman who had been sitting on her porch takes one glance at you before going indoors. 
 You can faintly hear the sound of the deadbolt being slid in.&lt;&lt;/if&gt;&gt;
@@ -864,52 +860,54 @@ You recognize an [[old friend | Friend]] among their lots.
 Right in the center of town the liquor store is guarded by an old looking [[dog. | Dog]]
 
 [[Look at bounties | Bounties]]
-[[Go somewhere else | locations]]</tw-passagedata><tw-passagedata pid="82" name="cr.gun" tags="" position="225,1100" size="100,100">&lt;&lt;if $humanity &gt; -1 &gt;&gt; An older man with a bowler hat and a well-groomed mustache waves to you as you enter. &quot;Good to see you in. Whatcha lookin&#39; for today?&quot; [[I&#39;d like to look at your wares | cr.gunlist]] 
+[[Go somewhere else | locations]]</tw-passagedata><tw-passagedata pid="81" name="cr.gun" tags="" position="100,1100" size="100,100">&lt;&lt;if $humanity &gt; -1 &gt;&gt; An older man with a bowler hat and a well-groomed mustache waves to you as you enter. &quot;Good to see you in. Whatcha lookin&#39; for today?&quot; [[I&#39;d like to look at your wares | cr.gunlist]] 
 [[Nothing | Visit Town ]]&lt;&lt;elseif $humanity &gt; -41 &gt;&gt;You walk into the store and the older usually kind store owner gives you a cold look. 
 He nods to you, but his eyes never quiet meet your own. His voice is more clipped than usual as he opens up his drawer, revealing the firearms inside. &quot;What do you want?&quot; [[I&#39;d like to look at your wares | cr.gunlist]] 
-[[Nothing | Visit Town ]]&lt;&lt;else&gt;&gt;Your spurs jingle across the wooden steps into the store, but as you reach out to push the door open you hear a click. The door doesn&#39;t budge. From the windows you can see a light flicker off as the curtains are pulled tight. [[Leave | Visit Town]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="cr.gunlist" tags="" position="350,1100" size="100,100">We&#39;ve got some good stuff in. Why don&#39;t you take a look. We have...
+[[Nothing | Visit Town ]]&lt;&lt;else&gt;&gt;Your spurs jingle across the wooden steps into the store, but as you reach out to push the door open you hear a click. The door doesn&#39;t budge. From the windows you can see a light flicker off as the curtains are pulled tight. [[Leave | Visit Town]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="cr.gunlist" tags="" position="225,1100" size="100,100">We&#39;ve got some good stuff in. Why don&#39;t you take a look. We have...
 &lt;&lt;set $catalog to new Catalog([new Augment(&quot;Crossover Frequency&quot;, &quot;Dynamically splits and prioritizes incoming sounds allowing you to isolate even the quietest of noises. Achive perfect auditory balance.&quot;, &quot;ears&quot;, 15, 3, 5, -15, -20,[&quot;deadeye&quot;]), new Augment(&quot;Neuralink&quot;,&quot;With the newest cybernetic tech you can now think faster than ever!&quot;,&quot;brain&quot;,40,4,10,-50,-40,[&quot;deadeye&quot;]), new Augment(&quot;The CORE&quot;,&quot;Your cardiovascular system will thank you with this new and approved CORE!&quot;, &quot;heart&quot;,80,5,25,-80,-80,[&quot;deadeye&quot;])])&gt;&gt;
 &lt;&lt;set $deadeyeShops to $catalog.getItemsFromShop(&quot;deadeye&quot;)&gt;&gt;
 &lt;&lt;for _item range $deadeyeShops&gt;&gt;
 &lt;&lt;= [[_item.name]]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
+You currently have &lt;&lt;= $money &gt;&gt;
+
 &lt;&lt;if $money &gt;14.5&gt;&gt;[[Purchase Augments | BuyCR]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $money &lt;1&gt;&gt;[[You can&#39;t afford anything | Visit Town]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="BuyCR" tags="" position="475,1100" size="100,100">&lt;&lt;if $money &gt; 14&gt;&gt;[[Purchase Crossover Frequency]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $money &lt;1&gt;&gt;[[You can&#39;t afford anything | Visit Town]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="BuyCR" tags="" position="350,1100" size="100,100">&lt;&lt;if $money &gt; 14&gt;&gt;[[Purchase Crossover Frequency]]&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $money &gt; 39&gt;&gt;[[Purchase Neuralink]]&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $money &gt; 79&gt;&gt;[[Purchase The CORE]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="Purchase Crossover Frequency" tags="" position="600,1100" size="100,100">An augment for your ears. It dynamically splits and prioritizes incoming sounds, allowing you to isolate even the quietest of noises. Achieve perfect auditory balance.
+&lt;&lt;if $money &gt; 79&gt;&gt;[[Purchase The CORE]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="Purchase Crossover Frequency" tags="" position="475,1100" size="100,100">An augment for your ears. It dynamically splits and prioritizes incoming sounds, allowing you to isolate even the quietest of noises. Achieve perfect auditory balance.
 Cost: 15
 [[Buy | Crossover]]
-[[I&#39;ve changed my mind | cr.gunlist]]</tw-passagedata><tw-passagedata pid="86" name="Purchase Neuralink" tags="" position="725,1100" size="100,100">An augment for your brain. With the newest tech you can now think sharper than ever!
+[[I&#39;ve changed my mind | cr.gunlist]]</tw-passagedata><tw-passagedata pid="85" name="Purchase Neuralink" tags="" position="600,1100" size="100,100">An augment for your brain. With the newest tech you can now think sharper than ever!
 Cost: 40
 [[Buy | Neuralink]]
-[[I&#39;ve changed my mind | cr.gunlist]]</tw-passagedata><tw-passagedata pid="87" name="Purchase The CORE" tags="" position="850,1100" size="100,100">Your cardiovascular system will thank you for this new and improved CORE!
+[[I&#39;ve changed my mind | cr.gunlist]]</tw-passagedata><tw-passagedata pid="86" name="Purchase The CORE" tags="" position="725,1100" size="100,100">Your cardiovascular system will thank you for this new and improved CORE!
 Cost: 80
 [[Buy | CORE]]
-[[I&#39;ve changed my mind | cr.gunlist]]</tw-passagedata><tw-passagedata pid="88" name="CORE" tags="" position="975,1100" size="100,100">The older man lays you down on the makeshift operating table to perform the surgery. it doesn&#39;t take long, and when you wake up you can feel your blood rushing through your veins.
+[[I&#39;ve changed my mind | cr.gunlist]]</tw-passagedata><tw-passagedata pid="87" name="CORE" tags="" position="850,1100" size="100,100">The older man lays you down on the makeshift operating table to perform the surgery. it doesn&#39;t take long, and when you wake up you can feel your blood rushing through your veins.
 &lt;&lt;set$money = $money - 80&gt;&gt;
 &lt;&lt;set $power = $power + 5&gt;&gt;
 &lt;&lt;set $health = $health + 25&gt;&gt;
 &lt;&lt;set $humanity = $humanity - 80&gt;&gt;
 &lt;&lt;set $fame = $fame - 80&gt;&gt;
 
-[[Leave | Visit Town]]</tw-passagedata><tw-passagedata pid="89" name="Crossover" tags="" position="1100,1100" size="100,100">The older man lays you down on the makeshift opperating table to perform the surgery. It doesn&#39;t take long, and when you wake up you swear you can hear conversation from across town perfectly.
+[[Leave | Visit Town]]</tw-passagedata><tw-passagedata pid="88" name="Crossover" tags="" position="975,1100" size="100,100">The older man lays you down on the makeshift opperating table to perform the surgery. It doesn&#39;t take long, and when you wake up you swear you can hear conversation from across town perfectly.
 &lt;&lt;set$money = $money - 15&gt;&gt;
 &lt;&lt;set $power = $power + 3&gt;&gt;
 &lt;&lt;set $health = $health + 5&gt;&gt;
 &lt;&lt;set $humanity = $humanity - 15&gt;&gt;
 &lt;&lt;set $fame = $fame - 20&gt;&gt;
 
-[[Leave | Visit Town]]</tw-passagedata><tw-passagedata pid="90" name="Neuralink" tags="" position="1225,1100" size="100,100">The older man lays you down on the makeshift opperating table to perform the surgery. It doesn&#39;t take long, and when you wake up you can feel your thoughts running as fast as a bullet.
+[[Leave | Visit Town]]</tw-passagedata><tw-passagedata pid="89" name="Neuralink" tags="" position="1100,1100" size="100,100">The older man lays you down on the makeshift opperating table to perform the surgery. It doesn&#39;t take long, and when you wake up you can feel your thoughts running as fast as a bullet.
 &lt;&lt;set$money = $money - 40&gt;&gt;
 &lt;&lt;set $power = $power + 4&gt;&gt;
 &lt;&lt;set $health = $health + 10&gt;&gt;
 &lt;&lt;set $humanity = $humanity - 50&gt;&gt;
 &lt;&lt;set $fame = $fame - 40&gt;&gt;
 
-[[Leave | Visit Town]]</tw-passagedata><tw-passagedata pid="91" name="cr.item" tags="" position="100,1225" size="100,100">The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
+[[Leave | Visit Town]]</tw-passagedata><tw-passagedata pid="90" name="cr.item" tags="" position="1225,1100" size="100,100">The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
 People come in and out frequently, and the brass chimes hanging by the door ring every few seconds.
 
 &lt;&lt;if $humanity &gt; -1 &gt;&gt; As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. &quot;Good to see you darlin&#39; What are you in for?&quot; [[I&#39;d like to look at your wares | cr.itemlist]] 
@@ -919,15 +917,15 @@ Her eyes scan you up and down and her lips twitch down into a small frown.
 She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter. [[I&#39;d like to look at your wares | cr.itemlist]] 
 [[Nothing | Visit Town ]]&lt;&lt;else&gt;&gt;
 You walk up to the grocery store, but as you try to push the door open you are met with resistance. 
-The people still around on the street watch you with bairly hidden disdain.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="cr.itemlist" tags="" position="225,1225" size="100,100">item 1
+The people still around on the street watch you with bairly hidden disdain.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="cr.itemlist" tags="" position="100,1225" size="100,100">item 1
 
 item 2
 
-item 3</tw-passagedata><tw-passagedata pid="93" name="Friend" tags="" position="350,1225" size="100,100">Tom, an old childhood friend can be found selling meat at the local market. 
+item 3</tw-passagedata><tw-passagedata pid="92" name="Friend" tags="" position="225,1225" size="100,100">Tom, an old childhood friend can be found selling meat at the local market. 
 He used to do what you do, but after a bad incident he decided it was best for him to settle down and work at his family&#39;s ranch. 
-&lt;&lt;if $humanity &gt; -1 &gt;&gt;He waves to you, with a wide smile.&lt;&lt;else&gt;&gt;You can tell he saw you by the way he tenses, but his eyes don&#39;t quiet meet your own.&lt;&lt;/if&gt;&gt; [[Keep walking | Visit Town]]</tw-passagedata><tw-passagedata pid="94" name="Dog" tags="" position="475,1225" size="100,100">Outside the old run down liquor store an old stray mutt sits passively. 
+&lt;&lt;if $humanity &gt; -1 &gt;&gt;He waves to you, with a wide smile.&lt;&lt;else&gt;&gt;You can tell he saw you by the way he tenses, but his eyes don&#39;t quiet meet your own.&lt;&lt;/if&gt;&gt; [[Keep walking | Visit Town]]</tw-passagedata><tw-passagedata pid="93" name="Dog" tags="" position="350,1225" size="100,100">Outside the old run down liquor store an old stray mutt sits passively. 
 The brown fluffy thing is curled up into a ball, allowing its long droopy ears to waterfall over its stubby legs. 
-It&#39;s cute in an ugly way. As you pass by the dog&#39;s nose twitches. [[Ignore it | Ignore Dog]] or [[Pet the dog | Pet]]</tw-passagedata><tw-passagedata pid="95" name="Ignore Dog" tags="" position="600,1225" size="100,100">The dog&#39;s tail wags lazily as you [[pass by. | Visit Town]] It almost seems disappointed.</tw-passagedata><tw-passagedata pid="96" name="Pet" tags="" position="725,1225" size="100,100">&lt;&lt;if $humanity &gt; -30 &gt;&gt;You bend down to offer the old dog your hand. 
+It&#39;s cute in an ugly way. As you pass by the dog&#39;s nose twitches. [[Ignore it | Ignore Dog]] or [[Pet the dog | Pet]]</tw-passagedata><tw-passagedata pid="94" name="Ignore Dog" tags="" position="475,1225" size="100,100">The dog&#39;s tail wags lazily as you [[pass by. | Visit Town]] It almost seems disappointed.</tw-passagedata><tw-passagedata pid="95" name="Pet" tags="" position="600,1225" size="100,100">&lt;&lt;if $humanity &gt; -30 &gt;&gt;You bend down to offer the old dog your hand. 
 Its wet nose brushes against your gloved hand as it sniffs you. 
 It seems to consider you for a moment before lazily rolling over for you to scratch its stomach. 
 By the time you [[stand back up | Visit Town]] the dog has fallen back asleep. &lt;&lt;else&gt;&gt; You bend down to offer the old dog your hand. 
@@ -936,11 +934,11 @@ It seems to consider you for a moment before its tail&#39;s steady wag comes to 
 A soft growl emenates from its chest. 
 You [[stand back up | Visit Town]] before the dog can bite you.&lt;&lt;/if&gt;&gt;
 
-/* House */</tw-passagedata><tw-passagedata pid="97" name="Your house" tags="" position="850,1225" size="100,100">An old rickety shed right outside Cattle&#39;s Run. You&#39;ve lived here for ages after some hermit sold the place. It&#39;s not nice, but it&#39;s a safe place to lie low for a while.
+/* House */</tw-passagedata><tw-passagedata pid="96" name="Your house" tags="" position="725,1225" size="100,100">An old rickety shed right outside Cattle&#39;s Run. You&#39;ve lived here for ages after some hermit sold the place. It&#39;s not nice, but it&#39;s a safe place to lie low for a while.
 
-[[Visit | Visit House]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="98" name="Visit House" tags="" position="975,1225" size="100,100">The old rickety door swings open with a whine of its rusted hinges. Light streams in from the thin curtains that cover the small window above your bed. An old dusty [[picture frame | Look]] glints under the light. Even so, [[the room | Bedroom]] feels homey and safe.</tw-passagedata><tw-passagedata pid="99" name="Look" tags="" position="1100,1225" size="100,100">You wipe the dust off with your gloved fingers. Under the thick coat of dirt two familiar faces stare back at you. Your parents left this world [[long before their time | Parents]]. Sometimes you still miss them.</tw-passagedata><tw-passagedata pid="100" name="Parents" tags="" position="1225,1225" size="100,100">Your parents died in the city doing the same work you do now. &lt;&lt;if $humanity &gt; -41 &gt;&gt;It makes you wonder if you shouldn&#39;t just setlle down in Cattle&#39;s Run&lt;&lt;else&gt;&gt;You can&#39;t find it in yourself to care.&lt;&lt;/if&gt;&gt;
+[[Visit | Visit House]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="97" name="Visit House" tags="" position="850,1225" size="100,100">The old rickety door swings open with a whine of its rusted hinges. Light streams in from the thin curtains that cover the small window above your bed. An old dusty [[picture frame | Look]] glints under the light. Even so, [[the room | Bedroom]] feels homey and safe.</tw-passagedata><tw-passagedata pid="98" name="Look" tags="" position="975,1225" size="100,100">You wipe the dust off with your gloved fingers. Under the thick coat of dirt two familiar faces stare back at you. Your parents left this world [[long before their time | Parents]]. Sometimes you still miss them.</tw-passagedata><tw-passagedata pid="99" name="Parents" tags="" position="1100,1225" size="100,100">Your parents died in the city doing the same work you do now. &lt;&lt;if $humanity &gt; -41 &gt;&gt;It makes you wonder if you shouldn&#39;t just setlle down in Cattle&#39;s Run&lt;&lt;else&gt;&gt;You can&#39;t find it in yourself to care.&lt;&lt;/if&gt;&gt;
 
-[[Look away from the photo | Bedroom]]</tw-passagedata><tw-passagedata pid="101" name="Bedroom" tags="" position="100,1350" size="100,100">Your boots click against the wooden floor. [[Your bed | Sleep]] calls to you after so many sleepless days. [[The pantry | Pantry]] is never fully stocked, but you&#39;re sure you could find something there. Behind you [[the door | Leave House]] stands as a barrier between you and the stressors of the outside world.</tw-passagedata><tw-passagedata pid="102" name="Sleep" tags="" position="225,1350" size="100,100">&lt;&lt;if $humanity &gt; -1&gt;&gt;Sleep comes easy to you after so much time fighting for your life. You dream of a better home, a safer place. In your dream there is no more fighting- your gun is safely tucked away, only to be touched in case of emergency. People greet you as you walk past without a hint of trepidation. You awaken feeling rejuvenated.
+[[Look away from the photo | Bedroom]]</tw-passagedata><tw-passagedata pid="100" name="Bedroom" tags="" position="1225,1225" size="100,100">Your boots click against the wooden floor. [[Your bed | Sleep]] calls to you after so many sleepless days. [[The pantry | Pantry]] is never fully stocked, but you&#39;re sure you could find something there. Behind you [[the door | Leave House]] stands as a barrier between you and the stressors of the outside world.</tw-passagedata><tw-passagedata pid="101" name="Sleep" tags="" position="100,1350" size="100,100">&lt;&lt;if $humanity &gt; -1&gt;&gt;Sleep comes easy to you after so much time fighting for your life. You dream of a better home, a safer place. In your dream there is no more fighting- your gun is safely tucked away, only to be touched in case of emergency. People greet you as you walk past without a hint of trepidation. You awaken feeling rejuvenated.
 
 &lt;&lt;elseif $humanity &gt; -41 &gt;&gt;
 
@@ -950,15 +948,15 @@ Sleep doesn&#39;t come easily today. No matter what you do you can&#39;t seem to
 
 No matter how hard you try you can&#39;t seem to fall asleep. Your mind is awake, powered by metal and wires rather than blood and muscle. You stay there for a few more minutes before giving up.&lt;&lt;/if&gt;&gt;
 
-You [[stand up | Leave House]] from bed, ready to go about the rest of your day.</tw-passagedata><tw-passagedata pid="103" name="Pantry" tags="" position="350,1350" size="100,100">You open the pantry door and are met with a few dented cans of food. It&#39;s not much, but you can [[have a snack | Snack]] if you would like.</tw-passagedata><tw-passagedata pid="104" name="Snack" tags="" position="475,1350" size="100,100">You crack open a can of black beans with a small pocket knife and sit down at the small one-seat table in the middle of your bedroom. &lt;&lt;if $humanity &gt; -41&gt;&gt;You eat it slowly, savoring the meal like its your last since it very well could be.&lt;&lt;else&gt;&gt; It takes you a moment for you to realize you don&#39;t feel hungry... You don&#39;t feel anything anymore. This is pointless.&lt;&lt;/if&gt;&gt;
+You [[stand up | Leave House]] from bed, ready to go about the rest of your day.</tw-passagedata><tw-passagedata pid="102" name="Pantry" tags="" position="225,1350" size="100,100">You open the pantry door and are met with a few dented cans of food. It&#39;s not much, but you can [[have a snack | Snack]] if you would like.</tw-passagedata><tw-passagedata pid="103" name="Snack" tags="" position="350,1350" size="100,100">You crack open a can of black beans with a small pocket knife and sit down at the small one-seat table in the middle of your bedroom. &lt;&lt;if $humanity &gt; -41&gt;&gt;You eat it slowly, savoring the meal like its your last since it very well could be.&lt;&lt;else&gt;&gt; It takes you a moment for you to realize you don&#39;t feel hungry... You don&#39;t feel anything anymore. This is pointless.&lt;&lt;/if&gt;&gt;
 
-[[Throw out the can | Trash]]</tw-passagedata><tw-passagedata pid="105" name="Trash" tags="" position="600,1350" size="100,100">You throw the can into the small bin thats functioned as your trash for years before heading for [[the door | Leave House]].</tw-passagedata><tw-passagedata pid="106" name="Leave House" tags="" position="725,1350" size="100,100">You make sure to lock the door behind you as you face the sprawling desert outside. The wind whips against your face, beckoning you forward. In an odd way its emptiness is beautiful, but you have no time to appreciate its glory. You [[open your map | locations]] to figure out where to go next.
+[[Throw out the can | Trash]]</tw-passagedata><tw-passagedata pid="104" name="Trash" tags="" position="475,1350" size="100,100">You throw the can into the small bin thats functioned as your trash for years before heading for [[the door | Leave House]].</tw-passagedata><tw-passagedata pid="105" name="Leave House" tags="" position="600,1350" size="100,100">You make sure to lock the door behind you as you face the sprawling desert outside. The wind whips against your face, beckoning you forward. In an odd way its emptiness is beautiful, but you have no time to appreciate its glory. You [[open your map | locations]] to figure out where to go next.
 
-/* Ember City */</tw-passagedata><tw-passagedata pid="107" name="City" tags="" position="850,1350" size="100,100">A sprawling urban city with large skyscrapers and a constant blanket of light and smog. 
+/* Ember City */</tw-passagedata><tw-passagedata pid="106" name="City" tags="" position="725,1350" size="100,100">A sprawling urban city with large skyscrapers and a constant blanket of light and smog. 
 The people here reak of wealth. 
 Underneath the city&#39;s image lies another name [[The Ashes | Ashes]]
 
-[[Visit | Visit City]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="108" name="Visit City" tags="" position="975,1350" size="100,100">The neon lights and constant blanket of noise welcome you into the city. Skyscrapers tower above you like mountain tops you could never hope to climb. 
+[[Visit | Visit City]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="107" name="Visit City" tags="" position="850,1350" size="100,100">The neon lights and constant blanket of noise welcome you into the city. Skyscrapers tower above you like mountain tops you could never hope to climb. 
 People pass by without offering you a second glance as they go about their days. And there it is: [[the bounty board | Cassidy Start]], the pieces of paper touting tantalizing sums of money on it calling your name as you walk by.
 
 There are numerous stores here, but you know the best ones... at least for your needs. 
@@ -969,7 +967,7 @@ There&#39;s also [[a fancy shop | ec.augments2]] uptown where the more well-off 
 
 Towering above the rest of the city, like its own personal sun, the glowing lights of the Blue Flame Casino cast a dim light upon the other steal and glass buildings around it.
 
-[[Leave the city | locations]]</tw-passagedata><tw-passagedata pid="109" name="Casino" tags="" position="1100,1350" size="100,100">The giant sign above the casino with its colored lights that twinkle like stars seems to call you in. 
+[[Leave the city | locations]]</tw-passagedata><tw-passagedata pid="108" name="Casino" tags="" position="975,1350" size="100,100">The giant sign above the casino with its colored lights that twinkle like stars seems to call you in. 
 The smell of smoke strengthens as you get closer, but if anything it nearly feels comforting- like a blanket pulled tight on a cold afternoon. 
 The security... robots? 
 
@@ -980,7 +978,7 @@ You&#39;re not sure what they are anymore, but they don&#39;t even look your way
 In the lobby there are several tables set up with dealers ready to play. The dealers themselves are some of the most augmented people you&#39;ve ever seen- their entire faces transformed into an amalgamation of wires and lights. 
 You can [[sit down at a table | Gamble]] or [[go further in | investigate casino]]
 
-[[leave casino | Visit City]].</tw-passagedata><tw-passagedata pid="110" name="Gamble" tags="" position="1225,1350" size="100,100">You sit down at a spider&#39;s eyes table and nod your head to the dealer. Its a simple game, one you played often in your youth. Both you and the dealer roll a die and whoever rolls the highest wins. The dealer is wearing one of the cleanest suits you&#39;ve ever seen, its crisp black fabric is embroidered with gold thread along the lapels. He seems mostly human although you can&#39;t quite tell if the visor that wraps around his head is removable or not. Even still his voice sounds human enough. &quot;[[Your wager? | Wager]]&quot;</tw-passagedata><tw-passagedata pid="111" name="Wager" tags="" position="100,1475" size="100,100"></tw-passagedata><tw-passagedata pid="112" name="investigate casino" tags="" position="225,1475" size="100,100">The hustle and bustle of people here is nearly overwhelming.</tw-passagedata><tw-passagedata pid="113" name="ec.augments1" tags="" position="350,1475" size="100,100">&lt;&lt;if $humanity &gt; 1 &gt;&gt;The husband greets you as you walk in, his one metal arm that he&#39;d gotten done not too long ago still shines brightly- not a single scratch or dent in sight. &quot;Hey partner, what you in for today?&quot; [[I&#39;d like to look at your wares | ec.augmentlist1]] 
+[[leave casino | Visit City]].</tw-passagedata><tw-passagedata pid="109" name="Gamble" tags="" position="1100,1350" size="100,100">You sit down at a spider&#39;s eyes table and nod your head to the dealer. Its a simple game, one you played often in your youth. Both you and the dealer roll a die and whoever rolls the highest wins. The dealer is wearing one of the cleanest suits you&#39;ve ever seen, its crisp black fabric is embroidered with gold thread along the lapels. He seems mostly human although you can&#39;t quite tell if the visor that wraps around his head is removable or not. Even still his voice sounds human enough. &quot;[[Your wager? | Wager]]&quot;</tw-passagedata><tw-passagedata pid="110" name="Wager" tags="" position="1225,1350" size="100,100"></tw-passagedata><tw-passagedata pid="111" name="investigate casino" tags="" position="100,1475" size="100,100">The hustle and bustle of people here is nearly overwhelming.</tw-passagedata><tw-passagedata pid="112" name="ec.augments1" tags="" position="225,1475" size="100,100">&lt;&lt;if $humanity &gt; 1 &gt;&gt;The husband greets you as you walk in, his one metal arm that he&#39;d gotten done not too long ago still shines brightly- not a single scratch or dent in sight. &quot;Hey partner, what you in for today?&quot; [[I&#39;d like to look at your wares | ec.augmentlist1]] 
 [[Nothing | Visit City]]
 
 &lt;&lt;elseif $humanity &gt; -31 &gt;&gt;
@@ -997,12 +995,14 @@ The wife smiles widely at you as you enter, her long flowing black hair seems to
 &lt;&lt;else&gt;&gt;
 
 &quot;Oh darlin&#39; theres nothing more we can do for you. I hope some of you is still in there, would be a shame to loose you.&quot;&lt;&lt;/if&gt;&gt;
-[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="114" name="ec.augmentlist1" tags="" position="475,1475" size="100,100">We&#39;ve got some good stuff in. Why don&#39;t you take a look. We have...
+[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="113" name="ec.augmentlist1" tags="" position="350,1475" size="100,100">We&#39;ve got some good stuff in. Why don&#39;t you take a look. We have...
 &lt;&lt;set $catalog to new Catalog([new Augment(&quot;&#39;Leg&#39; Replacement&quot;,&quot;A rusty piece of metal that is vaguley leg looking. It is clearly handmade&quot;, &quot;legs&quot;, 2,2,5,-2,-10,[&quot;the iron giant&quot;]), new Augment(&quot;The Final Step&quot;, &quot;A slightly less rusty leg with some bronze detailing. The heel has a sharp piece of metal which could be used to kick someone with YEEOWCH&quot;,&quot;legs&quot;,7,2,5,-2,-10,[&quot;the iron giant&quot;]), new Augment(&quot;Rebar&quot;, &quot;A metal Arm which is held together with welding burns and prayers. Might lift, might seize up&quot;, &quot;arms&quot;, 5,2,5,-4,-10,[&quot;the iron giant&quot;]), new Augment(&quot;Firearm&quot;,&quot;A slightly less rusty arm with an airsoft gun attached to it.Technically a firearm. Technically&quot;, &quot;arms&quot;, 7,2,5,-6,-10,[&quot;the iron giant&quot;])])&gt;&gt;
 &lt;&lt;set $theirongiantShops to $catalog.getItemsFromShop(&quot;the iron giant&quot;)&gt;&gt;
 &lt;&lt;for _item range $theirongiantShops&gt;&gt;
 &lt;&lt;= [[_item.name]]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
+
+You currently have &lt;&lt;= $money &gt;&gt;
 
 &lt;&lt;if $money &lt; 2&gt;&gt;[[You can&#39;t afford anthing | Visit City]]&lt;&lt;/if&gt;&gt;
 
@@ -1012,97 +1012,99 @@ The wife smiles widely at you as you enter, her long flowing black hair seems to
 
 &lt;&lt;if $money &gt; 5&gt;&gt;[[Purchase Rebar | rebar]]&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $money &gt; 7&gt;&gt;[[Purchase Firearm | firearm]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="Leg" tags="" position="600,1475" size="100,100">An augment for your leg (duh). It&#39;s a rusty piece of metal that vaguely looks like a leg... It&#39;s only slightly better than your own.
+&lt;&lt;if $money &gt; 7&gt;&gt;[[Purchase Firearm | firearm]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Leg" tags="" position="475,1475" size="100,100">An augment for your leg (duh). It&#39;s a rusty piece of metal that vaguely looks like a leg... It&#39;s only slightly better than your own.
 Cost: 2
 
 [[Nevermind | ec.augmentlist1]]
-[[Buy Leg]]</tw-passagedata><tw-passagedata pid="116" name="Buy Leg" tags="" position="725,1475" size="100,100">The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of rusted metal.
+[[Buy Leg]]</tw-passagedata><tw-passagedata pid="115" name="Buy Leg" tags="" position="600,1475" size="100,100">The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of rusted metal.
 &lt;&lt;set$money = $money - 2&gt;&gt;
 &lt;&lt;set $power = $power + 2&gt;&gt;
 &lt;&lt;set $health = $health + 5&gt;&gt;
 &lt;&lt;set $humanity = $humanity - 2&gt;&gt;
-&lt;&lt;set $fame = $fame - 10&gt;&gt;</tw-passagedata><tw-passagedata pid="117" name="final step" tags="" position="850,1475" size="100,100">A slightly less rusty leg with some bronze detailing. The heel has a sharp piece of metal which could be used to kick someone with... YEOWCH.
+&lt;&lt;set $fame = $fame - 10&gt;&gt;</tw-passagedata><tw-passagedata pid="116" name="final step" tags="" position="725,1475" size="100,100">A slightly less rusty leg with some bronze detailing. The heel has a sharp piece of metal which could be used to kick someone with... YEOWCH.
 Cost: 7
 
 [[Nevermind | ec.augmentlist1]]
-[[Buy final step]]</tw-passagedata><tw-passagedata pid="118" name="Buy final step" tags="" position="975,1475" size="100,100">The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of elegantly designed metal. For some reason, you feel like kicking someone.
+[[Buy final step]]</tw-passagedata><tw-passagedata pid="117" name="Buy final step" tags="" position="850,1475" size="100,100">The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of elegantly designed metal. For some reason, you feel like kicking someone.
 &lt;&lt;set$money = $money - 7&gt;&gt;
 &lt;&lt;set $power = $power + 2&gt;&gt;
 &lt;&lt;set $health = $health + 5&gt;&gt;
 &lt;&lt;set $humanity = $humanity - 2&gt;&gt;
-&lt;&lt;set $fame = $fame - 10&gt;&gt;</tw-passagedata><tw-passagedata pid="119" name="rebar" tags="" position="1100,1475" size="100,100">A rusty metal arm that is held together by welding burns and prayers. Might help lift... might seize up.
+&lt;&lt;set $fame = $fame - 10&gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="rebar" tags="" position="975,1475" size="100,100">A rusty metal arm that is held together by welding burns and prayers. Might help lift... might seize up.
 Cost: 5
 
 [[Nevermind | ec.augmentlist1]]
-[[Buy rebar]]</tw-passagedata><tw-passagedata pid="120" name="Buy rebar" tags="" position="1225,1475" size="100,100">The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of rusted metal.
+[[Buy rebar]]</tw-passagedata><tw-passagedata pid="119" name="Buy rebar" tags="" position="1100,1475" size="100,100">The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of rusted metal.
 &lt;&lt;set$money = $money - 5&gt;&gt;
 &lt;&lt;set $power = $power + 2&gt;&gt;
 &lt;&lt;set $health = $health + 5&gt;&gt;
 &lt;&lt;set $humanity = $humanity - 4&gt;&gt;
-&lt;&lt;set $fame = $fame - 10&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="firearm" tags="" position="100,1600" size="100,100">A slightly less rusty arm with an airsoft gun attached to it... it&#39;s technically a firearm... you think.
+&lt;&lt;set $fame = $fame - 10&gt;&gt;</tw-passagedata><tw-passagedata pid="120" name="firearm" tags="" position="1225,1475" size="100,100">A slightly less rusty arm with an airsoft gun attached to it... it&#39;s technically a firearm... you think.
 Cost: 7
 
 [[Nevermind | ec.augmentlist1]]
-[[Buy firearm]]</tw-passagedata><tw-passagedata pid="122" name="Bur firearm" tags="" position="225,1600" size="100,100">The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of rusted metal.
+[[Buy firearm]]</tw-passagedata><tw-passagedata pid="121" name="Bur firearm" tags="" position="100,1600" size="100,100">The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of rusted metal.
 &lt;&lt;set$money = $money - 7&gt;&gt;
 &lt;&lt;set $power = $power + 2&gt;&gt;
 &lt;&lt;set $health = $health + 5&gt;&gt;
 &lt;&lt;set $humanity = $humanity - 6&gt;&gt;
-&lt;&lt;set $fame = $fame - 10&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="ec.augments2" tags="" position="350,1600" size="100,100">The massive neon sign for Cyberwares can be seen from nearly anywhere in the city- a constant reminder of how you could improve yourself if only you could afford it. 
+&lt;&lt;set $fame = $fame - 10&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="ec.augments2" tags="" position="225,1600" size="100,100">The massive neon sign for Cyberwares can be seen from nearly anywhere in the city- a constant reminder of how you could improve yourself if only you could afford it. 
 You let the sign guide you to its entrance- a massive set of pristine glass doors. 
 You are greeted by someone who is entirely more machine than man. You can see the pumps and wires pushing blood through its system.
 
 &quot;Are you looking to get enhancements?&quot; The robotic voice chirps. Even though the man&#39;s face does not move, the synthetic voice modulator purrs as if he was some pleased cat.
 [[I&#39;d like to look at your wares | ec.augmentlist2]] 
-[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="124" name="ec.augmentlist2" tags="" position="475,1600" size="100,100">We&#39;ve got some good stuff in. Why don&#39;t you take a look. We have...
+[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="123" name="ec.augmentlist2" tags="" position="350,1600" size="100,100">We&#39;ve got some good stuff in. Why don&#39;t you take a look. We have...
 &lt;&lt;set $catalog to new Catalog([new Augment(&quot;Oracle Optics&quot;,&quot;See the future before it happens. Oracle Optics™ delivers predictive motion tracking, target leading algorithms, and real-time behavioral analysis.&quot;,&quot;eyes&quot;,15,3,5,-30,-20,[&quot;cyberwares&quot;]), new Augment(&quot;Opulent Crown&quot;,&quot;Headgear for the truly refined. Cast in 24 Karrot Gold threaded with rose-gold filigree,  it serves no function, and that&#39;s the point. Elegance has never been less efficient&quot;,&quot;head&quot;,100,0,0,-20,-100,[&quot;cyberwares&quot;]), new Augment(&quot;StrikerStep VX-9&quot;,&quot;Forged from milspec alloys, this leg is a blade in disguise. It transforms into a curved cleaver for rotational attacks. They&#39;ll never see the spin coming&quot;,&quot;legs&quot;,15,4,15,-30,-30,[&quot;cyberwares&quot;]), new Augment(&quot;HexSpitter Appendage-X&quot;,&quot;Forearm-integrated micro-munitions system. Load dart pods or neurotoxin needles. Precision targeting via ocular sync. The future of ranged subtlety.&quot;,&quot;arms&quot;,30,4,10,-30,-30,[&quot;cyberwares&quot;])])&gt;&gt;
 &lt;&lt;set $cyberwaresShops to $catalog.getItemsFromShop(&quot;cyberwares&quot;)&gt;&gt;
 &lt;&lt;for _item range $cyberwaresShops&gt;&gt;
 &lt;&lt;= [[_item.name]]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
+You currently have &lt;&lt;= $money &gt;&gt;
+
 &lt;&lt;if $money &lt; 14.5&gt;&gt;[[You can not afford anything | Visit City]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $money &gt; 14.5&gt;&gt;[[Look at the Oracle Optics | oracle]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $money &gt; 99&gt;&gt;[[Look at the opulent crown | crown]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $money &gt; 14.5&gt;&gt;[[Look at the Strikerstep VX-9 | striker]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $money &gt; 29 &gt;&gt;[[Look at the Hexspitter Appendage-X | hexspit]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="oracle" tags="" position="600,1600" size="100,100">An augment for your eyes. See the future before it happens. Oracle optics delivers predictive motion tracking, target leading algorithms, and real-time behavioral analysis.
+&lt;&lt;if $money &gt; 29 &gt;&gt;[[Look at the Hexspitter Appendage-X | hexspit]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="oracle" tags="" position="475,1600" size="100,100">An augment for your eyes. See the future before it happens. Oracle optics delivers predictive motion tracking, target leading algorithms, and real-time behavioral analysis.
 Cost: 15
 
 [[Nevermind | ec.augmentlist2]]
-[[Buy | buy oracle]]</tw-passagedata><tw-passagedata pid="126" name="buy oracle" tags="" position="725,1600" size="100,100">You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you seem to be able to see things in slow motion. Even the tiniest of dust particles is clear in your vision.
+[[Buy | buy oracle]]</tw-passagedata><tw-passagedata pid="125" name="buy oracle" tags="" position="600,1600" size="100,100">You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you seem to be able to see things in slow motion. Even the tiniest of dust particles is clear in your vision.
 &lt;&lt;set$money = $money - 15&gt;&gt;
 &lt;&lt;set $power = $power + 3&gt;&gt;
 &lt;&lt;set $health = $health + 5&gt;&gt;
 &lt;&lt;set $humanity = $humanity - 30&gt;&gt;
 &lt;&lt;set $fame = $fame - 20&gt;&gt;
 
-[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="127" name="crown" tags="" position="850,1600" size="100,100">Headgear for the truly refined. Cast in 24 K gold and threaded with rose-gold filigree. It serves no function, and that&#39;s the point! Elegance is worth the cost.
+[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="126" name="crown" tags="" position="725,1600" size="100,100">Headgear for the truly refined. Cast in 24 K gold and threaded with rose-gold filigree. It serves no function, and that&#39;s the point! Elegance is worth the cost.
 Cost: 100
 
 [[Nevermind | ec.augmentlist2]]
-[[Buy | buy crown]]</tw-passagedata><tw-passagedata pid="128" name="buy crown" tags="" position="975,1600" size="100,100">You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you don&#39;t feel too much different. There&#39;s a weight on your head, but nothing about your senses has changed... You do feel quite fashionable though.
+[[Buy | buy crown]]</tw-passagedata><tw-passagedata pid="127" name="buy crown" tags="" position="850,1600" size="100,100">You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you don&#39;t feel too much different. There&#39;s a weight on your head, but nothing about your senses has changed... You do feel quite fashionable though.
 &lt;&lt;set$money = $money - 100&gt;&gt;
 &lt;&lt;set $power = $power + 0&gt;&gt;
 &lt;&lt;set $health = $health + 0&gt;&gt;
 &lt;&lt;set $humanity = $humanity - 20&gt;&gt;
 &lt;&lt;set $fame = $fame - 100&gt;&gt;
 
-[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="129" name="striker" tags="" position="1100,1600" size="100,100">The strikerstep VX-9 is forged from milspec alloys. This leg is a blade in disguise. It transforms into a curved cleaver for rotational attacks. They&#39;ll never see the spin coming.
+[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="128" name="striker" tags="" position="975,1600" size="100,100">The strikerstep VX-9 is forged from milspec alloys. This leg is a blade in disguise. It transforms into a curved cleaver for rotational attacks. They&#39;ll never see the spin coming.
 Cost: 15
 
 [[Nevermind | ec.augmentlist2]]
-[[Buy | buy striker]]</tw-passagedata><tw-passagedata pid="130" name="buy striker" tags="" position="1225,1600" size="100,100">You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you feel barely anything where your leg once was. When you look down you see elegantly designed metal. It feels right.
+[[Buy | buy striker]]</tw-passagedata><tw-passagedata pid="129" name="buy striker" tags="" position="1100,1600" size="100,100">You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you feel barely anything where your leg once was. When you look down you see elegantly designed metal. It feels right.
 &lt;&lt;set$money = $money - 15&gt;&gt;
 &lt;&lt;set $power = $power + 4&gt;&gt;
 &lt;&lt;set $health = $health + 15&gt;&gt;
 &lt;&lt;set $humanity = $humanity - 30&gt;&gt;
 &lt;&lt;set $fame = $fame - 30&gt;&gt;
 
-[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="131" name="hexspit" tags="" position="100,1725" size="100,100">The hexspitter Appendage-X, the forearms integrated ammunitions system. Load dart pods of neurotoxin needles. Includes precision targeting via ocular sync. The future of ranged subtlety.
+[[Leave | Visit City]]</tw-passagedata><tw-passagedata pid="130" name="hexspit" tags="" position="1225,1600" size="100,100">The hexspitter Appendage-X, the forearms integrated ammunitions system. Load dart pods of neurotoxin needles. Includes precision targeting via ocular sync. The future of ranged subtlety.
 Cost: 30
 
 [[Nevermind | ec.augmentlist2]]
-[[Buy | buy hexspit]]</tw-passagedata><tw-passagedata pid="132" name="buy hexspit" tags="" position="225,1725" size="100,100">You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you go to wipe your face only to find that where there once was skin there is now metal. It should be helpful on missions.
+[[Buy | buy hexspit]]</tw-passagedata><tw-passagedata pid="131" name="buy hexspit" tags="" position="100,1725" size="100,100">You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you go to wipe your face only to find that where there once was skin there is now metal. It should be helpful on missions.
 &lt;&lt;set$money = $money - 30&gt;&gt;
 &lt;&lt;set $power = $power + 4&gt;&gt;
 &lt;&lt;set $health = $health + 10&gt;&gt;
@@ -1111,64 +1113,69 @@ Cost: 30
 
 [[Leave | Visit City]]
 
-/* The Ashes */</tw-passagedata><tw-passagedata pid="133" name="Ashes" tags="" position="350,1725" size="100,100">In the deepest parts of Ember City there lies a maze of alleyways and ruins stacked on top of eachother. 
+/* The Ashes */</tw-passagedata><tw-passagedata pid="132" name="Ashes" tags="" position="225,1725" size="100,100">In the deepest parts of Ember City there lies a maze of alleyways and ruins stacked on top of eachother. 
 It&#39;s filled with those who earn their income in less trustworthy ways. 
 If you are willing to take the chance there are &quot;doctors&quot; here you can visit for cybernetics and merchants selling under the table goods. 
 The black market here thrives...just don&#39;t expect good quality.
 
-[[Visit | Visit Ashes]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="134" name="Visit Ashes" tags="" position="475,1725" size="100,100">The entrance to the ashes isn&#39;t hard to find. If you go far enough into any alleyway in the city you&#39;ll end up there. 
+[[Visit | Visit Ashes]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="133" name="Visit Ashes" tags="" position="350,1725" size="100,100">The entrance to the ashes isn&#39;t hard to find. If you go far enough into any alleyway in the city you&#39;ll end up there. 
 You choose to follow a path near one of the city&#39;s large apartment buildings. You don&#39;t have to walk long before the glitz and glamour of the city melts away into smog and ruin. 
 It&#39;s darker here, like the sun itself isn&#39;t willing to set foot within. Most people here do not have augments, but the ones who do have mechanical limbs that are massive and gaudy. 
 There are only two places here of interest to you: the [[black market | a.gun]] and [[the makeshift cybernetics store, | a.augments]] Forge and Flame.
 
-[[Go back to the city | Visit City]]</tw-passagedata><tw-passagedata pid="135" name="a.gun" tags="" position="600,1725" size="100,100">The blackmarket can be found tucked between two levels of the Ashes. Various stands vendors line the narrow street. 
+[[Go back to the city | Visit City]]</tw-passagedata><tw-passagedata pid="134" name="a.gun" tags="" position="475,1725" size="100,100">The blackmarket can be found tucked between two levels of the Ashes. Various stands vendors line the narrow street. 
 One stand in particular draws your attention, run by a dealer you&#39;ve worked with before. &lt;&lt;if $humanity &gt; -21 &gt;&gt;The man nods to you and you tip your hat in response. 
 When he smiles his metallic lower jaw glints under the neon lights. &quot;Howdy partner,&quot; he grins, &quot;Good to see you back?&quot;&lt;&lt;else&gt;&gt;The man looks at you in shock, his eyes drifting over your nearly all-metal form. &quot;Well, pall. If there&#39;s any of you left in there I guess you can see what I&#39;ve got.&quot;&lt;&lt;/if&gt;&gt;
 [[I&#39;d like to see what you have | a.gunlist]] 
-[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="136" name="a.gunlist" tags="" position="725,1725" size="100,100">We&#39;ve got some good stuff in. Why don&#39;t you take a look. We have...
+[[Nothing | Visit City]]</tw-passagedata><tw-passagedata pid="135" name="a.gunlist" tags="" position="600,1725" size="100,100">We&#39;ve got some good stuff in. Why don&#39;t you take a look. We have...
 &lt;&lt;set $catalog to new Catalog([new Weapon(&quot;Pea Shooter&quot;, &quot;An old revolver that looks &#39;well loved&#39;. It&#39;s nothing fancy but it&#39;ll get the job done&quot;, 2, 4, [&quot;blackmarket guns&quot;]), new Weapon(&quot;Bucky&quot;, &quot;A double barrel shot gun&quot;, 8,6,[&quot;blackmarket guns&quot;]), new Weapon(&quot;Big Iron&quot;, &quot;A comically large rifle&quot;, 10,8,[&quot;blackmarket guns&quot;])])&gt;&gt;
 &lt;&lt;set $blackmarketShops to $catalog.getItemsFromShop(&quot;blackmarket guns&quot;)&gt;&gt;
 &lt;&lt;for _item range $blackmarketShops&gt;&gt;
 &lt;&lt;= [[_item.name]]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
+
+You currently have &lt;&lt;= $money &gt;&gt;
+
 [[Leave | Visit Ashes]]
 &lt;&lt;if $money &lt; 1.5&gt;&gt;[[You can&#39;t afford anything here | Visit Ashes]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $money &gt; 1&gt;&gt;[[Look at pea shooter | pea]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $money &gt; 7&gt;&gt;[[Look at bucky | bucky]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $money &gt; 9&gt;&gt;[[Look at big iron | iron]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="137" name="pea" tags="" position="850,1725" size="100,100">An old revolver that looks... well loved. It&#39;s nothing fancy, but it&#39;ll get the job done.
+&lt;&lt;if $money &gt; 9&gt;&gt;[[Look at big iron | iron]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="136" name="pea" tags="" position="725,1725" size="100,100">An old revolver that looks... well loved. It&#39;s nothing fancy, but it&#39;ll get the job done.
 Cost: 2
 
 [[Nevermind | a.gunlist]]
-[[Buy | buy pea]]</tw-passagedata><tw-passagedata pid="138" name="buy pea" tags="" position="975,1725" size="100,100">The man at the stall hands over the gun to you with a grin. &quot;Hope it treats you well.&quot;
+[[Buy | buy pea]]</tw-passagedata><tw-passagedata pid="137" name="buy pea" tags="" position="850,1725" size="100,100">The man at the stall hands over the gun to you with a grin. &quot;Hope it treats you well.&quot;
 &lt;&lt;set$money = $money - 2&gt;&gt;
 &lt;&lt;set $power = $power + 4&gt;&gt;
 
-[[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="139" name="bucky" tags="" position="1100,1725" size="100,100">A double barrel shot gun. It has obvious signs of ware.
+[[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="138" name="bucky" tags="" position="975,1725" size="100,100">A double barrel shot gun. It has obvious signs of ware.
 Cost: 8
 
 [[Nevermind | a.gunlist]]
-[[Buy | buy bucky]]</tw-passagedata><tw-passagedata pid="140" name="buy bucky" tags="" position="1225,1725" size="100,100">The man at the stall hands over the gun to you with a grin. &quot;Hope it treats you well.&quot;
+[[Buy | buy bucky]]</tw-passagedata><tw-passagedata pid="139" name="buy bucky" tags="" position="1100,1725" size="100,100">The man at the stall hands over the gun to you with a grin. &quot;Hope it treats you well.&quot;
 &lt;&lt;set$money = $money - 8&gt;&gt;
 &lt;&lt;set $power = $power + 6&gt;&gt;
 
-[[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="141" name="iron" tags="" position="100,1850" size="100,100">A comically large rifle. Not sneaky, but definitely strong.
+[[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="140" name="iron" tags="" position="1225,1725" size="100,100">A comically large rifle. Not sneaky, but definitely strong.
 Cost: 10
 
 [[Nevermind | a.gunlist]]
-[[Buy | buy iron]]</tw-passagedata><tw-passagedata pid="142" name="buy iron" tags="" position="225,1850" size="100,100">The man at the stall hands over the gun to you with a grin. &quot;Hope it treats you well.&quot;
+[[Buy | buy iron]]</tw-passagedata><tw-passagedata pid="141" name="buy iron" tags="" position="100,1850" size="100,100">The man at the stall hands over the gun to you with a grin. &quot;Hope it treats you well.&quot;
 &lt;&lt;set$money = $money - 10&gt;&gt;
 &lt;&lt;set $power = $power + 8&gt;&gt;
 
-[[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="143" name="a.augments" tags="" position="350,1850" size="100,100">Most cybernetics from the Ashes come from one place. A large ramshackle storefront that was taken over to become a place for surgeons and augment dealers to do business. 
+[[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="142" name="a.augments" tags="" position="225,1850" size="100,100">Most cybernetics from the Ashes come from one place. A large ramshackle storefront that was taken over to become a place for surgeons and augment dealers to do business. 
 &lt;&lt;if $humanity &gt; -11 &gt;&gt;When you walk in people look at you like a piece of fresh meat- their eyes follow you, hungry and wanting.&lt;&lt;else&gt;&gt; only a few people look your way. You fit right in with the over-the-top augments that are fitted against the skin of the people here.&lt;&lt;/if&gt;&gt;
 You stop in front of a desk where a thin man with metal arms emerging from his back barely looks up at you. Behind him several augments are attached to the wall by hooks.
 [[I&#39;d like to look at your wares | a.augmentlist]] 
-[[Nothing | Visit Ashes]]</tw-passagedata><tw-passagedata pid="144" name="a.augmentlist" tags="" position="475,1850" size="100,100">Behind the quiet man you see plaques above the augments. They read...
+[[Nothing | Visit Ashes]]</tw-passagedata><tw-passagedata pid="143" name="a.augmentlist" tags="" position="350,1850" size="100,100">Behind the quiet man you see plaques above the augments. They read...
 &lt;&lt;set $catalog to new Catalog([new Augment(&quot;VisionX&quot;,&quot;The final word in adaptive sight technology. VisionX™ features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays&quot;,&quot;eyes&quot;,15,3,5,-10,-40,[&quot;forge and flame&quot;]), new Augment(&quot;Vanta-Knife Limb Unit&quot;,&quot;Built for vertical dominance. Hydraulics deliver wall-scale jumping, and elevated agility. Mobility meets mayhem.&quot;,&quot;legs&quot;,10,3,20,-20,-20,[&quot;forge and flame&quot;]), new Augment(&quot;GravMaul TactArm&quot;,&quot;Augmented muscle density paired with shockwave knuckle tech. Land a punch and generate a localized impact radius. Your handshake just became a hazard&quot;,&quot;arms&quot;,20,2,20,-20,-20,[&quot;forge and flame&quot;]), new Augment(&quot;MantiEyes&quot;,&quot;The final word in adaptive sight technology. VisionX™ features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays.&quot;,&quot;eyes&quot;,15,3,5,-30,-20[&quot;forge and flame&quot;])])&gt;&gt;
 &lt;&lt;set $forgeShops to $catalog.getItemsFromShop(&quot;forge and flame&quot;)&gt;&gt;
 &lt;&lt;for _item range $forgeShops&gt;&gt;
 &lt;&lt;= [[_item.name]]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
+
+You currently have &lt;&lt;= $money &gt;&gt;
 
 &lt;&lt;if $money &lt; 9.5&gt;&gt;[[You can&#39;t afford anything. The man waves you away | Visit Ashes]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $money &gt; 14&gt;&gt;[[Look at VisionX | visionx]]&lt;&lt;/if&gt;&gt;
@@ -1176,42 +1183,42 @@ You stop in front of a desk where a thin man with metal arms emerging from his b
 &lt;&lt;if $money &gt; 19&gt;&gt;[[Look at gravmaul tactarm | tactarm]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $money &gt; 14&gt;&gt;[[Look at MantiEyes | mantieyes]]&lt;&lt;/if&gt;&gt;
 
-[[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="145" name="visionx" tags="" position="600,1850" size="100,100">The final world in adaptive sight technology. VisionX features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays.
+[[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="144" name="visionx" tags="" position="475,1850" size="100,100">The final world in adaptive sight technology. VisionX features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays.
 Cost: 15
 
 [[Nevermind | a.augmentlist]]
-[[Buy | buy visionx]]</tw-passagedata><tw-passagedata pid="146" name="buy visionx" tags="" position="725,1850" size="100,100">You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up you can see the world clearer than you ever have before.
+[[Buy | buy visionx]]</tw-passagedata><tw-passagedata pid="145" name="buy visionx" tags="" position="600,1850" size="100,100">You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up you can see the world clearer than you ever have before.
 &lt;&lt;set$money = $money - 15&gt;&gt;
 &lt;&lt;set $power = $power + 3&gt;&gt;
 &lt;&lt;set $health = $health + 5&gt;&gt;
 &lt;&lt;set $humanity = $humanity - 10&gt;&gt;
 &lt;&lt;set $fame = $fame - 40&gt;&gt;
 
-[[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="147" name="vanta" tags="" position="850,1850" size="100,100">Built for vertical dominance. Hydraulics deliver wall-scale jumping, and elevated agility. Mobility meets mayhem.
+[[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="146" name="vanta" tags="" position="725,1850" size="100,100">Built for vertical dominance. Hydraulics deliver wall-scale jumping, and elevated agility. Mobility meets mayhem.
 Cost: 10
 
 [[Nevermind | a.augmentlist]]
-[[Buy | buy vanta]]</tw-passagedata><tw-passagedata pid="148" name="buy vanta" tags="" position="975,1850" size="100,100">You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up your legs feel more agile than ever before.
+[[Buy | buy vanta]]</tw-passagedata><tw-passagedata pid="147" name="buy vanta" tags="" position="850,1850" size="100,100">You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up your legs feel more agile than ever before.
 &lt;&lt;set$money = $money - 10&gt;&gt;
 &lt;&lt;set $power = $power + 3&gt;&gt;
 &lt;&lt;set $health = $health + 20&gt;&gt;
 &lt;&lt;set $humanity = $humanity - 20&gt;&gt;
 &lt;&lt;set $fame = $fame - 20&gt;&gt;
 
-[[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="149" name="tactarm" tags="" position="1100,1850" size="100,100">Augmented muscle density paired with a shockwave knuckle tech. Land a punch and generate a loacalized impact radius. Your handshake just became a hazard.
+[[Leave | Visit Ashes]]</tw-passagedata><tw-passagedata pid="148" name="tactarm" tags="" position="975,1850" size="100,100">Augmented muscle density paired with a shockwave knuckle tech. Land a punch and generate a loacalized impact radius. Your handshake just became a hazard.
 Cost: 20
 
 [[Nevermind | a.augmentlist]]
-[[Buy | buy tactarm]]</tw-passagedata><tw-passagedata pid="150" name="buy tactarm" tags="" position="1225,1850" size="100,100">You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up your arm feels stronger than ever. The metal muscles flex with your will.
+[[Buy | buy tactarm]]</tw-passagedata><tw-passagedata pid="149" name="buy tactarm" tags="" position="1100,1850" size="100,100">You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up your arm feels stronger than ever. The metal muscles flex with your will.
 &lt;&lt;set$money = $money - 20&gt;&gt;
 &lt;&lt;set $power = $power + 2&gt;&gt;
 &lt;&lt;set $health = $health + 20&gt;&gt;
 &lt;&lt;set $humanity = $humanity - 20&gt;&gt;
-&lt;&lt;set $fame = $fame - 20&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="mantieyes" tags="" position="100,1975" size="100,100">With scales like an insect these new and improved eyes offer heat sensing technology and nearly 360 vision. No one can hide from your sights with these.
+&lt;&lt;set $fame = $fame - 20&gt;&gt;</tw-passagedata><tw-passagedata pid="150" name="mantieyes" tags="" position="1225,1850" size="100,100">With scales like an insect these new and improved eyes offer heat sensing technology and nearly 360 vision. No one can hide from your sights with these.
 Cost: 15
 
 [[Nevermind | a.augmentlist]]
-[[Buy | buy mantieyes]]</tw-passagedata><tw-passagedata pid="152" name="buy mantieyes" tags="" position="225,1975" size="100,100">You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up your vision swims for a moment. It takes you a second to focus, but when you do you can see the outline of all living things nearby.
+[[Buy | buy mantieyes]]</tw-passagedata><tw-passagedata pid="151" name="buy mantieyes" tags="" position="100,1975" size="100,100">You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up your vision swims for a moment. It takes you a second to focus, but when you do you can see the outline of all living things nearby.
 &lt;&lt;set$money = $money - 15&gt;&gt;
 &lt;&lt;set $power = $power + 3&gt;&gt;
 &lt;&lt;set $health = $health + 5&gt;&gt;
@@ -1222,48 +1229,48 @@ Cost: 15
 
 
 
-/* Church Town */</tw-passagedata><tw-passagedata pid="153" name="Church town" tags="" position="350,1975" size="100,100">An old church town, not too crowded but still well-kept. Religious folk tend to gather here (and people looking to escape the law).
+/* Church Town */</tw-passagedata><tw-passagedata pid="152" name="Church town" tags="" position="225,1975" size="100,100">An old church town, not too crowded but still well-kept. Religious folk tend to gather here (and people looking to escape the law).
 
-[[Visit | Visit Church]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="154" name="Visit Church" tags="" position="475,1975" size="100,100">The church is busy today with people using the old building as a community center more than anything. A [[pastor | Pastor]] watches the people from a stand at the far end of the church. 
+[[Visit | Visit Church]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="153" name="Visit Church" tags="" position="350,1975" size="100,100">The church is busy today with people using the old building as a community center more than anything. A [[pastor | Pastor]] watches the people from a stand at the far end of the church. 
 At one of the tables a group of older women sit around a [[board game | Game]] you don&#39;t recognize.
 
-[[Leave church | locations]]</tw-passagedata><tw-passagedata pid="155" name="Pastor" tags="" position="600,1975" size="100,100">The pastor is familiar to you, when your parents were still alive they would take you to his sermons. His hair has thinned over the years but his kind patient face remains the same. 
-For a momnt his eyes catch your own. You [[look away | Visit Church]] or [[walk up to him. | Pastor Talk]]</tw-passagedata><tw-passagedata pid="156" name="Pastor Talk" tags="" position="725,1975" size="100,100">The pastor nods to you as you approach, his lips tugging upwards into a smile. &quot;I haven&#39;t seen you at mass in a long time,&quot; he laughs, &quot;Have you been doing well?&quot;
+[[Leave church | locations]]</tw-passagedata><tw-passagedata pid="154" name="Pastor" tags="" position="475,1975" size="100,100">The pastor is familiar to you, when your parents were still alive they would take you to his sermons. His hair has thinned over the years but his kind patient face remains the same. 
+For a momnt his eyes catch your own. You [[look away | Visit Church]] or [[walk up to him. | Pastor Talk]]</tw-passagedata><tw-passagedata pid="155" name="Pastor Talk" tags="" position="600,1975" size="100,100">The pastor nods to you as you approach, his lips tugging upwards into a smile. &quot;I haven&#39;t seen you at mass in a long time,&quot; he laughs, &quot;Have you been doing well?&quot;
 
 [[&quot;I&#39;ve been alright.&quot; | Alright]]
-[[&quot;Things have been better.&quot; | Better]]</tw-passagedata><tw-passagedata pid="157" name="Alright" tags="" position="850,1975" size="100,100">The pastor nods, &quot;That is good to hear. The church is always a safe place for you, if you need it.&quot;
+[[&quot;Things have been better.&quot; | Better]]</tw-passagedata><tw-passagedata pid="156" name="Alright" tags="" position="725,1975" size="100,100">The pastor nods, &quot;That is good to hear. The church is always a safe place for you, if you need it.&quot;
 
-[[&quot;Thank you, but I&#39;m not much of a holy person.&quot; | Pastor End]]</tw-passagedata><tw-passagedata pid="158" name="Better" tags="" position="975,1975" size="100,100">The pastor&#39;s smile drops for only a moment before he waves you closer. &quot;Unfortunately, that&#39;s what I&#39;ve been hearing a lot of these days. I&#39;m quite sorry about your parents.&quot; You know not far from the church your parents lie six feet under unmarked graves. 
+[[&quot;Thank you, but I&#39;m not much of a holy person.&quot; | Pastor End]]</tw-passagedata><tw-passagedata pid="157" name="Better" tags="" position="850,1975" size="100,100">The pastor&#39;s smile drops for only a moment before he waves you closer. &quot;Unfortunately, that&#39;s what I&#39;ve been hearing a lot of these days. I&#39;m quite sorry about your parents.&quot; You know not far from the church your parents lie six feet under unmarked graves. 
 
 The pastor at least has the mind to give a small apologetic smile.
 
-[[&quot;It&#39;s been hard.&quot; | Pastor End]]</tw-passagedata><tw-passagedata pid="159" name="Pastor End" tags="" position="1100,1975" size="100,100">&quot;Even as times become harder I hope you can find a safe place here. I&#39;m sure you&#39;re not here to entertain me though, I hope whatever you&#39;re here for finds you well.&quot;
+[[&quot;It&#39;s been hard.&quot; | Pastor End]]</tw-passagedata><tw-passagedata pid="158" name="Pastor End" tags="" position="975,1975" size="100,100">&quot;Even as times become harder I hope you can find a safe place here. I&#39;m sure you&#39;re not here to entertain me though, I hope whatever you&#39;re here for finds you well.&quot;
 
-With that the pastor offers his hand. You take it for a moment, and the human contact feels comforting after so long alone. You give the man one last polite nod before [[turning back | Visit Church]] to the people flooding the church grounds.</tw-passagedata><tw-passagedata pid="160" name="Game" tags="" position="1225,1975" size="100,100">You walk up to the group of women all entranced by the game on the table. It involves cards being laid out on the table, each one depicting various machines. 
+With that the pastor offers his hand. You take it for a moment, and the human contact feels comforting after so long alone. You give the man one last polite nod before [[turning back | Visit Church]] to the people flooding the church grounds.</tw-passagedata><tw-passagedata pid="159" name="Game" tags="" position="1100,1975" size="100,100">You walk up to the group of women all entranced by the game on the table. It involves cards being laid out on the table, each one depicting various machines. 
 &lt;&lt;if $humanity &gt; -11 &gt;&gt;Even when you are right behind them none of them look your way.&lt;&lt;else&gt;&gt; The women seem to tense up as you draw close.&lt;&lt;/if&gt;&gt; There&#39;s [[nothing more | Visit Church]] to see here unless you want to interrupt their flow.
 
-/* The Desert */</tw-passagedata><tw-passagedata pid="161" name="Desert" tags="" position="100,2100" size="100,100">A sprawling desert that goes on for miles between the various cities and towns. Not much happens here, but some trains pass through on their way to the city. 
+/* The Desert */</tw-passagedata><tw-passagedata pid="160" name="Desert" tags="" position="1225,1975" size="100,100">A sprawling desert that goes on for miles between the various cities and towns. Not much happens here, but some trains pass through on their way to the city. 
 Every few miles you may be able to spot some dust-beaten buildings long-abandoned by their owners.
 
-[[Visit | Visit Desert]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="162" name="Visit Desert" tags="" position="225,2100" size="100,100">Just outside of town the desert winds start to buffet your face. The sun beats down on you, warming your skin. In the distance, a lone train blows its whistle.
+[[Visit | Visit Desert]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="161" name="Visit Desert" tags="" position="100,2100" size="100,100">Just outside of town the desert winds start to buffet your face. The sun beats down on you, warming your skin. In the distance, a lone train blows its whistle.
 
 [[Walk towards the train tracks | Train]] 
 or
-[[Go back to town | Cow Town]]</tw-passagedata><tw-passagedata pid="163" name="Train" tags="" position="350,2100" size="100,100">The walk through the desert is uncomfortable but peaceful. The only thing that interrupts your thoughts is the howling wind and dust that whips across your face. 
-When the train comes into view you spot a light- a fire next to the tracks. [[Investigate | Investigate Fire]] or [[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="164" name="Investigate Fire" tags="" position="475,2100" size="100,100">Only a few meters away the dust gives way to the small camfire set up near the rusted metal train tracks. 
-A figure sits near it; smoke billows from their lips as they bring a cigar to their lips. [[Talk to them | Stranger]] or [[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="165" name="Stranger" tags="" position="600,2100" size="100,100">You approach the stranger with hands raised. The figure tenses for a moment before turning to face you. You are met by the face of an older man. His dark eyes seem to see right through you.
+[[Go back to town | Cow Town]]</tw-passagedata><tw-passagedata pid="162" name="Train" tags="" position="225,2100" size="100,100">The walk through the desert is uncomfortable but peaceful. The only thing that interrupts your thoughts is the howling wind and dust that whips across your face. 
+When the train comes into view you spot a light- a fire next to the tracks. [[Investigate | Investigate Fire]] or [[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="163" name="Investigate Fire" tags="" position="350,2100" size="100,100">Only a few meters away the dust gives way to the small camfire set up near the rusted metal train tracks. 
+A figure sits near it; smoke billows from their lips as they bring a cigar to their lips. [[Talk to them | Stranger]] or [[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="164" name="Stranger" tags="" position="475,2100" size="100,100">You approach the stranger with hands raised. The figure tenses for a moment before turning to face you. You are met by the face of an older man. His dark eyes seem to see right through you.
 &quot;Not often I find company here,&quot; he drawls, &quot;Come. Sit.&quot;
 
 The man pats a spot on the dirt next to him and looks at you expectantly, drawing his cigar back between his lips. 
 
-[[Sit | Stranger Talk]] or [[Turn Away | Stranger Leave]]</tw-passagedata><tw-passagedata pid="166" name="Stranger Leave" tags="" position="725,2100" size="100,100">You walk away. You can feel the man&#39;s eyes burning holes into the back of your head, but he doesn&#39;t try to stop you. 
-You should open your [[map | locations]] to figure out where to go next.</tw-passagedata><tw-passagedata pid="167" name="Stranger Talk" tags="" position="850,2100" size="100,100">You feels your knees protest as you take a seat on the warm dirt. Without even looking at you the man offers the cigar. 
+[[Sit | Stranger Talk]] or [[Turn Away | Stranger Leave]]</tw-passagedata><tw-passagedata pid="165" name="Stranger Leave" tags="" position="600,2100" size="100,100">You walk away. You can feel the man&#39;s eyes burning holes into the back of your head, but he doesn&#39;t try to stop you. 
+You should open your [[map | locations]] to figure out where to go next.</tw-passagedata><tw-passagedata pid="166" name="Stranger Talk" tags="" position="725,2100" size="100,100">You feels your knees protest as you take a seat on the warm dirt. Without even looking at you the man offers the cigar. 
 &lt;&lt;if $humanity &gt; -51 &gt;&gt;You take it and take a long draw, letting the smoke calm your nerves. He seems pleased when you hand it back.&lt;&lt;else&gt;&gt;In the past, you would have accepted the offer but now theres no part of you left that can enjoy the smoke. The man seems to notice your hesitance and shrugs.&lt;&lt;/if&gt;&gt;
 &quot;Folks only come here when they&#39;re trying to escape something. What&#39;s got ya runnin&#39;?&quot;
 
 [[I feel like I&#39;m stuck | Anticorp]]
 [[I don&#39;t know if I&#39;m doing the right thing | Antiwork]]
-&lt;&lt;if $humanity &lt; -49&gt;&gt;[[Am I human still? | Human]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="168" name="Anticorp" tags="" position="975,2100" size="100,100">You shrug, staring at the lights of the city in the distance. &quot;Too much noise. Feel like no matter what I do I&#39;m not going nowhere,&quot; you frown.
+&lt;&lt;if $humanity &lt; -49&gt;&gt;[[Am I human still? | Human]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="167" name="Anticorp" tags="" position="850,2100" size="100,100">You shrug, staring at the lights of the city in the distance. &quot;Too much noise. Feel like no matter what I do I&#39;m not going nowhere,&quot; you frown.
 
 The stranger nods, his eyes following your own. &quot;They&#39;ll bleed you dry out there kid. No fault of your own its just how it works.&quot;
 
@@ -1271,7 +1278,7 @@ The stranger nods, his eyes following your own. &quot;They&#39;ll bleed you dry 
 
 &quot;To live,&quot; the stranger replies, &quot;Simple as that.&quot;
 
-[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="169" name="AntiWork" tags="" position="1100,2100" size="100,100">You frown; the stress, both physical and mental, wears heavy on you. You can feel the sins you&#39;ve committed just to live crawling under your skin- writhing and ugly. &quot;I don&#39;t know if I&#39;m doing the right thing.&quot;
+[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="168" name="AntiWork" tags="" position="975,2100" size="100,100">You frown; the stress, both physical and mental, wears heavy on you. You can feel the sins you&#39;ve committed just to live crawling under your skin- writhing and ugly. &quot;I don&#39;t know if I&#39;m doing the right thing.&quot;
 
 &quot;Well you&#39;re alive aint ya? That&#39;s gotta count for somethin&#39; right?&quot;
 
@@ -1281,29 +1288,29 @@ You shrug, reaching over to grab the cigar from the man again. He lets you take 
 
 &lt;&lt;if $humanity &lt; -39&gt;&gt;&gt; The man seems to think on his words before letting out a soft breathy laugh. &quot;Although at this rate kid, I&#39;m not sure how much of you is eft that can die.&quot;&lt;&lt;/if&gt;&gt;
 
-[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="170" name="Human" tags="" position="1225,2100" size="100,100">You frown, the metal in your body feels like its heavier than normal. &quot;I&#39;m doing everything right but... I don&#39;t know what I am anymore.&quot;
+[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="169" name="Human" tags="" position="1100,2100" size="100,100">You frown, the metal in your body feels like its heavier than normal. &quot;I&#39;m doing everything right but... I don&#39;t know what I am anymore.&quot;
 
 The stranger nods, looking you up and down. &quot;You&#39;re a man tryin&#39; his best.&quot;
 
 Your gaze falls to the metal augments adorning your body. You nearly can&#39;t remember how it felt before the metal started to encroach on your skin like a plague you can&#39;t escape. 
 
 [[&quot;Is it worth it if by the end I can&#39;t recognize myself?&quot; | Myself]]
-[[&quot;I don&#39;t think I&#39;m a man anymore | No Human&quot;]]</tw-passagedata><tw-passagedata pid="171" name="Myself" tags="" position="100,2225" size="100,100">&quot;Thats up to you. You can stop whenever ya want; the world&#39;ll keep spinnin&#39;.&quot;
+[[&quot;I don&#39;t think I&#39;m a man anymore | No Human&quot;]]</tw-passagedata><tw-passagedata pid="170" name="Myself" tags="" position="1225,2100" size="100,100">&quot;Thats up to you. You can stop whenever ya want; the world&#39;ll keep spinnin&#39;.&quot;
 
-[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="172" name="No Human" tags="" position="225,2225" size="100,100">&quot;You&#39;ve still gotta head on your shoulders don&#39;t ya? Seems man enough to me.&quot;
+[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="171" name="No Human" tags="" position="100,2225" size="100,100">&quot;You&#39;ve still gotta head on your shoulders don&#39;t ya? Seems man enough to me.&quot;
 
-[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="173" name="Cassidy Start" tags="" position="350,2225" size="100,100">&lt;&lt;set $CorpoBounties = [&quot;retrieve rent&quot;,&quot;whistleblower&quot;,&quot;gamblers fallacy&quot;,&quot;the train station&quot;]&gt;&gt;
+[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="172" name="Cassidy Start" tags="" position="225,2225" size="100,100">&lt;&lt;set $CorpoBounties = [&quot;retrieve rent&quot;,&quot;whistleblower&quot;,&quot;gamblers fallacy&quot;,&quot;the train station&quot;]&gt;&gt;
 Go to the [[bounty board | Bounty Board]]
 &lt;&lt;set $corpo1 to new Bounty(&quot;retrieve rent&quot;, &quot;Collect a local pubs overdue rent.&quot;, &quot;available&quot;, 150, -10, -2, &quot;hard&quot;,[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;
 &lt;&lt;set $corpo2 to new Bounty(&quot;whistleblower&quot;, &quot;Prevent a corporate whistleblower from releasing his findings.&quot;, &quot;available&quot;, 250, -15, -10, &quot;intermediate&quot;,[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;
 &lt;&lt;set $corpo3 to new Bounty(&quot;gamblers fallacy&quot;, &quot;Hunt down a notorious gambler and end his winning streak.&quot;, &quot;available&quot;, 250, -5, -1, &quot;intermediate&quot;[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;
-&lt;&lt;set $corpo4 to new Bounty(&quot;the train station&quot;, &quot;Prevent citizens from dodging the trainfare.&quot;, &quot;available&quot;, 100, -5, -10, &quot;novice&quot;,[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;</tw-passagedata><tw-passagedata pid="174" name="Bounty Board" tags="" position="475,2225" size="100,100">You approach a large board with a metal rim and torn, patchy cork board littered with an array of flimsy reused paper pinned up.
+&lt;&lt;set $corpo4 to new Bounty(&quot;the train station&quot;, &quot;Prevent citizens from dodging the trainfare.&quot;, &quot;available&quot;, 100, -5, -10, &quot;novice&quot;,[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;</tw-passagedata><tw-passagedata pid="173" name="Bounty Board" tags="" position="350,2225" size="100,100">You approach a large board with a metal rim and torn, patchy cork board littered with an array of flimsy reused paper pinned up.
 Upon further inspecion, each piece of paper contains a bounty issued by one of the many corporations.
 &lt;&lt;if $rent_done == false&gt;&gt;&lt;&lt;link &quot;Check out the first bounty&quot; $CorpoBounties[0]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;The first bounty is no longer displayed.&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $whistleblown == false&gt;&gt;&lt;&lt;link &quot;Check out the second bounty&quot; $CorpoBounties[1]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;The second bounty is no longer displayed.&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $gambled == false&gt;&gt;&lt;&lt;link &quot;Check out the third bounty&quot; $CorpoBounties[2]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;The third bounty is no longer displayed.&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $trained == false&gt;&gt;&lt;&lt;link &quot;Check out the fourth bounty&quot; $CorpoBounties[3]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;The fourth bounty is no longer displayed.&lt;&lt;/if&gt;&gt;
-[[Return to the map | Map]]</tw-passagedata><tw-passagedata pid="175" name="retrieve rent" tags="" position="600,2225" size="100,100">In the corner of the bounty there is a corporate logo and four small stars.
+[[Return to the map | Map]]</tw-passagedata><tw-passagedata pid="174" name="retrieve rent" tags="" position="475,2225" size="100,100">In the corner of the bounty there is a corporate logo and four small stars.
 The top of the bounty reads &quot;Retrieve&quot;, underneath is a photo of A muscular man with a glistening metal arm followed by the name &quot;Bill Westwood&quot; 
 The bounty&#39;s description reads:
 Wanted for repeated failure to fulfill property rent payments over a period of two months.
@@ -1311,21 +1318,21 @@ Retrieve the owed sum of $650 by any means necessary.
 Last known location: The Lazy Cat
 Reward: $50
 
-&lt;&lt;link &quot;Accept bounty&quot; &quot;accept retrieve rent&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="176" name="accept retrieve rent" tags="" position="725,2225" size="100,100">You make your way through the noise of the city and the aggressively neon lights to a small pub with a flickering neon sign that reads, &quot;The Lazy Cat&quot;.
-[[enter | The Lazy Cat]]</tw-passagedata><tw-passagedata pid="177" name="The Lazy Cat" tags="" position="850,2225" size="100,100">Pushing open the wooden doors, you enter the run down pub. There are various groups at different tables talking and drinking, as well as a particularly drunk group of bikers playing pool near the bar.
-Tending the bar you see a large man with a metal arm, he must be Bill Westwood. [[Approach the bar | approach Bill]]</tw-passagedata><tw-passagedata pid="178" name="approach Bill" tags="" position="975,2225" size="100,100">As you approach the bar, Bill nods to you and says, &quot;Don&#39;t think I&#39;ve seen you round &#39;ere before, what can I do for ya?&quot;
-[[I&#39;m here for the rent you&#39;ve been missing | inquire on rent]]</tw-passagedata><tw-passagedata pid="179" name="inquire on rent" tags="" position="1100,2225" size="100,100">&quot;I see, so your one of them cowpunks then.&quot; Bill replied.
+&lt;&lt;link &quot;Accept bounty&quot; &quot;accept retrieve rent&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="175" name="accept retrieve rent" tags="" position="600,2225" size="100,100">You make your way through the noise of the city and the aggressively neon lights to a small pub with a flickering neon sign that reads, &quot;The Lazy Cat&quot;.
+[[enter | The Lazy Cat]]</tw-passagedata><tw-passagedata pid="176" name="The Lazy Cat" tags="" position="725,2225" size="100,100">Pushing open the wooden doors, you enter the run down pub. There are various groups at different tables talking and drinking, as well as a particularly drunk group of bikers playing pool near the bar.
+Tending the bar you see a large man with a metal arm, he must be Bill Westwood. [[Approach the bar | approach Bill]]</tw-passagedata><tw-passagedata pid="177" name="approach Bill" tags="" position="850,2225" size="100,100">As you approach the bar, Bill nods to you and says, &quot;Don&#39;t think I&#39;ve seen you round &#39;ere before, what can I do for ya?&quot;
+[[I&#39;m here for the rent you&#39;ve been missing | inquire on rent]]</tw-passagedata><tw-passagedata pid="178" name="inquire on rent" tags="" position="975,2225" size="100,100">&quot;I see, so your one of them cowpunks then.&quot; Bill replied.
 He lit a cigarette and took a long draw, then continued, &quot;Listen, neither one of us wants this to get ugly, I&#39;ve been having to pay fer my family&#39;s meds, and the booze barely pays for itself round this part of town, so what say you we just forget about the bounty and I give you $25 to tear it up?&quot;
 &lt;&lt;link &quot;Accept Bill&#39;s deal&quot; &quot;friend of bill&quot;&gt;&gt;&lt;&lt;set $money = $money + 25&gt;&gt;&lt;&lt;set $rent_done = true&gt;&gt;&lt;&lt;/link&gt;&gt;
-[[Push for the rent | push for rent]]</tw-passagedata><tw-passagedata pid="180" name="friend of bill" tags="" position="1225,2225" size="100,100">You accept Bill&#39;s bribe and return [[home. | Your house]].</tw-passagedata><tw-passagedata pid="181" name="push for rent" tags="" position="100,2350" size="100,100">You need more money, and you stand on principle, Bill must pay his debt. 
+[[Push for the rent | push for rent]]</tw-passagedata><tw-passagedata pid="179" name="friend of bill" tags="" position="1100,2225" size="100,100">You accept Bill&#39;s bribe and return [[home. | Your house]].</tw-passagedata><tw-passagedata pid="180" name="push for rent" tags="" position="1225,2225" size="100,100">You need more money, and you stand on principle, Bill must pay his debt. 
 &quot;All right I see how it is then&quot; Bill said in a stern voice.
-The pub went quiet around the two of you, and [[Bill reached under the bar... | fight bill]]</tw-passagedata><tw-passagedata pid="182" name="fight bill" tags="" position="225,2350" size="100,100">You need more money, and you stand on principle, Bill must pay his debt. 
+The pub went quiet around the two of you, and [[Bill reached under the bar... | fight bill]]</tw-passagedata><tw-passagedata pid="181" name="fight bill" tags="" position="100,2350" size="100,100">You need more money, and you stand on principle, Bill must pay his debt. 
 &quot;All right I see how it is then&quot; Bill said in a stern voice.
 The pub went quiet around the two of you, and Bill reached under the bar to pull out a shotgun, at the same time you pulled out your gun and began to fire.
 &lt;&lt;script&gt;&gt;StartCombat(3,7,5)&lt;&lt;/script&gt;&gt;
-&lt;&lt;if $health &gt; 0&gt;&gt;You shoot bill to death, ready to [[collect his overdue rent. | collect rent]]&lt;&lt;else&gt;&gt; Bill fires his shotgun quicker than you can lift your gun, once he&#39;s sure you&#39;re not getting back up he puts away his shotgun. [[It&#39;s over for now cowpunk | Map]]&lt;&lt;set $rent_done = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="183" name="collect rent" tags="" position="350,2350" size="100,100">Stepping past the silent onlookers, still in shock of what just happened to Bill, you approach the bar and find where [[bill kept his money... | bills money]]</tw-passagedata><tw-passagedata pid="184" name="bills money" tags="" position="475,2350" size="100,100">Stepping past the silent onlookers, still in shock of what just happened to Bill, you approach the bar and find where bill kept his money.
+&lt;&lt;if $health &gt; 0&gt;&gt;You shoot bill to death, ready to [[collect his overdue rent. | collect rent]]&lt;&lt;else&gt;&gt; Bill fires his shotgun quicker than you can lift your gun, once he&#39;s sure you&#39;re not getting back up he puts away his shotgun. [[It&#39;s over for now cowpunk | Map]]&lt;&lt;set $rent_done = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="182" name="collect rent" tags="" position="225,2350" size="100,100">Stepping past the silent onlookers, still in shock of what just happened to Bill, you approach the bar and find where [[bill kept his money... | bills money]]</tw-passagedata><tw-passagedata pid="183" name="bills money" tags="" position="350,2350" size="100,100">Stepping past the silent onlookers, still in shock of what just happened to Bill, you approach the bar and find where bill kept his money.
 There was a small safe, already opened, with just enough money to cover the missing rent, and a picture of him with a woman who could only be his wife.
-[[Contact a corporation representative. | corpo rep]]</tw-passagedata><tw-passagedata pid="185" name="corpo rep" tags="" position="600,2350" size="100,100">After a few minutes a corporate representative meets you outside The Lazy Cat and takes the owed rent, leaving you with &lt;&lt;link&quot;$50 for the bounty.&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $money = $money +50&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="186" name="whistleblower" tags="" position="725,2350" size="100,100">You notice a corporate logo and two small stars in the top corner of the bounty.
+[[Contact a corporation representative. | corpo rep]]</tw-passagedata><tw-passagedata pid="184" name="corpo rep" tags="" position="475,2350" size="100,100">After a few minutes a corporate representative meets you outside The Lazy Cat and takes the owed rent, leaving you with &lt;&lt;link&quot;$50 for the bounty.&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $money = $money +50&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="185" name="whistleblower" tags="" position="600,2350" size="100,100">You notice a corporate logo and two small stars in the top corner of the bounty.
 In bold red text, the top of the bounty reads &quot;Wanted dead or alive&quot;
 Underneath is a photo of a young man with greasy blonde hair and a circular scar on his left temple.
 The bounty&#39;s description reads:
@@ -1335,34 +1342,34 @@ Eliminate or apprehend by any means necessary.
 Last known location: The Ashes
 Reward: $75
 
-&lt;&lt;link &quot;Accept bounty&quot; &quot;accept whistleblower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="187" name="accept whistleblower" tags="" position="850,2350" size="100,100">Making your way through the dark alleyways of Ember city you find yourself in the undercity known as The Ashes. 
+&lt;&lt;link &quot;Accept bounty&quot; &quot;accept whistleblower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="186" name="accept whistleblower" tags="" position="725,2350" size="100,100">Making your way through the dark alleyways of Ember city you find yourself in the undercity known as The Ashes. 
 The image of Joshea Dean strong in your mind, you wander through The Ashes, you find yourself at the Pine Motel, known for hiding their guests identity.
-[[Enter the motel | pine motel]]</tw-passagedata><tw-passagedata pid="188" name="pine motel" tags="" position="975,2350" size="100,100">&quot;What can I do for you friend?&quot; A woman with bright green hair working the desk asks as you cross through the doors. 
-[[I&#39;m looking for someone... | pine motel dialogue 1]]</tw-passagedata><tw-passagedata pid="189" name="pine motel dialogue 1" tags="" position="1100,2350" size="100,100">&quot;What can I do for you friend?&quot; A woman with bright green hair working the desk asks as you cross through the doors. 
+[[Enter the motel | pine motel]]</tw-passagedata><tw-passagedata pid="187" name="pine motel" tags="" position="850,2350" size="100,100">&quot;What can I do for you friend?&quot; A woman with bright green hair working the desk asks as you cross through the doors. 
+[[I&#39;m looking for someone... | pine motel dialogue 1]]</tw-passagedata><tw-passagedata pid="188" name="pine motel dialogue 1" tags="" position="975,2350" size="100,100">&quot;What can I do for you friend?&quot; A woman with bright green hair working the desk asks as you cross through the doors. 
 &quot;I&#39;m looking for someone, greasy blonde hair, scar about here&quot; you say gesturing to your temple.
 &quot;I&#39;m afraid we don&#39;t keep a guest book, and I can&#39;t disclose any customer information. But if you&#39;d like a room I think I could help you out.&quot;
-[[Threaten the desk attendant | threaten pine motel]] or &lt;&lt;link &quot;Bribe the desk attendant (-$10)&quot; &quot;bribe pine motel&quot;&gt;&gt;&lt;&lt;set $money = $money - 10&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="190" name="bribe pine motel" tags="" position="1225,2350" size="100,100">&quot;What can I do for you friend?&quot; A woman with bright green hair working the desk asks as you cross through the doors. 
+[[Threaten the desk attendant | threaten pine motel]] or &lt;&lt;link &quot;Bribe the desk attendant (-$10)&quot; &quot;bribe pine motel&quot;&gt;&gt;&lt;&lt;set $money = $money - 10&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="189" name="bribe pine motel" tags="" position="1100,2350" size="100,100">&quot;What can I do for you friend?&quot; A woman with bright green hair working the desk asks as you cross through the doors. 
 &quot;I&#39;m looking for someone, greasy blonde hair, scar about here&quot; you say gesturing to your temple.
 &quot;I&#39;m afraid we don&#39;t keep a guest book, and I can&#39;t disclose any customer information. But if you&#39;d like a room I think I could help you out.&quot;
 You hand the woman $10 and she stashes it away behind the desk, &quot;There&#39;s a room on the second floor, room 213. The man your looking for booked that room.&quot;
-[[Thank you. | room 213]]</tw-passagedata><tw-passagedata pid="191" name="threaten pine motel" tags="" position="100,2475" size="100,100">&quot;What can I do for you friend?&quot; A woman with bright green hair working the desk asks as you cross through the doors. 
+[[Thank you. | room 213]]</tw-passagedata><tw-passagedata pid="190" name="threaten pine motel" tags="" position="1225,2350" size="100,100">&quot;What can I do for you friend?&quot; A woman with bright green hair working the desk asks as you cross through the doors. 
 &quot;I&#39;m looking for someone, greasy blonde hair, scar about here&quot; you say gesturing to your temple.
 &quot;I&#39;m afraid we don&#39;t keep a guest book, and I can&#39;t disclose any customer information. But if you&#39;d like a room I think I could help you out.&quot;
 You put your hand on your holster and repeat yourself, &quot;I&#39;m looking for a man with greasy blonde hair and a scar on his temple, make the right choice.&quot;
-The woman cowers a little and nods saying, &quot;He&#39;s in [[room 213 | room 213]]&quot;</tw-passagedata><tw-passagedata pid="192" name="room 213" tags="" position="225,2475" size="100,100">You climb the rickety motel stairs and walk down the faded red carpets of the cramped hallways, eventually finding room 213.
+The woman cowers a little and nods saying, &quot;He&#39;s in [[room 213 | room 213]]&quot;</tw-passagedata><tw-passagedata pid="191" name="room 213" tags="" position="100,2475" size="100,100">You climb the rickety motel stairs and walk down the faded red carpets of the cramped hallways, eventually finding room 213.
 The door is cracked open slightly, letting soft yellow light stream into the otherwise dark room.
 You creak the door open, alerting the man inside.
-Joshea Dean sits curled up on the bed, [[muttering to himself. | insane man]]</tw-passagedata><tw-passagedata pid="193" name="insane man" tags="" position="350,2475" size="100,100">After noticing your entrance he turns to look at you, now muttering to you, &quot;I didn&#39;t think it would be like this. I didn&#39;t think it would be like this.&quot;
+Joshea Dean sits curled up on the bed, [[muttering to himself. | insane man]]</tw-passagedata><tw-passagedata pid="192" name="insane man" tags="" position="225,2475" size="100,100">After noticing your entrance he turns to look at you, now muttering to you, &quot;I didn&#39;t think it would be like this. I didn&#39;t think it would be like this.&quot;
 His eyes begin to water as he stares at you, &quot;Please. you have to believe me. I won&#39;t tell a soul, I&#39;ll-&quot; he stopped to frantically think, &quot;-I&#39;ll burn the drive, I&#39;ll destroy the data, just please, please let me go.&quot;
-[[I&#39;m afraid I can&#39;t do that | insane man 2]]</tw-passagedata><tw-passagedata pid="194" name="insane man 2" tags="" position="475,2475" size="100,100">&quot;Yes, yes you can&quot; He stuttered barely holding composure, &quot;because if you don&#39;t, I swear to god I will [[shoot | kill joshua]] you.&quot; Joshua pulled out a gun from beside him, still talking.
-[[Keep listening | insane man 3]]</tw-passagedata><tw-passagedata pid="195" name="insane man 3" tags="" position="600,2475" size="100,100">&quot;Oh what am I doing.&quot; The gun fell to his side, &quot;They killed him. My son, I mean. My wife died in child birth, he was all I had, and they just killed him.&quot;
+[[I&#39;m afraid I can&#39;t do that | insane man 2]]</tw-passagedata><tw-passagedata pid="193" name="insane man 2" tags="" position="350,2475" size="100,100">&quot;Yes, yes you can&quot; He stuttered barely holding composure, &quot;because if you don&#39;t, I swear to god I will [[shoot | kill joshua]] you.&quot; Joshua pulled out a gun from beside him, still talking.
+[[Keep listening | insane man 3]]</tw-passagedata><tw-passagedata pid="194" name="insane man 3" tags="" position="475,2475" size="100,100">&quot;Oh what am I doing.&quot; The gun fell to his side, &quot;They killed him. My son, I mean. My wife died in child birth, he was all I had, and they just killed him.&quot;
 &quot;What I did was wrong. Was it? No, what the corporations are doing is wrong.&quot;
 [[Spare him | Bounty Board]]
 [[Attempt to apprehend him | apprehend josh]]
-[[Shoot him | victory over josh]]</tw-passagedata><tw-passagedata pid="196" name="apprehend josh" tags="" position="725,2475" size="100,100">&lt;&lt;set $rng = random(1,6)&gt;&gt;
-&lt;&lt;if $rng &gt; 3&gt;&gt;You manage to wrestle the man down and put him in cuffs. [[Call in a corporate representative | corpo rep josh]]&lt;&lt;else&gt;&gt; You are unable to make Joshua submit. [[Shoot him | kill joshua]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="197" name="kill joshua" tags="" position="850,2475" size="100,100">&lt;&lt;script&gt;&gt;StartCombat(1,4,3)&lt;&lt;/script&gt;&gt;
-&lt;&lt;if $health &gt; 0&gt;&gt;[[You win the scuffle | victory over josh]] &lt;&lt;else&gt;&gt; [[You lose the scuffle | defeat over josh]] &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="198" name="victory over josh" tags="" position="975,2475" size="100,100">You fire at Joshua Dean and before he can shoot back, his corpse slumps to the bed.
-[[Call in a corporate representative | corpo rep josh]]</tw-passagedata><tw-passagedata pid="199" name="defeat over josh" tags="" position="1100,2475" size="100,100">Against all odds, Joshua Dean manages to best you, surviving for now. &lt;&lt;set $whistleblown = true&gt;&gt;[[It&#39;s over for now cowpunk. | Map]]</tw-passagedata><tw-passagedata pid="200" name="corpo rep josh" tags="" position="1225,2475" size="100,100">A man in a black suit meets you outside the motel and thanks you for dealing with their little problem, handing you &lt;&lt;link &quot;$75&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $whistleblown = true&gt;&gt;&lt;&lt;set $money = $money + 75&gt;&gt;&lt;&lt;/link&gt;&gt; in exchange.</tw-passagedata><tw-passagedata pid="201" name="gamblers fallacy" tags="" position="100,2600" size="100,100">The thin sheet of paper&#39;s upper corner appears to be branded with a corporate logo and three small stars.
+[[Shoot him | victory over josh]]</tw-passagedata><tw-passagedata pid="195" name="apprehend josh" tags="" position="600,2475" size="100,100">&lt;&lt;set $rng = random(1,6)&gt;&gt;
+&lt;&lt;if $rng &gt; 3&gt;&gt;You manage to wrestle the man down and put him in cuffs. [[Call in a corporate representative | corpo rep josh]]&lt;&lt;else&gt;&gt; You are unable to make Joshua submit. [[Shoot him | kill joshua]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="196" name="kill joshua" tags="" position="725,2475" size="100,100">&lt;&lt;script&gt;&gt;StartCombat(1,4,3)&lt;&lt;/script&gt;&gt;
+&lt;&lt;if $health &gt; 0&gt;&gt;[[You win the scuffle | victory over josh]] &lt;&lt;else&gt;&gt; [[You lose the scuffle | defeat over josh]] &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="197" name="victory over josh" tags="" position="850,2475" size="100,100">You fire at Joshua Dean and before he can shoot back, his corpse slumps to the bed.
+[[Call in a corporate representative | corpo rep josh]]</tw-passagedata><tw-passagedata pid="198" name="defeat over josh" tags="" position="975,2475" size="100,100">Against all odds, Joshua Dean manages to best you, surviving for now. &lt;&lt;set $whistleblown = true&gt;&gt;[[It&#39;s over for now cowpunk. | Map]]</tw-passagedata><tw-passagedata pid="199" name="corpo rep josh" tags="" position="1100,2475" size="100,100">A man in a black suit meets you outside the motel and thanks you for dealing with their little problem, handing you &lt;&lt;link &quot;$75&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $whistleblown = true&gt;&gt;&lt;&lt;set $money = $money + 75&gt;&gt;&lt;&lt;/link&gt;&gt; in exchange.</tw-passagedata><tw-passagedata pid="200" name="gamblers fallacy" tags="" position="1225,2475" size="100,100">The thin sheet of paper&#39;s upper corner appears to be branded with a corporate logo and three small stars.
 In bold red text, the top of the bounty reads &quot;Wanted dead or alive&quot;
 Underneath is a dark photo of a man in a bright red velvet suit.
 The bounty&#39;s description reads:
@@ -1372,27 +1379,27 @@ Eliminate or apprehend by any means necessary.
 Last known location: Blue Flame Casino
 Reward: $75
 
-&lt;&lt;link &quot;Accept bounty&quot; &quot;accept gamblers fallacy&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="202" name="accept gamblers fallacy" tags="" position="225,2600" size="100,100">You ascend through Ember City drawing ever nearer to the enchanting allure of the Blue Flame, sitting atop its paramount.
+&lt;&lt;link &quot;Accept bounty&quot; &quot;accept gamblers fallacy&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="201" name="accept gamblers fallacy" tags="" position="100,2600" size="100,100">You ascend through Ember City drawing ever nearer to the enchanting allure of the Blue Flame, sitting atop its paramount.
 When you reach the casino you are drawn into it by the dazzling stars making up its sign, its as though you had no recollection of approaching or entering the casino, you simply appeared inside.
-Passing from table to table you have the urge to [[gamble | gamble?]], but that would be unwise, best to [[keep searching | keep searching]].</tw-passagedata><tw-passagedata pid="203" name="gamble?" tags="" position="350,2600" size="100,100">Now&#39;s not the time, your on a job. [[Keep searching | keep searching]]</tw-passagedata><tw-passagedata pid="204" name="keep searching" tags="" position="475,2600" size="100,100">As you search deeper into the casino, you approach the [[high rollers tables | the velvet suit]], It wouls be so nice to [[gamble | gamble??]], even just a little.</tw-passagedata><tw-passagedata pid="205" name="gamble??" tags="" position="600,2600" size="100,100">What is wrong with you, you have to find the man in the velevet suit. [[Go to the high rollers table. | the velvet suit]]</tw-passagedata><tw-passagedata pid="206" name="the velvet suit" tags="" position="725,2600" size="100,100">Once you make it to the high rollers table you sit down, sitting next to you is the man you&#39;ve been looking for, the man in the velvet suit.
+Passing from table to table you have the urge to [[gamble | gamble?]], but that would be unwise, best to [[keep searching | keep searching]].</tw-passagedata><tw-passagedata pid="202" name="gamble?" tags="" position="225,2600" size="100,100">Now&#39;s not the time, your on a job. [[Keep searching | keep searching]]</tw-passagedata><tw-passagedata pid="203" name="keep searching" tags="" position="350,2600" size="100,100">As you search deeper into the casino, you approach the [[high rollers tables | the velvet suit]], It wouls be so nice to [[gamble | gamble??]], even just a little.</tw-passagedata><tw-passagedata pid="204" name="gamble??" tags="" position="475,2600" size="100,100">What is wrong with you, you have to find the man in the velevet suit. [[Go to the high rollers table. | the velvet suit]]</tw-passagedata><tw-passagedata pid="205" name="the velvet suit" tags="" position="600,2600" size="100,100">Once you make it to the high rollers table you sit down, sitting next to you is the man you&#39;ve been looking for, the man in the velvet suit.
 [[Gamble at the high rollers table | gamble???]]
-[[Interrogate the man | interrogate]]</tw-passagedata><tw-passagedata pid="207" name="gamble???" tags="" position="850,2600" size="100,100">You have a serious problem, you need that money, so start [[interrogating the man in the velvet suit | interrogate]].</tw-passagedata><tw-passagedata pid="208" name="interrogate" tags="" position="975,2600" size="100,100">You turn to the man, &quot;you don&#39;t belong here.&quot; He interrupts before you can say anything.
+[[Interrogate the man | interrogate]]</tw-passagedata><tw-passagedata pid="206" name="gamble???" tags="" position="725,2600" size="100,100">You have a serious problem, you need that money, so start [[interrogating the man in the velvet suit | interrogate]].</tw-passagedata><tw-passagedata pid="207" name="interrogate" tags="" position="850,2600" size="100,100">You turn to the man, &quot;you don&#39;t belong here.&quot; He interrupts before you can say anything.
 &quot;I can tell your poor, so run along little cowpunk.&quot;
-[[Excuse me? | asshole]]</tw-passagedata><tw-passagedata pid="209" name="asshole" tags="" position="1100,2600" size="100,100">You turn to the man, &quot;you don&#39;t belong here.&quot; He interrupts before you can say anything.
+[[Excuse me? | asshole]]</tw-passagedata><tw-passagedata pid="208" name="asshole" tags="" position="975,2600" size="100,100">You turn to the man, &quot;you don&#39;t belong here.&quot; He interrupts before you can say anything.
 &quot;I can tell your poor, so run along little cowpunk.&quot;
 &quot;excuse me?&quot;
 &quot;You heard me.&quot; After a moment of staring his eyes widened in realization, &quot;Oh shit, your here to get me, those corpo bastards hired you.&quot;
-[[Come peacefully or I&#39;ll have to take matters into my own hands. | take matters]]</tw-passagedata><tw-passagedata pid="210" name="take matters" tags="" position="1225,2600" size="100,100">You turn to the man, &quot;you don&#39;t belong here.&quot; He interrupts before you can say anything.
+[[Come peacefully or I&#39;ll have to take matters into my own hands. | take matters]]</tw-passagedata><tw-passagedata pid="209" name="take matters" tags="" position="1100,2600" size="100,100">You turn to the man, &quot;you don&#39;t belong here.&quot; He interrupts before you can say anything.
 &quot;I can tell your poor, so run along little cowpunk.&quot;
 &quot;excuse me?&quot;
 &quot;You heard me.&quot; After a moment of staring his eyes widened in realization, &quot;Oh shit, your here to get me, those corpo bastards hired you.&quot;
 &quot;Come peacefully or I&#39;ll have to take matters into my own hands.&quot;
 &quot;I&#39;m afraid I can&#39;t do that.&quot; The man stood up and flashed a knife.
-[[Draw your gun | draw gun casino]]</tw-passagedata><tw-passagedata pid="211" name="draw gun casino" tags="" position="100,2725" size="100,100">You draw your weapon as the man in the velvet suit charges towards you with his knife.
+[[Draw your gun | draw gun casino]]</tw-passagedata><tw-passagedata pid="210" name="draw gun casino" tags="" position="1225,2600" size="100,100">You draw your weapon as the man in the velvet suit charges towards you with his knife.
 [[Fire away | fight velvet man]]
-[[Gamble real quick | gamble????]]</tw-passagedata><tw-passagedata pid="212" name="gamble????" tags="" position="225,2725" size="100,100">Are you serious, that man is about to kill you and you want to gamble? [[Shoot him. | fight velvet man]]</tw-passagedata><tw-passagedata pid="213" name="fight velvet man" tags="" position="350,2725" size="100,100">The man in velvet lunges at you with the knife, and you begin to fire back,
+[[Gamble real quick | gamble????]]</tw-passagedata><tw-passagedata pid="211" name="gamble????" tags="" position="100,2725" size="100,100">Are you serious, that man is about to kill you and you want to gamble? [[Shoot him. | fight velvet man]]</tw-passagedata><tw-passagedata pid="212" name="fight velvet man" tags="" position="225,2725" size="100,100">The man in velvet lunges at you with the knife, and you begin to fire back,
 &lt;&lt;script&gt;&gt;StartCombat(2,8,2)&lt;&lt;/script&gt;&gt;
-&lt;&lt;if $health &gt; 0&gt;&gt;You hit him dead on, and he lies bleeding out on the casino floor, you should probably [[call a corporate representative quick. | corpo rep velvet]]&lt;&lt;set $gambled = true&gt;&gt; &lt;&lt;else&gt;&gt; Your thoughts of gambling slowed your draw, [[It&#39;s over for now cowpunk | Map]]&lt;&lt;set $gambled = true&gt;&gt; &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="214" name="corpo rep velvet" tags="" position="475,2725" size="100,100">A familiar man in a black suit arrives at the Blue Flame in minutes, ready to give you your reward, &lt;&lt;link &quot;$75&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $money = $money + 75&gt;&gt;&lt;&lt;/link&gt;&gt;.</tw-passagedata><tw-passagedata pid="215" name="the train station" tags="" position="600,2725" size="100,100">In the corner of the bounty there is a corporate logo with just one small star.
+&lt;&lt;if $health &gt; 0&gt;&gt;You hit him dead on, and he lies bleeding out on the casino floor, you should probably [[call a corporate representative quick. | corpo rep velvet]]&lt;&lt;set $gambled = true&gt;&gt; &lt;&lt;else&gt;&gt; Your thoughts of gambling slowed your draw, [[It&#39;s over for now cowpunk | Map]]&lt;&lt;set $gambled = true&gt;&gt; &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="213" name="corpo rep velvet" tags="" position="350,2725" size="100,100">A familiar man in a black suit arrives at the Blue Flame in minutes, ready to give you your reward, &lt;&lt;link &quot;$75&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $money = $money + 75&gt;&gt;&lt;&lt;/link&gt;&gt;.</tw-passagedata><tw-passagedata pid="214" name="the train station" tags="" position="475,2725" size="100,100">In the corner of the bounty there is a corporate logo with just one small star.
 The top of the bounty reads &quot;Defend&quot; followed by a picture of the train station.
 The bounty&#39;s description reads:
 Duration: 1 day
@@ -1401,32 +1408,43 @@ Use any means to prevent citizens from avoiding the fare.
 Location: Train station
 Reward: $25
 
-&lt;&lt;link &quot;Accept bounty&quot; &quot;Defend train station&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="216" name="Defend train station" tags="" position="725,2725" size="100,100">You make your way to the train station where you find a line of turnstiles blocking your path through to the train.
-&lt;&lt;if $money &gt;= 5&gt;&gt;&lt;&lt;link &quot;Pay to pass through (-$5)&quot; &quot;pass into station&quot;&gt;&gt;&lt;&lt;set $money = $money - 5&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link &quot;Pay to pass through (-$5)&quot; &quot;poor&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt; or &lt;&lt;link &quot;Abandon the bounty&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="217" name="poor" tags="" position="850,2725" size="100,100">You don&#39;t have the funds to enter. You must [[Vault the turnstile. | vault into station]]</tw-passagedata><tw-passagedata pid="218" name="pass into station" tags="" position="975,2725" size="100,100">You pay the fare and pass through as the turnstile clicks loudly. At the same time that you pass through, a man climbs over the turnstile next to you. 
-You notice a security camera on the wall watching you closely, [[Say something to the man | shill]] or [[Ignore it and get the next person | not a shill]].</tw-passagedata><tw-passagedata pid="219" name="vault into station" tags="" position="1100,2725" size="100,100">You vault yourself over the turnstile and hit the ground loudly. At the same time that you pass over, a man climbs over the turnstile next to you. 
-You notice a security camera on the wall watching you closely, [[Say something to the man | shill]] or [[Ignore it and get the next person | not a shill]].</tw-passagedata><tw-passagedata pid="220" name="shill" tags="" position="1225,2725" size="100,100">You call out to the man, accusing him of dodging the train fare. 
+&lt;&lt;link &quot;Accept bounty&quot; &quot;Defend train station&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="215" name="Defend train station" tags="" position="600,2725" size="100,100">You make your way to the train station where you find a line of turnstiles blocking your path through to the train.
+&lt;&lt;if $money &gt;= 5&gt;&gt;&lt;&lt;link &quot;Pay to pass through (-$5)&quot; &quot;pass into station&quot;&gt;&gt;&lt;&lt;set $money = $money - 5&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link &quot;Pay to pass through (-$5)&quot; &quot;poor&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt; or &lt;&lt;link &quot;Abandon the bounty&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="216" name="poor" tags="" position="725,2725" size="100,100">You don&#39;t have the funds to enter. You must [[Vault the turnstile. | vault into station]]</tw-passagedata><tw-passagedata pid="217" name="pass into station" tags="" position="850,2725" size="100,100">You pay the fare and pass through as the turnstile clicks loudly. At the same time that you pass through, a man climbs over the turnstile next to you. 
+You notice a security camera on the wall watching you closely, [[Say something to the man | shill]] or [[Ignore it and get the next person | not a shill]].</tw-passagedata><tw-passagedata pid="218" name="vault into station" tags="" position="975,2725" size="100,100">You vault yourself over the turnstile and hit the ground loudly. At the same time that you pass over, a man climbs over the turnstile next to you. 
+You notice a security camera on the wall watching you closely, [[Say something to the man | shill]] or [[Ignore it and get the next person | not a shill]].</tw-passagedata><tw-passagedata pid="219" name="shill" tags="" position="1100,2725" size="100,100">You call out to the man, accusing him of dodging the train fare. 
 &quot;Welcome to the real world goodie two shoes.&quot; He sneers back, as he keeps walking towards the train.
-[[&quot;I said stop, you must pay your fare like everybody else&quot; | argue]] you retort.</tw-passagedata><tw-passagedata pid="221" name="argue" tags="" position="100,2850" size="100,100">&quot;Nobody else cares, you corpo shill.&quot; The man responds, offended that you had the audacity to call him out.
-With seemingly no other option, you must decide to [[escalate things | escalate]] or [[just leave it | leave it]]</tw-passagedata><tw-passagedata pid="222" name="escalate" tags="" position="225,2850" size="100,100">Feeling like you don&#39;t have any other choice, you raise your gun towards the man. 
+[[&quot;I said stop, you must pay your fare like everybody else&quot; | argue]] you retort.</tw-passagedata><tw-passagedata pid="220" name="argue" tags="" position="1225,2725" size="100,100">&quot;Nobody else cares, you corpo shill.&quot; The man responds, offended that you had the audacity to call him out.
+With seemingly no other option, you must decide to [[escalate things | escalate]] or [[just leave it | leave it]]</tw-passagedata><tw-passagedata pid="221" name="escalate" tags="" position="100,2850" size="100,100">Feeling like you don&#39;t have any other choice, you raise your gun towards the man. 
 He throws his arms upward, &quot;Woah! What the hell man! god damn I&#39;ll just pay my damn fare.&quot;
-[[Collect the man&#39;s fare | next]]</tw-passagedata><tw-passagedata pid="223" name="leave it" tags="" position="350,2850" size="100,100">You decide to let the man go and you watch as he boards the train. [[It&#39;s time to start keeping watch | next]]</tw-passagedata><tw-passagedata pid="224" name="not a shill" tags="" position="475,2850" size="100,100">You ignore the man and hope that whoever&#39;s behind the camera didn&#39;t notice. 
-[[Stand at guard | next]] or &lt;&lt;link &quot;Abandon the bounty&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="225" name="next" tags="" position="600,2850" size="100,100">Shortly after turning back to guard the turnstiles you see a man in a nice suit and a woman vault over the turnstiles in short succession. 
-[[Call out to them, the fare must be payed. | two of them now]]</tw-passagedata><tw-passagedata pid="226" name="two of them now" tags="" position="725,2850" size="100,100">The man seems to ignore you, but the woman turns to you and looks at you for a moment before responding, &quot;Filthy cowpunks like you should mind their own business&quot;
-[[Mind your own business | do nothing]] or [[escalate things | do something crazy]]</tw-passagedata><tw-passagedata pid="227" name="do nothing" tags="" position="850,2850" size="100,100">It&#39;s not worth even trying, the person behind the camera knows for sure that your heart isn&#39;t in it by now, you likely won&#39;t get paid at this point anyway. you should just &lt;&lt;link &quot;leave&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;.</tw-passagedata><tw-passagedata pid="228" name="do something crazy" tags="" position="975,2850" size="100,100">You pull out your gun and point it at the man and woman across from you. The man in the suit perks up and looks at the gun.
+[[Collect the man&#39;s fare | next]]</tw-passagedata><tw-passagedata pid="222" name="leave it" tags="" position="225,2850" size="100,100">You decide to let the man go and you watch as he boards the train. [[It&#39;s time to start keeping watch | next]]</tw-passagedata><tw-passagedata pid="223" name="not a shill" tags="" position="350,2850" size="100,100">You ignore the man and hope that whoever&#39;s behind the camera didn&#39;t notice. 
+[[Stand at guard | next]] or &lt;&lt;link &quot;Abandon the bounty&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="224" name="next" tags="" position="475,2850" size="100,100">Shortly after turning back to guard the turnstiles you see a man in a nice suit and a woman vault over the turnstiles in short succession. 
+[[Call out to them, the fare must be payed. | two of them now]]</tw-passagedata><tw-passagedata pid="225" name="two of them now" tags="" position="600,2850" size="100,100">The man seems to ignore you, but the woman turns to you and looks at you for a moment before responding, &quot;Filthy cowpunks like you should mind their own business&quot;
+[[Mind your own business | do nothing]] or [[escalate things | do something crazy]]</tw-passagedata><tw-passagedata pid="226" name="do nothing" tags="" position="725,2850" size="100,100">It&#39;s not worth even trying, the person behind the camera knows for sure that your heart isn&#39;t in it by now, you likely won&#39;t get paid at this point anyway. you should just &lt;&lt;link &quot;leave&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;.</tw-passagedata><tw-passagedata pid="227" name="do something crazy" tags="" position="850,2850" size="100,100">You pull out your gun and point it at the man and woman across from you. The man in the suit perks up and looks at the gun.
 &quot;What the hell do you think yer doin there, I HAVE A MEETING TO GET TO!&quot; 
 The woman chimes in, &quot;Just let us be, my boss won&#39;t be happy if I&#39;m late.&quot;
 You start to feel the [[pressure | pressure]] of the situation.
-&lt;&lt;link &quot;You could still leave, abandoning the assignment&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="229" name="pressure" tags="" position="1100,2850" size="100,100">As you don&#39;t stand down, the man and woman start to berate you, but it all becomes a blur. 
+&lt;&lt;link &quot;You could still leave, abandoning the assignment&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="228" name="pressure" tags="" position="975,2850" size="100,100">As you don&#39;t stand down, the man and woman start to berate you, but it all becomes a blur. 
 You know they won&#39;t pay their fares if you just keep pointing the gun, you need to do something more to show them you&#39;re serious.
-[[Shoot them | shoot]]</tw-passagedata><tw-passagedata pid="230" name="shoot" tags="" position="1225,2850" size="100,100">You fire your gun until it runs out of bullets. 
+[[Shoot them | shoot]]</tw-passagedata><tw-passagedata pid="229" name="shoot" tags="" position="1100,2850" size="100,100">You fire your gun until it runs out of bullets. 
 The man lies on the ground in front of you, his suit now drenched in blood.
 The woman lies sobbing behind him, her legs unrecognizable.
-[[No one will be skipping their fares for quite some time. | congrats]]</tw-passagedata><tw-passagedata pid="231" name="congrats" tags="" position="100,2975" size="100,100">After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with &lt;&lt;link &quot;$25.&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $money = $money + 25&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="232" name="Kai Start" tags="" position="225,2975" size="100,100">Downtime! we vibin
+[[No one will be skipping their fares for quite some time. | congrats]]</tw-passagedata><tw-passagedata pid="230" name="congrats" tags="" position="1225,2850" size="100,100">After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with &lt;&lt;link &quot;$25.&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $money = $money + 25&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="231" name="Kai Start" tags="" position="100,2975" size="100,100">Downtime! we vibin
 
 &lt;&lt;set $deadeyeShops to $cat.getItemsFromShop(&quot;deadeye&quot;)&gt;&gt;
 &lt;&lt;for _item range $deadeyeShops&gt;&gt;
 &lt;&lt;= _item.name&gt;&gt;
-&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="233" name="Megan Start" tags="" position="350,2975" size="100,100">&lt;&lt;set $money = 0&gt;&gt; &lt;&lt;set $augments = &#39;None&#39;&gt;&gt; Here you are in the, where you are. Its unlike anywhere you&#39;ve ever seen. No word could describe it.
+&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="232" name="Start" tags="" position="225,2975" size="100,100">You wake up to a new day. The sunlights streams through your curtains, giving your small room a golden sheen. You need to find a job, and quick, if you&#39;re going to be able to support yourself much longer. As a cowpunk, another slang term for a bounty hunter, you&#39;ve had to resort to taking jobs for funds. You should check the bulletin boards in either the town or the city.
+
+The [[town bulletin board| Bounties]] is filled with smaller tasks. Nothing too big, but the people in town are awfully thankful for the help. And you&#39;ve found typically its good to help out the people you live right next to.
+
+The [[city bulletin board | Bounty Board]] on the other hand has more...intense...jobs. They&#39;re harder and more dangerous, but they often pay better.
+
+Or if your looking to explore before starting work you can open your [[map. | Map]]
+/* &lt;&lt;link &quot;Andrew&quot; &quot;Bounties&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; */
+/* &lt;&lt;link &quot;Caitlin&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; */
+/* &lt;&lt;link &quot;Cassidy&quot; &quot;Cassidy Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; */
+/* &lt;&lt;link &quot;Kai&quot; &quot;Kai Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; */
+/* &lt;&lt;link &quot;Megan&quot; &quot;Megan Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; */</tw-passagedata><tw-passagedata pid="233" name="Megan Start" tags="" position="350,2975" size="100,100">&lt;&lt;set $money = 0&gt;&gt; &lt;&lt;set $augments = &#39;None&#39;&gt;&gt; Here you are in the, where you are. Its unlike anywhere you&#39;ve ever seen. No word could describe it.
 [[who are you|Shut up I am so scared right now]]</tw-passagedata><tw-passagedata pid="234" name="Shut up I am so scared right now" tags="" position="475,2975" size="100,100">You can see your [[coin pouch|coin pouch]] out on the table and in the corner of the room is a dirty mirror with [[your reflection|upgrades]].</tw-passagedata><tw-passagedata pid="235" name="coin pouch" tags="" position="600,2975" size="100,100">When did I get $money dollars? Wow!</tw-passagedata><tw-passagedata pid="236" name="upgrades" tags="" position="725,2975" size="100,100">&lt;&lt;if $augments=&#39;None&#39;&gt;&gt;It&#39;s just me. The old boots my dad gave me before I left home and my cowboy hat.&lt;&lt;else&gt;&gt;Somewhat odd looking. &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="237" name="StoryInit" tags="" position="850,2975" size="100,100">&lt;&lt;set $health to 10&gt;&gt;
 &lt;&lt;set $power to 3&gt;&gt;
 &lt;&lt;set $damage to 3&gt;&gt;

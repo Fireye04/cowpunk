@@ -1,14 +1,7 @@
 :: Caitlin Start
 Caitlin file
 
-:: Start
-You wake up to a new day. The sunlights streams through your curtains, giving your small room a golden sheen. You need to find a job, and quick, if you're going to be able to support yourself much longer. As a cowpunk, another slang term for a bounty hunter, you've had to resort to taking jobs for funds. You should check the bulletin boards in either the town or the city.
 
-The [[town bulletin board| Bounties]] is filled with smaller tasks. Nothing too big, but the people in town are awfully thankful for the help. And you've found typically its good to help out the people you live right next to.
-
-The [[city bulletin board]] on the other hand has more...intense...jobs. They're harder and more dangerous, but they often pay better.
-
-Well, no time for hanging around. Time for you to get to work.
 
 
 :: Map
@@ -64,6 +57,8 @@ We've got some good stuff in. Why don't you take a look. We have...
 <<for _item range $deadeyeShops>>
 <<= [[_item.name]]>>
 <</for>>
+
+You currently have <<= $money >>
 
 <<if $money >14.5>>[[Purchase Augments | BuyCR]]<</if>>
 <<if $money <1>>[[You can't afford anything | Visit Town]]<</if>>
@@ -290,6 +285,8 @@ We've got some good stuff in. Why don't you take a look. We have...
 <<= [[_item.name]]>>
 <</for>>
 
+You currently have <<= $money >>
+
 <<if $money < 2>>[[You can't afford anthing | Visit City]]<</if>>
 
 <<if $money > 2>>[[Purchase Leg Replacement | Leg]]<</if>>
@@ -377,6 +374,8 @@ We've got some good stuff in. Why don't you take a look. We have...
 <<for _item range $cyberwaresShops>>
 <<= [[_item.name]]>>
 <</for>>
+
+You currently have <<= $money >>
 
 <<if $money < 14.5>>[[You can not afford anything | Visit City]]<</if>>
 <<if $money > 14.5>>[[Look at the Oracle Optics | oracle]]<</if>>
@@ -484,6 +483,9 @@ We've got some good stuff in. Why don't you take a look. We have...
 <<for _item range $blackmarketShops>>
 <<= [[_item.name]]>>
 <</for>>
+
+You currently have <<= $money >>
+
 [[Leave | Visit Ashes]]
 <<if $money < 1.5>>[[You can't afford anything here | Visit Ashes]]<</if>>
 <<if $money > 1>>[[Look at pea shooter | pea]]<</if>>
@@ -548,6 +550,8 @@ Behind the quiet man you see plaques above the augments. They read...
 <<for _item range $forgeShops>>
 <<= [[_item.name]]>>
 <</for>>
+
+You currently have <<= $money >>
 
 <<if $money < 9.5>>[[You can't afford anything. The man waves you away | Visit Ashes]]<</if>>
 <<if $money > 14>>[[Look at VisionX | visionx]]<</if>>
