@@ -285,6 +285,8 @@ We've got some good stuff in. Why don't you take a look. We have...
 <<= [[_item.name]]>>
 <</for>>
 
+You currently have <<= $money >>
+
 <<if $money < 2>>[[You can't afford anthing | Visit City]]<</if>>
 
 <<if $money > 2>>[[Purchase Leg Replacement | Leg]]<</if>>
@@ -372,6 +374,8 @@ We've got some good stuff in. Why don't you take a look. We have...
 <<for _item range $cyberwaresShops>>
 <<= [[_item.name]]>>
 <</for>>
+
+You currently have <<= $money >>
 
 <<if $money < 14.5>>[[You can not afford anything | Visit City]]<</if>>
 <<if $money > 14.5>>[[Look at the Oracle Optics | oracle]]<</if>>
@@ -479,6 +483,9 @@ We've got some good stuff in. Why don't you take a look. We have...
 <<for _item range $blackmarketShops>>
 <<= [[_item.name]]>>
 <</for>>
+
+You currently have <<= $money >>
+
 [[Leave | Visit Ashes]]
 <<if $money < 1.5>>[[You can't afford anything here | Visit Ashes]]<</if>>
 <<if $money > 1>>[[Look at pea shooter | pea]]<</if>>
@@ -543,6 +550,8 @@ Behind the quiet man you see plaques above the augments. They read...
 <<for _item range $forgeShops>>
 <<= [[_item.name]]>>
 <</for>>
+
+You currently have <<= $money >>
 
 <<if $money < 9.5>>[[You can't afford anything. The man waves you away | Visit Ashes]]<</if>>
 <<if $money > 14>>[[Look at VisionX | visionx]]<</if>>

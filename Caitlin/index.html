@@ -1002,6 +1002,8 @@ The wife smiles widely at you as you enter, her long flowing black hair seems to
 &lt;&lt;= [[_item.name]]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
+You currently have &lt;&lt;= $money &gt;&gt;
+
 &lt;&lt;if $money &lt; 2&gt;&gt;[[You can&#39;t afford anthing | Visit City]]&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $money &gt; 2&gt;&gt;[[Purchase Leg Replacement | Leg]]&lt;&lt;/if&gt;&gt;
@@ -1058,6 +1060,8 @@ You are greeted by someone who is entirely more machine than man. You can see th
 &lt;&lt;for _item range $cyberwaresShops&gt;&gt;
 &lt;&lt;= [[_item.name]]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
+
+You currently have &lt;&lt;= $money &gt;&gt;
 
 &lt;&lt;if $money &lt; 14.5&gt;&gt;[[You can not afford anything | Visit City]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $money &gt; 14.5&gt;&gt;[[Look at the Oracle Optics | oracle]]&lt;&lt;/if&gt;&gt;
@@ -1129,6 +1133,9 @@ When he smiles his metallic lower jaw glints under the neon lights. &quot;Howdy 
 &lt;&lt;for _item range $blackmarketShops&gt;&gt;
 &lt;&lt;= [[_item.name]]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
+
+You currently have &lt;&lt;= $money &gt;&gt;
+
 [[Leave | Visit Ashes]]
 &lt;&lt;if $money &lt; 1.5&gt;&gt;[[You can&#39;t afford anything here | Visit Ashes]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $money &gt; 1&gt;&gt;[[Look at pea shooter | pea]]&lt;&lt;/if&gt;&gt;
@@ -1167,6 +1174,8 @@ You stop in front of a desk where a thin man with metal arms emerging from his b
 &lt;&lt;for _item range $forgeShops&gt;&gt;
 &lt;&lt;= [[_item.name]]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
+
+You currently have &lt;&lt;= $money &gt;&gt;
 
 &lt;&lt;if $money &lt; 9.5&gt;&gt;[[You can&#39;t afford anything. The man waves you away | Visit Ashes]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $money &gt; 14&gt;&gt;[[Look at VisionX | visionx]]&lt;&lt;/if&gt;&gt;
