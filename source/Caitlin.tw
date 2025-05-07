@@ -53,7 +53,24 @@ He nods to you, but his eyes never quiet meet your own. His voice is more clippe
 <<= [[_item.name]]>>
 <</for>>
 
+<<if $money >14.5>>[[Purchase Augments | BuyCR]]<</if>>
+<<if $money <1>>[[You can't afford anything | Visit Town]]<</if>>
 
+:: BuyCR
+<<if $money > 14>>[[Purchase Crossover Frequency]]<</if>>
+
+<<if $money > 39>>[[Purchase Neuralink]]<</if>>
+
+<<if $money > 79>>[[Purchase The CORE]]<</if>>
+
+:: Purchase Crossover Frequency
+An augment for your ears. It dynamically splits and prioritizes incoming sounds, allowing you to isolate even the quietest of noises. Achieve perfect auditory balance.
+[[Buy |Crossover]]
+
+:: Crossover
+The older man lays you down on the makeshift opperating table to perform the surgery> it doesn't take long, and when you wake up you swear you can hear conversation from across town perfectly.
+<<set$money = $money - 15>>
+<<set $humanity = $humanity >>
 
 :: Buy
 Testing
