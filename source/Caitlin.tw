@@ -59,8 +59,8 @@ He nods to you, but his eyes never quiet meet your own. His voice is more clippe
 
 :: cr.gunlist
 We've got some good stuff in. Why don't you take a look. We have...
-<<set $cat to new Catalog([new Augment("Crossover Frequency", "Dynamically splits and prioritizes incoming sounds allowing you to isolate even the quietest of noises. Achive perfect auditory balance.", "ears", 15, 3, 5, -15, -20,["deadeye"]), new Augment("Neuralink","With the newest cybernetic tech you can now think faster than ever!","brain",40,4,10,-50,-40,["deadeye"]), new Augment("The CORE","Your cardiovascular system will thank you with this new and approved CORE!", "heart",80,5,25,-80,-80,["deadeye"])])>>
-<<set $deadeyeShops to $cat.getItemsFromShop("deadeye")>>
+<<set $catalog to new Catalog([new Augment("Crossover Frequency", "Dynamically splits and prioritizes incoming sounds allowing you to isolate even the quietest of noises. Achive perfect auditory balance.", "ears", 15, 3, 5, -15, -20,["deadeye"]), new Augment("Neuralink","With the newest cybernetic tech you can now think faster than ever!","brain",40,4,10,-50,-40,["deadeye"]), new Augment("The CORE","Your cardiovascular system will thank you with this new and approved CORE!", "heart",80,5,25,-80,-80,["deadeye"])])>>
+<<set $deadeyeShops to $catalog.getItemsFromShop("deadeye")>>
 <<for _item range $deadeyeShops>>
 <<= [[_item.name]]>>
 <</for>>
@@ -284,8 +284,8 @@ The wife smiles widely at you as you enter, her long flowing black hair seems to
 
 :: ec.augmentlist1
 We've got some good stuff in. Why don't you take a look. We have...
-<<set $cat to new Catalog([new Augment("'Leg' Replacement","A rusty piece of metal that is vaguley leg looking. It is clearly handmade", "legs", 2,2,5,-2,-10,["the iron giant"]), new Augment("The Final Step", "A slightly less rusty leg with some bronze detailing. The heel has a sharp piece of metal which could be used to kick someone with YEEOWCH","legs",7,2,5,-2,-10,["the iron giant"]), new Augment("Rebar", "A metal Arm which is held together with welding burns and prayers. Might lift, might seize up", "arms", 5,2,5,-4,-10,["the iron giant"]), new Augment("Firearm","A slightly less rusty arm with an airsoft gun attached to it.Technically a firearm. Technically", "arms", 7,2,5,-6,-10,["the iron giant"])])>>
-<<set $theirongiantShops to $cat.getItemsFromShop("the iron giant")>>
+<<set $catalog to new Catalog([new Augment("'Leg' Replacement","A rusty piece of metal that is vaguley leg looking. It is clearly handmade", "legs", 2,2,5,-2,-10,["the iron giant"]), new Augment("The Final Step", "A slightly less rusty leg with some bronze detailing. The heel has a sharp piece of metal which could be used to kick someone with YEEOWCH","legs",7,2,5,-2,-10,["the iron giant"]), new Augment("Rebar", "A metal Arm which is held together with welding burns and prayers. Might lift, might seize up", "arms", 5,2,5,-4,-10,["the iron giant"]), new Augment("Firearm","A slightly less rusty arm with an airsoft gun attached to it.Technically a firearm. Technically", "arms", 7,2,5,-6,-10,["the iron giant"])])>>
+<<set $theirongiantShops to $catalog.getItemsFromShop("the iron giant")>>
 <<for _item range $theirongiantShops>>
 <<= [[_item.name]]>>
 <</for>>
@@ -372,8 +372,8 @@ You are greeted by someone who is entirely more machine than man. You can see th
 
 :: ec.augmentlist2
 We've got some good stuff in. Why don't you take a look. We have...
-<<set $cat to new Catalog([new Augment("Oracle Optics","See the future before it happens. Oracle Optics™ delivers predictive motion tracking, target leading algorithms, and real-time behavioral analysis.","eyes",15,3,5,-30,-20,["cyberwares"]), new Augment("Opulent Crown","Headgear for the truly refined. Cast in 24 Karrot Gold threaded with rose-gold filigree,  it serves no function, and that's the point. Elegance has never been less efficient","head",100,0,0,-20,-100,["cyberwares"]), new Augment("StrikerStep VX-9","Forged from milspec alloys, this leg is a blade in disguise. It transforms into a curved cleaver for rotational attacks. They'll never see the spin coming","legs",15,4,15,-30,-30,["cyberwares"]), new Augment("HexSpitter Appendage-X","Forearm-integrated micro-munitions system. Load dart pods or neurotoxin needles. Precision targeting via ocular sync. The future of ranged subtlety.","arms",30,4,10,-30,-30,["cyberwares"])])>>
-<<set $cyberwaresShops to $cat.getItemsFromShop("cyberwares")>>
+<<set $catalog to new Catalog([new Augment("Oracle Optics","See the future before it happens. Oracle Optics™ delivers predictive motion tracking, target leading algorithms, and real-time behavioral analysis.","eyes",15,3,5,-30,-20,["cyberwares"]), new Augment("Opulent Crown","Headgear for the truly refined. Cast in 24 Karrot Gold threaded with rose-gold filigree,  it serves no function, and that's the point. Elegance has never been less efficient","head",100,0,0,-20,-100,["cyberwares"]), new Augment("StrikerStep VX-9","Forged from milspec alloys, this leg is a blade in disguise. It transforms into a curved cleaver for rotational attacks. They'll never see the spin coming","legs",15,4,15,-30,-30,["cyberwares"]), new Augment("HexSpitter Appendage-X","Forearm-integrated micro-munitions system. Load dart pods or neurotoxin needles. Precision targeting via ocular sync. The future of ranged subtlety.","arms",30,4,10,-30,-30,["cyberwares"])])>>
+<<set $cyberwaresShops to $catalog.getItemsFromShop("cyberwares")>>
 <<for _item range $cyberwaresShops>>
 <<= [[_item.name]]>>
 <</for>>
@@ -479,8 +479,8 @@ When he smiles his metallic lower jaw glints under the neon lights. "Howdy partn
 
 :: a.gunlist
 We've got some good stuff in. Why don't you take a look. We have...
-<<set $cat to new Catalog([new Weapon("Pea Shooter", "An old revolver that looks 'well loved'. It's nothing fancy but it'll get the job done", 2, 4, ["blackmarket guns"]), new Weapon("Bucky", "A double barrel shot gun", 8,6,["blackmarket guns"]), new Weapon("Big Iron", "A comically large rifle", 10,8,["blackmarket guns"])])>>
-<<set $blackmarketShops to $cat.getItemsFromShop("blackmarket guns")>>
+<<set $catalog to new Catalog([new Weapon("Pea Shooter", "An old revolver that looks 'well loved'. It's nothing fancy but it'll get the job done", 2, 4, ["blackmarket guns"]), new Weapon("Bucky", "A double barrel shot gun", 8,6,["blackmarket guns"]), new Weapon("Big Iron", "A comically large rifle", 10,8,["blackmarket guns"])])>>
+<<set $blackmarketShops to $catalog.getItemsFromShop("blackmarket guns")>>
 <<for _item range $blackmarketShops>>
 <<= [[_item.name]]>>
 <</for>>
@@ -543,8 +543,8 @@ You stop in front of a desk where a thin man with metal arms emerging from his b
 
 :: a.augmentlist
 Behind the quiet man you see plaques above the augments. They read...
-<<set $cat to new Catalog([new Augment("VisionX","The final word in adaptive sight technology. VisionX™ features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays","eyes",15,3,5,-10,-40,["forge and flame"]), new Augment("Vanta-Knife Limb Unit","Built for vertical dominance. Hydraulics deliver wall-scale jumping, and elevated agility. Mobility meets mayhem.","legs",10,3,20,-20,-20,["forge and flame"]), new Augment("GravMaul TactArm","Augmented muscle density paired with shockwave knuckle tech. Land a punch and generate a localized impact radius. Your handshake just became a hazard","arms",20,2,20,-20,-20,["forge and flame"]), new Augment("MantiEyes","The final word in adaptive sight technology. VisionX™ features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays.","eyes",15,3,5,-30,-20["forge and flame"])])>>
-<<set $forgeShops to $cat.getItemsFromShop("forge and flame")>>
+<<set $catalog to new Catalog([new Augment("VisionX","The final word in adaptive sight technology. VisionX™ features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays","eyes",15,3,5,-10,-40,["forge and flame"]), new Augment("Vanta-Knife Limb Unit","Built for vertical dominance. Hydraulics deliver wall-scale jumping, and elevated agility. Mobility meets mayhem.","legs",10,3,20,-20,-20,["forge and flame"]), new Augment("GravMaul TactArm","Augmented muscle density paired with shockwave knuckle tech. Land a punch and generate a localized impact radius. Your handshake just became a hazard","arms",20,2,20,-20,-20,["forge and flame"]), new Augment("MantiEyes","The final word in adaptive sight technology. VisionX™ features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays.","eyes",15,3,5,-30,-20["forge and flame"])])>>
+<<set $forgeShops to $catalog.getItemsFromShop("forge and flame")>>
 <<for _item range $forgeShops>>
 <<= [[_item.name]]>>
 <</for>>
