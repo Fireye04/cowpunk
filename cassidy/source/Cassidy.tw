@@ -123,7 +123,7 @@ His eyes begin to water as he stares at you, "Please. you have to believe me. I 
 [[I'm afraid I can't do that | insane man 2]]
 
 :: insane man 2
-"Yes, yes you can" He stuttered barely holding composure, "because if you don't, I swear to god I will [[shoot | kill Joshua]] you." Joshua pulled out a gun from beside him, still talking.
+"Yes, yes you can" He stuttered barely holding composure, "because if you don't, I swear to god I will [[shoot | kill joshua]] you." Joshua pulled out a gun from beside him, still talking.
 [[Keep listening | insane man 3]]
 
 :: insane man 3
@@ -134,8 +134,8 @@ His eyes begin to water as he stares at you, "Please. you have to believe me. I 
 [[Shoot him | victory over josh]]
 
 :: apprehend josh
-<<set rng = random(1,6)>>
-<<if rng > 3>>You manage to wrestle the man down and put him in cuffs. [[Call in a corporate representative | corpo rep josh]]<<else>> You are unable to make Joshua submit. [[Shoot him | kill joshua]]<</if>>
+<<set $rng = random(1,6)>>
+<<if $rng > 3>>You manage to wrestle the man down and put him in cuffs. [[Call in a corporate representative | corpo rep josh]]<<else>> You are unable to make Joshua submit. [[Shoot him | kill joshua]]<</if>>
 
 :: kill joshua
 <<script>>StartCombat(1,4,3)<</script>>
