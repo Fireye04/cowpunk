@@ -959,7 +959,7 @@ The people here reak of wealth.
 Underneath the city&#39;s image lies another name [[The Ashes | Ashes]]
 
 [[Visit | Visit City]] or [[go back to the map | locations]]</tw-passagedata><tw-passagedata pid="108" name="Visit City" tags="" position="975,1350" size="100,100">The neon lights and constant blanket of noise welcome you into the city. Skyscrapers tower above you like mountain tops you could never hope to climb. 
-People pass by without offering you a second glance as they go about their days. 
+People pass by without offering you a second glance as they go about their days. And there it is: [[the bounty board | Cassidy Start]], the pieces of paper touting tantalizing sums of money on it calling your name as you walk by.
 
 There are numerous stores here, but you know the best ones... at least for your needs. 
 
@@ -1292,19 +1292,153 @@ Your gaze falls to the metal augments adorning your body. You nearly can&#39;t r
 
 [[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="172" name="No Human" tags="" position="225,2225" size="100,100">&quot;You&#39;ve still gotta head on your shoulders don&#39;t ya? Seems man enough to me.&quot;
 
-[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="173" name="Cassidy Start" tags="" position="350,2225" size="100,100">Cassidy file</tw-passagedata><tw-passagedata pid="174" name="Kai Start" tags="" position="475,2225" size="100,100">Downtime! we vibin
+[[Leave | Visit Desert]]</tw-passagedata><tw-passagedata pid="173" name="Cassidy Start" tags="" position="350,2225" size="100,100">&lt;&lt;set $CorpoBounties = [&quot;retrieve rent&quot;,&quot;whistleblower&quot;,&quot;gamblers fallacy&quot;,&quot;the train station&quot;]&gt;&gt;
+Go to the [[bounty board | Bounty Board]]
+&lt;&lt;set $corpo1 to new Bounty(&quot;retrieve rent&quot;, &quot;Collect a local pubs overdue rent.&quot;, &quot;available&quot;, 150, -10, -2, &quot;hard&quot;,[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;
+&lt;&lt;set $corpo2 to new Bounty(&quot;whistleblower&quot;, &quot;Prevent a corporate whistleblower from releasing his findings.&quot;, &quot;available&quot;, 250, -15, -10, &quot;intermediate&quot;,[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;
+&lt;&lt;set $corpo3 to new Bounty(&quot;gamblers fallacy&quot;, &quot;Hunt down a notorious gambler and end his winning streak.&quot;, &quot;available&quot;, 250, -5, -1, &quot;intermediate&quot;[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;
+&lt;&lt;set $corpo4 to new Bounty(&quot;the train station&quot;, &quot;Prevent citizens from dodging the trainfare.&quot;, &quot;available&quot;, 100, -5, -10, &quot;novice&quot;,[&quot;the first one&quot;,&quot;dennis&quot;,&quot;el pequenito caballero&quot;])&gt;&gt;</tw-passagedata><tw-passagedata pid="174" name="Bounty Board" tags="" position="475,2225" size="100,100">You approach a large board with a metal rim and torn, patchy cork board littered with an array of flimsy reused paper pinned up.
+Upon further inspecion, each piece of paper contains a bounty issued by one of the many corporations.
+&lt;&lt;if $rent_done == false&gt;&gt;&lt;&lt;link &quot;Check out the first bounty&quot; $CorpoBounties[0]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;The first bounty is no longer displayed.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $whistleblown == false&gt;&gt;&lt;&lt;link &quot;Check out the second bounty&quot; $CorpoBounties[1]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;The second bounty is no longer displayed.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $gambled == false&gt;&gt;&lt;&lt;link &quot;Check out the third bounty&quot; $CorpoBounties[2]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;The third bounty is no longer displayed.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $trained == false&gt;&gt;&lt;&lt;link &quot;Check out the fourth bounty&quot; $CorpoBounties[3]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;The fourth bounty is no longer displayed.&lt;&lt;/if&gt;&gt;
+[[Return to the map | Map]]</tw-passagedata><tw-passagedata pid="175" name="retrieve rent" tags="" position="600,2225" size="100,100">In the corner of the bounty there is a corporate logo and four small stars.
+The top of the bounty reads &quot;Retrieve&quot;, underneath is a photo of A muscular man with a glistening metal arm followed by the name &quot;Bill Westwood&quot; 
+The bounty&#39;s description reads:
+Wanted for repeated failure to fulfill property rent payments over a period of two months.
+Retrieve the owed sum of $650 by any means necessary.
+Last known location: The Lazy Cat
+Reward: $50
+
+&lt;&lt;link &quot;Accept bounty&quot; &quot;accept retrieve rent&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="176" name="accept retrieve rent" tags="" position="725,2225" size="100,100">You make your way through the noise of the city and the aggressively neon lights to a small pub with a flickering neon sign that reads, &quot;The Lazy Cat&quot;.
+[[enter | The Lazy Cat]]</tw-passagedata><tw-passagedata pid="177" name="The Lazy Cat" tags="" position="850,2225" size="100,100">Pushing open the wooden doors, you enter the run down pub. There are various groups at different tables talking and drinking, as well as a particularly drunk group of bikers playing pool near the bar.
+Tending the bar you see a large man with a metal arm, he must be Bill Westwood. [[Approach the bar | approach Bill]]</tw-passagedata><tw-passagedata pid="178" name="approach Bill" tags="" position="975,2225" size="100,100">As you approach the bar, Bill nods to you and says, &quot;Don&#39;t think I&#39;ve seen you round &#39;ere before, what can I do for ya?&quot;
+[[I&#39;m here for the rent you&#39;ve been missing | inquire on rent]]</tw-passagedata><tw-passagedata pid="179" name="inquire on rent" tags="" position="1100,2225" size="100,100">&quot;I see, so your one of them cowpunks then.&quot; Bill replied.
+He lit a cigarette and took a long draw, then continued, &quot;Listen, neither one of us wants this to get ugly, I&#39;ve been having to pay fer my family&#39;s meds, and the booze barely pays for itself round this part of town, so what say you we just forget about the bounty and I give you $25 to tear it up?&quot;
+&lt;&lt;link &quot;Accept Bill&#39;s deal&quot; &quot;friend of bill&quot;&gt;&gt;&lt;&lt;set $money = $money + 25&gt;&gt;&lt;&lt;set $rent_done = true&gt;&gt;&lt;&lt;/link&gt;&gt;
+[[Push for the rent | push for rent]]</tw-passagedata><tw-passagedata pid="180" name="friend of bill" tags="" position="1225,2225" size="100,100">You accept Bill&#39;s bribe and return [[home. | Your house]].</tw-passagedata><tw-passagedata pid="181" name="push for rent" tags="" position="100,2350" size="100,100">You need more money, and you stand on principle, Bill must pay his debt. 
+&quot;All right I see how it is then&quot; Bill said in a stern voice.
+The pub went quiet around the two of you, and [[Bill reached under the bar... | fight bill]]</tw-passagedata><tw-passagedata pid="182" name="fight bill" tags="" position="225,2350" size="100,100">You need more money, and you stand on principle, Bill must pay his debt. 
+&quot;All right I see how it is then&quot; Bill said in a stern voice.
+The pub went quiet around the two of you, and Bill reached under the bar to pull out a shotgun, at the same time you pulled out your gun and began to fire.
+&lt;&lt;script&gt;&gt;StartCombat(3,7,5)&lt;&lt;/script&gt;&gt;
+&lt;&lt;if $health &gt; 0&gt;&gt;You shoot bill to death, ready to [[collect his overdue rent. | collect rent]]&lt;&lt;else&gt;&gt; Bill fires his shotgun quicker than you can lift your gun, once he&#39;s sure you&#39;re not getting back up he puts away his shotgun. [[It&#39;s over for now cowpunk | Map]]&lt;&lt;set $rent_done = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="183" name="collect rent" tags="" position="350,2350" size="100,100">Stepping past the silent onlookers, still in shock of what just happened to Bill, you approach the bar and find where [[bill kept his money... | bills money]]</tw-passagedata><tw-passagedata pid="184" name="bills money" tags="" position="475,2350" size="100,100">Stepping past the silent onlookers, still in shock of what just happened to Bill, you approach the bar and find where bill kept his money.
+There was a small safe, already opened, with just enough money to cover the missing rent, and a picture of him with a woman who could only be his wife.
+[[Contact a corporation representative. | corpo rep]]</tw-passagedata><tw-passagedata pid="185" name="corpo rep" tags="" position="600,2350" size="100,100">After a few minutes a corporate representative meets you outside The Lazy Cat and takes the owed rent, leaving you with &lt;&lt;link&quot;$50 for the bounty.&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $money = $money +50&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="186" name="whistleblower" tags="" position="725,2350" size="100,100">You notice a corporate logo and two small stars in the top corner of the bounty.
+In bold red text, the top of the bounty reads &quot;Wanted dead or alive&quot;
+Underneath is a photo of a young man with greasy blonde hair and a circular scar on his left temple.
+The bounty&#39;s description reads:
+Joshua Dean
+Wanted for theft of confidential company information, and threat to expose important company secrets.
+Eliminate or apprehend by any means necessary.
+Last known location: The Ashes
+Reward: $75
+
+&lt;&lt;link &quot;Accept bounty&quot; &quot;accept whistleblower&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="187" name="accept whistleblower" tags="" position="850,2350" size="100,100">Making your way through the dark alleyways of Ember city you find yourself in the undercity known as The Ashes. 
+The image of Joshea Dean strong in your mind, you wander through The Ashes, you find yourself at the Pine Motel, known for hiding their guests identity.
+[[Enter the motel | pine motel]]</tw-passagedata><tw-passagedata pid="188" name="pine motel" tags="" position="975,2350" size="100,100">&quot;What can I do for you friend?&quot; A woman with bright green hair working the desk asks as you cross through the doors. 
+[[I&#39;m looking for someone... | pine motel dialogue 1]]</tw-passagedata><tw-passagedata pid="189" name="pine motel dialogue 1" tags="" position="1100,2350" size="100,100">&quot;What can I do for you friend?&quot; A woman with bright green hair working the desk asks as you cross through the doors. 
+&quot;I&#39;m looking for someone, greasy blonde hair, scar about here&quot; you say gesturing to your temple.
+&quot;I&#39;m afraid we don&#39;t keep a guest book, and I can&#39;t disclose any customer information. But if you&#39;d like a room I think I could help you out.&quot;
+[[Threaten the desk attendant | threaten pine motel]] or &lt;&lt;link &quot;Bribe the desk attendant (-$10)&quot; &quot;bribe pine motel&quot;&gt;&gt;&lt;&lt;set $money = $money - 10&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="190" name="bribe pine motel" tags="" position="1225,2350" size="100,100">&quot;What can I do for you friend?&quot; A woman with bright green hair working the desk asks as you cross through the doors. 
+&quot;I&#39;m looking for someone, greasy blonde hair, scar about here&quot; you say gesturing to your temple.
+&quot;I&#39;m afraid we don&#39;t keep a guest book, and I can&#39;t disclose any customer information. But if you&#39;d like a room I think I could help you out.&quot;
+You hand the woman $10 and she stashes it away behind the desk, &quot;There&#39;s a room on the second floor, room 213. The man your looking for booked that room.&quot;
+[[Thank you. | room 213]]</tw-passagedata><tw-passagedata pid="191" name="threaten pine motel" tags="" position="100,2475" size="100,100">&quot;What can I do for you friend?&quot; A woman with bright green hair working the desk asks as you cross through the doors. 
+&quot;I&#39;m looking for someone, greasy blonde hair, scar about here&quot; you say gesturing to your temple.
+&quot;I&#39;m afraid we don&#39;t keep a guest book, and I can&#39;t disclose any customer information. But if you&#39;d like a room I think I could help you out.&quot;
+You put your hand on your holster and repeat yourself, &quot;I&#39;m looking for a man with greasy blonde hair and a scar on his temple, make the right choice.&quot;
+The woman cowers a little and nods saying, &quot;He&#39;s in [[room 213 | room 213]]&quot;</tw-passagedata><tw-passagedata pid="192" name="room 213" tags="" position="225,2475" size="100,100">You climb the rickety motel stairs and walk down the faded red carpets of the cramped hallways, eventually finding room 213.
+The door is cracked open slightly, letting soft yellow light stream into the otherwise dark room.
+You creak the door open, alerting the man inside.
+Joshea Dean sits curled up on the bed, [[muttering to himself. | insane man]]</tw-passagedata><tw-passagedata pid="193" name="insane man" tags="" position="350,2475" size="100,100">After noticing your entrance he turns to look at you, now muttering to you, &quot;I didn&#39;t think it would be like this. I didn&#39;t think it would be like this.&quot;
+His eyes begin to water as he stares at you, &quot;Please. you have to believe me. I won&#39;t tell a soul, I&#39;ll-&quot; he stopped to frantically think, &quot;-I&#39;ll burn the drive, I&#39;ll destroy the data, just please, please let me go.&quot;
+[[I&#39;m afraid I can&#39;t do that | insane man 2]]</tw-passagedata><tw-passagedata pid="194" name="insane man 2" tags="" position="475,2475" size="100,100">&quot;Yes, yes you can&quot; He stuttered barely holding composure, &quot;because if you don&#39;t, I swear to god I will [[shoot | kill joshua]] you.&quot; Joshua pulled out a gun from beside him, still talking.
+[[Keep listening | insane man 3]]</tw-passagedata><tw-passagedata pid="195" name="insane man 3" tags="" position="600,2475" size="100,100">&quot;Oh what am I doing.&quot; The gun fell to his side, &quot;They killed him. My son, I mean. My wife died in child birth, he was all I had, and they just killed him.&quot;
+&quot;What I did was wrong. Was it? No, what the corporations are doing is wrong.&quot;
+[[Spare him | Bounty Board]]
+[[Attempt to apprehend him | apprehend josh]]
+[[Shoot him | victory over josh]]</tw-passagedata><tw-passagedata pid="196" name="apprehend josh" tags="" position="725,2475" size="100,100">&lt;&lt;set $rng = random(1,6)&gt;&gt;
+&lt;&lt;if $rng &gt; 3&gt;&gt;You manage to wrestle the man down and put him in cuffs. [[Call in a corporate representative | corpo rep josh]]&lt;&lt;else&gt;&gt; You are unable to make Joshua submit. [[Shoot him | kill joshua]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="197" name="kill joshua" tags="" position="850,2475" size="100,100">&lt;&lt;script&gt;&gt;StartCombat(1,4,3)&lt;&lt;/script&gt;&gt;
+&lt;&lt;if $health &gt; 0&gt;&gt;[[You win the scuffle | victory over josh]] &lt;&lt;else&gt;&gt; [[You lose the scuffle | defeat over josh]] &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="198" name="victory over josh" tags="" position="975,2475" size="100,100">You fire at Joshua Dean and before he can shoot back, his corpse slumps to the bed.
+[[Call in a corporate representative | corpo rep josh]]</tw-passagedata><tw-passagedata pid="199" name="defeat over josh" tags="" position="1100,2475" size="100,100">Against all odds, Joshua Dean manages to best you, surviving for now. &lt;&lt;set $whistleblown = true&gt;&gt;[[It&#39;s over for now cowpunk. | Map]]</tw-passagedata><tw-passagedata pid="200" name="corpo rep josh" tags="" position="1225,2475" size="100,100">A man in a black suit meets you outside the motel and thanks you for dealing with their little problem, handing you &lt;&lt;link &quot;$75&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $whistleblown = true&gt;&gt;&lt;&lt;set $money = $money + 75&gt;&gt;&lt;&lt;/link&gt;&gt; in exchange.</tw-passagedata><tw-passagedata pid="201" name="gamblers fallacy" tags="" position="100,2600" size="100,100">The thin sheet of paper&#39;s upper corner appears to be branded with a corporate logo and three small stars.
+In bold red text, the top of the bounty reads &quot;Wanted dead or alive&quot;
+Underneath is a dark photo of a man in a bright red velvet suit.
+The bounty&#39;s description reads:
+Name unknown
+Wanted for card counting and repeated return to the Blue Flame Casino following expulsion.
+Eliminate or apprehend by any means necessary.
+Last known location: Blue Flame Casino
+Reward: $75
+
+&lt;&lt;link &quot;Accept bounty&quot; &quot;accept gamblers fallacy&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="202" name="accept gamblers fallacy" tags="" position="225,2600" size="100,100">You ascend through Ember City drawing ever nearer to the enchanting allure of the Blue Flame, sitting atop its paramount.
+When you reach the casino you are drawn into it by the dazzling stars making up its sign, its as though you had no recollection of approaching or entering the casino, you simply appeared inside.
+Passing from table to table you have the urge to [[gamble | gamble?]], but that would be unwise, best to [[keep searching | keep searching]].</tw-passagedata><tw-passagedata pid="203" name="gamble?" tags="" position="350,2600" size="100,100">Now&#39;s not the time, your on a job. [[Keep searching | keep searching]]</tw-passagedata><tw-passagedata pid="204" name="keep searching" tags="" position="475,2600" size="100,100">As you search deeper into the casino, you approach the [[high rollers tables | the velvet suit]], It wouls be so nice to [[gamble | gamble??]], even just a little.</tw-passagedata><tw-passagedata pid="205" name="gamble??" tags="" position="600,2600" size="100,100">What is wrong with you, you have to find the man in the velevet suit. [[Go to the high rollers table. | the velvet suit]]</tw-passagedata><tw-passagedata pid="206" name="the velvet suit" tags="" position="725,2600" size="100,100">Once you make it to the high rollers table you sit down, sitting next to you is the man you&#39;ve been looking for, the man in the velvet suit.
+[[Gamble at the high rollers table | gamble???]]
+[[Interrogate the man | interrogate]]</tw-passagedata><tw-passagedata pid="207" name="gamble???" tags="" position="850,2600" size="100,100">You have a serious problem, you need that money, so start [[interrogating the man in the velvet suit | interrogate]].</tw-passagedata><tw-passagedata pid="208" name="interrogate" tags="" position="975,2600" size="100,100">You turn to the man, &quot;you don&#39;t belong here.&quot; He interrupts before you can say anything.
+&quot;I can tell your poor, so run along little cowpunk.&quot;
+[[Excuse me? | asshole]]</tw-passagedata><tw-passagedata pid="209" name="asshole" tags="" position="1100,2600" size="100,100">You turn to the man, &quot;you don&#39;t belong here.&quot; He interrupts before you can say anything.
+&quot;I can tell your poor, so run along little cowpunk.&quot;
+&quot;excuse me?&quot;
+&quot;You heard me.&quot; After a moment of staring his eyes widened in realization, &quot;Oh shit, your here to get me, those corpo bastards hired you.&quot;
+[[Come peacefully or I&#39;ll have to take matters into my own hands. | take matters]]</tw-passagedata><tw-passagedata pid="210" name="take matters" tags="" position="1225,2600" size="100,100">You turn to the man, &quot;you don&#39;t belong here.&quot; He interrupts before you can say anything.
+&quot;I can tell your poor, so run along little cowpunk.&quot;
+&quot;excuse me?&quot;
+&quot;You heard me.&quot; After a moment of staring his eyes widened in realization, &quot;Oh shit, your here to get me, those corpo bastards hired you.&quot;
+&quot;Come peacefully or I&#39;ll have to take matters into my own hands.&quot;
+&quot;I&#39;m afraid I can&#39;t do that.&quot; The man stood up and flashed a knife.
+[[Draw your gun | draw gun casino]]</tw-passagedata><tw-passagedata pid="211" name="draw gun casino" tags="" position="100,2725" size="100,100">You draw your weapon as the man in the velvet suit charges towards you with his knife.
+[[Fire away | fight velvet man]]
+[[Gamble real quick | gamble????]]</tw-passagedata><tw-passagedata pid="212" name="gamble????" tags="" position="225,2725" size="100,100">Are you serious, that man is about to kill you and you want to gamble? [[Shoot him. | fight velvet man]]</tw-passagedata><tw-passagedata pid="213" name="fight velvet man" tags="" position="350,2725" size="100,100">The man in velvet lunges at you with the knife, and you begin to fire back,
+&lt;&lt;script&gt;&gt;StartCombat(2,8,2)&lt;&lt;/script&gt;&gt;
+&lt;&lt;if $health &gt; 0&gt;&gt;You hit him dead on, and he lies bleeding out on the casino floor, you should probably [[call a corporate representative quick. | corpo rep velvet]]&lt;&lt;set $gambled = true&gt;&gt; &lt;&lt;else&gt;&gt; Your thoughts of gambling slowed your draw, [[It&#39;s over for now cowpunk | Map]]&lt;&lt;set $gambled = true&gt;&gt; &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="214" name="corpo rep velvet" tags="" position="475,2725" size="100,100">A familiar man in a black suit arrives at the Blue Flame in minutes, ready to give you your reward, &lt;&lt;link &quot;$75&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $money = $money + 75&gt;&gt;&lt;&lt;/link&gt;&gt;.</tw-passagedata><tw-passagedata pid="215" name="the train station" tags="" position="600,2725" size="100,100">In the corner of the bounty there is a corporate logo with just one small star.
+The top of the bounty reads &quot;Defend&quot; followed by a picture of the train station.
+The bounty&#39;s description reads:
+Duration: 1 day
+Act as guard at the train station to prevent unruly citizens from vaulting the pay gates to evade the train fare.
+Use any means to prevent citizens from avoiding the fare.
+Location: Train station
+Reward: $25
+
+&lt;&lt;link &quot;Accept bounty&quot; &quot;Defend train station&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; or [[Return to Bounty Board | Bounty Board]]</tw-passagedata><tw-passagedata pid="216" name="Defend train station" tags="" position="725,2725" size="100,100">You make your way to the train station where you find a line of turnstiles blocking your path through to the train.
+&lt;&lt;if $money &gt;= 5&gt;&gt;&lt;&lt;link &quot;Pay to pass through (-$5)&quot; &quot;pass into station&quot;&gt;&gt;&lt;&lt;set $money = $money - 5&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link &quot;Pay to pass through (-$5)&quot; &quot;poor&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt; or &lt;&lt;link &quot;Abandon the bounty&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="217" name="poor" tags="" position="850,2725" size="100,100">You don&#39;t have the funds to enter. You must [[Vault the turnstile. | vault into station]]</tw-passagedata><tw-passagedata pid="218" name="pass into station" tags="" position="975,2725" size="100,100">You pay the fare and pass through as the turnstile clicks loudly. At the same time that you pass through, a man climbs over the turnstile next to you. 
+You notice a security camera on the wall watching you closely, [[Say something to the man | shill]] or [[Ignore it and get the next person | not a shill]].</tw-passagedata><tw-passagedata pid="219" name="vault into station" tags="" position="1100,2725" size="100,100">You vault yourself over the turnstile and hit the ground loudly. At the same time that you pass over, a man climbs over the turnstile next to you. 
+You notice a security camera on the wall watching you closely, [[Say something to the man | shill]] or [[Ignore it and get the next person | not a shill]].</tw-passagedata><tw-passagedata pid="220" name="shill" tags="" position="1225,2725" size="100,100">You call out to the man, accusing him of dodging the train fare. 
+&quot;Welcome to the real world goodie two shoes.&quot; He sneers back, as he keeps walking towards the train.
+[[&quot;I said stop, you must pay your fare like everybody else&quot; | argue]] you retort.</tw-passagedata><tw-passagedata pid="221" name="argue" tags="" position="100,2850" size="100,100">&quot;Nobody else cares, you corpo shill.&quot; The man responds, offended that you had the audacity to call him out.
+With seemingly no other option, you must decide to [[escalate things | escalate]] or [[just leave it | leave it]]</tw-passagedata><tw-passagedata pid="222" name="escalate" tags="" position="225,2850" size="100,100">Feeling like you don&#39;t have any other choice, you raise your gun towards the man. 
+He throws his arms upward, &quot;Woah! What the hell man! god damn I&#39;ll just pay my damn fare.&quot;
+[[Collect the man&#39;s fare | next]]</tw-passagedata><tw-passagedata pid="223" name="leave it" tags="" position="350,2850" size="100,100">You decide to let the man go and you watch as he boards the train. [[It&#39;s time to start keeping watch | next]]</tw-passagedata><tw-passagedata pid="224" name="not a shill" tags="" position="475,2850" size="100,100">You ignore the man and hope that whoever&#39;s behind the camera didn&#39;t notice. 
+[[Stand at guard | next]] or &lt;&lt;link &quot;Abandon the bounty&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="225" name="next" tags="" position="600,2850" size="100,100">Shortly after turning back to guard the turnstiles you see a man in a nice suit and a woman vault over the turnstiles in short succession. 
+[[Call out to them, the fare must be payed. | two of them now]]</tw-passagedata><tw-passagedata pid="226" name="two of them now" tags="" position="725,2850" size="100,100">The man seems to ignore you, but the woman turns to you and looks at you for a moment before responding, &quot;Filthy cowpunks like you should mind their own business&quot;
+[[Mind your own business | do nothing]] or [[escalate things | do something crazy]]</tw-passagedata><tw-passagedata pid="227" name="do nothing" tags="" position="850,2850" size="100,100">It&#39;s not worth even trying, the person behind the camera knows for sure that your heart isn&#39;t in it by now, you likely won&#39;t get paid at this point anyway. you should just &lt;&lt;link &quot;leave&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;.</tw-passagedata><tw-passagedata pid="228" name="do something crazy" tags="" position="975,2850" size="100,100">You pull out your gun and point it at the man and woman across from you. The man in the suit perks up and looks at the gun.
+&quot;What the hell do you think yer doin there, I HAVE A MEETING TO GET TO!&quot; 
+The woman chimes in, &quot;Just let us be, my boss won&#39;t be happy if I&#39;m late.&quot;
+You start to feel the [[pressure | pressure]] of the situation.
+&lt;&lt;link &quot;You could still leave, abandoning the assignment&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="229" name="pressure" tags="" position="1100,2850" size="100,100">As you don&#39;t stand down, the man and woman start to berate you, but it all becomes a blur. 
+You know they won&#39;t pay their fares if you just keep pointing the gun, you need to do something more to show them you&#39;re serious.
+[[Shoot them | shoot]]</tw-passagedata><tw-passagedata pid="230" name="shoot" tags="" position="1225,2850" size="100,100">You fire your gun until it runs out of bullets. 
+The man lies on the ground in front of you, his suit now drenched in blood.
+The woman lies sobbing behind him, her legs unrecognizable.
+[[No one will be skipping their fares for quite some time. | congrats]]</tw-passagedata><tw-passagedata pid="231" name="congrats" tags="" position="100,2975" size="100,100">After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with &lt;&lt;link &quot;$25.&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;set $money = $money + 25&gt;&gt;&lt;&lt;set $trained = true&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="232" name="Kai Start" tags="" position="225,2975" size="100,100">Downtime! we vibin
 
 &lt;&lt;set $deadeyeShops to $cat.getItemsFromShop(&quot;deadeye&quot;)&gt;&gt;
 &lt;&lt;for _item range $deadeyeShops&gt;&gt;
 &lt;&lt;= _item.name&gt;&gt;
-&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="175" name="Megan Start" tags="" position="600,2225" size="100,100">&lt;&lt;set $money = 0&gt;&gt; &lt;&lt;set $augments = &#39;None&#39;&gt;&gt; Here you are in the, where you are. Its unlike anywhere you&#39;ve ever seen. No word could describe it.
-[[who are you|Shut up I am so scared right now]]</tw-passagedata><tw-passagedata pid="176" name="Shut up I am so scared right now" tags="" position="725,2225" size="100,100">You can see your [[coin pouch|coin pouch]] out on the table and in the corner of the room is a dirty mirror with [[your reflection|upgrades]].</tw-passagedata><tw-passagedata pid="177" name="coin pouch" tags="" position="850,2225" size="100,100">When did I get $money dollars? Wow!</tw-passagedata><tw-passagedata pid="178" name="upgrades" tags="" position="975,2225" size="100,100">&lt;&lt;if $augments=&#39;None&#39;&gt;&gt;It&#39;s just me. The old boots my dad gave me before I left home and my cowboy hat.&lt;&lt;else&gt;&gt;Somewhat odd looking. &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="179" name="StoryInit" tags="" position="1100,2225" size="100,100">&lt;&lt;set $health to 10&gt;&gt;
+&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="233" name="Megan Start" tags="" position="350,2975" size="100,100">&lt;&lt;set $money = 0&gt;&gt; &lt;&lt;set $augments = &#39;None&#39;&gt;&gt; Here you are in the, where you are. Its unlike anywhere you&#39;ve ever seen. No word could describe it.
+[[who are you|Shut up I am so scared right now]]</tw-passagedata><tw-passagedata pid="234" name="Shut up I am so scared right now" tags="" position="475,2975" size="100,100">You can see your [[coin pouch|coin pouch]] out on the table and in the corner of the room is a dirty mirror with [[your reflection|upgrades]].</tw-passagedata><tw-passagedata pid="235" name="coin pouch" tags="" position="600,2975" size="100,100">When did I get $money dollars? Wow!</tw-passagedata><tw-passagedata pid="236" name="upgrades" tags="" position="725,2975" size="100,100">&lt;&lt;if $augments=&#39;None&#39;&gt;&gt;It&#39;s just me. The old boots my dad gave me before I left home and my cowboy hat.&lt;&lt;else&gt;&gt;Somewhat odd looking. &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="237" name="StoryInit" tags="" position="850,2975" size="100,100">&lt;&lt;set $health to 10&gt;&gt;
 &lt;&lt;set $power to 3&gt;&gt;
 &lt;&lt;set $damage to 3&gt;&gt;
 &lt;&lt;set $money to 100&gt;&gt;
 &lt;&lt;set $diceroll to 0&gt;&gt;
 &lt;&lt;set $humanity to 150&gt;&gt;
 &lt;&lt;set $fame to 0&gt;&gt;
+
+&lt;&lt;set $rent_done to false&gt;&gt;
+&lt;&lt;set $whistleblown to false&gt;&gt;
+&lt;&lt;set $gambled to false&gt;&gt;
+&lt;&lt;set $trained to false&gt;&gt;
 
 
 
