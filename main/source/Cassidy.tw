@@ -9,10 +9,11 @@ Go to the [[bounty board | Bounty Board]]
 :: Bounty Board
 You approach a large board with a metal rim and torn, patchy cork board littered with an array of flimsy reused paper pinned up.
 Upon further inspecion, each piece of paper contains a bounty issued by one of the many corporations.
-[[Check out the first bounty | $CorpoBounties[0]]]
-[[Check out the second bounty | $CorpoBounties[1]]]
-[[Check out the third bounty | $CorpoBounties[2]]]
-[[Check out the fourth bounty | $CorpoBounties[3]]]
+<<if $rent_done == false>><<link "Check out the first bounty" $CorpoBounties[0]>><</link>><<else>>The first bounty is no longer displayed.<</if>>
+<<if $whistleblown == false>><<link "Check out the second bounty" $CorpoBounties[1]>><</link>><<else>>The second bounty is no longer displayed.<</if>>
+<<if $gambled == false>><<link "Check out the third bounty" $CorpoBounties[2]>><</link>><<else>>The third bounty is no longer displayed.<</if>>
+<<if $trained == false>><<link "Check out the fourth bounty" $CorpoBounties[3]>><</link>><<else>>The fourth bounty is no longer displayed.<</if>>
+[[Return to the map | Map]]
 
 :: retrieve rent
 In the corner of the bounty there is a corporate logo and four small stars.
@@ -21,9 +22,9 @@ The bounty's description reads:
 Wanted for repeated failure to fulfill property rent payments over a period of two months.
 Retrieve the owed sum of $650 by any means necessary.
 Last known location: The Lazy Cat
-Reward: $150
+Reward: $50
 
-<<link "Accept bounty" "accept retrieve rent">><<set $corpo1 to updateStatus("in-progress")>><</link>> or [[Return to Bounty Board | Bounty Board]]
+<<link "Accept bounty" "accept retrieve rent">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
 :: accept retrieve rent
 You make your way through the noise of the city and the aggressively neon lights to a small pub with a flickering neon sign that reads, "The Lazy Cat".
@@ -39,13 +40,12 @@ As you approach the bar, Bill nods to you and says, "Don't think I've seen you r
 
 :: inquire on rent
 "I see, so your one of them cowpunks then." Bill replied.
-He lit a cigarette and took a long draw, then continued, "Listen, neither one of us wants this to get ugly, I've been having to pay fer my family's meds, and the booze barely pays for itself round this part of town, so what say you we just forget about the bounty and I give you $50 to tear it up?"
-<<link "Accept Bill's deal" "friend of bill">><<set $money = $money + 50>><</link>>
+He lit a cigarette and took a long draw, then continued, "Listen, neither one of us wants this to get ugly, I've been having to pay fer my family's meds, and the booze barely pays for itself round this part of town, so what say you we just forget about the bounty and I give you $25 to tear it up?"
+<<link "Accept Bill's deal" "friend of bill">><<set $money = $money + 25>><<set $rent_done = true>><</link>>
 [[Push for the rent | push for rent]]
 
 :: friend of bill
 You accept Bill's bribe and return [[home. | Your house]].
-<<set $corpo1 to updateStatus("failed")>>
 
 :: push for rent
 You need more money, and you stand on principle, Bill must pay his debt. 
@@ -57,7 +57,7 @@ You need more money, and you stand on principle, Bill must pay his debt.
 "All right I see how it is then" Bill said in a stern voice.
 The pub went quiet around the two of you, and Bill reached under the bar to pull out a shotgun, at the same time you pulled out your gun and began to fire.
 <<script>>StartCombat(3,7,5)<</script>>
-<<if $health > 0>>You shoot bill to death, ready to [[collect his overdue rent. | collect rent]]<<else>> Bill fires his shotgun quicker than you can lift your gun, once he's sure you're not getting back up he puts away his shotgun. [[It's over for now cowpunk | Map]]<<set $corpo1 to updateStatus("failed")>><</if>>
+<<if $health > 0>>You shoot bill to death, ready to [[collect his overdue rent. | collect rent]]<<else>> Bill fires his shotgun quicker than you can lift your gun, once he's sure you're not getting back up he puts away his shotgun. [[It's over for now cowpunk | Map]]<<set $rent_done = true>><</if>>
 
 :: collect rent
 Stepping past the silent onlookers, still in shock of what just happened to Bill, you approach the bar and find where [[bill kept his money... | bills money]]
@@ -68,7 +68,7 @@ There was a small safe, already opened, with just enough money to cover the miss
 [[Contact a corporation representative. | corpo rep]]
 
 :: corpo rep
-After a few minutes a corporate representative meets you outside The Lazy Cat and takes the owed rent, leaving you with <<link"$150 for the bounty." "Map">><<set $corpo1 to updateStatus("succeeded")>><</link>>
+After a few minutes a corporate representative meets you outside The Lazy Cat and takes the owed rent, leaving you with <<link"$50 for the bounty." "Map">><<set $money = $money +50>><</link>>
 
 :: whistleblower
 You notice a corporate logo and two small stars in the top corner of the bounty.
@@ -79,7 +79,7 @@ Joshua Dean
 Wanted for theft of confidential company information, and threat to expose important company secrets.
 Eliminate or apprehend by any means necessary.
 Last known location: The Ashes
-Reward: $250
+Reward: $75
 
 <<link "Accept bounty" "accept whistleblower">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
@@ -96,13 +96,13 @@ The image of Joshea Dean strong in your mind, you wander through The Ashes, you 
 "What can I do for you friend?" A woman with bright green hair working the desk asks as you cross through the doors. 
 "I'm looking for someone, greasy blonde hair, scar about here" you say gesturing to your temple.
 "I'm afraid we don't keep a guest book, and I can't disclose any customer information. But if you'd like a room I think I could help you out."
-[[Threaten the desk attendant | threaten pine motel]] or <<link "Bribe the desk attendant (-$20)" "bribe pine motel">><<set $money = $money - 20>><</link>>
+[[Threaten the desk attendant | threaten pine motel]] or <<link "Bribe the desk attendant (-$10)" "bribe pine motel">><<set $money = $money - 10>><</link>>
 
 :: bribe pine motel
 "What can I do for you friend?" A woman with bright green hair working the desk asks as you cross through the doors. 
 "I'm looking for someone, greasy blonde hair, scar about here" you say gesturing to your temple.
 "I'm afraid we don't keep a guest book, and I can't disclose any customer information. But if you'd like a room I think I could help you out."
-You hand the woman $20 and she stashes it away behind the desk, "There's a room on the second floor, room 213. The man your looking for booked that room."
+You hand the woman $10 and she stashes it away behind the desk, "There's a room on the second floor, room 213. The man your looking for booked that room."
 [[Thank you. | room 213]]
 
 :: threaten pine motel
@@ -124,7 +124,7 @@ His eyes begin to water as he stares at you, "Please. you have to believe me. I 
 [[I'm afraid I can't do that | insane man 2]]
 
 :: insane man 2
-"Yes, yes you can" He stuttered barely holding composure, "because if you don't, I swear to god I will [[shoot | kill Joshua]] you." Joshua pulled out a gun from beside him, still talking.
+"Yes, yes you can" He stuttered barely holding composure, "because if you don't, I swear to god I will [[shoot | kill joshua]] you." Joshua pulled out a gun from beside him, still talking.
 [[Keep listening | insane man 3]]
 
 :: insane man 3
@@ -135,8 +135,8 @@ His eyes begin to water as he stares at you, "Please. you have to believe me. I 
 [[Shoot him | victory over josh]]
 
 :: apprehend josh
-<<set rng = random(1,6)>>
-<<if rng > 3>>You manage to wrestle the man down and put him in cuffs. [[Call in a corporate representative | corpo rep josh]]<<else>> You are unable to make Joshua submit. [[Shoot him | kill joshua]]<</if>>
+<<set $rng = random(1,6)>>
+<<if $rng > 3>>You manage to wrestle the man down and put him in cuffs. [[Call in a corporate representative | corpo rep josh]]<<else>> You are unable to make Joshua submit. [[Shoot him | kill joshua]]<</if>>
 
 :: kill joshua
 <<script>>StartCombat(1,4,3)<</script>>
@@ -147,10 +147,10 @@ You fire at Joshua Dean and before he can shoot back, his corpse slumps to the b
 [[Call in a corporate representative | corpo rep josh]]
 
 :: defeat over josh
-Against all odds, Joshua Dean manages to best you, surviving for now. [[It's over for now cowpunk. | Map]]
+Against all odds, Joshua Dean manages to best you, surviving for now. <<set $whistleblown = true>>[[It's over for now cowpunk. | Map]]
 
 :: corpo rep josh
-A man in a black suit meets you outside the motel and thanks you for dealing with their little problem, handing you <<link "$250" "Map">><<set $money = $money + 250>><</link>> in exchange.
+A man in a black suit meets you outside the motel and thanks you for dealing with their little problem, handing you <<link "$75" "Map">><<set $whistleblown = true>><<set $money = $money + 75>><</link>> in exchange.
 
 :: gamblers fallacy
 The thin sheet of paper's upper corner appears to be branded with a corporate logo and three small stars.
@@ -161,7 +161,7 @@ Name unknown
 Wanted for card counting and repeated return to the Blue Flame Casino following expulsion.
 Eliminate or apprehend by any means necessary.
 Last known location: Blue Flame Casino
-Reward: $250
+Reward: $75
 
 <<link "Accept bounty" "accept gamblers fallacy">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
@@ -219,10 +219,10 @@ Are you serious, that man is about to kill you and you want to gamble? [[Shoot h
 :: fight velvet man
 The man in velvet lunges at you with the knife, and you begin to fire back,
 <<script>>StartCombat(2,8,2)<</script>>
-<<if $health > 0>>You hit him dead on, and he lies bleeding out on the casino floor, you should probably [[call a corporate representative quick. | corpo rep velvet]] <<else>> Your thoughts of gambling slowed your draw, [[It's over for now cowpunk | Map]] <</if>>
+<<if $health > 0>>You hit him dead on, and he lies bleeding out on the casino floor, you should probably [[call a corporate representative quick. | corpo rep velvet]]<<set $gambled = true>> <<else>> Your thoughts of gambling slowed your draw, [[It's over for now cowpunk | Map]]<<set $gambled = true>> <</if>>
 
 :: corpo rep velvet 
-A familiar man in a black suit arrives at the Blue Flame in minutes, ready to give you your reward, <<link "$250" "Map">><<set $money = $money + 250>><</link>>.
+A familiar man in a black suit arrives at the Blue Flame in minutes, ready to give you your reward, <<link "$75" "Map">><<set $money = $money + 75>><</link>>.
 
 :: the train station
 In the corner of the bounty there is a corporate logo with just one small star.
@@ -232,13 +232,13 @@ Duration: 1 day
 Act as guard at the train station to prevent unruly citizens from vaulting the pay gates to evade the train fare.
 Use any means to prevent citizens from avoiding the fare.
 Location: Train station
-Reward: $100
+Reward: $25
 
 <<link "Accept bounty" "Defend train station">><</link>> or [[Return to Bounty Board | Bounty Board]]
 
 :: Defend train station
 You make your way to the train station where you find a line of turnstiles blocking your path through to the train.
-<<if $money >= 5>><<link "Pay to pass through (-$5)" "pass into station">><<set $money = $money - 5>><</link>><<else>><<link "Pay to pass through (-$5)" "poor">><</link>><</if>> or [[Abandon the bounty | Bounty Board]]
+<<if $money >= 5>><<link "Pay to pass through (-$5)" "pass into station">><<set $money = $money - 5>><</link>><<else>><<link "Pay to pass through (-$5)" "poor">><</link>><</if>> or <<link "Abandon the bounty" "Map">><<set $trained = true>><</link>> 
 
 :: poor
 You don't have the funds to enter. You must [[Vault the turnstile. | vault into station]]
@@ -270,7 +270,7 @@ You decide to let the man go and you watch as he boards the train. [[It's time t
 
 :: not a shill
 You ignore the man and hope that whoever's behind the camera didn't notice. 
-[[Stand at guard | next]] or [[Abandon the bounty | Bounty Board]]
+[[Stand at guard | next]] or <<link "Abandon the bounty" "Map">><<set $trained = true>><</link>>
 
 :: next
 Shortly after turning back to guard the turnstiles you see a man in a nice suit and a woman vault over the turnstiles in short succession. 
@@ -281,14 +281,14 @@ The man seems to ignore you, but the woman turns to you and looks at you for a m
 [[Mind your own business | do nothing]] or [[escalate things | do something crazy]]
 
 :: do nothing
-It's not worth even trying, the person behind the camera knows for sure that your heart isn't in it by now, you likely won't get paid at this point anyway. you should just [[leave | Bounty Board]].
+It's not worth even trying, the person behind the camera knows for sure that your heart isn't in it by now, you likely won't get paid at this point anyway. you should just <<link "leave" "Map">><<set $trained = true>><</link>>.
 
 :: do something crazy
 You pull out your gun and point it at the man and woman across from you. The man in the suit perks up and looks at the gun.
 "What the hell do you think yer doin there, I HAVE A MEETING TO GET TO!" 
 The woman chimes in, "Just let us be, my boss won't be happy if I'm late."
 You start to feel the [[pressure | pressure]] of the situation.
-[[You could still leave, abandoning the assignment | Bounty Board]]
+<<link "You could still leave, abandoning the assignment" "Map">><<set $trained = true>><</link>>
 
 :: pressure
 As you don't stand down, the man and woman start to berate you, but it all becomes a blur. 
@@ -302,4 +302,4 @@ The woman lies sobbing behind him, her legs unrecognizable.
 [[No one will be skipping their fares for quite some time. | congrats]]
 
 :: congrats
-After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with <<link "$100." "Map">><<set $money = $money + 100>><</link>>
+After the day has passed and the train station shuts down, a tall man in a black suit approaches you, and hands you an envelope with <<link "$25." "Map">><<set $money = $money + 25>><<set $trained = true>><</link>>
