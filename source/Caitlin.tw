@@ -1,6 +1,16 @@
 :: Caitlin Start
 Caitlin file
 
+:: Start
+You wake up to a new day. The sunlights streams through your curtains, giving your small room a golden sheen. You need to find a job, and quick, if you're going to be able to support yourself much longer. As a cowpunk, another slang term for a bounty hunter, you've had to resort to taking jobs for funds. You should check the bulletin boards in either the town or the city.
+
+The [[town bulletin board| Bounties]] is filled with smaller tasks. Nothing too big, but the people in town are awfully thankful for the help. And you've found typically its good to help out the people you live right next to.
+
+The [[city bulletin board]] on the other hand has more...intense...jobs. They're harder and more dangerous, but they often pay better.
+
+Well, no time for hanging around. Time for you to get to work.
+
+
 :: Map
 You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]
 
@@ -35,6 +45,7 @@ One side of the central street is lined with stalls where the various farmers se
 You recognize an [[old friend | Friend]] among their lots. 
 Right in the center of town the liquor store is guarded by an old looking [[dog. | Dog]]
 
+[[Look at bounties | Bounties]]
 [[Go somewhere else | locations]]
 
 
