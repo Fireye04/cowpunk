@@ -13,6 +13,7 @@ Upon further inspecion, each piece of paper contains a bounty issued by one of t
 <<if $whistleblown == false>><<link "Check out the second bounty" $CorpoBounties[1]>><</link>><<else>>The second bounty is no longer displayed.<</if>>
 <<if $gambled == false>><<link "Check out the third bounty" $CorpoBounties[2]>><</link>><<else>>The third bounty is no longer displayed.<</if>>
 <<if $trained == false>><<link "Check out the fourth bounty" $CorpoBounties[3]>><</link>><<else>>The fourth bounty is no longer displayed.<</if>>
+[[Return to the map | Map]]
 
 :: retrieve rent
 In the corner of the bounty there is a corporate logo and four small stars.
