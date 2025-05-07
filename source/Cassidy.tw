@@ -13,10 +13,10 @@ Go to the [[bounty board | Bounty Board]]
 :: Bounty Board
 You approach a large board with a metal rim and torn, patchy cork board littered with an array of flimsy reused paper pinned up.
 Upon further inspecion, each piece of paper contains a bounty issued by one of the many corporations.
-<<if $rent_done == false>>[[Check out the first bounty | $CorpoBounties[0]]]<<else>>The first bounty is no longer displayed.<</if>>
-<<if $whistleblown == false>>[[Check out the second bounty | $CorpoBounties[1]]]<<else>>The second bounty is no longer displayed.<</if>>
-<<if $gambled == false>>[[Check out the third bounty | $CorpoBounties[2]]]<<else>>The third bounty is no longer displayed.<</if>>
-<<if $trained == false>>[[Check out the fourth bounty | $CorpoBounties[3]]]<<else>>The fourth bounty is no longer displayed.<</if>>
+<<if $rent_done == false>><<link "Check out the first bounty" $CorpoBounties[0]>><</link>><<else>>The first bounty is no longer displayed.<</if>>
+<<if $whistleblown == false>><<link "Check out the second bounty" $CorpoBounties[1]>><</link>><<else>>The second bounty is no longer displayed.<</if>>
+<<if $gambled == false>><<link "Check out the third bounty" $CorpoBounties[2]>><</link>><<else>>The third bounty is no longer displayed.<</if>>
+<<if $trained == false>><<link "Check out the fourth bounty" $CorpoBounties[3]>><</link>><<else>>The fourth bounty is no longer displayed.<</if>>
 
 :: retrieve rent
 In the corner of the bounty there is a corporate logo and four small stars.
