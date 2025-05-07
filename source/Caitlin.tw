@@ -47,12 +47,6 @@ He nods to you, but his eyes never quiet meet your own. His voice is more clippe
 
 
 :: cr.gunlist
-<<set $cat to new Catalog([new Augment("Crossover Frequency","Dynamically splits and prioritizes incoming sounds, allowing you to isolate even the quietest of noises. Achive perfect auditory balance.","ears",15,3,5,-15,-20,["deadeye"]),
-
-new Augment("Neuralink","With the newest cybernetic tech you can now think faster than ever!","brain",40,4,10,-50,-40,["deadeye"]),
-new Augment("The CORE","Your cardiovascular system will thank you with this new and approved CORE!", "heart",80,5,25,-80,-80,["deadeye"]),
-new Augment("Iron Lungs","The iron lungs never run out of breath and can withstand the smog of the inner city. Take care of business with ease","lungs",30,4,20,-30,-20,-20,-20,["deadeye"]),
-new Augment("Mono Edge Prosthesis","Reinforced joints allow devastating knee strikes, while the heel conceals a retractable mono-blade. Every step is a potential takedown","legs",15,3,10,-15,-20,["deadeye"])])>>
 <<set $deadeyeShops to $cat.getItemsFromShop("deadeye")>>
 <<for _item range $deadeyeShops>>
 <<= _item.name>>
