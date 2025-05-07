@@ -36,12 +36,12 @@ new Augment("Audio Processors", "It's made of silicone but the material obviousl
 new Augment("Saffire Glare", "It is off-puttingly blue and the whites of the eyes seem to be... shining? The glow is probably cosmetic. It hasn't blinked in five minutes.","eyes",8,2,0,-6,-10,["the iron giant"]),
 new Augment("Optic Nurv","When you pick it up there is a feint mechanical whirring sound and is the iris looking at you?","eyes",10,2,0,-10,-10,["the iron giant"]),
 
+new Augment("Crossover Frequency","Dynamically splits and prioritizes incoming sounds, allowing you to isolate even the quietest of noises. Achive perfect auditory balance.","ears",15,3,5,-15,-20,["deadeye"]),
 new Augment("Neuralink","With the newest cybernetic tech you can now think faster than ever!","brain",40,4,10,-50,-40,["deadeye"]),
 new Augment("The CORE","Your cardiovascular system will thank you with this new and approved CORE!", "heart",80,5,25,-80,-80,["deadeye"]),
 new Augment("Iron Lungs","The iron lungs never run out of breath and can withstand the smog of the inner city. Take care of business with ease","lungs",30,4,20,-30,-20,-20,-20,["deadeye"]),
 new Augment("Mono Edge Prosthesis","Reinforced joints allow devastating knee strikes, while the heel conceals a retractable mono-blade. Every step is a potential takedown","legs",15,3,10,-15,-20,["deadeye"]),
-new Augment("RiftSaw Limb Suite","Under the wrist: a concealed rotary blade for cutting through armor, doors, or enemies. Includes active coolant so it never overheats. Carve your path.","arms",25,3,15,-15,-30,["deadeye"]),
-new Augment("Crossover Frequency","Dynamically splits and prioritizes incoming sounds, allowing you to isolate even the quietest of noises. Achive perfect auditory balance.","ears",15,3,5,-15,-20,["deadeye"]),
+new Augment("RiftSaw Limb Suite","Under the wrist: a concealed rotary blade for cutting through armor, doors, or enemies. Includes active coolant so it never overheats. Carve your path.","arms",25,3,15,-15,-3 ["deadeye"]),
 
 new Augment("Oracle Optics","See the future before it happens. Oracle Optics™ delivers predictive motion tracking, target leading algorithms, and real-time behavioral analysis.","eyes",15,3,5,-30,-20,["cyberwares"]),
 new Augment("Opulent Crown","Headgear for the truly refined. Cast in 24 Karrot Gold threaded with rose-gold filigree,  it serves no function, and that's the point. Elegance has never been less efficient","head",100,0,0,-20,-100,["cyberwares"]),
