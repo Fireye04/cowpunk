@@ -18,10 +18,10 @@ My Twine Game
 <<set $humanity to 150>>
 <<set $fame to 0>>
 
-<<set $rent_done = false>>
-<<set $whistleblown = false>>
-<<set $gambled = false>>
-<<set $trained = false>>
+<<set $rent_done to false>>
+<<set $whistleblown to false>>
+<<set $gambled to false>>
+<<set $trained to false>>
 
 
 
