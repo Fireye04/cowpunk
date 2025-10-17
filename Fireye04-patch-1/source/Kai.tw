@@ -1,0 +1,7 @@
+:: Kai Start
+Downtime! we vibin
+
+<<set $deadeyeShops to $cat.getItemsFromShop("deadeye")>>
+<<for _item range $deadeyeShops>>
+<<= _item.name>>
+<</for>>

@@ -1,0 +1,765 @@
+:: Caitlin Start
+Caitlin file
+
+
+
+
+:: Map
+You open up your old dirtied map to decide where you should go next. There are [[a few options. | locations]]
+
+
+
+
+:: locations
+    [[Cattle's Run | Cow Town]]
+    
+    [[Home | Your house]]
+    
+    [[Ember City | City]]
+
+    [[Heaven's Gate | Church town]]
+
+    [[Devil's Pass | Desert]]
+
+/* Cattle's Run */
+
+:: Cow Town
+A large old timey rural town. Compared to the lights and glamour of the city it almost feels out of place- like it is meant to be from another time.
+
+[[Visit | Visit Town]] or [[go back to the map | locations]]
+
+:: Visit Town
+No matter how many times you've been here its striking how different Cattle's Run is from the city. 
+The squat wooden buildings line a central dirt road that radiates warmth from the sun. 
+As you walk in, some people look your way; <<if $humanity > -21 >>an older gentleman tips his hat to you.<<else>>a woman who had been sitting on her porch takes one glance at you before going indoors. 
+You can faintly hear the sound of the deadbolt being slid in.<</if>>
+The [[weapons shop | cr.gun]], Deadeye, run by a retired bounty hunter sits at the edge of town, right next to the old grocery store. 
+One side of the central street is lined with stalls where the various farmers sell their goods. 
+You recognize an [[old friend | Friend]] among their lots. 
+Right in the center of town the liquor store is guarded by an old looking [[dog. | Dog]]
+
+[[Look at bounties | Bounties]]
+[[Go somewhere else | locations]]
+
+
+:: cr.gun
+<<if $humanity > -1 >> An older man with a bowler hat and a well-groomed mustache waves to you as you enter. "Good to see you in. Whatcha lookin' for today?" [[I'd like to look at your wares | cr.gunlist]] 
+[[Nothing | Visit Town ]]<<elseif $humanity > -41 >>You walk into the store and the older usually kind store owner gives you a cold look. 
+He nods to you, but his eyes never quiet meet your own. His voice is more clipped than usual as he opens up his drawer, revealing the firearms inside. "What do you want?" [[I'd like to look at your wares | cr.gunlist]] 
+[[Nothing | Visit Town ]]<<else>>Your spurs jingle across the wooden steps into the store, but as you reach out to push the door open you hear a click. The door doesn't budge. From the windows you can see a light flicker off as the curtains are pulled tight. [[Leave | Visit Town]]<</if>>
+
+
+
+:: cr.gunlist
+We've got some good stuff in. Why don't you take a look. We have...
+<<set $catalog to new Catalog([new Augment("Crossover Frequency", "Dynamically splits and prioritizes incoming sounds allowing you to isolate even the quietest of noises. Achive perfect auditory balance.", "ears", 15, 3, 5, -15, -20,["deadeye"]), new Augment("Neuralink","With the newest cybernetic tech you can now think faster than ever!","brain",40,4,10,-50,-40,["deadeye"]), new Augment("The CORE","Your cardiovascular system will thank you with this new and approved CORE!", "heart",80,5,25,-80,-80,["deadeye"])])>>
+<<set $deadeyeShops to $catalog.getItemsFromShop("deadeye")>>
+<<for _item range $deadeyeShops>>
+<<= [[_item.name]]>>
+<</for>>
+
+You currently have <<= $money >>
+
+<<if $money >14.5>>[[Purchase Augments | BuyCR]]<</if>>
+<<if $money <1>>[[You can't afford anything | Visit Town]]<</if>>
+
+:: BuyCR
+<<if $money > 14>>[[Purchase Crossover Frequency]]<</if>>
+
+<<if $money > 39>>[[Purchase Neuralink]]<</if>>
+
+<<if $money > 79>>[[Purchase The CORE]]<</if>>
+
+:: Purchase Crossover Frequency
+An augment for your ears. It dynamically splits and prioritizes incoming sounds, allowing you to isolate even the quietest of noises. Achieve perfect auditory balance.
+Cost: 15
+[[Buy | Crossover]]
+[[I've changed my mind | cr.gunlist]]
+
+:: Purchase Neuralink
+An augment for your brain. With the newest tech you can now think sharper than ever!
+Cost: 40
+[[Buy | Neuralink]]
+[[I've changed my mind | cr.gunlist]]
+
+:: Purchase The CORE
+Your cardiovascular system will thank you for this new and improved CORE!
+Cost: 80
+[[Buy | CORE]]
+[[I've changed my mind | cr.gunlist]]
+
+:: CORE
+The older man lays you down on the makeshift operating table to perform the surgery. it doesn't take long, and when you wake up you can feel your blood rushing through your veins.
+<<set$money = $money - 80>>
+<<set $power = $power + 5>>
+<<set $health = $health + 25>>
+<<set $humanity = $humanity - 80>>
+<<set $fame = $fame - 80>>
+
+[[Leave | Visit Town]]
+
+:: Crossover
+The older man lays you down on the makeshift opperating table to perform the surgery. It doesn't take long, and when you wake up you swear you can hear conversation from across town perfectly.
+<<set$money = $money - 15>>
+<<set $power = $power + 3>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 15>>
+<<set $fame = $fame - 20>>
+
+[[Leave | Visit Town]]
+
+:: Neuralink
+The older man lays you down on the makeshift opperating table to perform the surgery. It doesn't take long, and when you wake up you can feel your thoughts running as fast as a bullet.
+<<set$money = $money - 40>>
+<<set $power = $power + 4>>
+<<set $health = $health + 10>>
+<<set $humanity = $humanity - 50>>
+<<set $fame = $fame - 40>>
+
+[[Leave | Visit Town]]
+
+:: cr.item
+The grocery store is a small humble wooden building plastered in posters and papers advertizing different wares you can find within. 
+People come in and out frequently, and the brass chimes hanging by the door ring every few seconds.
+
+<<if $humanity > -1 >> As you enter the store, the woman at the counter smiles wide at you and waves you over to where she sits. "Good to see you darlin' What are you in for?" [[I'd like to look at your wares | cr.itemlist]] 
+[[Nothing | Visit Town ]]<<elseif $humanity > -41 >>
+As you enter the store, the woman at the front counter's smile wavers. 
+Her eyes scan you up and down and her lips twitch down into a small frown. 
+She seems to feel uncomfortable under your gaze as she looks down, trying to appear busy at the counter. [[I'd like to look at your wares | cr.itemlist]] 
+[[Nothing | Visit Town ]]<<else>>
+You walk up to the grocery store, but as you try to push the door open you are met with resistance. 
+The people still around on the street watch you with bairly hidden disdain.<</if>>
+
+
+:: cr.itemlist
+item 1
+
+item 2
+
+item 3
+
+:: Friend
+Tom, an old childhood friend can be found selling meat at the local market. 
+He used to do what you do, but after a bad incident he decided it was best for him to settle down and work at his family's ranch. 
+<<if $humanity > -1 >>He waves to you, with a wide smile.<<else>>You can tell he saw you by the way he tenses, but his eyes don't quiet meet your own.<</if>> [[Keep walking | Visit Town]]
+
+:: Dog
+Outside the old run down liquor store an old stray mutt sits passively. 
+The brown fluffy thing is curled up into a ball, allowing its long droopy ears to waterfall over its stubby legs. 
+It's cute in an ugly way. As you pass by the dog's nose twitches. [[Ignore it | Ignore Dog]] or [[Pet the dog | Pet]]
+
+:: Ignore Dog
+The dog's tail wags lazily as you [[pass by. | Visit Town]] It almost seems disappointed. 
+
+:: Pet
+<<if $humanity > -30 >>You bend down to offer the old dog your hand. 
+Its wet nose brushes against your gloved hand as it sniffs you. 
+It seems to consider you for a moment before lazily rolling over for you to scratch its stomach. 
+By the time you [[stand back up | Visit Town]] the dog has fallen back asleep. <<else>> You bend down to offer the old dog your hand. 
+Its wet nose brushes against your gloved hand as it sniffs you. 
+It seems to consider you for a moment before its tail's steady wag comes to a halt. 
+A soft growl emenates from its chest. 
+You [[stand back up | Visit Town]] before the dog can bite you.<</if>>
+
+/* House */
+
+:: Your house
+An old rickety shed right outside Cattle's Run. You've lived here for ages after some hermit sold the place. It's not nice, but it's a safe place to lie low for a while.
+
+[[Visit | Visit House]] or [[go back to the map | locations]]
+
+:: Visit House
+The old rickety door swings open with a whine of its rusted hinges. Light streams in from the thin curtains that cover the small window above your bed. An old dusty [[picture frame | Look]] glints under the light. Even so, [[the room | Bedroom]] feels homey and safe.
+
+:: Look
+You wipe the dust off with your gloved fingers. Under the thick coat of dirt two familiar faces stare back at you. Your parents left this world [[long before their time | Parents]]. Sometimes you still miss them.
+
+:: Parents
+Your parents died in the city doing the same work you do now. <<if $humanity > -41 >>It makes you wonder if you shouldn't just setlle down in Cattle's Run<<else>>You can't find it in yourself to care.<</if>>
+
+[[Look away from the photo | Bedroom]]
+
+:: Bedroom 
+Your boots click against the wooden floor. [[Your bed | Sleep]] calls to you after so many sleepless days. [[The pantry | Pantry]] is never fully stocked, but you're sure you could find something there. Behind you [[the door | Leave House]] stands as a barrier between you and the stressors of the outside world.
+
+:: Sleep
+<<if $humanity > -1>>Sleep comes easy to you after so much time fighting for your life. You dream of a better home, a safer place. In your dream there is no more fighting- your gun is safely tucked away, only to be touched in case of emergency. People greet you as you walk past without a hint of trepidation. You awaken feeling rejuvenated.
+
+<<elseif $humanity > -41 >>
+
+Sleep doesn't come easily today. No matter what you do you can't seem to find comfort under your sheets. The harsh metal planes of your body seem to pinch the skin around them. When sleep finally claims you, your dreams are filled wih unease. Darkness surrounds you and all around you, standing tall, are large shadowy towers. Metal scrapes against metal and gears whir in the distance. No matter how far you walk you cant seem to escape their metalic gaze. You awaken feeling unsteady. 
+
+<<else>>
+
+No matter how hard you try you can't seem to fall asleep. Your mind is awake, powered by metal and wires rather than blood and muscle. You stay there for a few more minutes before giving up.<</if>>
+
+You [[stand up | Leave House]] from bed, ready to go about the rest of your day.
+
+:: Pantry
+You open the pantry door and are met with a few dented cans of food. It's not much, but you can [[have a snack | Snack]] if you would like.
+
+:: Snack
+You crack open a can of black beans with a small pocket knife and sit down at the small one-seat table in the middle of your bedroom. <<if $humanity > -41>>You eat it slowly, savoring the meal like its your last since it very well could be.<<else>> It takes you a moment for you to realize you don't feel hungry... You don't feel anything anymore. This is pointless.<</if>>
+
+[[Throw out the can | Trash]]
+
+:: Trash
+You throw the can into the small bin thats functioned as your trash for years before heading for [[the door | Leave House]].
+
+:: Leave House
+You make sure to lock the door behind you as you face the sprawling desert outside. The wind whips against your face, beckoning you forward. In an odd way its emptiness is beautiful, but you have no time to appreciate its glory. You [[open your map | locations]] to figure out where to go next.
+
+/* Ember City */
+
+:: City
+A sprawling urban city with large skyscrapers and a constant blanket of light and smog. 
+The people here reak of wealth. 
+Underneath the city's image lies another name [[The Ashes | Ashes]]
+
+[[Visit | Visit City]] or [[go back to the map | locations]]
+
+:: Visit City
+The neon lights and constant blanket of noise welcome you into the city. Skyscrapers tower above you like mountain tops you could never hope to climb. 
+People pass by without offering you a second glance as they go about their days. And there it is: [[the bounty board | Cassidy Start]], the pieces of paper touting tantalizing sums of money on it calling your name as you walk by.
+
+There are numerous stores here, but you know the best ones... at least for your needs. 
+
+There's a small [[mom and pop shop | ec.augments1]] called The Iron Giant that sells food and offers cybernetic enhancements whenever they have them in stock. 
+The husband worked as an engineer for years, so his work isn't too bad, although he'd never really worked with augmentations before opening the store. 
+There's also [[a fancy shop | ec.augments2]] uptown where the more well-off folks go to get new augmentations. The work is good if you can afford to pay the price. 
+
+Towering above the rest of the city, like its own personal sun, the glowing lights of the Blue Flame Casino cast a dim light upon the other steal and glass buildings around it.
+
+[[Leave the city | locations]]
+
+:: Casino
+The giant sign above the casino with its colored lights that twinkle like stars seems to call you in. 
+The smell of smoke strengthens as you get closer, but if anything it nearly feels comforting- like a blanket pulled tight on a cold afternoon. 
+The security... robots? 
+
+People? 
+
+You're not sure what they are anymore, but they don't even look your way as you walk in. 
+
+In the lobby there are several tables set up with dealers ready to play. The dealers themselves are some of the most augmented people you've ever seen- their entire faces transformed into an amalgamation of wires and lights. 
+You can [[sit down at a table | Gamble]] or [[go further in | investigate casino]]
+
+[[leave casino | Visit City]].
+
+:: Gamble
+You sit down at a spider's eyes table and nod your head to the dealer. Its a simple game, one you played often in your youth. Both you and the dealer roll a die and whoever rolls the highest wins. The dealer is wearing one of the cleanest suits you've ever seen, its crisp black fabric is embroidered with gold thread along the lapels. He seems mostly human although you can't quite tell if the visor that wraps around his head is removable or not. Even still his voice sounds human enough. "[[Your wager? | Wager]]"
+
+:: Wager
+   
+:: investigate casino
+The hustle and bustle of people here is nearly overwhelming.
+
+:: ec.augments1
+<<if $humanity > 1 >>The husband greets you as you walk in, his one metal arm that he'd gotten done not too long ago still shines brightly- not a single scratch or dent in sight. "Hey partner, what you in for today?" [[I'd like to look at your wares | ec.augmentlist1]] 
+[[Nothing | Visit City]]
+
+<<elseif $humanity > -31 >>
+
+The wife smiles widely at you as you enter, her long flowing black hair seems to shine under the city's ambient neon glow. "Hey darlin' what is it you need today?"
+[[I'd like to look at your wares | ec.augmentlist1]] 
+[[Nothing | Visit City]]
+
+<<elseif $humanity > -41 >>
+
+"Honey, I know its helpful but are you sure you want to do this? At this rate you'll be more metal than man."
+[[I'd like to look at your wares | ec.augmentlist1]] 
+[[Nothing | Visit City]]
+<<else>>
+
+"Oh darlin' theres nothing more we can do for you. I hope some of you is still in there, would be a shame to loose you."<</if>>
+[[Leave | Visit City]]
+
+
+
+:: ec.augmentlist1
+We've got some good stuff in. Why don't you take a look. We have...
+<<set $catalog to new Catalog([new Augment("'Leg' Replacement","A rusty piece of metal that is vaguley leg looking. It is clearly handmade", "legs", 2,2,5,-2,-10,["the iron giant"]), new Augment("The Final Step", "A slightly less rusty leg with some bronze detailing. The heel has a sharp piece of metal which could be used to kick someone with YEEOWCH","legs",7,2,5,-2,-10,["the iron giant"]), new Augment("Rebar", "A metal Arm which is held together with welding burns and prayers. Might lift, might seize up", "arms", 5,2,5,-4,-10,["the iron giant"]), new Augment("Firearm","A slightly less rusty arm with an airsoft gun attached to it.Technically a firearm. Technically", "arms", 7,2,5,-6,-10,["the iron giant"])])>>
+<<set $theirongiantShops to $catalog.getItemsFromShop("the iron giant")>>
+<<for _item range $theirongiantShops>>
+<<= [[_item.name]]>>
+<</for>>
+
+You currently have <<= $money >>
+
+<<if $money < 2>>[[You can't afford anthing | Visit City]]<</if>>
+
+<<if $money > 2>>[[Purchase Leg Replacement | Leg]]<</if>>
+
+<<if $money > 7>>[[Purchase the Final Step | final step]]<</if>>
+
+<<if $money > 5>>[[Purchase Rebar | rebar]]<</if>>
+
+<<if $money > 7>>[[Purchase Firearm | firearm]]<</if>>
+
+:: Leg
+An augment for your leg (duh). It's a rusty piece of metal that vaguely looks like a leg... It's only slightly better than your own.
+Cost: 2
+
+[[Nevermind | ec.augmentlist1]]
+[[Buy Leg]]
+
+:: Buy Leg
+The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of rusted metal.
+<<set$money = $money - 2>>
+<<set $power = $power + 2>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 2>>
+<<set $fame = $fame - 10>>
+
+
+:: final step
+A slightly less rusty leg with some bronze detailing. The heel has a sharp piece of metal which could be used to kick someone with... YEOWCH.
+Cost: 7
+
+[[Nevermind | ec.augmentlist1]]
+[[Buy final step]]
+
+:: Buy final step
+The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of elegantly designed metal. For some reason, you feel like kicking someone.
+<<set$money = $money - 7>>
+<<set $power = $power + 2>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 2>>
+<<set $fame = $fame - 10>>
+
+:: rebar
+A rusty metal arm that is held together by welding burns and prayers. Might help lift... might seize up.
+Cost: 5
+
+[[Nevermind | ec.augmentlist1]]
+[[Buy rebar]]
+
+:: Buy rebar
+The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of rusted metal.
+<<set$money = $money - 5>>
+<<set $power = $power + 2>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 4>>
+<<set $fame = $fame - 10>>
+
+:: firearm
+A slightly less rusty arm with an airsoft gun attached to it... it's technically a firearm... you think.
+Cost: 7
+
+[[Nevermind | ec.augmentlist1]]
+[[Buy firearm]]
+
+:: Bur firearm
+The wife gives you a sedative to take as you lay down on the old work table. The husband pulls out a few scary looking instruments you can barely process before you fall asleep. When you wake up your leg has been replaced by one of rusted metal.
+<<set$money = $money - 7>>
+<<set $power = $power + 2>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 6>>
+<<set $fame = $fame - 10>>
+
+:: ec.augments2
+The massive neon sign for Cyberwares can be seen from nearly anywhere in the city- a constant reminder of how you could improve yourself if only you could afford it. 
+You let the sign guide you to its entrance- a massive set of pristine glass doors. 
+You are greeted by someone who is entirely more machine than man. You can see the pumps and wires pushing blood through its system.
+
+"Are you looking to get enhancements?" The robotic voice chirps. Even though the man's face does not move, the synthetic voice modulator purrs as if he was some pleased cat.
+[[I'd like to look at your wares | ec.augmentlist2]] 
+[[Nothing | Visit City]]
+
+:: ec.augmentlist2
+We've got some good stuff in. Why don't you take a look. We have...
+<<set $catalog to new Catalog([new Augment("Oracle Optics","See the future before it happens. Oracle Optics™ delivers predictive motion tracking, target leading algorithms, and real-time behavioral analysis.","eyes",15,3,5,-30,-20,["cyberwares"]), new Augment("Opulent Crown","Headgear for the truly refined. Cast in 24 Karrot Gold threaded with rose-gold filigree,  it serves no function, and that's the point. Elegance has never been less efficient","head",100,0,0,-20,-100,["cyberwares"]), new Augment("StrikerStep VX-9","Forged from milspec alloys, this leg is a blade in disguise. It transforms into a curved cleaver for rotational attacks. They'll never see the spin coming","legs",15,4,15,-30,-30,["cyberwares"]), new Augment("HexSpitter Appendage-X","Forearm-integrated micro-munitions system. Load dart pods or neurotoxin needles. Precision targeting via ocular sync. The future of ranged subtlety.","arms",30,4,10,-30,-30,["cyberwares"])])>>
+<<set $cyberwaresShops to $catalog.getItemsFromShop("cyberwares")>>
+<<for _item range $cyberwaresShops>>
+<<= [[_item.name]]>>
+<</for>>
+
+You currently have <<= $money >>
+
+<<if $money < 14.5>>[[You can not afford anything | Visit City]]<</if>>
+<<if $money > 14.5>>[[Look at the Oracle Optics | oracle]]<</if>>
+<<if $money > 99>>[[Look at the opulent crown | crown]]<</if>>
+<<if $money > 14.5>>[[Look at the Strikerstep VX-9 | striker]]<</if>>
+<<if $money > 29 >>[[Look at the Hexspitter Appendage-X | hexspit]]<</if>>
+
+:: oracle
+An augment for your eyes. See the future before it happens. Oracle optics delivers predictive motion tracking, target leading algorithms, and real-time behavioral analysis.
+Cost: 15
+
+[[Nevermind | ec.augmentlist2]]
+[[Buy | buy oracle]]
+
+:: buy oracle
+You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you seem to be able to see things in slow motion. Even the tiniest of dust particles is clear in your vision.
+<<set$money = $money - 15>>
+<<set $power = $power + 3>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 30>>
+<<set $fame = $fame - 20>>
+
+[[Leave | Visit City]]
+
+:: crown
+Headgear for the truly refined. Cast in 24 K gold and threaded with rose-gold filigree. It serves no function, and that's the point! Elegance is worth the cost.
+Cost: 100
+
+[[Nevermind | ec.augmentlist2]]
+[[Buy | buy crown]]
+
+:: buy crown
+You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you don't feel too much different. There's a weight on your head, but nothing about your senses has changed... You do feel quite fashionable though.
+<<set$money = $money - 100>>
+<<set $power = $power + 0>>
+<<set $health = $health + 0>>
+<<set $humanity = $humanity - 20>>
+<<set $fame = $fame - 100>>
+
+[[Leave | Visit City]]
+
+:: striker
+The strikerstep VX-9 is forged from milspec alloys. This leg is a blade in disguise. It transforms into a curved cleaver for rotational attacks. They'll never see the spin coming.
+Cost: 15
+
+[[Nevermind | ec.augmentlist2]]
+[[Buy | buy striker]]
+
+:: buy striker
+You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you feel barely anything where your leg once was. When you look down you see elegantly designed metal. It feels right.
+<<set$money = $money - 15>>
+<<set $power = $power + 4>>
+<<set $health = $health + 15>>
+<<set $humanity = $humanity - 30>>
+<<set $fame = $fame - 30>>
+
+[[Leave | Visit City]]
+
+:: hexspit
+The hexspitter Appendage-X, the forearms integrated ammunitions system. Load dart pods of neurotoxin needles. Includes precision targeting via ocular sync. The future of ranged subtlety.
+Cost: 30
+
+[[Nevermind | ec.augmentlist2]]
+[[Buy | buy hexspit]]
+
+:: buy hexspit
+You are ushered off into a sterile sugery room. The white walls blind you as you are put under. When you wake up you go to wipe your face only to find that where there once was skin there is now metal. It should be helpful on missions.
+<<set$money = $money - 30>>
+<<set $power = $power + 4>>
+<<set $health = $health + 10>>
+<<set $humanity = $humanity - 30>>
+<<set $fame = $fame - 30>>
+
+[[Leave | Visit City]]
+
+/* The Ashes */
+
+:: Ashes
+In the deepest parts of Ember City there lies a maze of alleyways and ruins stacked on top of eachother. 
+It's filled with those who earn their income in less trustworthy ways. 
+If you are willing to take the chance there are "doctors" here you can visit for cybernetics and merchants selling under the table goods. 
+The black market here thrives...just don't expect good quality.
+
+[[Visit | Visit Ashes]] or [[go back to the map | locations]]
+
+:: Visit Ashes
+The entrance to the ashes isn't hard to find. If you go far enough into any alleyway in the city you'll end up there. 
+You choose to follow a path near one of the city's large apartment buildings. You don't have to walk long before the glitz and glamour of the city melts away into smog and ruin. 
+It's darker here, like the sun itself isn't willing to set foot within. Most people here do not have augments, but the ones who do have mechanical limbs that are massive and gaudy. 
+There are only two places here of interest to you: the [[black market | a.gun]] and [[the makeshift cybernetics store, | a.augments]] Forge and Flame.
+
+[[Go back to the city | Visit City]]
+
+:: a.gun
+The blackmarket can be found tucked between two levels of the Ashes. Various stands vendors line the narrow street. 
+One stand in particular draws your attention, run by a dealer you've worked with before. <<if $humanity > -21 >>The man nods to you and you tip your hat in response. 
+When he smiles his metallic lower jaw glints under the neon lights. "Howdy partner," he grins, "Good to see you back?"<<else>>The man looks at you in shock, his eyes drifting over your nearly all-metal form. "Well, pall. If there's any of you left in there I guess you can see what I've got."<</if>>
+[[I'd like to see what you have | a.gunlist]] 
+[[Nothing | Visit City]]
+
+:: a.gunlist
+We've got some good stuff in. Why don't you take a look. We have...
+<<set $catalog to new Catalog([new Weapon("Pea Shooter", "An old revolver that looks 'well loved'. It's nothing fancy but it'll get the job done", 2, 4, ["blackmarket guns"]), new Weapon("Bucky", "A double barrel shot gun", 8,6,["blackmarket guns"]), new Weapon("Big Iron", "A comically large rifle", 10,8,["blackmarket guns"])])>>
+<<set $blackmarketShops to $catalog.getItemsFromShop("blackmarket guns")>>
+<<for _item range $blackmarketShops>>
+<<= [[_item.name]]>>
+<</for>>
+
+You currently have <<= $money >>
+
+[[Leave | Visit Ashes]]
+<<if $money < 1.5>>[[You can't afford anything here | Visit Ashes]]<</if>>
+<<if $money > 1>>[[Look at pea shooter | pea]]<</if>>
+<<if $money > 7>>[[Look at bucky | bucky]]<</if>>
+<<if $money > 9>>[[Look at big iron | iron]]<</if>>
+
+:: pea
+An old revolver that looks... well loved. It's nothing fancy, but it'll get the job done.
+Cost: 2
+
+[[Nevermind | a.gunlist]]
+[[Buy | buy pea]]
+
+:: buy pea
+The man at the stall hands over the gun to you with a grin. "Hope it treats you well."
+<<set$money = $money - 2>>
+<<set $power = $power + 4>>
+
+[[Leave | Visit Ashes]]
+
+:: bucky
+A double barrel shot gun. It has obvious signs of ware.
+Cost: 8
+
+[[Nevermind | a.gunlist]]
+[[Buy | buy bucky]]
+
+:: buy bucky
+The man at the stall hands over the gun to you with a grin. "Hope it treats you well."
+<<set$money = $money - 8>>
+<<set $power = $power + 6>>
+
+[[Leave | Visit Ashes]]
+
+:: iron
+A comically large rifle. Not sneaky, but definitely strong.
+Cost: 10
+
+[[Nevermind | a.gunlist]]
+[[Buy | buy iron]]
+
+:: buy iron
+The man at the stall hands over the gun to you with a grin. "Hope it treats you well."
+<<set$money = $money - 10>>
+<<set $power = $power + 8>>
+
+[[Leave | Visit Ashes]]
+
+
+
+:: a.augments
+Most cybernetics from the Ashes come from one place. A large ramshackle storefront that was taken over to become a place for surgeons and augment dealers to do business. 
+<<if $humanity > -11 >>When you walk in people look at you like a piece of fresh meat- their eyes follow you, hungry and wanting.<<else>> only a few people look your way. You fit right in with the over-the-top augments that are fitted against the skin of the people here.<</if>>
+You stop in front of a desk where a thin man with metal arms emerging from his back barely looks up at you. Behind him several augments are attached to the wall by hooks.
+[[I'd like to look at your wares | a.augmentlist]] 
+[[Nothing | Visit Ashes]]
+
+:: a.augmentlist
+Behind the quiet man you see plaques above the augments. They read...
+<<set $catalog to new Catalog([new Augment("VisionX","The final word in adaptive sight technology. VisionX™ features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays","eyes",15,3,5,-10,-40,["forge and flame"]), new Augment("Vanta-Knife Limb Unit","Built for vertical dominance. Hydraulics deliver wall-scale jumping, and elevated agility. Mobility meets mayhem.","legs",10,3,20,-20,-20,["forge and flame"]), new Augment("GravMaul TactArm","Augmented muscle density paired with shockwave knuckle tech. Land a punch and generate a localized impact radius. Your handshake just became a hazard","arms",20,2,20,-20,-20,["forge and flame"]), new Augment("MantiEyes","The final word in adaptive sight technology. VisionX™ features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays.","eyes",15,3,5,-30,-20["forge and flame"])])>>
+<<set $forgeShops to $catalog.getItemsFromShop("forge and flame")>>
+<<for _item range $forgeShops>>
+<<= [[_item.name]]>>
+<</for>>
+
+You currently have <<= $money >>
+
+<<if $money < 9.5>>[[You can't afford anything. The man waves you away | Visit Ashes]]<</if>>
+<<if $money > 14>>[[Look at VisionX | visionx]]<</if>>
+<<if $money > 9>>[[Look at vanta-knife limb unit | vanta]]<</if>>
+<<if $money > 19>>[[Look at gravmaul tactarm | tactarm]]<</if>>
+<<if $money > 14>>[[Look at MantiEyes | mantieyes]]<</if>>
+
+[[Leave | Visit Ashes]]
+
+:: visionx
+The final world in adaptive sight technology. VisionX features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays.
+Cost: 15
+
+[[Nevermind | a.augmentlist]]
+[[Buy | buy visionx]]
+
+:: buy visionx
+You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up you can see the world clearer than you ever have before.
+<<set$money = $money - 15>>
+<<set $power = $power + 3>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 10>>
+<<set $fame = $fame - 40>>
+
+[[Leave | Visit Ashes]]
+
+:: vanta
+Built for vertical dominance. Hydraulics deliver wall-scale jumping, and elevated agility. Mobility meets mayhem.
+Cost: 10
+
+[[Nevermind | a.augmentlist]]
+[[Buy | buy vanta]]
+
+:: buy vanta
+You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up your legs feel more agile than ever before.
+<<set$money = $money - 10>>
+<<set $power = $power + 3>>
+<<set $health = $health + 20>>
+<<set $humanity = $humanity - 20>>
+<<set $fame = $fame - 20>>
+
+[[Leave | Visit Ashes]]
+
+
+:: tactarm
+Augmented muscle density paired with a shockwave knuckle tech. Land a punch and generate a loacalized impact radius. Your handshake just became a hazard.
+Cost: 20
+
+[[Nevermind | a.augmentlist]]
+[[Buy | buy tactarm]]
+
+:: buy tactarm
+You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up your arm feels stronger than ever. The metal muscles flex with your will.
+<<set$money = $money - 20>>
+<<set $power = $power + 2>>
+<<set $health = $health + 20>>
+<<set $humanity = $humanity - 20>>
+<<set $fame = $fame - 20>>
+
+:: mantieyes
+With scales like an insect these new and improved eyes offer heat sensing technology and nearly 360 vision. No one can hide from your sights with these.
+Cost: 15
+
+[[Nevermind | a.augmentlist]]
+[[Buy | buy mantieyes]]
+
+:: buy mantieyes
+You are take to a back room that is hidden behind old tattered curtains. You are put to sleep using a mysterious thick green gas. When you wake up your vision swims for a moment. It takes you a second to focus, but when you do you can see the outline of all living things nearby.
+<<set$money = $money - 15>>
+<<set $power = $power + 3>>
+<<set $health = $health + 5>>
+<<set $humanity = $humanity - 30>>
+<<set $fame = $fame - 20>>
+
+[[Leave | Visit Ashes]]
+
+
+
+/* Church Town */
+
+:: Church town
+An old church town, not too crowded but still well-kept. Religious folk tend to gather here (and people looking to escape the law).
+
+[[Visit | Visit Church]] or [[go back to the map | locations]]
+
+:: Visit Church
+The church is busy today with people using the old building as a community center more than anything. A [[pastor | Pastor]] watches the people from a stand at the far end of the church. 
+At one of the tables a group of older women sit around a [[board game | Game]] you don't recognize.
+
+[[Leave church | locations]]
+
+:: Pastor
+The pastor is familiar to you, when your parents were still alive they would take you to his sermons. His hair has thinned over the years but his kind patient face remains the same. 
+For a momnt his eyes catch your own. You [[look away | Visit Church]] or [[walk up to him. | Pastor Talk]]
+
+:: Pastor Talk
+The pastor nods to you as you approach, his lips tugging upwards into a smile. "I haven't seen you at mass in a long time," he laughs, "Have you been doing well?"
+
+[["I've been alright." | Alright]]
+[["Things have been better." | Better]]
+
+:: Alright
+The pastor nods, "That is good to hear. The church is always a safe place for you, if you need it."
+
+[["Thank you, but I'm not much of a holy person." | Pastor End]]
+
+:: Better
+The pastor's smile drops for only a moment before he waves you closer. "Unfortunately, that's what I've been hearing a lot of these days. I'm quite sorry about your parents." You know not far from the church your parents lie six feet under unmarked graves. 
+
+The pastor at least has the mind to give a small apologetic smile.
+
+[["It's been hard." | Pastor End]]
+
+:: Pastor End
+"Even as times become harder I hope you can find a safe place here. I'm sure you're not here to entertain me though, I hope whatever you're here for finds you well."
+
+With that the pastor offers his hand. You take it for a moment, and the human contact feels comforting after so long alone. You give the man one last polite nod before [[turning back | Visit Church]] to the people flooding the church grounds.
+
+:: Game
+You walk up to the group of women all entranced by the game on the table. It involves cards being laid out on the table, each one depicting various machines. 
+<<if $humanity > -11 >>Even when you are right behind them none of them look your way.<<else>> The women seem to tense up as you draw close.<</if>> There's [[nothing more | Visit Church]] to see here unless you want to interrupt their flow.
+
+/* The Desert */
+
+:: Desert
+A sprawling desert that goes on for miles between the various cities and towns. Not much happens here, but some trains pass through on their way to the city. 
+Every few miles you may be able to spot some dust-beaten buildings long-abandoned by their owners.
+
+[[Visit | Visit Desert]] or [[go back to the map | locations]]
+
+:: Visit Desert
+Just outside of town the desert winds start to buffet your face. The sun beats down on you, warming your skin. In the distance, a lone train blows its whistle.
+
+[[Walk towards the train tracks | Train]] 
+or
+[[Go back to town | Cow Town]]
+
+:: Train
+The walk through the desert is uncomfortable but peaceful. The only thing that interrupts your thoughts is the howling wind and dust that whips across your face. 
+When the train comes into view you spot a light- a fire next to the tracks. [[Investigate | Investigate Fire]] or [[Leave | Visit Desert]]
+
+:: Investigate Fire
+Only a few meters away the dust gives way to the small camfire set up near the rusted metal train tracks. 
+A figure sits near it; smoke billows from their lips as they bring a cigar to their lips. [[Talk to them | Stranger]] or [[Leave | Visit Desert]]
+
+:: Stranger
+You approach the stranger with hands raised. The figure tenses for a moment before turning to face you. You are met by the face of an older man. His dark eyes seem to see right through you.
+"Not often I find company here," he drawls, "Come. Sit."
+
+The man pats a spot on the dirt next to him and looks at you expectantly, drawing his cigar back between his lips. 
+
+[[Sit | Stranger Talk]] or [[Turn Away | Stranger Leave]]
+
+:: Stranger Leave
+You walk away. You can feel the man's eyes burning holes into the back of your head, but he doesn't try to stop you. 
+You should open your [[map | locations]] to figure out where to go next.
+
+:: Stranger Talk
+You feels your knees protest as you take a seat on the warm dirt. Without even looking at you the man offers the cigar. 
+<<if $humanity > -51 >>You take it and take a long draw, letting the smoke calm your nerves. He seems pleased when you hand it back.<<else>>In the past, you would have accepted the offer but now theres no part of you left that can enjoy the smoke. The man seems to notice your hesitance and shrugs.<</if>>
+"Folks only come here when they're trying to escape something. What's got ya runnin'?"
+
+[[I feel like I'm stuck | Anticorp]]
+[[I don't know if I'm doing the right thing | Antiwork]]
+<<if $humanity < -49>>[[Am I human still? | Human]]<</if>>
+
+
+:: Anticorp
+You shrug, staring at the lights of the city in the distance. "Too much noise. Feel like no matter what I do I'm not going nowhere," you frown.
+
+The stranger nods, his eyes following your own. "They'll bleed you dry out there kid. No fault of your own its just how it works."
+
+"What's the point?"
+
+"To live," the stranger replies, "Simple as that."
+
+[[Leave | Visit Desert]]
+
+:: AntiWork
+You frown; the stress, both physical and mental, wears heavy on you. You can feel the sins you've committed just to live crawling under your skin- writhing and ugly. "I don't know if I'm doing the right thing."
+
+"Well you're alive aint ya? That's gotta count for somethin' right?"
+
+You shrug, reaching over to grab the cigar from the man again. He lets you take it from his fingers with no resistance. "Does it matter if I'm killing myself in the process?"
+
+"It's all perspective ain't it?" the stranger hums. "We all gotta die someday."
+
+<<if $humanity < -39>>> The man seems to think on his words before letting out a soft breathy laugh. "Although at this rate kid, I'm not sure how much of you is eft that can die."<</if>>
+
+[[Leave | Visit Desert]]
+
+:: Human
+You frown, the metal in your body feels like its heavier than normal. "I'm doing everything right but... I don't know what I am anymore."
+
+The stranger nods, looking you up and down. "You're a man tryin' his best."
+
+Your gaze falls to the metal augments adorning your body. You nearly can't remember how it felt before the metal started to encroach on your skin like a plague you can't escape. 
+
+[["Is it worth it if by the end I can't recognize myself?" | Myself]]
+[["I don't think I'm a man anymore | No Human"]]
+
+:: Myself
+"Thats up to you. You can stop whenever ya want; the world'll keep spinnin'."
+
+[[Leave | Visit Desert]]
+
+:: No Human
+"You've still gotta head on your shoulders don't ya? Seems man enough to me."
+
+[[Leave | Visit Desert]]
+

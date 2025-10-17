@@ -1,0 +1,61 @@
+:: StoryData
+{
+"ifid": "1F012455-6A83-4CCB-BCB1-49B9D77D4E03",
+"format": "SugarCube",
+"format-version": "2.37.3",
+"start": "Start"
+}
+
+:: StoryTitle
+Cowpunk
+
+:: StoryInit
+<<set $health to 10>>
+<<set $power to 3>>
+<<set $damage to 3>>
+<<set $money to 10>>
+<<set $diceroll to 0>>
+<<set $humanity to 150>>
+<<set $fame to 0>>
+
+<<set $rent_done to false>>
+<<set $whistleblown to false>>
+<<set $gambled to false>>
+<<set $trained to false>>
+
+
+
+<<set $inv to new Inventory([new Weapon("Ol' Reliable", "A family heirloom, your dad gave it to you a long time ago and it has since worn down", 0,2,[])], null)>>
+
+<<set $cat to new Catalog([new Weapon("Pea Shooter", "An old revolver that looks 'well loved'. It's nothing fancy but it'll get the job done", 2, 4, ["blackmarket guns"]),
+new Weapon("Bucky", "A double barrel shot gun", 8,6,["blackmarket guns"]),
+new Weapon("Big Iron", "A comically large rifle", 10,8,["blackmarket guns"]),
+new Weapon("The Widower","I hope I did the right thing", 0, 10,[]),
+
+new Augment("'Leg' Replacement","A rusty piece of metal that is vaguley leg looking. It is clearly handmade", "legs", 2,2,5,-2,-10,["the iron giant"]),
+new Augment("The Final Step", "A slightly less rusty leg with some bronze detailing. The heel has a sharp piece of metal which could be used to kick someone with YEEOWCH","legs",7,2,5,-2,-10,["the iron giant"]),
+new Augment("Rebar", "A metal Arm which is held together with welding burns and prayers. Might lift, might seize up", "arms", 5,2,5,-4,-10,["the iron giant"]),
+new Augment("Firearm","A slightly less rusty arm with an airsoft gun attached to it.Technically a firearm. Technically", "arms", 7,2,5,-6,-10,["the iron giant"]),
+new Augment("Patchnotes","The pair of ears look like scrap metal that has been sewn together.","ears",8,2,0,-2,-10,["the iron giant"]),
+new Augment("Audio Processors", "It's made of silicone but the material obviously doesn't match your skin and the left ear has a disproportionate amount of piercings.", "ears",5,2,0,-2,-10,["the iron giant"]),
+new Augment("Saffire Glare", "It is off-puttingly blue and the whites of the eyes seem to be... shining? The glow is probably cosmetic. It hasn't blinked in five minutes.","eyes",8,2,0,-6,-10,["the iron giant"]),
+new Augment("Optic Nurv","When you pick it up there is a feint mechanical whirring sound and is the iris looking at you?","eyes",10,2,0,-10,-10,["the iron giant"]),
+
+new Augment("Crossover Frequency","Dynamically splits and prioritizes incoming sounds, allowing you to isolate even the quietest of noises. Achive perfect auditory balance.","ears",15,3,5,-15,-20,["deadeye"]),
+new Augment("Neuralink","With the newest cybernetic tech you can now think faster than ever!","brain",40,4,10,-50,-40,["deadeye"]),
+new Augment("The CORE","Your cardiovascular system will thank you with this new and approved CORE!", "heart",80,5,25,-80,-80,["deadeye"]),
+new Augment("Iron Lungs","The iron lungs never run out of breath and can withstand the smog of the inner city. Take care of business with ease","lungs",30,4,20,-30,-20,-20,-20,["deadeye"]),
+new Augment("Mono Edge Prosthesis","Reinforced joints allow devastating knee strikes, while the heel conceals a retractable mono-blade. Every step is a potential takedown","legs",15,3,10,-15,-20,["deadeye"]),
+new Augment("RiftSaw Limb Suite","Under the wrist: a concealed rotary blade for cutting through armor, doors, or enemies. Includes active coolant so it never overheats. Carve your path.","arms",25,3,15,-15,-3 ["deadeye"]),
+
+new Augment("Oracle Optics","See the future before it happens. Oracle Optics™ delivers predictive motion tracking, target leading algorithms, and real-time behavioral analysis.","eyes",15,3,5,-30,-20,["cyberwares"]),
+new Augment("Opulent Crown","Headgear for the truly refined. Cast in 24 Karrot Gold threaded with rose-gold filigree,  it serves no function, and that's the point. Elegance has never been less efficient","head",100,0,0,-20,-100,["cyberwares"]),
+new Augment("StrikerStep VX-9","Forged from milspec alloys, this leg is a blade in disguise. It transforms into a curved cleaver for rotational attacks. They'll never see the spin coming","legs",15,4,15,-30,-30,["cyberwares"]),
+new Augment("HexSpitter Appendage-X","Forearm-integrated micro-munitions system. Load dart pods or neurotoxin needles. Precision targeting via ocular sync. The future of ranged subtlety.","arms",30,4,10,-30,-30,["cyberwares"]),
+new Augment("Bass Reflex","Enhances low-frequency perception and allows you to experience the bass physically through vibrational feedback. Feel the sound, live the beat, Bass Reflex.","ears",15,2,5,-10,-30,["cyberwares"]),
+
+new Augment("VisionX","The final word in adaptive sight technology. VisionX™ features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays","eyes",15,3,5,-10,-40,["forge and flame"]),
+new Augment("Vanta-Knife Limb Unit","Built for vertical dominance. Hydraulics deliver wall-scale jumping, and elevated agility. Mobility meets mayhem.","legs",10,3,20,-20,-20,["forge and flame"]),
+new Augment("GravMaul TactArm","Augmented muscle density paired with shockwave knuckle tech. Land a punch and generate a localized impact radius. Your handshake just became a hazard","arms",20,2,20,-20,-20,["forge and flame"]),
+new Augment("MantiEyes","The final word in adaptive sight technology. VisionX™ features auto-tuning visual filters, low-light enhancement, thermal blending, and AR data overlays.","eyes",15,3,5,-30,-20["forge and flame"])])>>
+

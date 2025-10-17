@@ -1,0 +1,18 @@
+:: Megan Start
+
+<<set $money = 0>> <<set $augments = 'None'>> Here you are in the, where you are. Its unlike anywhere you've ever seen. No word could describe it.
+[[who are you|Shut up I am so scared right now]]
+
+:: Shut up I am so scared right now
+You can see your [[coin pouch|coin pouch]] out on the table and in the corner of the room is a dirty mirror with [[your reflection|upgrades]].
+
+:: coin pouch
+When did I get $money dollars? Wow!
+
+:: upgrades
+
+
+
+<<if $augments='None'>>It's just me. The old boots my dad gave me before I left home and my cowboy hat.<<else>>Somewhat odd looking. <</if>>
+
+

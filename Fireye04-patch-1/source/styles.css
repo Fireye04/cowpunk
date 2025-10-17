@@ -1,0 +1,42 @@
+
+/*The body is everything displayed in the main text delivery area*/
+body {
+	background: #685f4d ;
+	color: black;
+}
+
+
+/* This class is specific to the text in the passages*/
+.bountyboard {
+    border: 10px solid #948a76;
+	border-top: 10px;
+	border-bottom: 10px;
+	border-left: 10px;
+	border-right: 10px;
+
+}
+
+.text1 {
+    color:orangered;
+}
+
+a.link-internal {
+	color: white
+}
+
+.death {
+	background: #ce2741;
+	color: black;
+	
+}
+
+
+/* This id is specific to the sidebar*/
+#ui-bar {
+	background-color: gray;
+}
+
+.important {
+	color: #ff0000;
+}
+
